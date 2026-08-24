@@ -1,0 +1,18 @@
+/* testimonial — replica */
+.quote {
+  border-left: 4px solid var(--c-blue);
+  padding: 8px 0 8px 32px;
+  max-width: 900px;
+}
+
+.quote > div > div:first-child p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.quote > div > div:last-child p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}

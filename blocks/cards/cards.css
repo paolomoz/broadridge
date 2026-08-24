@@ -1,0 +1,115 @@
+/* cards — replica: tinted icon cards (featured), navy/photo cards, awards, bento */
+.cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 834px) {
+  .cards > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1140px) {
+  .cards > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cards.bento > ul,
+  .cards.awards > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards > ul > li {
+  background-color: var(--c-grey-surface);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* featured — captured: blue-tint faces, line illustration, arrow cta */
+.cards.featured > ul > li {
+  background-color: var(--c-blue-tint);
+}
+
+.cards .cards-card-image {
+  padding: 24px 24px 0;
+}
+
+.cards .cards-card-image img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.cards .cards-card-body {
+  padding: 24px;
+  flex: 1;
+}
+
+.cards .cards-card-body h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.cards .cards-card-body h3 a:any-link {
+  color: var(--c-text);
+  text-decoration: none;
+}
+
+.cards .cards-card-body h3 a:hover {
+  color: var(--c-blue-link);
+}
+
+.cards .cards-card-body p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.cards .cards-card-body em {
+  display: inline-block;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* awards — captured: tinted band cards with award label */
+.cards.awards > ul > li {
+  background-color: var(--c-white);
+}
+
+.section.tint .cards.awards > ul > li,
+.section.light .cards.awards > ul > li {
+  background-color: var(--c-white);
+}
+
+.cards.awards > ul > li:first-child {
+  background-color: var(--c-navy-deep);
+  color: var(--c-white);
+}
+
+.cards.awards > ul > li:first-child h3 a:any-link,
+.cards.awards > ul > li:first-child p {
+  color: var(--c-white);
+}
+
+/* captured: lg:min-h-[250px] card content */
+@media (width >= 1140px) {
+  .cards.featured .cards-card-body {
+    min-height: 250px;
+  }
+
+  .cards.awards > ul > li {
+    min-height: 300px;
+    padding: 8px;
+  }
+}

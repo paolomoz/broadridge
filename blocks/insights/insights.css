@@ -1,0 +1,75 @@
+/* Insights & perspectives rail — replica of .insights card slider */
+.insights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 834px) {
+  .insights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1140px) {
+  .insights {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.insights > div {
+  background-color: var(--c-navy);
+  color: var(--c-white);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.insights > div > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.insights img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.insights em {
+  display: inline-block;
+  align-self: flex-start;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid var(--c-white);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  margin: 16px 16px 0;
+}
+
+.insights h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 12px 16px 16px;
+}
+
+.insights h3 a:any-link {
+  color: var(--c-white);
+  text-decoration: none;
+}
+
+.insights h3 a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 1140px) {
+  .insights > div {
+    min-height: 540px;
+  }
+}

@@ -1,0 +1,84 @@
+/* Broadridge mega-footer — replica; values lifted from source CSS */
+footer {
+  background-color: var(--c-navy-deep);
+  color: var(--c-white);
+  font-size: var(--body-font-size-s);
+}
+
+footer .footer {
+  max-width: var(--container-wide);
+  margin: auto;
+  padding: 48px var(--gutter-m) 24px;
+}
+
+footer .footer > div > div {
+  margin-bottom: 24px;
+}
+
+footer p {
+  color: var(--c-neutral-250);
+}
+
+footer img {
+  width: 140px;
+  height: auto;
+}
+
+footer a:any-link {
+  color: var(--c-white);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--c-blue-350);
+  text-decoration: underline;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+/* link columns */
+footer .footer-links > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 834px) {
+  footer .footer-links > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+footer .footer-links strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--c-neutral-250);
+  font-weight: 500;
+}
+
+/* legal row */
+footer .footer > div:last-child ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  border-top: 1px solid rgb(255 255 255 / 15%);
+  padding-top: 20px;
+}
+
+footer .footer > div:last-child a:any-link {
+  color: var(--c-neutral-250);
+  font-size: 12px;
+}
+
+footer .footer > div:last-child p {
+  font-size: 12px;
+  color: var(--c-neutral-250);
+}

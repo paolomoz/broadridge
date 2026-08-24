@@ -1,0 +1,110 @@
+/* tabs — replica of .top-tabber / .side-tabber / .list-c3a */
+.tabs {
+  display: grid;
+  gap: 24px;
+}
+
+.tabs .tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--c-neutral-300);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tabs .tabs-list button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  padding: 12px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--c-text);
+  cursor: pointer;
+}
+
+.tabs .tabs-list button[aria-selected='true'] {
+  color: var(--c-blue-link);
+  border-bottom-color: var(--c-blue);
+}
+
+.tabs [role='tabpanel'][hidden] {
+  display: none;
+}
+
+/* side variant — captured: left link list + right blue detail card */
+.tabs.side {
+  grid-template-columns: 1fr;
+}
+
+@media (width >= 900px) {
+  .tabs.side {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .tabs.side .tabs-list {
+    flex-direction: column;
+    border-bottom: 0;
+  }
+
+  .tabs.side .tabs-list button {
+    text-align: left;
+    border-bottom: 1px solid var(--c-neutral-300);
+    padding: 16px 8px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .tabs.side .tabs-list button[aria-selected='true'] {
+    color: var(--c-blue-link);
+  }
+
+  .tabs.side [role='tabpanel'] {
+    background-color: var(--c-blue);
+    color: var(--c-white);
+    border-radius: var(--radius-sm);
+    padding: 32px;
+    min-height: 280px;
+  }
+
+  .tabs.side [role='tabpanel'] h3,
+  .tabs.side [role='tabpanel'] p,
+  .tabs.side [role='tabpanel'] a:any-link {
+    color: var(--c-white);
+  }
+}
+
+/* top-tabber panel: text left, media right (captured layout) */
+@media (width >= 900px) {
+  .tabs:not(.side) [role='tabpanel'] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    min-height: 480px;
+  }
+
+  .tabs:not(.side) [role='tabpanel'] img {
+    max-height: 480px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+  }
+
+  .tabs.side .tabs-list button {
+    padding: 24px 8px;
+    font-size: 20px;
+  }
+
+  .tabs.side [role='tabpanel'] {
+    min-height: 520px;
+  }
+}
+
+/* hidden beats layout display — keep after all layout rules */
+.tabs [role='tabpanel'][hidden] {
+  display: none !important;
+}

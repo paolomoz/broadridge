@@ -1,0 +1,67 @@
+/* template layouts — replica (values lifted from source CSS) */
+
+/* article / press-release: narrow reading column (captured .wyswyg max-width 778px,
+   text color #000c36) with utility rail right */
+body.press-release main .section .default-content-wrapper,
+body.article main .section .default-content-wrapper,
+body.legal main .section .default-content-wrapper {
+  /* captured .wyswyg: max-width 778px, 24px/1.3 type, color #000c36 */
+  max-width: calc(778px + 2 * var(--gutter-m));
+  color: var(--c-navy-deep);
+}
+
+body.press-release main .section .default-content-wrapper p,
+body.article main .section .default-content-wrapper p {
+  font-size: 24px;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+body.press-release main .section .default-content-wrapper ul,
+body.article main .section .default-content-wrapper ul {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+body.press-release main .fragment-wrapper,
+body.article main .fragment-wrapper {
+  max-width: 778px;
+}
+
+/* utility rail — share + archive + media contacts, right of the article */
+@media (width >= 1140px) {
+  body.press-release main > .section:nth-of-type(2),
+  body.article main > .section:nth-of-type(2) {
+    position: relative;
+  }
+
+  body.press-release main .press-rail,
+  body.article main .press-rail {
+    position: absolute;
+    top: 48px;
+    right: var(--gutter-m);
+    width: 300px;
+    font-size: 14px;
+  }
+
+  body.press-release main .press-rail .share,
+  body.article main .press-rail .share {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+
+body .press-rail h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+body .press-rail ul {
+  list-style: none;
+  padding: 0;
+}
+
+body .press-rail li {
+  margin-bottom: 8px;
+}

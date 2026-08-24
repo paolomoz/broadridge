@@ -1,0 +1,279 @@
+/*
+ * Broadridge — EDS replica design system.
+ * Every token value lifted from the live site's own CSS
+ * (stardust/replica/source-css/styles.css) or computed styles.
+ * stardust:canon source: broadridge.com, extracted 2026-08-24.
+ */
+
+:root {
+  /* palette — captured */
+  --c-white: #fff;
+  --c-navy-deep: #000c36;   /* heroes, footer, navy cards (bg-blue-750) */
+  --c-navy: #001f5a;        /* navy card faces (bg-blue-650) */
+  --c-blue: #2662fc;        /* sole action color */
+  --c-blue-link: #0f3db5;   /* in-text links, arrow CTAs */
+  --c-blue-tint: #e7f1fc;   /* tinted surfaces (bg-blue-150) */
+  --c-blue-100: #f2f7fd;
+  --c-grey-surface: #f9f9f9;
+  --c-text: #1a1a1a;
+  --c-neutral-250: #d9d9d9;
+  --c-neutral-300: #e6e6e6;
+  --c-border: #b3b3b3;
+  --c-blue-350: #6ca5fe; /* captured .text-blue-350 — links on navy */
+
+  /* aem boilerplate aliases */
+  --background-color: var(--c-white);
+  --light-color: var(--c-grey-surface);
+  --dark-color: var(--c-navy-deep);
+  --text-color: var(--c-text);
+  --link-color: var(--c-blue-link);
+  --link-hover-color: var(--c-blue);
+
+  /* layout — captured custom props */
+  --container-width: 1184px;
+  --container-wide: calc(var(--container-width) + (2 * var(--gutter)));
+  --gutter-s: 1rem;
+  --gutter: 1.5rem;
+  --gutter-m: 2rem;
+  --gutter-l: 2.5rem;
+  --breakpoint-s: 430px;
+  --breakpoint-m: 834px;
+  --breakpoint-l: 1140px;
+  --site-header-height: 80px;
+  --site-top-header-height: 38px;
+  --nav-height: calc(var(--site-header-height) + var(--site-top-header-height));
+  --section-padding: 48px;
+
+  /* type — freight-sans-pro via Typekit (kit xmw3hcn), weights 300–700 */
+  --body-font-family: freight-sans-pro, -apple-system, blinkmacsystemfont, 'Segoe UI', 'Helvetica Neue', arial, sans-serif;
+  --heading-font-family: var(--body-font-family);
+  --body-font-size-m: 16px;
+  --body-font-size-l: 20px;
+  --body-font-size-s: 14px;
+
+  /* heading ramp — captured (mobile values; scaled up at breakpoints) */
+  --heading-font-size-xxl: 36px; /* h1 */
+  --heading-font-size-xl: 32px;  /* h2 */
+  --heading-font-size-l: 28px;   /* h3 */
+  --heading-font-size-m: 24px;   /* h4 */
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
+
+  /* shape — captured */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
+
+@media (width >= 834px) {
+  :root {
+    --heading-font-size-xxl: 40px;
+    --heading-font-size-xl: 36px;
+    --heading-font-size-l: 32px;
+    --heading-font-size-m: 26px;
+  }
+}
+
+@media (width >= 1140px) {
+  :root {
+    --heading-font-size-xxl: 48px;
+    --heading-font-size-xl: 40px;
+    --heading-font-size-l: 36px;
+    --heading-font-size-m: 28px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: none;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+body.appear {
+  display: block;
+}
+
+header {
+  height: var(--nav-height);
+}
+
+header .header,
+footer .footer {
+  visibility: hidden;
+}
+
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
+  visibility: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px;
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  line-height: 1.15;
+  scroll-margin: calc(var(--nav-height) + 1em);
+}
+
+h1 { font-size: var(--heading-font-size-xxl); }
+h2 { font-size: var(--heading-font-size-xl); }
+h3 { font-size: var(--heading-font-size-l); }
+h4 { font-size: var(--heading-font-size-m); }
+h5 { font-size: var(--heading-font-size-s); }
+h6 { font-size: var(--heading-font-size-xs); }
+
+p, dl, ol, ul, pre, blockquote {
+  margin: 0 0 16px;
+}
+
+code, pre {
+  font-size: var(--body-font-size-s);
+}
+
+main > div {
+  margin: 0;
+}
+
+input, textarea, select, button {
+  font: inherit;
+}
+
+/* links — captured: #0f3db5, no underline until hover */
+a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* buttons — captured: .button/.cta, 2px radius, w500, 16/24 padding */
+a.button:any-link, button.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 12px 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 16px 24px;
+  background-color: var(--c-blue);
+  color: var(--c-white);
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+
+a.button:hover, button.button:hover {
+  background-color: var(--c-blue-link);
+  color: var(--c-white);
+  text-decoration: none;
+}
+
+button.button:disabled, button.button:disabled:hover {
+  background-color: var(--c-neutral-300);
+  cursor: not-allowed;
+}
+
+/* ghost / secondary — captured: transparent + 1px border */
+a.button.secondary, button.button.secondary {
+  border: 1px solid currentcolor;
+  background-color: transparent;
+  color: var(--c-blue-link);
+}
+
+.section.dark a.button.secondary,
+.section.navy a.button.secondary {
+  color: var(--c-white);
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+/* sections — captured rhythm: 48px, container 1184 */
+main > .section {
+  margin: 0;
+  padding: var(--section-padding) 0;
+}
+
+main > .section > div {
+  max-width: var(--container-wide);
+  margin: auto;
+  padding: 0 var(--gutter);
+}
+
+main > .section:first-of-type {
+  margin-top: 0;
+}
+
+@media (width >= 900px) {
+  main > .section > div {
+    padding: 0 var(--gutter-m);
+  }
+}
+
+/* section palette variants — captured surface alternation */
+main .section.light,
+main .section.highlight {
+  background-color: var(--c-grey-surface);
+}
+
+main .section.tint {
+  background-color: var(--c-blue-tint);
+}
+
+main .section.dark,
+main .section.navy {
+  background-color: var(--c-navy-deep);
+  color: var(--c-white);
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark p,
+main .section.navy h1,
+main .section.navy h2,
+main .section.navy h3 {
+  color: var(--c-white);
+}
+
+main .section.dark a:any-link:not(.button) {
+  color: var(--c-blue-350);
+}
+
+/* lead-form band inherits the captured tint ground */
+main .section:has(.form),
+main .section:has(.fragment-wrapper .form) {
+  background-color: var(--c-blue-tint);
+}

@@ -1,0 +1,102 @@
+/* Broadridge hero — replica of .hero-general (navy band, breadcrumb, left headline) */
+.hero-wrapper {
+  background-color: var(--c-navy-deep);
+  color: var(--c-white);
+}
+
+.hero {
+  position: relative;
+  padding: 48px 0 32px;
+  min-height: 180px;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin-bottom: 16px;
+  color: var(--c-white);
+  font-weight: 400;
+}
+
+.hero p {
+  max-width: 640px;
+  color: var(--c-white);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* breadcrumb row (first block row when authored) */
+.hero > div:first-child:not(:only-child) p,
+.hero .hero-breadcrumb {
+  font-size: 14px;
+}
+
+.hero > div:first-child:not(:only-child) a:any-link {
+  color: var(--c-blue-350);
+  text-decoration: none;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .35;
+  z-index: 0;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .button {
+  background-color: var(--c-blue);
+}
+
+/* variant: half — light hero with media right (insights study) */
+.hero.half {
+  background-color: var(--c-navy-deep);
+}
+
+@media (width >= 900px) {
+  .hero {
+    padding: 64px 0 48px;
+  }
+
+  .hero.half > div:last-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero.half img {
+    position: static;
+    opacity: 1;
+    border-radius: var(--radius-sm);
+  }
+}
+
+/* full-bleed band: background at section level, content in container */
+main > .section.hero-container {
+  background-color: var(--c-navy-deep);
+  padding: 0;
+}
+
+.hero-wrapper {
+  background-color: transparent;
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 var(--gutter-m);
+}
+
+.hero {
+  padding: 40px 0 56px;
+}
+
+.hero h1 {
+  max-width: 1160px;
+  font-size: var(--heading-font-size-xxl);
+  line-height: 1.15;
+}

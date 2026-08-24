@@ -1,0 +1,41 @@
+/* cta banner — replica of .b1-cta-banner (navy/gradient band, angled edge) */
+.cta-banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  background: linear-gradient(100deg, var(--c-navy-deep) 0%, var(--c-blue-link) 100%);
+  color: var(--c-white);
+  border-radius: var(--radius-sm);
+  padding: 32px;
+}
+
+@media (width >= 834px) {
+  .cta-banner {
+    grid-template-columns: 2fr 1fr;
+    padding: 40px 48px;
+  }
+
+  .cta-banner > div > div:last-child {
+    text-align: right;
+  }
+}
+
+.cta-banner h3 {
+  color: var(--c-white);
+  margin-bottom: 8px;
+}
+
+.cta-banner p {
+  color: var(--c-white);
+  margin-bottom: 0;
+}
+
+.cta-banner .button {
+  background-color: var(--c-blue);
+}
+
+.cta-banner a:any-link:not(.button) {
+  color: var(--c-white);
+  text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+.share {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--c-neutral-300);
+  border-bottom: 1px solid var(--c-neutral-300);
+  padding: 12px 0;
+}
+
+.share .share-label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.share ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.share a:any-link {
+  font-size: 14px;
+  color: var(--c-blue-link);
+}

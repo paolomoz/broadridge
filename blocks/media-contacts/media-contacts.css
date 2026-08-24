@@ -1,0 +1,17 @@
+/* press-release media contacts / about-broadridge boilerplate rail */
+.media-contacts {
+  background-color: var(--c-grey-surface);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  font-size: 14px;
+}
+
+.media-contacts h2,
+.media-contacts h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.media-contacts p {
+  margin-bottom: 8px;
+}

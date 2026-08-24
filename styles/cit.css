@@ -1,0 +1,42 @@
+/*
+ * cit mini-canon — Matrix Trust Company microsite (18 pages).
+ * Replica of the co-branded sub-brand: uppercase nav, lighter blue,
+ * "Ready for Next" footer register. Values lifted from cit page computed styles.
+ */
+body.cit header nav .nav-utility {
+  display: none;
+}
+
+body.cit header .nav-wrapper {
+  background-color: var(--c-navy-deep);
+  border-bottom: 0;
+}
+
+body.cit header nav .nav-sections .default-content-wrapper > ul > li {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--c-white);
+}
+
+body.cit main .hero-wrapper {
+  background: linear-gradient(120deg, #123a75 0%, var(--c-navy) 60%);
+}
+
+body.cit main .hero h1 {
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto 16px;
+}
+
+body.cit main .hero p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+body.cit .button {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  background-color: var(--c-blue-link);
+}
