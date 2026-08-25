@@ -619,6 +619,12 @@ body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
   body.test-b main .section.text-slider p { min-height: 0; }
   body.test-b main .section.text-slider .default-content-wrapper:has(> p:nth-of-type(4)) { grid-template-columns: 1fr; }
   body.test-b main .section.text-slider .default-content-wrapper:has(> p:nth-of-type(4)) p { min-height: 0; }
+  body.test-b main .section.text-slider + .section.tabs-container:has(.tabs.side),
+  body.test-b main .section.tabs-container:has(.tabs.side) + .section.stats-container,
+  body.test-b main .section.stats-container + .section.cards-container:has(.cards.bento),
+  body.test-b main .section.cards-container:has(.cards.bento) + .section.insights-container,
+  body.test-b main .section.insights-container + .section.text-slider { margin-top: 64px; }
+  body.test-b main .section.text-slider + .section.form-container { margin-top: 96px; }
 
   /* tabs (top): accordion look, panels collapsed */
   body.test-b .tabs-container > .default-content-wrapper { grid-template-columns: 1fr; gap: 20px; }
@@ -887,6 +893,12 @@ body.test-b main .section.cards-container:has(.cards.bento) .default-content-wra
   body.test-b main .section.text-slider p { min-height: 0; }
   body.test-b main .section.text-slider .default-content-wrapper:has(> p:nth-of-type(4)) { grid-template-columns: 1fr; }
   body.test-b main .section.text-slider .default-content-wrapper:has(> p:nth-of-type(4)) p { min-height: 0; }
+  body.test-b main .section.text-slider + .section.tabs-container:has(.tabs.side),
+  body.test-b main .section.tabs-container:has(.tabs.side) + .section.stats-container,
+  body.test-b main .section.stats-container + .section.cards-container:has(.cards.bento),
+  body.test-b main .section.cards-container:has(.cards.bento) + .section.insights-container,
+  body.test-b main .section.insights-container + .section.text-slider { margin-top: 64px; }
+  body.test-b main .section.text-slider + .section.form-container { margin-top: 96px; }
   body.test-b main .section.stats-container { margin: 32px 8px; padding: 32px 16px; }
   body.test-b .stats.block { grid-template-columns: 1fr; row-gap: 24px; }
   body.test-b main .section.cards-container:has(.cards.bento) { margin: 32px 8px; padding: 32px 16px; }
