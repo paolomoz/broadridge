@@ -200,6 +200,12 @@ async function loadEager(doc) {
   if (document.body.classList.contains('cit')) {
     loadCSS(`${window.hlx.codeBasePath}/styles/cit.css`);
   }
+  // /test-b review copy: template-scoped fidelity styles, loaded ONLY when
+  // the page's template metadata is `test-b` — no effect on any other page
+  if (document.body.classList.contains('test-b')) {
+    await loadCSS(`${window.hlx.codeBasePath}/styles/test-b.css`);
+    import('./test-b.js').then((m) => m.default()).catch(() => {});
+  }
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
