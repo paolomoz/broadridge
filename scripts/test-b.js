@@ -55,15 +55,29 @@ function fixHeroHeading() {
   h2.replaceWith(h1);
 }
 
-function addSliderControls() {
-  const wrap = document.querySelector('main .insights-wrapper');
-  if (!wrap || wrap.querySelector('.test-b-slider-controls')) return !!wrap;
+function controlsEl(bullets) {
   const c = document.createElement('div');
   c.className = 'test-b-slider-controls';
-  c.innerHTML = '<div class="bullets"><span></span><span></span><span></span><span></span></div>'
+  c.innerHTML = `<div class="bullets">${'<span></span>'.repeat(bullets)}</div>`
     + '<div class="arrows"><span class="prev"></span><span class="next"></span></div>';
-  wrap.append(c);
-  return true;
+  return c;
+}
+
+function addSliderControls() {
+  const ins = document.querySelector('main .insights-wrapper');
+  if (ins && !ins.querySelector('.test-b-slider-controls')) {
+    const slides = ins.querySelectorAll('.insights.block > div').length;
+    ins.append(controlsEl(Math.max(4, slides - 3)));
+  }
+  document.querySelectorAll('main .section.text-slider > .default-content-wrapper').forEach((w) => {
+    if (w.querySelector('.test-b-slider-controls')) return;
+    w.append(controlsEl(w.querySelectorAll(':scope > p').length));
+  });
+  document.querySelectorAll('main .section.stats-container > .stats-wrapper').forEach((w) => {
+    if (w.querySelector('.test-b-slider-controls')) return;
+    w.append(controlsEl(w.querySelectorAll('.stats.block > div').length));
+  });
+  return !!ins;
 }
 
 function addTabActivators() {
