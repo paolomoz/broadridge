@@ -55,49 +55,75 @@ function fixHeroHeading() {
   h2.replaceWith(h1);
 }
 
-function controlsEl(bullets) {
-  const c = document.createElement('div');
-  c.className = 'test-b-slider-controls';
-  c.innerHTML = `<div class="bullets">${'<span></span>'.repeat(bullets)}</div>`
-    + '<div class="arrows"><span class="prev"></span><span class="next"></span></div>';
-  return c;
+function buildCarousel(viewport, slides, host) {
+  if (viewport.dataset.testbCarousel) return;
+  viewport.dataset.testbCarousel = '1';
+  const controls = document.createElement('div');
+  controls.className = 'test-b-slider-controls';
+  controls.innerHTML = '<div class="bullets"></div>'
+    + '<div class="arrows"><button type="button" class="prev" aria-label="Previous slide"></button>'
+    + '<button type="button" class="next" aria-label="Next slide"></button></div>';
+  (host || viewport.parentElement).append(controls);
+  const bulletsBox = controls.querySelector('.bullets');
+  const prev = controls.querySelector('.prev');
+  const next = controls.querySelector('.next');
+  let index = 0;
+  const metrics = () => {
+    const first = slides()[0];
+    if (!first) return null;
+    const second = slides()[1];
+    const pitch = second ? second.offsetLeft - first.offsetLeft : first.offsetWidth;
+    const max = Math.max(0, Math.round((viewport.scrollWidth - viewport.clientWidth) / pitch));
+    return { pitch, max };
+  };
+  const render = () => {
+    const m = metrics();
+    if (!m || m.max === 0) { controls.style.display = 'none'; return; }
+    controls.style.display = 'flex';
+    if (index > m.max) index = m.max;
+    bulletsBox.innerHTML = '<span></span>'.repeat(m.max + 1);
+    [...bulletsBox.children].forEach((bIdx, i) => bulletsBox.children[i].classList.toggle('on', i === index));
+    prev.classList.toggle('off', index === 0);
+    next.classList.toggle('off', index === m.max);
+  };
+  const go = (dir) => {
+    const m = metrics();
+    if (!m) return;
+    index = Math.min(m.max, Math.max(0, index + dir));
+    viewport.scrollTo({ left: index * m.pitch, behavior: 'smooth' });
+    render();
+  };
+  prev.addEventListener('click', () => go(-1));
+  next.addEventListener('click', () => go(1));
+  window.addEventListener('resize', render);
+  window.addEventListener('load', render);
+  [400, 1200, 3000].forEach((ms) => setTimeout(render, ms));
+  render();
 }
 
 function addSliderControls() {
-  const ins = document.querySelector('main .insights-wrapper');
-  if (ins && !ins.querySelector('.test-b-slider-controls')) {
-    const slides = ins.querySelectorAll('.insights.block > div').length;
-    ins.append(controlsEl(Math.max(4, slides - 3)));
-  }
+  const ins = document.querySelector('main .insights-wrapper .insights.block');
+  if (ins) buildCarousel(ins, () => [...ins.children].filter((c) => !c.className.includes('controls')), ins.parentElement);
   document.querySelectorAll('main .section.text-slider > .default-content-wrapper').forEach((w) => {
-    if (w.querySelector('.test-b-slider-controls')) return;
-    w.append(controlsEl(w.querySelectorAll(':scope > p').length));
+    if (w.querySelector('.testb-viewport')) return;
+    const items = [...w.children].filter((c) => c.matches('h3, p'));
+    if (!items.length) return;
+    const vp = document.createElement('div');
+    vp.className = 'testb-viewport';
+    let slide = null;
+    items.forEach((el) => {
+      if (el.matches('h3') || !slide || slide.querySelector('p')) {
+        slide = document.createElement('div'); slide.className = 'testb-slide'; vp.append(slide);
+      }
+      slide.append(el);
+    });
+    w.append(vp);
+    buildCarousel(vp, () => [...vp.children], w);
   });
-  document.querySelectorAll('main .section.stats-container > .stats-wrapper').forEach((w) => {
-    if (w.querySelector('.test-b-slider-controls')) return;
-    w.append(controlsEl(w.querySelectorAll('.stats.block > div').length));
+  document.querySelectorAll('main .stats-wrapper .stats.block').forEach((st) => {
+    buildCarousel(st, () => [...st.children].filter((c) => c.matches('div:not(.test-b-slider-controls)')), st.parentElement);
   });
   return !!ins;
-}
-
-function addTabActivators() {
-  document.querySelectorAll('main .tabs.block:not(.side) .tabs-list').forEach((list) => {
-    if (list.querySelector('.testb-activator')) return;
-    const bar = document.createElement('span');
-    bar.className = 'testb-activator';
-    list.append(bar);
-    const position = () => {
-      const btn = list.querySelector('button[aria-selected="true"]') || list.querySelector('button');
-      if (!btn) return;
-      const lb = list.getBoundingClientRect();
-      const bb = btn.getBoundingClientRect();
-      bar.style.left = `${bb.left - lb.left}px`;
-      bar.style.width = `${bb.width}px`;
-    };
-    position();
-    list.addEventListener('click', () => setTimeout(position, 0));
-    window.addEventListener('resize', position);
-  });
 }
 
 export default function run() {
