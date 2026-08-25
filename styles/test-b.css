@@ -1026,3 +1026,14 @@ body.test-b main .section.cards-container:has(.cards.bento-six) + .section.insig
   body.test-b main .section.stats-container + .section.cards-container:has(.cards.bento-six),
   body.test-b main .section.cards-container:has(.cards.bento-six) + .section.insights-container { margin-top: 64px; }
 }
+
+/* wave1 fixes: stats desktop clips beyond 3 (carousel), media video, b1 natural height */
+body.test-b .stats.block {
+  display: flex; gap: 32px; overflow: hidden; grid-template-columns: none;
+}
+body.test-b .stats.block > div { flex: none; width: 373px; }
+body.test-b main .section.media-video { max-width: 1232px; margin: 0 auto; padding: 48px 24px; }
+body.test-b main .section.media-video > div { max-width: 1184px; margin: 0 auto; padding: 0; }
+body.test-b .section.media-video .video-frame, body.test-b .section.media-video iframe {
+  width: 100%; aspect-ratio: 16 / 9; border: 0; display: block;
+}
