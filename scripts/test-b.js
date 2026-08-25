@@ -66,12 +66,34 @@ function addSliderControls() {
   return true;
 }
 
+function addTabActivators() {
+  document.querySelectorAll('main .tabs.block:not(.side) .tabs-list').forEach((list) => {
+    if (list.querySelector('.testb-activator')) return;
+    const bar = document.createElement('span');
+    bar.className = 'testb-activator';
+    list.append(bar);
+    const position = () => {
+      const btn = list.querySelector('button[aria-selected="true"]') || list.querySelector('button');
+      if (!btn) return;
+      const lb = list.getBoundingClientRect();
+      const bb = btn.getBoundingClientRect();
+      bar.style.left = `${bb.left - lb.left}px`;
+      bar.style.width = `${bb.width}px`;
+    };
+    position();
+    list.addEventListener('click', () => setTimeout(position, 0));
+    window.addEventListener('resize', position);
+  });
+}
+
 export default function run() {
   fixHeroHeading();
   addSliderControls();
+  addTabActivators();
   const tryEnhance = () => {
     fixHeroHeading();
     addSliderControls();
+    addTabActivators();
     const form = document.querySelector('main .form.block form');
     if (form) { enhanceForm(form); return true; }
     return false;
