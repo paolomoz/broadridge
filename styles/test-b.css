@@ -613,8 +613,8 @@ body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
   body.test-b .test-b-slider-controls { margin-top: 24px; }
   body.test-b main .section.text-slider .testb-viewport { gap: 16px; }
   body.test-b main .section.text-slider .testb-slide { width: 312px; min-height: 200px; }
-  body.test-b main .section.text-slider h2 { margin-bottom: 24px; }
-  body.test-b main .section.text-slider .testb-viewport { margin-bottom: 24px; }
+  body.test-b main .section.text-slider h2 { margin-bottom: 32px; }
+  body.test-b main .section.text-slider .testb-viewport { margin-bottom: 32px; }
   body.test-b main .section.text-slider .test-b-slider-controls { margin-top: 0; }
   body.test-b .stats-wrapper .test-b-slider-controls { margin-top: 0; }
   body.test-b main .section.text-slider + .section.tabs-container:has(.tabs.side),
@@ -677,7 +677,7 @@ body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
   body.test-b .form-container .default-content-wrapper > p:first-of-type { order: 2; margin: 32px 0 0; }
   body.test-b main .section.form-container > div.form-wrapper { order: 3; margin-top: 24px; }
   body.test-b .form-container .default-content-wrapper > p:nth-of-type(2) { order: 4; margin-top: 48px; }
-  body.test-b .form-container .default-content-wrapper > p:nth-of-type(3) { order: 5; margin-top: 24px; }
+  body.test-b .form-container .default-content-wrapper > p:nth-of-type(3) { order: 5; margin-top: 24px; max-width: 300px; }
   body.test-b .form-container .default-content-wrapper > p:nth-of-type(4) { order: 6; }
   body.test-b .form-container .default-content-wrapper > p:nth-of-type(5) { order: 7; }
   body.test-b .form-container .default-content-wrapper > p:nth-of-type(6) { order: 8; }
@@ -894,7 +894,7 @@ body.test-b main .section.cards-container:has(.cards.bento) .default-content-wra
   body.test-b .hero.dark > div > div { grid-template-columns: 1fr; gap: 40px; }
   body.test-b .hero.dark h1 { font-size: 40px; line-height: 46px; }
   body.test-b .hero.dark p { font-size: 24px; line-height: 27.6px; }
-  body.test-b main .section.text-slider { margin: 32px 8px; padding: 32px 16px; }
+  body.test-b main .section.text-slider { margin: 32px 8px; padding: 24px 16px; }
   body.test-b main .section.text-slider .default-content-wrapper { grid-template-columns: 1fr; row-gap: 24px; }
   body.test-b main .section.text-slider h2 { margin-bottom: 8px; }
   body.test-b main .section.text-slider p { min-height: 0; }
