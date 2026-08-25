@@ -144,7 +144,8 @@ body.test-b .cards.featured .cards-card-image {
 }
 body.test-b .cards.featured .cards-card-image p { margin: 0; }
 body.test-b .cards.featured .cards-card-image img {
-  width: 356px; height: 356px; max-width: none; position: absolute; left: 48px; top: -148px;
+  width: 356px; height: 356px; max-width: none; max-height: none;
+  object-fit: fill; padding: 0; position: absolute; left: 48px; top: -148px;
 }
 body.test-b .cards.featured .cards-card-body {
   padding: 24px; display: flex; flex-direction: column; min-height: 250px; flex: 1; margin: 0;
