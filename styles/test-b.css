@@ -616,9 +616,6 @@ body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
   body.test-b main .section.text-slider h2 { margin-bottom: 24px; }
   body.test-b main .section.text-slider .testb-viewport { margin-bottom: 24px; }
   body.test-b main .section.text-slider .test-b-slider-controls { margin-top: 0; }
-  body.test-b .stats.block { display: flex; gap: 16px; overflow: hidden; }
-  body.test-b .stats.block > div { flex: none; width: 257px; }
-  body.test-b .stats.block { margin-bottom: 24px; }
   body.test-b .stats-wrapper .test-b-slider-controls { margin-top: 0; }
   body.test-b main .section.text-slider + .section.tabs-container:has(.tabs.side),
   body.test-b main .section.tabs-container:has(.tabs.side) + .section.stats-container,
@@ -673,13 +670,13 @@ body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
 
   /* contact band: heading, form, then specialist (live mobile order) */
   body.test-b main .section.form-container {
-    margin: 64px 8px 32px; padding: 32px 16px; display: flex; flex-direction: column; gap: 0;
+    margin: 64px 8px 32px; padding: 32px 16px 48px; display: flex; flex-direction: column; gap: 0;
   }
   body.test-b .form-container > .default-content-wrapper { display: contents; }
   body.test-b .form-container .default-content-wrapper h2 { order: 1; font-size: 32px; line-height: 36.8px; }
   body.test-b .form-container .default-content-wrapper > p:first-of-type { order: 2; margin: 32px 0 0; }
   body.test-b main .section.form-container > div.form-wrapper { order: 3; margin-top: 24px; }
-  body.test-b .form-container .default-content-wrapper > p:nth-of-type(2) { order: 4; margin-top: 24px; }
+  body.test-b .form-container .default-content-wrapper > p:nth-of-type(2) { order: 4; margin-top: 48px; }
   body.test-b .form-container .default-content-wrapper > p:nth-of-type(3) { order: 5; margin-top: 24px; }
   body.test-b .form-container .default-content-wrapper > p:nth-of-type(4) { order: 6; }
   body.test-b .form-container .default-content-wrapper > p:nth-of-type(5) { order: 7; }
@@ -910,7 +907,8 @@ body.test-b main .section.cards-container:has(.cards.bento) .default-content-wra
   body.test-b main .section.insights-container + .section.text-slider { margin-top: 64px; }
   body.test-b main .section.text-slider + .section.form-container { margin-top: 96px; }
   body.test-b main .section.stats-container { margin: 32px 8px; padding: 32px 16px; }
-  body.test-b .stats.block { grid-template-columns: 1fr; row-gap: 24px; }
+  body.test-b .stats.block { display: flex; gap: 16px; overflow: hidden; margin-bottom: 24px; }
+  body.test-b .stats.block > div { flex: none; width: 257px; }
   body.test-b main .section.cards-container:has(.cards.bento) { margin: 32px 8px; padding: 32px 16px; }
   body.test-b .cards.bento > ul { grid-template-columns: 1fr; grid-template-rows: none; gap: 16px; }
   body.test-b .cards.bento > ul > li:first-child { grid-row: auto; grid-column: auto; height: 406px; margin-bottom: 16px; }
