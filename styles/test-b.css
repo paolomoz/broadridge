@@ -926,3 +926,103 @@ body.test-b .cards.bento > ul > li:not(:first-child):hover h3 a { color: var(--t
 body.test-b .cards.bento > ul > li:not(:first-child):hover .cards-card-body::after { background-color: var(--tb-blue); }
 body.test-b .cards.bento .cards-card-body::after { transform: translateX(10px); }
 body.test-b .cards.bento > ul > li:hover .cards-card-body::after { transform: translateX(12px); }
+
+/* ================= wave 1: segment siblings (measured live 2026-08-25) ================= */
+/* bento-six: tint wrap, navy lead card spans 2 cols, wide tail card */
+body.test-b main .section.cards-container:has(.cards.bento-six) {
+  max-width: 1312px; margin: 48px auto; padding: 64px; background: var(--tb-blue-150); border-radius: 4px;
+}
+body.test-b main .section.cards-container:has(.cards.bento-six) > div { max-width: none; margin: 0 auto; padding: 0; }
+body.test-b main .section.cards-container:has(.cards.bento-six) > div.default-content-wrapper:not(:last-child) { margin-bottom: 48px; }
+body.test-b main .section.cards-container:has(.cards.bento-six) h2 { color: var(--tb-navy); }
+body.test-b .cards.bento-six > ul {
+  display: grid; grid-template-columns: repeat(4, 272px); gap: 32px;
+  list-style: none; margin: 0; padding: 0;
+}
+body.test-b .cards.bento-six > ul > li {
+  background: var(--tb-neutral); color: var(--tb-navy); border-radius: 4px;
+  overflow: hidden; display: flex; flex-direction: column; border: 0; margin: 0;
+}
+body.test-b .cards.bento-six > ul > li:first-child { grid-column: 1 / span 2; background: var(--tb-blue-750); color: #fff; }
+body.test-b .cards.bento-six > ul > li:last-child { grid-column: 3 / span 2; }
+body.test-b .cards.bento-six .cards-card-image { display: none; }
+body.test-b .cards.bento-six .cards-card-body { padding: 24px; margin: 0; display: flex; flex-direction: column; flex: 1; }
+body.test-b .cards.bento-six h3, body.test-b .cards.bento-six h3 a {
+  font-size: 24px; font-weight: 400; line-height: 1.15; color: inherit; text-decoration: none;
+}
+body.test-b .cards.bento-six h3 { margin: 8px 0 0; }
+body.test-b .cards.bento-six > ul > li:first-child h3 a { color: #fff; }
+body.test-b .cards.bento-six .cards-card-body::after {
+  display: block; width: 24px; height: 24px; content: ''; margin-top: auto;
+  background-color: currentcolor; transform: translateX(10px);
+  -webkit-mask: var(--tb-arrow) center / contain no-repeat;
+  mask: var(--tb-arrow) center / contain no-repeat;
+  transition: transform .3s cubic-bezier(.05, .7, .1, 1);
+}
+body.test-b .cards.bento-six > ul > li { transition: all .15s cubic-bezier(.4, 0, .2, 1); }
+body.test-b .cards.bento-six > ul > li:hover { box-shadow: 0 0 1px rgb(0 12 54 / 15%), 0 8px 16px rgb(0 12 54 / 10%); }
+body.test-b .cards.bento-six > ul > li:not(:first-child):hover { background: var(--tb-blue-250); }
+body.test-b .cards.bento-six > ul > li:not(:first-child):hover h3 a { color: var(--tb-blue); }
+body.test-b .cards.bento-six > ul > li:hover .cards-card-body::after { transform: translateX(12px); }
+body.test-b main .section.cards-container:has(.cards.bento-six) .default-content-wrapper:last-child {
+  display: flex; justify-content: flex-end; margin: 48px 0 0;
+}
+
+/* b1-cta-banner: 1312 rounded band, bg image cover, white button right */
+body.test-b main .section.b1-banner {
+  max-width: 1312px; margin: 48px auto; padding: 64px; border-radius: 4px;
+  position: relative; overflow: hidden; background: var(--tb-blue-750); color: #fff;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+}
+body.test-b main .section.b1-banner > div { max-width: none; margin: 0; padding: 0; display: contents; }
+body.test-b main .section.b1-banner p:has(picture), body.test-b main .section.b1-banner > div > p:first-child:has(img) {
+  position: absolute; inset: 0; margin: 0; z-index: 0; width: 100%; height: 100%; order: 0;
+}
+body.test-b main .section.b1-banner p:has(picture) picture { display: block; width: 100%; height: 100%; }
+body.test-b main .section.b1-banner img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
+}
+body.test-b main .section.b1-banner h3 {
+  position: relative; z-index: 1; font-size: 48px; font-weight: 400; line-height: 1.15;
+  color: #fff; margin: 0; max-width: 880px; flex: 1 1 auto; order: 1;
+}
+body.test-b main .section.b1-banner > div > p:not(.button-wrapper):not(:has(img)) {
+  position: relative; z-index: 1; font-size: 22px; font-weight: 400; line-height: 1.3;
+  color: #fff; margin: 16px 0 0; max-width: 880px; order: 2; flex-basis: 100%;
+}
+body.test-b main .section.b1-banner .button-wrapper { position: relative; z-index: 1; margin: 0; order: 3; flex: none; }
+body.test-b main .section.b1-banner a.button {
+  background: #fff; color: var(--tb-blue); font-size: 20px; font-weight: 500;
+  padding: 16px 24px; border-radius: 2px; display: inline-flex; margin: 0;
+}
+body.test-b main .section.b1-banner a.button:hover { background: var(--tb-blue-150); color: var(--tb-blue); }
+/* head-left/button-right two-column composition */
+body.test-b main .section.b1-banner { display: grid; grid-template-columns: 880px 1fr; align-items: center; }
+body.test-b main .section.b1-banner h3 { grid-column: 1; }
+body.test-b main .section.b1-banner > div > p:not(.button-wrapper):not(:has(img)) { grid-column: 1; }
+body.test-b main .section.b1-banner .button-wrapper { grid-column: 2; justify-self: end; }
+
+/* wrap junctions involving b1-banner */
+body.test-b main .section.tabs-container:has(.tabs.side) + .section.b1-banner,
+body.test-b main .section.b1-banner + .section.stats-container,
+body.test-b main .section.insights-container + .section.b1-banner,
+body.test-b main .section.b1-banner + .section.text-slider,
+body.test-b main .section.stats-container + .section.cards-container:has(.cards.bento-six),
+body.test-b main .section.cards-container:has(.cards.bento-six) + .section.insights-container { margin-top: 96px; }
+
+@media (max-width: 833px) {
+  body.test-b main .section.cards-container:has(.cards.bento-six) { margin: 32px 8px; padding: 32px 16px; }
+  body.test-b .cards.bento-six > ul { grid-template-columns: 1fr; gap: 16px; }
+  body.test-b .cards.bento-six > ul > li:first-child, body.test-b .cards.bento-six > ul > li:last-child { grid-column: auto; }
+  body.test-b main .section.b1-banner {
+    margin: 32px 8px; padding: 32px 16px; grid-template-columns: 1fr;
+  }
+  body.test-b main .section.b1-banner h3 { font-size: 32px; }
+  body.test-b main .section.b1-banner .button-wrapper { grid-column: 1; justify-self: start; margin-top: 24px; }
+  body.test-b main .section.tabs-container:has(.tabs.side) + .section.b1-banner,
+  body.test-b main .section.b1-banner + .section.stats-container,
+  body.test-b main .section.insights-container + .section.b1-banner,
+  body.test-b main .section.b1-banner + .section.text-slider,
+  body.test-b main .section.stats-container + .section.cards-container:has(.cards.bento-six),
+  body.test-b main .section.cards-container:has(.cards.bento-six) + .section.insights-container { margin-top: 64px; }
+}
