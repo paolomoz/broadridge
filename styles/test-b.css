@@ -1007,7 +1007,10 @@ body.test-b main .section.b1-banner + .section.stats-container,
 body.test-b main .section.insights-container + .section.b1-banner,
 body.test-b main .section.b1-banner + .section.text-slider,
 body.test-b main .section.stats-container + .section.cards-container:has(.cards.bento-six),
-body.test-b main .section.cards-container:has(.cards.bento-six) + .section.insights-container { margin-top: 96px; }
+body.test-b main .section.cards-container:has(.cards.bento-six) + .section.insights-container,
+body.test-b main .section.text-slider + .section.cards-container:has(.cards.grid-navy),
+body.test-b main .section.cards-container:has(.cards.grid-navy) + .section.stats-container,
+body.test-b main .section.cards-container:has(.cards.bento-six) + .section.columns-container:has(.columns.media-card) { margin-top: 96px; }
 
 @media (max-width: 833px) {
   body.test-b main .section.cards-container:has(.cards.bento-six) { margin: 32px 8px; padding: 32px 16px; }
