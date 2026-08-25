@@ -604,6 +604,7 @@ body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
   body.test-b main .section.insights-container > div.insights-wrapper { margin-top: 24px; }
   body.test-b .insights.block { gap: 16px; }
   body.test-b .insights.block > div { width: 218px; min-height: 451px; }
+  body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 424px; }
   body.test-b .insights.block h3 { margin-top: 16px; }
   body.test-b .cards.awards h3 { margin-top: 16px; }
   body.test-b .cards.featured .cards-card-body h3 { margin-top: 0; }
@@ -884,9 +885,9 @@ body.test-b main .section.cards-container:has(.cards.bento) .default-content-wra
 
 @media (max-width: 833px) {
   body.test-b main .section.hero-container { margin-top: -118px; padding: 150px 0 32px; }
-  body.test-b .hero.dark > div > div { grid-template-columns: 1fr; gap: 24px; }
-  body.test-b .hero.dark h1 { font-size: 44px; }
-  body.test-b .hero.dark p { font-size: 20px; line-height: 1.3; }
+  body.test-b .hero.dark > div > div { grid-template-columns: 1fr; gap: 40px; }
+  body.test-b .hero.dark h1 { font-size: 40px; line-height: 46px; }
+  body.test-b .hero.dark p { font-size: 24px; line-height: 27.6px; }
   body.test-b main .section.text-slider { margin: 32px 8px; padding: 32px 16px; }
   body.test-b main .section.text-slider .default-content-wrapper { grid-template-columns: 1fr; row-gap: 24px; }
   body.test-b main .section.text-slider h2 { margin-bottom: 8px; }
