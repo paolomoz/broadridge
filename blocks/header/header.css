@@ -416,3 +416,30 @@ header nav .nav-tools .default-content-wrapper > ul > li {
     gap: 32px;
   }
 }
+
+/* main-row children center vertically (live: one 80px row) */
+@media (width >= 900px) {
+  header nav .nav-main .nav-brand,
+  header nav .nav-main .nav-sections,
+  header nav .nav-main .nav-tools {
+    display: flex;
+    align-items: center;
+    height: var(--site-header-height);
+  }
+
+  header nav .nav-sections .default-content-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul {
+    align-items: center;
+  }
+}
+
+/* live behavior: utility bar scrolls away, main bar stays pinned */
+header .nav-wrapper {
+  position: sticky;
+  top: calc(-1 * var(--site-top-header-height));
+}

@@ -21,7 +21,13 @@ function field(f) {
   wrap.className = `form-field${f.half ? ' half' : ''}`;
   const label = document.createElement('label');
   label.setAttribute('for', `f-${f.name}`);
-  label.textContent = f.label + (f.required ? ' *' : '');
+  label.textContent = f.label;
+  if (f.required) {
+    const req = document.createElement('span');
+    req.className = 'req';
+    req.textContent = ' *';
+    label.append(req);
+  }
   let input;
   if (f.type === 'select') {
     input = document.createElement('select');
@@ -53,7 +59,11 @@ export default function decorate(block) {
   const isDownload = block.classList.contains('download');
   const intro = document.createElement('div');
   intro.className = 'form-intro';
-  [...block.children].forEach((row) => { intro.append(...row.querySelector('div').childNodes); row.remove(); });
+  [...block.children].forEach((row) => {
+    const txt = row.textContent.trim().toLowerCase();
+    if (txt === 'contact' || txt === 'download' || txt === 'auto') { row.remove(); return; }
+    intro.append(...row.querySelector('div').childNodes); row.remove();
+  });
 
   const form = document.createElement('form');
   form.noValidate = false;

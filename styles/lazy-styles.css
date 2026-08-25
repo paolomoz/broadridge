@@ -65,3 +65,20 @@ body .press-rail ul {
 body .press-rail li {
   margin-bottom: 8px;
 }
+
+/* contact band — captured: copy left, form card right (~630px) */
+@media (width >= 1140px) {
+  .section.form-container > div:has(.form),
+  .section:has(.form) .fragment-wrapper > div,
+  .section:has(> div > .form-wrapper) > div {
+    display: grid;
+    grid-template-columns: 1fr 630px;
+    gap: 48px;
+  }
+
+  .section:has(.form) .form-wrapper,
+  .section:has(.form) .form {
+    grid-column: 2;
+    grid-row: 1 / span 12;
+  }
+}

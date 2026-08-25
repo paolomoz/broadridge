@@ -77,7 +77,7 @@
   }
 }
 
-/* top-tabber panel: text left, media right (captured layout) */
+/* top-tabber panel: media LEFT, text right (captured layout) */
 @media (width >= 900px) {
   .tabs:not(.side) [role='tabpanel'] {
     display: grid;
@@ -88,10 +88,16 @@
   }
 
   .tabs:not(.side) [role='tabpanel'] img {
+    grid-column: 1;
+    grid-row: 1 / span 6;
     max-height: 480px;
     width: 100%;
     object-fit: contain;
     border-radius: var(--radius-sm);
+  }
+
+  .tabs:not(.side) [role='tabpanel'] > :not(img) {
+    grid-column: 2;
   }
 
   .tabs.side .tabs-list button {
@@ -107,4 +113,42 @@
 /* hidden beats layout display — keep after all layout rules */
 .tabs [role='tabpanel'][hidden] {
   display: none !important;
+}
+
+/* panel headings are content headings, not link-blue (source) */
+.tabs [role='tabpanel'] h3,
+.tabs [role='tabpanel'] h3 a:any-link {
+  color: var(--c-text);
+  text-decoration: none;
+}
+
+.tabs.side [role='tabpanel'] h3,
+.tabs.side [role='tabpanel'] h3 a:any-link {
+  color: var(--c-white);
+}
+
+/* side variant: active trigger gets the captured tint + arrow */
+@media (width >= 900px) {
+  .tabs.side .tabs-list button[aria-selected='true'] {
+    background-color: var(--c-blue-tint);
+    border-radius: var(--radius-sm);
+    position: relative;
+  }
+
+  .tabs.side .tabs-list button[aria-selected='true']::after {
+    content: '\2192';
+    position: absolute;
+    right: 16px;
+    color: var(--c-blue-link);
+  }
+}
+
+/* section header with intro copy: h2 left, paragraph right (source pattern) */
+@media (width >= 900px) {
+  .tabs-container .default-content-wrapper:has(> h2 + p) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
 }

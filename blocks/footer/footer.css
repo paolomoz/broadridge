@@ -65,7 +65,7 @@ footer .footer-links strong {
 }
 
 /* legal row */
-footer .footer > div:last-child ul {
+footer .footer > div > div:last-child ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 20px;
@@ -73,12 +73,34 @@ footer .footer > div:last-child ul {
   padding-top: 20px;
 }
 
-footer .footer > div:last-child a:any-link {
+footer .footer > div > div:last-child a:any-link {
   color: var(--c-neutral-250);
   font-size: 12px;
 }
 
-footer .footer > div:last-child p {
+footer .footer > div > div:last-child p {
   font-size: 12px;
   color: var(--c-neutral-250);
+}
+
+/* social icon row */
+footer .footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+footer .footer-social img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+/* link columns stack vertically inside each column cell */
+footer .footer-links li {
+  display: block;
+}
+
+footer .footer-links ul {
+  display: block;
+  columns: 1;
 }
