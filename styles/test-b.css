@@ -31,6 +31,7 @@ body.test-b {
 }
 body.test-b main { background: var(--tb-neutral); }
 body.test-b main .section { padding: 48px 0; margin: 0 auto; }
+body.test-b main .section:not(:has(*)) { display: none; }
 body.test-b h1, body.test-b h2, body.test-b h3, body.test-b p { margin: 0; }
 body.test-b main h2 { font-size: 40px; font-weight: 400; line-height: 46px; color: #000; }
 
