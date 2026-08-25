@@ -466,8 +466,8 @@ body.test-b footer .footer.block .section:first-child p:nth-of-type(4) {
 body.test-b footer .footer.block .section:first-child p:nth-of-type(5) { font-size: 14px; }
 body.test-b footer .footer-links-container { grid-column: 2; grid-row: 1; }
 body.test-b footer .footer-links-wrapper, body.test-b footer .footer-links.block { max-width: none; margin: 0; padding: 0; }
-body.test-b footer .footer-links.block > div { display: flex; gap: 100px; }
-body.test-b footer .footer-links.block > div > div { width: 159px; flex: none; }
+body.test-b footer .footer-links.block > div { display: flex; gap: 48px; }
+body.test-b footer .footer-links.block > div > div { flex: 1 1 0; }
 body.test-b footer .footer-links.block h3, body.test-b footer .footer-links.block strong,
 body.test-b footer .footer-links.block p:first-child {
   font-size: 18px; line-height: 1.3; font-weight: 400; margin: 0 0 9px;
