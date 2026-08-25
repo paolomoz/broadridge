@@ -236,7 +236,8 @@ body.test-b .tabs.block:not(.side) > div:not(.tabs-list) {
 body.test-b .tabs.block:not(.side) > div:not(.tabs-list)[hidden],
 body.test-b .tabs.block:not(.side) > div:not(.tabs-list)[aria-hidden="true"] { display: none; }
 body.test-b .tabs.block:not(.side) > div img,
-body.test-b .tabs.block:not(.side) > div > p:has(picture) {
+body.test-b .tabs.block:not(.side) > div > p.testb-media,
+body.test-b .tabs.block:not(.side) > div > p:not(.button-wrapper):has(picture) {
   width: 509px; aspect-ratio: 4/3; object-fit: cover; height: auto;
   grid-column: 1; grid-row: 1 / span 3; margin: 0;
 }
