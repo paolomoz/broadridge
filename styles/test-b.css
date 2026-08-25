@@ -219,7 +219,7 @@ body.test-b .insights.block h3, body.test-b .insights.block h3 a {
 body.test-b .insights.block h3 { margin: 8px 24px 0; }
 body.test-b .insights.block > div > div::after {
   display: block; width: 24px; height: 24px; content: '';
-  margin: auto 24px 24px; padding-top: 16px; box-sizing: content-box;
+  margin: auto 24px 24px; padding-top: 32px; box-sizing: content-box;
   background-color: #fff;
   -webkit-mask: var(--tb-arrow) center bottom / 24px no-repeat;
   mask: var(--tb-arrow) center bottom / 24px no-repeat;
@@ -552,7 +552,6 @@ body.test-b .test-b-slider-controls .arrows .prev::after { transform: rotate(180
 body.test-b .test-b-slider-controls .arrows .off { border-color: var(--tb-divider); cursor: default; }
 body.test-b .test-b-slider-controls .arrows .off::after { background-color: #999; }
 body.test-b main .section.insights-container .test-b-slider-controls { margin-top: 64px; }
-body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
 
 /* ================= mobile (gate width 360) — measured live values ================= */
 @media (max-width: 833px) {
@@ -602,8 +601,7 @@ body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 402px; }
   body.test-b main .section.insights-container > div.default-content-wrapper:last-child { display: block; }
   body.test-b main .section.insights-container > div.insights-wrapper { margin-top: 24px; }
   body.test-b .insights.block { gap: 16px; }
-  body.test-b .insights.block > div { width: 218px; min-height: 451px; }
-  body.test-b .insights.block:has(> div:nth-child(5)) > div { min-height: 424px; }
+  body.test-b .insights.block > div { width: 218px; }
   body.test-b .insights.block h3 { margin-top: 16px; }
   body.test-b .cards.awards h3 { margin-top: 16px; }
   body.test-b .cards.featured .cards-card-body h3 { margin-top: 0; }
@@ -997,7 +995,7 @@ body.test-b main .section.b1-banner a.button {
 }
 body.test-b main .section.b1-banner a.button:hover { background: var(--tb-blue-150); color: var(--tb-blue); }
 /* head-left/button-right two-column composition */
-body.test-b main .section.b1-banner { display: grid; grid-template-columns: 880px 1fr; align-items: center; }
+body.test-b main .section.b1-banner { display: grid; grid-template-columns: 880px 1fr; align-items: center; gap: 0 32px; }
 body.test-b main .section.b1-banner h3 { grid-column: 1; }
 body.test-b main .section.b1-banner > div > p:not(.button-wrapper):not(:has(img)) { grid-column: 1; }
 body.test-b main .section.b1-banner .button-wrapper { grid-column: 2; justify-self: end; }
