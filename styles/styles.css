@@ -157,51 +157,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* buttons — captured: .button/.cta, 2px radius, w500, 16/24 padding */
-a.button:any-link, button.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  box-sizing: border-box;
-  margin: 12px 0;
-  border: 0;
-  border-radius: var(--radius-sm);
-  padding: 16px 24px;
-  background-color: var(--c-blue);
-  color: var(--c-white);
-  font-family: var(--body-font-family);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color .2s, color .2s;
-}
-
-a.button:hover, button.button:hover {
-  background-color: var(--c-blue-link);
-  color: var(--c-white);
-  text-decoration: none;
-}
-
-button.button:disabled, button.button:disabled:hover {
-  background-color: var(--c-neutral-300);
-  cursor: not-allowed;
-}
-
-/* ghost / secondary — captured: transparent + 1px border */
-a.button.secondary, button.button.secondary {
-  border: 1px solid currentcolor;
-  background-color: transparent;
-  color: var(--c-blue-link);
-}
-
-.section.dark a.button.secondary,
-.section.navy a.button.secondary {
-  color: var(--c-white);
-}
+/* replica button rules removed — superseded by the figma-to-eds atoms layer (A6, set 2058:4213380) */
 
 main img {
   max-width: 100%;
@@ -743,63 +699,63 @@ main .section:has(.fragment-wrapper .form) {
   --grid-gutter-mobile: 16px;
   /* type styles (base = mobile values; responsive styles re-assigned at breakpoints) */
   --type-display-1-font-family: FreightSans Pro;
-  --type-display-1-font-weight: 350;
+  --type-display-1-font-weight: 400;
   --type-display-1-font-style: normal;
   --type-display-1-font-size: 48px;
   --type-display-1-line-height: 1.15;
   --type-display-1-letter-spacing: 0;
   --type-display-1-paragraph-spacing: 0;
   --type-display-2-font-family: FreightSans Pro;
-  --type-display-2-font-weight: 350;
+  --type-display-2-font-weight: 400;
   --type-display-2-font-style: normal;
   --type-display-2-font-size: 40px;
   --type-display-2-line-height: 1.15;
   --type-display-2-letter-spacing: 0;
   --type-display-2-paragraph-spacing: 0;
   --type-heading-1-font-family: FreightSans Pro;
-  --type-heading-1-font-weight: 350;
+  --type-heading-1-font-weight: 400;
   --type-heading-1-font-style: normal;
   --type-heading-1-font-size: 36px;
   --type-heading-1-line-height: 1.15;
   --type-heading-1-letter-spacing: 0;
   --type-heading-1-paragraph-spacing: 0;
   --type-heading-2-font-family: FreightSans Pro;
-  --type-heading-2-font-weight: 350;
+  --type-heading-2-font-weight: 400;
   --type-heading-2-font-style: normal;
   --type-heading-2-font-size: 32px;
   --type-heading-2-line-height: 1.15;
   --type-heading-2-letter-spacing: 0;
   --type-heading-2-paragraph-spacing: 0;
   --type-heading-3-font-family: FreightSans Pro;
-  --type-heading-3-font-weight: 350;
+  --type-heading-3-font-weight: 400;
   --type-heading-3-font-style: normal;
   --type-heading-3-font-size: 28px;
   --type-heading-3-line-height: 1.15;
   --type-heading-3-letter-spacing: 0;
   --type-heading-3-paragraph-spacing: 0;
   --type-heading-4-font-family: FreightSans Pro;
-  --type-heading-4-font-weight: 350;
+  --type-heading-4-font-weight: 400;
   --type-heading-4-font-style: normal;
   --type-heading-4-font-size: 24px;
   --type-heading-4-line-height: 1.15;
   --type-heading-4-letter-spacing: 0;
   --type-heading-4-paragraph-spacing: 0;
   --type-title-1-font-family: FreightSans Pro;
-  --type-title-1-font-weight: 350;
+  --type-title-1-font-weight: 400;
   --type-title-1-font-style: normal;
   --type-title-1-font-size: 28px;
   --type-title-1-line-height: 1.15;
   --type-title-1-letter-spacing: 0;
   --type-title-1-paragraph-spacing: 0;
   --type-title-2-font-family: FreightSans Pro;
-  --type-title-2-font-weight: 350;
+  --type-title-2-font-weight: 400;
   --type-title-2-font-style: normal;
   --type-title-2-font-size: 24px;
   --type-title-2-line-height: 1.15;
   --type-title-2-letter-spacing: 0;
   --type-title-2-paragraph-spacing: 0;
   --type-title-3-font-family: FreightSans Pro;
-  --type-title-3-font-weight: 350;
+  --type-title-3-font-weight: 400;
   --type-title-3-font-style: normal;
   --type-title-3-font-size: 20px;
   --type-title-3-line-height: 1.15;
@@ -827,35 +783,35 @@ main .section:has(.fragment-wrapper .form) {
   --type-label-small-letter-spacing: 0;
   --type-label-small-paragraph-spacing: 0;
   --type-eyebrow-large-font-family: FreightSans Pro;
-  --type-eyebrow-large-font-weight: 350;
+  --type-eyebrow-large-font-weight: 400;
   --type-eyebrow-large-font-style: normal;
   --type-eyebrow-large-font-size: 18px;
   --type-eyebrow-large-line-height: 1;
   --type-eyebrow-large-letter-spacing: 10%;
   --type-eyebrow-large-paragraph-spacing: 0;
   --type-eyebrow-medium-font-family: FreightSans Pro;
-  --type-eyebrow-medium-font-weight: 350;
+  --type-eyebrow-medium-font-weight: 400;
   --type-eyebrow-medium-font-style: normal;
   --type-eyebrow-medium-font-size: 16px;
   --type-eyebrow-medium-line-height: 1;
   --type-eyebrow-medium-letter-spacing: 10%;
   --type-eyebrow-medium-paragraph-spacing: 0;
   --type-eyebrow-small-font-family: FreightSans Pro;
-  --type-eyebrow-small-font-weight: 350;
+  --type-eyebrow-small-font-weight: 400;
   --type-eyebrow-small-font-style: normal;
   --type-eyebrow-small-font-size: 14px;
   --type-eyebrow-small-line-height: 1;
   --type-eyebrow-small-letter-spacing: 10%;
   --type-eyebrow-small-paragraph-spacing: 0;
   --type-badge-large-font-family: FreightSans Pro;
-  --type-badge-large-font-weight: 350;
+  --type-badge-large-font-weight: 400;
   --type-badge-large-font-style: normal;
   --type-badge-large-font-size: 18px;
   --type-badge-large-line-height: 1;
   --type-badge-large-letter-spacing: -1%;
   --type-badge-large-paragraph-spacing: 0;
   --type-badge-medium-font-family: FreightSans Pro;
-  --type-badge-medium-font-weight: 350;
+  --type-badge-medium-font-weight: 400;
   --type-badge-medium-font-style: normal;
   --type-badge-medium-font-size: 16px;
   --type-badge-medium-line-height: 24px;
@@ -869,28 +825,28 @@ main .section:has(.fragment-wrapper .form) {
   --type-badge-small-letter-spacing: 0;
   --type-badge-small-paragraph-spacing: 0;
   --type-text-link-large-font-family: FreightSans Pro;
-  --type-text-link-large-font-weight: 350;
+  --type-text-link-large-font-weight: 400;
   --type-text-link-large-font-style: normal;
   --type-text-link-large-font-size: 22px;
   --type-text-link-large-line-height: 1.3;
   --type-text-link-large-letter-spacing: 0;
   --type-text-link-large-paragraph-spacing: 22px;
   --type-text-link-medium-font-family: FreightSans Pro;
-  --type-text-link-medium-font-weight: 350;
+  --type-text-link-medium-font-weight: 400;
   --type-text-link-medium-font-style: normal;
   --type-text-link-medium-font-size: 18px;
   --type-text-link-medium-line-height: 1.3;
   --type-text-link-medium-letter-spacing: 0;
   --type-text-link-medium-paragraph-spacing: 18px;
   --type-text-link-small-font-family: FreightSans Pro;
-  --type-text-link-small-font-weight: 350;
+  --type-text-link-small-font-weight: 400;
   --type-text-link-small-font-style: normal;
   --type-text-link-small-font-size: 14px;
   --type-text-link-small-line-height: 1.3;
   --type-text-link-small-letter-spacing: 0;
   --type-text-link-small-paragraph-spacing: 14px;
   --type-quote-large-book-font-family: FreightSans Pro;
-  --type-quote-large-book-font-weight: 350;
+  --type-quote-large-book-font-weight: 400;
   --type-quote-large-book-font-style: normal;
   --type-quote-large-book-font-size: 32px;
   --type-quote-large-book-line-height: 1.25;
@@ -904,14 +860,14 @@ main .section:has(.fragment-wrapper .form) {
   --type-quote-large-bold-letter-spacing: 1%;
   --type-quote-large-bold-paragraph-spacing: 0;
   --type-quote-large-italic-font-family: FreightSans Pro;
-  --type-quote-large-italic-font-weight: 350;
+  --type-quote-large-italic-font-weight: 400;
   --type-quote-large-italic-font-style: italic;
   --type-quote-large-italic-font-size: 32px;
   --type-quote-large-italic-line-height: 1.25;
   --type-quote-large-italic-letter-spacing: 1%;
   --type-quote-large-italic-paragraph-spacing: 0;
   --type-quote-medium-book-font-family: FreightSans Pro;
-  --type-quote-medium-book-font-weight: 350;
+  --type-quote-medium-book-font-weight: 400;
   --type-quote-medium-book-font-style: normal;
   --type-quote-medium-book-font-size: 28px;
   --type-quote-medium-book-line-height: 1.25;
@@ -925,14 +881,14 @@ main .section:has(.fragment-wrapper .form) {
   --type-quote-medium-bold-letter-spacing: 1%;
   --type-quote-medium-bold-paragraph-spacing: 0;
   --type-quote-medium-italic-font-family: FreightSans Pro;
-  --type-quote-medium-italic-font-weight: 350;
+  --type-quote-medium-italic-font-weight: 400;
   --type-quote-medium-italic-font-style: italic;
   --type-quote-medium-italic-font-size: 28px;
   --type-quote-medium-italic-line-height: 1.25;
   --type-quote-medium-italic-letter-spacing: 1%;
   --type-quote-medium-italic-paragraph-spacing: 0;
   --type-quote-small-book-font-family: FreightSans Pro;
-  --type-quote-small-book-font-weight: 350;
+  --type-quote-small-book-font-weight: 400;
   --type-quote-small-book-font-style: normal;
   --type-quote-small-book-font-size: 24px;
   --type-quote-small-book-line-height: 1.25;
@@ -946,14 +902,14 @@ main .section:has(.fragment-wrapper .form) {
   --type-quote-small-bold-letter-spacing: 1%;
   --type-quote-small-bold-paragraph-spacing: 0;
   --type-quote-small-italic-font-family: FreightSans Pro;
-  --type-quote-small-italic-font-weight: 350;
+  --type-quote-small-italic-font-weight: 400;
   --type-quote-small-italic-font-style: italic;
   --type-quote-small-italic-font-size: 24px;
   --type-quote-small-italic-line-height: 1.25;
   --type-quote-small-italic-letter-spacing: 1%;
   --type-quote-small-italic-paragraph-spacing: 0;
   --type-body-1-book-font-family: FreightSans Pro;
-  --type-body-1-book-font-weight: 350;
+  --type-body-1-book-font-weight: 400;
   --type-body-1-book-font-style: normal;
   --type-body-1-book-font-size: 24px;
   --type-body-1-book-line-height: 1.3;
@@ -967,14 +923,14 @@ main .section:has(.fragment-wrapper .form) {
   --type-body-1-bold-letter-spacing: 0;
   --type-body-1-bold-paragraph-spacing: 24px;
   --type-body-1-italic-font-family: FreightSans Pro;
-  --type-body-1-italic-font-weight: 350;
+  --type-body-1-italic-font-weight: 400;
   --type-body-1-italic-font-style: italic;
   --type-body-1-italic-font-size: 24px;
   --type-body-1-italic-line-height: 1.3;
   --type-body-1-italic-letter-spacing: 0;
   --type-body-1-italic-paragraph-spacing: 24px;
   --type-body-2-book-font-family: FreightSans Pro;
-  --type-body-2-book-font-weight: 350;
+  --type-body-2-book-font-weight: 400;
   --type-body-2-book-font-style: normal;
   --type-body-2-book-font-size: 22px;
   --type-body-2-book-line-height: 1.3;
@@ -988,14 +944,14 @@ main .section:has(.fragment-wrapper .form) {
   --type-body-2-bold-letter-spacing: 0;
   --type-body-2-bold-paragraph-spacing: 22px;
   --type-body-2-italic-font-family: FreightSans Pro;
-  --type-body-2-italic-font-weight: 350;
+  --type-body-2-italic-font-weight: 400;
   --type-body-2-italic-font-style: italic;
   --type-body-2-italic-font-size: 22px;
   --type-body-2-italic-line-height: 1.3;
   --type-body-2-italic-letter-spacing: 0;
   --type-body-2-italic-paragraph-spacing: 22px;
   --type-body-3-book-font-family: FreightSans Pro;
-  --type-body-3-book-font-weight: 350;
+  --type-body-3-book-font-weight: 400;
   --type-body-3-book-font-style: normal;
   --type-body-3-book-font-size: 18px;
   --type-body-3-book-line-height: 1.3;
@@ -1009,14 +965,14 @@ main .section:has(.fragment-wrapper .form) {
   --type-body-3-bold-letter-spacing: 0;
   --type-body-3-bold-paragraph-spacing: 18px;
   --type-body-3-italic-font-family: FreightSans Pro;
-  --type-body-3-italic-font-weight: 350;
+  --type-body-3-italic-font-weight: 400;
   --type-body-3-italic-font-style: italic;
   --type-body-3-italic-font-size: 18px;
   --type-body-3-italic-line-height: 1.3;
   --type-body-3-italic-letter-spacing: 0;
   --type-body-3-italic-paragraph-spacing: 18px;
   --type-body-4-book-font-family: FreightSans Pro;
-  --type-body-4-book-font-weight: 350;
+  --type-body-4-book-font-weight: 400;
   --type-body-4-book-font-style: normal;
   --type-body-4-book-font-size: 14px;
   --type-body-4-book-line-height: 1.3;
@@ -1030,7 +986,7 @@ main .section:has(.fragment-wrapper .form) {
   --type-body-4-bold-letter-spacing: 0;
   --type-body-4-bold-paragraph-spacing: 14px;
   --type-body-4-italic-font-family: FreightSans Pro;
-  --type-body-4-italic-font-weight: 350;
+  --type-body-4-italic-font-weight: 400;
   --type-body-4-italic-font-style: italic;
   --type-body-4-italic-font-size: 14px;
   --type-body-4-italic-line-height: 1.3;
@@ -1065,7 +1021,7 @@ main .section:has(.fragment-wrapper .form) {
   --type-code-medium-letter-spacing: 1%;
   --type-code-medium-paragraph-spacing: 0;
   --type-breadcrumb-medium-font-family: FreightSans Pro;
-  --type-breadcrumb-medium-font-weight: 350;
+  --type-breadcrumb-medium-font-weight: 400;
   --type-breadcrumb-medium-font-style: normal;
   --type-breadcrumb-medium-font-size: 16px;
   --type-breadcrumb-medium-line-height: 1.25;
@@ -1079,21 +1035,21 @@ main .section:has(.fragment-wrapper .form) {
   --type-form-label-letter-spacing: 0;
   --type-form-label-paragraph-spacing: 0;
   --type-form-optional-font-family: FreightSans Pro;
-  --type-form-optional-font-weight: 350;
+  --type-form-optional-font-weight: 400;
   --type-form-optional-font-style: normal;
   --type-form-optional-font-size: 16px;
   --type-form-optional-line-height: 1;
   --type-form-optional-letter-spacing: 0;
   --type-form-optional-paragraph-spacing: 0;
   --type-form-helper-text-font-family: FreightSans Pro;
-  --type-form-helper-text-font-weight: 350;
+  --type-form-helper-text-font-weight: 400;
   --type-form-helper-text-font-style: italic;
   --type-form-helper-text-font-size: 14px;
   --type-form-helper-text-line-height: 1;
   --type-form-helper-text-letter-spacing: 0;
   --type-form-helper-text-paragraph-spacing: 0;
   --type-form-input-font-family: FreightSans Pro;
-  --type-form-input-font-weight: 350;
+  --type-form-input-font-weight: 400;
   --type-form-input-font-style: normal;
   --type-form-input-font-size: 16px;
   --type-form-input-line-height: 1;
@@ -1203,3 +1159,156 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==== figma-to-eds token layer END ==== */
+
+/* ==== figma-to-eds atoms layer BEGIN (spec: stardust/canon-source/atoms-spec/) ==== */
+/* A6 Button — set 2058:4213380; Default=primary role, Secondary=outline.
+   Geometry: padding 16/24, gap 4, radius-sm, min-height 56 (M), font 20/500/lh1/-0.4px */
+a.button,
+button.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-component-4);
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--space-component-16) var(--space-component-24);
+  min-height: 56px;
+  border: 2px solid var(--color-action-primary-border-base);
+  border-radius: var(--border-radius-radius-sm);
+  background-color: var(--color-action-primary-surface-base);
+  color: var(--color-action-primary-content-base);
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-short4, 200ms) var(--motion-easing-standard),
+    border-color var(--motion-duration-short4, 200ms) var(--motion-easing-standard),
+    color var(--motion-duration-short4, 200ms) var(--motion-easing-standard);
+}
+
+a.button:hover,
+button.button:hover {
+  background-color: var(--color-action-primary-surface-hover);
+  border-color: var(--color-action-primary-border-hover);
+  color: var(--color-action-primary-content-hover);
+}
+
+a.button:active,
+button.button:active {
+  background-color: var(--color-action-primary-surface-active);
+  border-color: var(--color-action-primary-border-active);
+}
+
+a.button:focus-visible,
+button.button:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 3px var(--color-action-primary-border-focus-ring); /* focus ring INSIDE bounds (2058:4213396) */
+}
+
+a.button:disabled,
+button.button:disabled,
+a.button.disabled {
+  background-color: var(--color-action-disabled);
+  border-color: var(--color-action-disabled);
+  color: var(--color-action-disabled-content);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* small size */
+a.button.small,
+button.button.small {
+  min-height: 48px;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+/* Secondary (outline) — 2058:4213433 */
+a.button.secondary,
+button.button.secondary {
+  background-color: transparent;
+  border-color: var(--color-action-secondary-border-base);
+  color: var(--color-action-secondary-content-base);
+}
+
+a.button.secondary:hover,
+button.button.secondary:hover {
+  background-color: transparent;
+  border-color: var(--color-action-secondary-border-hover);
+  color: var(--color-action-secondary-content-hover);
+}
+
+a.button.secondary:active,
+button.button.secondary:active {
+  border-color: var(--color-action-secondary-border-active);
+  color: var(--color-action-secondary-content-active);
+}
+
+a.button.secondary:focus-visible,
+button.button.secondary:focus-visible {
+  box-shadow: none;
+  outline: 3px solid var(--color-action-secondary-border-focus-ring); /* ring OUTSIDE border box (2058:4213448) */
+  outline-offset: -1px;
+}
+
+a.button.secondary:disabled,
+a.button.secondary.disabled {
+  background-color: transparent;
+  border-color: var(--color-action-disabled);
+  color: var(--color-action-disabled);
+}
+
+/* A5 Button Group — 354:11586: row, wrap, gap 16 */
+p.button-container,
+p.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-component-16);
+  align-items: center;
+  margin: 0;
+}
+
+/* A12 Link (standalone arrow/cta link) — 24:697, tertiary role */
+a.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 24px;
+  color: var(--color-action-tertiary-content-base);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+a.cta-link:hover { color: var(--color-action-tertiary-content-hover); }
+a.cta-link:active { color: var(--color-action-tertiary-content-active); }
+
+a.cta-link:focus-visible {
+  outline: 3px solid var(--color-action-tertiary-border-focus-ring);
+  outline-offset: 0;
+  border-radius: var(--border-radius-radius-sm);
+}
+
+/* A2 Badge — 73:12484: 20px tall, 2/6 padding, uppercase 14/350 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  border-radius: var(--border-radius-radius-sm);
+  background-color: var(--color-edge-badge-surface);
+  color: var(--color-edge-badge-content);
+  font-weight: 400; /* kit Book=350 -> web 400, see donor-tokens normalizations */
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+/* ==== figma-to-eds atoms layer END ==== */

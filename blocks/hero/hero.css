@@ -1,102 +1,102 @@
-/* Broadridge hero — replica of .hero-general (navy band, breadcrumb, left headline) */
-.hero-wrapper {
-  background-color: var(--c-navy-deep);
-  color: var(--c-white);
+/* hero — Figma web kit H4 General Hero (set 1793:54916, gate 1893:11962).
+   Light default per kit; dark/facet backgrounds are section options.
+   Geometry from the gate instance: 64px block padding, breadcrumb + 48px,
+   two 576px columns on a 32px gutter, button row + 48px.
+   Variants: (deconstructed) H1, (split) H2, (feature) H3, (stacked) H4. */
+
+.section.hero-container {
+  padding: 0;
 }
 
-.hero {
-  position: relative;
-  padding: 48px 0 32px;
-  min-height: 180px;
-}
-
-.hero h1 {
-  max-width: 720px;
-  margin-bottom: 16px;
-  color: var(--c-white);
-  font-weight: 400;
-}
-
-.hero p {
-  max-width: 640px;
-  color: var(--c-white);
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-/* breadcrumb row (first block row when authored) */
-.hero > div:first-child:not(:only-child) p,
-.hero .hero-breadcrumb {
-  font-size: 14px;
-}
-
-.hero > div:first-child:not(:only-child) a:any-link {
-  color: var(--c-blue-350);
-  text-decoration: none;
-}
-
-.hero img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .35;
-  z-index: 0;
-}
-
-.hero > div {
-  position: relative;
-  z-index: 1;
-}
-
-.hero .button {
-  background-color: var(--c-blue);
-}
-
-/* variant: half — light hero with media right (insights study) */
-.hero.half {
-  background-color: var(--c-navy-deep);
-}
-
-@media (width >= 900px) {
-  .hero {
-    padding: 64px 0 48px;
-  }
-
-  .hero.half > div:last-child {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-  }
-
-  .hero.half img {
-    position: static;
-    opacity: 1;
-    border-radius: var(--radius-sm);
-  }
-}
-
-/* full-bleed band: background at section level, content in container */
-main > .section.hero-container {
-  background-color: var(--c-navy-deep);
+/* full-bleed: the hero manages its own container (1184 content grid) */
+.section.hero-container > div.hero-wrapper {
+  max-width: none;
   padding: 0;
 }
 
 .hero-wrapper {
-  background-color: transparent;
-  max-width: var(--container-wide);
-  margin: 0 auto;
-  padding: 0 var(--gutter-m);
+  background-color: var(--color-surface-light);
+  color: var(--color-content-primary);
 }
 
 .hero {
-  padding: 40px 0 56px;
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 64px var(--grid-page-margin-mobile);
+}
+
+@media (width >= 834px) {
+  .hero {
+    padding: 64px var(--grid-page-margin-tablet);
+  }
+}
+
+@media (width >= 1240px) {
+  .hero {
+    padding: 64px 0;
+  }
+}
+
+/* breadcrumb (first row) — A3, functional/breadcrumb-medium */
+.hero .hero-breadcrumb {
+  margin: 0 0 48px;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.hero .hero-breadcrumb p {
+  margin: 0;
+}
+
+.hero .hero-breadcrumb a {
+  color: var(--color-action-breadcrumb-content-base);
+  text-decoration: none;
+}
+
+.hero .hero-breadcrumb a:hover {
+  color: var(--color-action-breadcrumb-content-hover);
+}
+
+/* content row — Display-2 headline left, Body-2 copy right */
+.hero .hero-breadcrumb + div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gutter-desktop);
+  align-items: start;
+}
+
+@media (width < 834px) {
+  .hero .hero-breadcrumb + div {
+    grid-template-columns: 1fr;
+    gap: var(--grid-gutter-mobile);
+  }
 }
 
 .hero h1 {
-  max-width: 1160px;
-  font-size: var(--heading-font-size-xxl);
-  line-height: 1.15;
+  margin: 0;
+  font-weight: var(--type-display-2-font-weight);
+  font-size: var(--type-display-2-font-size);
+  font-style: normal;
+  line-height: var(--type-display-2-line-height);
+  letter-spacing: var(--type-display-2-letter-spacing);
+}
+
+.hero p {
+  margin: 0;
+  font-weight: var(--type-body-2-book-font-weight);
+  font-size: var(--type-body-2-book-font-size);
+  line-height: var(--type-body-2-book-line-height);
+}
+
+/* button row */
+.hero .hero-breadcrumb + div + div {
+  margin-top: 48px;
+}
+
+/* block decorator wraps cell text in <p>; keep breadcrumb at functional/breadcrumb-medium */
+.hero .hero-breadcrumb p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
 }
