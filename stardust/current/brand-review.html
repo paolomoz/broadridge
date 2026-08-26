@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broadridge — current-state brand review</title>
+<style>
+@font-face { font-family: 'freight-sans-pro'; src: url('assets/fonts/l-35060336.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'freight-sans-pro'; src: url('assets/fonts/l-5b721b38.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'freight-sans-pro'; src: url('assets/fonts/l-ca90b67d.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'freight-sans-pro'; src: url('assets/fonts/l-04451ba2.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'freight-sans-pro'; src: url('assets/fonts/l-c2ba5f01.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+:root {
+  --primary: #2662fc; --primary-dark: #000c36; --accent: #0f3db5;
+  --secondary: #001f5a; --text: #1a1a1a; --text-muted: #555f6e;
+  --surface: #f9f9f9; --surface-alt: #e7f1fc; --border: #bad1f5;
+  --display: 'freight-sans-pro', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --body: 'freight-sans-pro', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; }
+body { font-family: var(--body); color: var(--text); background: #fff; line-height: 1.5; }
+nav.top { position: sticky; top: 0; z-index: 10; background: var(--primary-dark); color: #fff; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 10px 24px; font-family: var(--display); text-transform: uppercase; letter-spacing: 1.5px; font-size: 12px; }
+nav.top .brand { font-weight: 700; margin-right: 16px; }
+nav.top a { color: #fff; text-decoration: none; padding: 5px 12px; border-radius: 150px; }
+nav.top a:hover { background: rgba(255,255,255,.18); }
+main { max-width: 1184px; margin: 0 auto; padding: 0 24px; }
+section { padding: 48px 0; border-bottom: 1px solid #e6e6e6; page-break-inside: avoid; }
+h1,h2,h3,h4 { font-family: var(--display); font-weight: 400; }
+h2 { font-size: 40px; line-height: 1.15; margin-bottom: 8px; }
+h3 { font-size: 24px; margin: 24px 0 12px; }
+.badge { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: 150px; background: var(--surface-alt); color: var(--accent); vertical-align: middle; margin-left: 10px; font-family: var(--display); font-weight: 500; }
+.masthead { background: var(--primary-dark); color: #fff; padding: 72px 0 56px; border: 0; }
+.masthead .inner { max-width: 1184px; margin: 0 auto; padding: 0 24px; }
+.masthead h1 { font-size: 56px; font-weight: 700; }
+.masthead .hero-line { color: #7ea4ff; font-size: 24px; font-weight: 300; margin: 8px 0 4px; }
+.masthead .tagline { color: #ccd6ea; max-width: 720px; }
+.masthead .origin { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: #8fa2c8; margin-top: 16px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.stat { background: var(--surface); border-radius: 2px; padding: 20px; }
+.stat b { display: block; font-size: 28px; font-family: var(--display); color: var(--secondary); }
+.stat span { font-size: 13px; color: var(--text-muted); }
+.shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.shot { background: var(--surface); border-radius: 2px; overflow: hidden; }
+.shot img { width: 100%; height: 260px; object-fit: cover; object-position: top; display: block; }
+.shot figcaption { padding: 10px 12px; font-size: 13px; }
+.shot code { display: block; font-size: 11px; color: var(--text-muted); }
+.swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.swatch { border: 1px solid #e6e6e6; border-radius: 2px; min-height: 200px; }
+.swatch .chip { height: 96px; border-radius: 2px 2px 0 0; }
+.swatch .meta { padding: 12px; font-size: 12px; }
+.swatch .role { font-family: var(--display); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-size: 12px; }
+.swatch code { font-family: ui-monospace, Menlo, monospace; color: var(--text-muted); }
+.usedas span { display: inline-block; background: var(--surface); border-radius: 150px; padding: 1px 8px; margin: 2px 2px 0 0; font-size: 10px; }
+.spec { border-bottom: 1px dashed #e0e0e0; padding: 16px 0; }
+.spec .label { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-muted); margin-bottom: 4px; display: block; }
+.voice-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+.vcard { background: var(--surface-alt); border-radius: 2px; padding: 20px; }
+.vcard .k { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-family: var(--display); }
+.vcard .v { font-size: 20px; font-family: var(--display); margin-top: 6px; }
+table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 14px; }
+th { text-align: left; font-family: var(--display); text-transform: uppercase; letter-spacing: 1px; font-size: 11px; color: var(--text-muted); padding: 8px; border-bottom: 2px solid var(--border); }
+td { padding: 8px; border-bottom: 1px solid #eee; }
+.pill { display: inline-block; background: var(--primary); color: #fff; border-radius: 150px; padding: 3px 14px; font-size: 13px; }
+.tensions { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+.tension { border-left: 4px solid var(--accent); background: var(--surface); padding: 16px 20px; border-radius: 0 2px 2px 0; }
+.tension .tag { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--accent); }
+.tension h4 { font-size: 17px; font-weight: 600; margin: 4px 0; }
+.tension p { font-size: 14px; }
+.tension .src { font-size: 11px; color: var(--text-muted); margin-top: 8px; font-family: ui-monospace, Menlo, monospace; }
+.motifs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.motif { border: 1px solid #e6e6e6; border-radius: 2px; padding: 16px; text-align: center; font-size: 13px; }
+.motif .demo { width: 100%; height: 80px; background: var(--primary); margin-bottom: 10px; }
+.complist { margin-top: 16px; }
+.complist li { list-style: none; border-left: 3px solid var(--primary); padding: 10px 16px; margin-bottom: 8px; background: var(--surface); font-size: 14px; }
+.complist b { font-family: var(--display); }
+.xpromo { background: var(--primary-dark); border: 4px dashed var(--primary); border-radius: 2px; padding: 32px; color: #fff; margin-top: 16px; }
+.xpromo .tag { color: #7ea4ff; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-family: var(--display); }
+.xpromo h3 { color: #fff; font-size: 32px; font-weight: 400; margin: 8px 0 16px; }
+.xpromo .btn { display: inline-block; background: var(--primary); color: #fff; border-radius: 2px; padding: 16px 24px; font-weight: 500; font-size: 16px; }
+.syscomp li { list-style: none; padding: 12px 16px; border: 1px solid #e6e6e6; border-radius: 2px; margin-bottom: 8px; font-size: 14px; }
+.kind { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; background: var(--secondary); color: #fff; border-radius: 150px; padding: 2px 10px; margin-right: 8px; font-family: var(--display); }
+.logorow { display: flex; gap: 32px; align-items: flex-start; margin-top: 16px; }
+.logorow .logobox { background: var(--primary-dark); padding: 32px; border-radius: 2px; }
+.logorow img { max-width: 280px; display: block; }
+dl { font-size: 14px; }
+dt { font-family: var(--display); text-transform: uppercase; letter-spacing: 1px; font-size: 11px; color: var(--text-muted); margin-top: 10px; }
+.bars { display: flex; align-items: flex-end; gap: 12px; margin: 16px 0; height: 110px; }
+.bars div { background: var(--primary); width: 44px; border-radius: 2px 2px 0 0; position: relative; }
+.bars span { position: absolute; top: -20px; width: 100%; text-align: center; font-size: 11px; color: var(--text-muted); }
+.radpill { display: inline-block; border: 2px solid var(--primary); color: var(--accent); padding: 6px 18px; margin-right: 10px; font-size: 13px; font-family: ui-monospace, Menlo, monospace; }
+footer.rev { padding: 40px 24px 64px; font-size: 13px; color: var(--text-muted); max-width: 1184px; margin: 0 auto; }
+@media (max-width: 900px) { .shots, .swatches, .motifs { grid-template-columns: repeat(2,1fr); } .voice-cards, .stats, .tensions { grid-template-columns: 1fr; } }
+@media print { nav.top { position: static; } section { border: 0; } }
+</style>
+</head>
+<body>
+<nav class="top">
+  <span class="brand">Broadridge · Current state</span>
+  <a href="#coverage">Coverage</a><a href="#pages">Pages</a><a href="#palette">Palette</a><a href="#type">Typography</a><a href="#voice">Voice</a><a href="#tensions">Tensions</a><a href="#motifs">Motifs</a><a href="#components">Components</a><a href="#xpromo">Cross-promo</a><a href="#system">System</a><a href="#logo">Logo</a><a href="#spacing">Spacing</a>
+</nav>
+
+<div class="masthead"><div class="inner">
+  <h1>Broadridge</h1>
+  <p class="hero-line">NAVIGATE — tokenized markets with confidence.</p>
+  <p class="tagline">Global fintech leader powering investing, corporate governance, and communications for banks, broker-dealers, asset managers, wealth firms, and corporate issuers. NYSE: BR.</p>
+  <p class="origin">https://www.broadridge.com · extracted 2026-08-24 · stardust 0.18.1</p>
+</div></div>
+
+<main>
+<section id="coverage">
+  <h2>Coverage<span class="badge">cross-page</span></h2>
+  <div class="stats">
+    <div class="stat"><b>5 / 1,044</b><span>pages extracted / discovered (us-en sitemap; legacy sitemap of 3,696 URLs is stale — old IA 301-redirects)</span></div>
+    <div class="stat"><b>medium–spec</b><span>wait strategy · 2.5–8s waits · 0 crawl failures · consent auto-dismissed (patched retry)</span></div>
+    <div class="stat"><b>8 colors · 1 family · 4 system components</b><span>brand surface: freight-sans-pro (Typekit, 5 weights captured), navy/blue palette, flat 2px-radius system</span></div>
+  </div>
+</section>
+
+<section id="pages">
+  <h2>Pages<span class="badge">observed</span></h2>
+  <div class="shots">
+    <figure class="shot"><img src="assets/screenshots/index.png" alt="Home"><figcaption>Home — Global Leader Financial Technology<code>/</code></figcaption></figure>
+    <figure class="shot"><img src="assets/screenshots/who-we-serve-capital-markets.png" alt="Capital Markets"><figcaption>Capital Markets (segment)<code>/who-we-serve/capital-markets</code></figcaption></figure>
+    <figure class="shot"><img src="assets/screenshots/capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy.png" alt="Issuer Proxy"><figcaption>Issuer Proxy (capability)<code>/capability/…/proxy-services/issuer-proxy</code></figcaption></figure>
+    <figure class="shot"><img src="assets/screenshots/insights-2026-digital-transformation-study.png" alt="Digital Transformation Study"><figcaption>2026 Digital Transformation Study (insight)<code>/insights/2026-digital-transformation-study</code></figcaption></figure>
+    <figure class="shot"><img src="assets/screenshots/about.png" alt="About"><figcaption>About us<code>/about/</code></figcaption></figure>
+  </div>
+</section>
+
+<section id="palette">
+  <h2>Color palette<span class="badge">cross-page</span></h2>
+  <div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#ffffff;border-bottom:1px solid #eee"></div><div class="meta"><span class="role">background</span><br><code>#ffffff</code> · 3,563<div class="usedas"><span>background</span><span>border</span><span>text</span></div><small>index · capital-markets · about</small></div></div>
+    <div class="swatch"><div class="chip" style="background:#000c36"></div><div class="meta"><span class="role">secondary / navy-deep</span><br><code>#000c36</code> · 2,703<div class="usedas"><span>background</span><span>border</span><span>text</span></div><small>heroes · footer · navy cards</small></div></div>
+    <div class="swatch"><div class="chip" style="background:#f9f9f9"></div><div class="meta"><span class="role">surface</span><br><code>#f9f9f9</code> · 1,579<div class="usedas"><span>background</span></div><small>alternate sections</small></div></div>
+    <div class="swatch"><div class="chip" style="background:#e7f1fc"></div><div class="meta"><span class="role">surface-tint</span><br><code>#e7f1fc</code> · 1,571<div class="usedas"><span>background</span><span>text</span></div><small>card faces · form band</small></div></div>
+    <div class="swatch"><div class="chip" style="background:#1a1a1a"></div><div class="meta"><span class="role">text-primary</span><br><code>#1a1a1a</code> · 1,138<div class="usedas"><span>text</span></div><small>#000000 clustered in (ΔE&lt;5)</small></div></div>
+    <div class="swatch"><div class="chip" style="background:#001f5a"></div><div class="meta"><span class="role">accent-navy</span><br><code>#001f5a</code> · 1,108<div class="usedas"><span>background</span><span>text</span></div><small>navy card faces</small></div></div>
+    <div class="swatch"><div class="chip" style="background:#0f3db5"></div><div class="meta"><span class="role">accent-link</span><br><code>#0f3db5</code> · 362<div class="usedas"><span>background</span><span>text</span></div><small>in-text links · arrow CTAs</small></div></div>
+    <div class="swatch"><div class="chip" style="background:#2662fc"></div><div class="meta"><span class="role">primary</span><br><code>#2662fc</code> · 338<div class="usedas"><span>background</span><span>border</span><span>text</span></div><small>buttons · CTAs (sole action color)</small></div></div>
+  </div>
+  <p style="margin-top:12px;font-size:13px;color:var(--text-muted)">Dropped from top-8: #bad1f5 border (162), #082485 (98), #b3b3b3 border (42), #6aaae4 (25). Source: <code>_brand-extraction.json § palette</code></p>
+</section>
+
+<section id="type">
+  <h2>Typography<span class="badge">cross-page</span><span class="badge">No modular scale</span></h2>
+  <div class="spec"><span class="label">H1 display · freight-sans-pro 700 / 128px / 1.15 (home hero carousel)</span><div style="font-family:var(--display);font-weight:700;font-size:72px;line-height:1.1">NAVIGATE</div></div>
+  <div class="spec"><span class="label">H2 · freight-sans-pro 400 / 40px / 1.15 (31 occurrences — the workhorse)</span><div style="font-family:var(--display);font-weight:400;font-size:40px">Powering the pulse of the financial industry</div></div>
+  <div class="spec"><span class="label">H3 · freight-sans-pro 400 / 36px / 1.2</span><div style="font-family:var(--display);font-weight:400;font-size:36px">Setting the standard for global trading and operations</div></div>
+  <div class="spec"><span class="label">H4 · freight-sans-pro 400 / 32px</span><div style="font-family:var(--display);font-weight:400;font-size:32px">Enhance every aspect of the trade lifecycle</div></div>
+  <div class="spec"><span class="label">Body · freight-sans-pro 400 / 16–20px / 1.5</span><p style="max-width:720px">Broadridge is a global technology leader with trusted expertise and transformative technology, helping our clients and the financial services industry operate, innovate, and grow.</p></div>
+  <p style="margin-top:12px;font-size:13px;color:var(--text-muted)">Scale ratios 3.2 → 1.11 → 1.13 (ad-hoc). Weights loaded: 300/400/500/600/700 via Adobe Typekit, font-display: swap. Source: <code>_brand-extraction.json § type</code></p>
+</section>
+
+<section id="voice">
+  <h2>Voice<span class="badge">home-only</span><span class="badge">tone: professional-formal (inferred)</span></h2>
+  <div class="voice-cards">
+    <div class="vcard"><div class="k">Hero headline</div><div class="v">NAVIGATE tokenized markets with confidence.</div></div>
+    <div class="vcard"><div class="k">Tagline</div><div class="v">Powering the pulse of the financial industry</div></div>
+    <div class="vcard"><div class="k">First paragraph</div><div class="v" style="font-size:15px">Broadridge is a global technology leader with trusted expertise and transformative technology, helping our clients and the financial services industry operate, innovate, and grow.</div></div>
+  </div>
+  <h3>CTA frequency</h3>
+  <table><tr><th>Label</th><th>Total</th><th>Pages</th></tr>
+    <tr><td><span class="pill">Contact us</span></td><td>10</td><td>5/5</td></tr>
+    <tr><td><span class="pill">Client access</span></td><td>10</td><td>5/5</td></tr>
+    <tr><td><span class="pill">Explore all insights</span></td><td>3</td><td>3/5</td></tr>
+    <tr><td><span class="pill">Download the full report</span></td><td>3</td><td>1/5</td></tr>
+  </table>
+  <h3>Repeated headings (≥3 pages)</h3>
+  <table><tr><th>Heading</th><th>Level</th><th>Pages</th></tr>
+    <tr><td>What's next for your business?</td><td>H2</td><td>4/5</td></tr>
+    <tr><td>Insights &amp; perspectives</td><td>H2</td><td>3/5</td></tr>
+  </table>
+  <h3>Tone metrics</h3>
+  <div class="stats">
+    <div class="stat"><b>4%</b><span>headings uppercase (mixed-case convention; display hero is the exception)</span></div>
+    <div class="stat"><b>64</b><span>distinct headings across 5 pages</span></div>
+    <div class="stat"><b>~90</b><span>distinct CTA labels (nav + card links included)</span></div>
+  </div>
+</section>
+
+<section id="tensions">
+  <h2>Tensions<span class="badge">decision agenda for direct</span></h2>
+  <div class="tensions">
+    <div class="tension"><span class="tag">T-scale · synthesized</span><h4>Type scale is ad-hoc</h4><p>128 → 40 → 36 → 32, no consistent ratio. Direct will need to decide whether the target adopts a modular scale.</p><div class="src">_brand-extraction.json § type.scaleAudit</div></div>
+    <div class="tension"><span class="tag">T-logo-variants · observed</span><h4>Only one logo variant captured</h4><p>White-on-navy header SVG (brodridgeLogo.svg) only. The migration needs monochrome / dark-on-light / favicon-scale variants; direct should plan that set.</p><div class="src">_brand-extraction.json § logo</div></div>
+    <div class="tension"><span class="tag">T-color-imbalance · observed</span><h4>#f9f9f9 (surface) appears as background only</h4><p>Never as text or border. Direct will need to decide: drop, expand, or keep as section-alternation surface.</p><div class="src">_brand-extraction.json § palette[].usedAs</div></div>
+    <div class="tension"><span class="tag">T-img-alt-empty · cross-page</span><h4>30% of images carry empty alt text</h4><p>39 of 129 images. Accessibility issue and a content-sourcing decision for the migration.</p><div class="src">pages/*.json § media.imgs[].alt</div></div>
+    <div class="tension"><span class="tag">T-agent-alt-generic · cross-page</span><h4>Banner images ship alt="header"</h4><p>5 hero/banner images across pages use the literal alt text "header" — content-free for screen readers; migrate should re-author alts.</p><div class="src">pages/*.json § media.imgs[].alt</div></div>
+    <div class="tension"><span class="tag">T-agent-dual-ia · observed</span><h4>Two IAs coexist: legacy sitemap vs live URL space</h4><p>The 3,696-URL legacy sitemap (old /financial-services/… IA) 301-redirects into the current /who-we-serve/ + /capability/ IA (1,044 URLs). Migration inventory must be built from the us-en sitemap, and redirect mapping preserved.</p><div class="src">_crawl-log.json · robots.txt Sitemap directive</div></div>
+  </div>
+</section>
+
+<section id="motifs">
+  <h2>Motifs<span class="badge">cross-page</span></h2>
+  <div class="motifs">
+    <div class="motif"><div class="demo" style="border-radius:2px"></div>2px — primary radius · 130×</div>
+    <div class="motif"><div class="demo" style="border-radius:4px"></div>4px — secondary · 80×</div>
+    <div class="motif"><div class="demo" style="border-radius:150px;height:48px;width:60%;margin:16px auto 10px"></div>pill — badges/controls · 22×</div>
+    <div class="motif"><div class="demo" style="background:#fff;border-radius:2px;box-shadow:0 4px 8px rgba(0,0,0,.2);border:1px solid #eee"></div>shadow — rare, floating UI only</div>
+  </div>
+</section>
+
+<section id="components">
+  <h2>Components<span class="badge">cross-page</span></h2>
+  <ul class="complist">
+    <li><b>hero-band-navy</b> — full-width #000c36 hero band, headline left / subcopy right · 5/5 pages</li>
+    <li><b>card-grid</b> — 4-up icon/illustration card grids on tinted faces · 4/5 pages</li>
+    <li><b>insights-rail</b> — "Insights &amp; perspectives" card carousel, navy/photo faces + label chips (REPORT, ARTICLE) · 3/5 pages</li>
+    <li><b>stat-carousel</b> — large-numeral proof stats ($15T, 15,000, 10,000, 2,200, 120+) · 3/5 pages</li>
+    <li><b>awards-band</b> — "Recognized by the industry" tinted band with award cards · 2/5 pages</li>
+    <li><b>tabbed-capability-list</b> — left link-list + right blue detail card · 3/5 pages</li>
+    <li><b>contact-form-band</b> — "What's next for your business?" lead form above footer · 4/5 pages</li>
+    <li><b>footer-mega</b> — navy mega-footer, 3 link columns, NYSE: BR ticker, locale links · 5/5</li>
+    <li><b>nav-mega</b> — two-tier header: utility bar + primary dropdown nav + blue Contact us · 5/5</li>
+    <li><b>line-illustration</b> — thin-line financial illustrations on tinted card faces</li>
+    <li><b>buttons</b> — primary #2662fc/white 2px radius 16×24 pad w500 · ghost white-border on navy · arrow-link tertiary. Dual-CTA: primary-then-arrow-link</li>
+  </ul>
+</section>
+
+<section id="xpromo">
+  <h2>Cross-promo reproduction<span class="badge">cross-page</span></h2>
+  <div class="xpromo">
+    <span class="tag">Reproduction · approximate — appears on 4/5 pages, directly above the footer</span>
+    <h3>What's next for your business?</h3>
+    <p style="max-width:520px;color:#ccd6ea">We want to hear more about what you need to improve your business and drive transformative innovation, efficiency, and growth.</p>
+    <p style="margin:16px 0;color:#8fa2c8;font-size:13px">[ lead form: First name · Last name · Work email · Telephone · Job title · Company · Country · message ] + regional phone numbers (North America, EMEA, Hong Kong, Singapore)</p>
+    <span class="btn">Contact us</span>
+  </div>
+</section>
+
+<section id="system">
+  <h2>System components<span class="badge">cross-page</span></h2>
+  <ul class="syscomp">
+    <li><span class="kind">header</span><b>site-header</b> · 5/5 — Who we serve · Capabilities · Insights · About us — CTAs: Client access, Careers, Search, Contact us</li>
+    <li><span class="kind">footer</span><b>site-footer</b> · 5/5 — Company information · Who we serve — About Broadridge, Careers, Client access, Company newsroom, Investor relations, Manage email preferences + legal row + NYSE: BR</li>
+    <li><span class="kind">cta-band</span><b>contact-form-band</b> · 4/5 — "What's next for your business?" — Contact us</li>
+    <li><span class="kind">cross-promo</span><b>insights-rail</b> · 3/5 — "Insights &amp; perspectives" — Explore all insights</li>
+  </ul>
+</section>
+
+<section id="logo">
+  <h2>Logo &amp; favicons<span class="badge">home-only</span></h2>
+  <div class="logorow">
+    <div class="logobox"><img src="assets/logo.svg" alt="Broadridge logo (white wordmark on navy)"></div>
+    <dl>
+      <dt>Source</dt><dd>header &lt;img&gt; — https://www.broadridge.com/_Static-Assets/images/brodridgeLogo.svg</dd>
+      <dt>File</dt><dd>SVG, 160×36 rendered (white wordmark + geometric mark; requires dark ground)</dd>
+      <dt>Variants captured</dt><dd>white-on-navy header logo · favicon.ico · footer logomark.webp (URL recorded)</dd>
+      <dt>Variants not captured</dt><dd>dark-on-light wordmark · monochrome · social-card lockup (og-image JPG exists)</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="spacing">
+  <h2>Spacing &amp; shape<span class="badge">cross-page</span></h2>
+  <p>Base unit 8px · container 1184px (<code>--container-width</code>, wrappers observed to 1360px) · gutter 24px (<code>--gutter: 1.5rem</code>) · dominant section padding 48px.</p>
+  <div class="bars">
+    <div style="height:8%"><span>8</span></div><div style="height:16%"><span>16</span></div><div style="height:24%"><span>24</span></div><div style="height:32%"><span>32</span></div><div style="height:48%"><span>48</span></div><div style="height:64%"><span>64</span></div><div style="height:96%"><span>96</span></div>
+  </div>
+  <h3>Radii revisited</h3>
+  <span class="radpill" style="border-radius:2px">2px · 130×</span>
+  <span class="radpill" style="border-radius:4px">4px · 80×</span>
+  <span class="radpill" style="border-radius:150px">pill · 22×</span>
+</section>
+</main>
+
+<footer class="rev">
+  <p><b>Provenance.</b> This review read: _brand-extraction.json, _crawl-log.json, pages/*.json (5), assets/screenshots/*, DESIGN.json. All values captured from live Playwright renders on 2026-08-24; no synthesized page records. Chrome colors: --primary #2662fc (brand action color; passes the saturation intent — the max&lt;240 letter-rule would have picked #0f3db5), --primary-dark #000c36 (hue-anchored navy), --accent #0f3db5.</p>
+  <p style="margin-top:8px"><b>What's next:</b> run <code>$stardust direct</code> to resolve the redesign/migration direction. For this 1:1 migration, direction = preserve the current system as canon.</p>
+  <p style="margin-top:8px">Badge legend: observed = frequency-counted from CSS · cross-page = aggregated across all 5 pages · home-only = single-page source · inferred = agent judgment · synthesized = constructed claim (register, scale audit).</p>
+</footer>
+</body>
+</html>

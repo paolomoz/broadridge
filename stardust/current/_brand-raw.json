@@ -1,0 +1,3638 @@
+{
+ "pages": {
+  "index": {
+   "colors": {
+    "rgb(0, 12, 54)": {
+     "count": 492,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "nav": 1,
+      "span.primary-nav-link": 1,
+      "div.heading": 1
+     }
+    },
+    "rgb(255, 255, 255)": {
+     "count": 698,
+     "usedAs": {
+      "text": 1,
+      "background": 1,
+      "border": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "a.utility-nav-link": 1,
+      "span.sr-only": 1,
+      "span": 1
+     }
+    },
+    "rgb(38, 98, 252)": {
+     "count": 73,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "button.button": 1,
+      "span": 1,
+      "a.cta": 1,
+      "span.tabs__activator": 1
+     }
+    },
+    "rgb(249, 249, 249)": {
+     "count": 256,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "main.main": 1,
+      "input.contact-us__form-input": 1,
+      "div.select": 1,
+      "div.dropdown": 1
+     }
+    },
+    "rgb(0, 31, 90)": {
+     "count": 322,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "article.card": 1,
+      "a.card": 1,
+      "div.card__content": 1,
+      "span.text-atom": 1
+     }
+    },
+    "rgb(15, 61, 181)": {
+     "count": 74,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "span.badge": 1,
+      "a.card": 1
+     }
+    },
+    "rgb(0, 0, 0)": {
+     "count": 221,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1,
+      "span.text-atom": 1,
+      "div.heading": 1,
+      "p": 1
+     }
+    },
+    "rgb(231, 241, 252)": {
+     "count": 426,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "a.card": 1,
+      "button.tabs__trigger-item": 1,
+      "div.contact-us__wrap": 1
+     }
+    },
+    "rgb(186, 209, 245)": {
+     "count": 42,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "span.badge": 1,
+      "a": 1,
+      "span.open_dns": 1,
+      "span.sr-only": 1
+     }
+    },
+    "rgb(8, 36, 133)": {
+     "count": 20,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1
+     }
+    },
+    "rgb(179, 179, 179)": {
+     "count": 8,
+     "usedAs": {
+      "border": 1
+     },
+     "sels": {
+      "input.contact-us__form-input": 1,
+      "div.select": 1,
+      "textarea.contact-us__form-input": 1
+     }
+    },
+    "rgb(115, 115, 115)": {
+     "count": 4,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "div.select-value": 1
+     }
+    },
+    "rgb(106, 170, 228)": {
+     "count": 5,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "div.ot-floating-button__front": 1
+     }
+    }
+   },
+   "radii": {
+    "2px": 29,
+    "4px": 21,
+    "100px": 2
+   },
+   "shadows": {
+    "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 12, 54, 0.15) 1px 1px 56px 0px": 1,
+    "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px": 2
+   },
+   "gradients": {},
+   "headings": [
+    {
+     "level": 2,
+     "text": "Search",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 1,
+     "text": "NAVIGATE",
+     "fontSize": "128px",
+     "fontWeight": "700",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "147.2px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Payward Services and Broadridge collaborate to give xStocks holders a voice in corporate governance",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Tokenization Pulse Study: Key insights shaping what’s next",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Featured solutions",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Insights & perspectives",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "See how firms are modernizing platforms to unlock scale, efficiency, and growth",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Distributed ledger technology is delivering real-world results",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "From pilot to production: 5 keys to scaling agentic AI in financial services",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Insights from 900+ financial services leaders on AI, tokenization, and more",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Powering the pulse of the financial industry",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Our capabilities",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Wealth Advisor Solutions",
+     "fontSize": "36px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "41.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Recognized by the industry",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Recognized as one of Fortune Magazine’s ‘World’s Most Admired Companies’ in the financial services category for the twel",
+     "fontSize": "28px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "32.2px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Ranked #3 on the 2025 IDC FinTech Rankings Top 100, Wins Capital Markets Transformation Award",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Broadridge Named a Leader in Wealth Management Technology in IDC MarketScape 2025 Assessment",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Celent: Broadridge is Streamlining the Advisor Onboarding Process",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "What's next for your business?",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   ],
+   "bodySamples": [
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "36px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    }
+   ],
+   "buttons": [
+    {
+     "label": "Skip to main content",
+     "background": "rgb(0, 12, 54)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "0px",
+     "padding": "8px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "skip-link"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "16px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-small button-light modal-trigger"
+    },
+    {
+     "label": "Let's go",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "600",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium md:self-baseline  cta-dark"
+    },
+    {
+     "label": "PRESS RELEASE\n\t\t\t\t\t                \n\t\t\t\t",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card bg-blue-750 text-white"
+    },
+    {
+     "label": "REPORT\n\t\t\t\t\t                \n\t\t\t\t\t      ",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card bg-blue-750 text-white card__media-cover"
+    },
+    {
+     "label": "Proxy Services\n                     \n   ",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-blue-150 flex-col sm:max-lg:flex-row sm:max-lg:justify-between"
+    },
+    {
+     "label": "Tokenization\n                     \n     ",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-blue-150 flex-col sm:max-lg:flex-row sm:max-lg:justify-between"
+    },
+    {
+     "label": "Asset Servicing\n                     \n  ",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-blue-150 flex-col sm:max-lg:flex-row sm:max-lg:justify-between"
+    },
+    {
+     "label": "Global Trading\n                     \n   ",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-blue-150 flex-col sm:max-lg:flex-row sm:max-lg:justify-between"
+    },
+    {
+     "label": "CASE STUDIES\n                        See",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark active"
+    },
+    {
+     "label": "REPORT\n                        Distribut",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark swiper-slide-next"
+    },
+    {
+     "label": "ARTICLE\n                        From pil",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "REPORT\n                        Insights ",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "Explore all insights",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-light w-full md:w-[unset]"
+    },
+    {
+     "label": "Wealth Advisor Solutions",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "0px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "24px",
+     "border": "0px solid rgba(0, 0, 0, 0)",
+     "shadow": "none",
+     "cls": "tabs__trigger-item active"
+    },
+    {
+     "label": "Wealth Advisor Solutions\n               ",
+     "background": "rgb(15, 61, 181)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "22px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card mb-16 lg:mb-0  text-white  bg-blue-550 card__media-top light"
+    },
+    {
+     "label": "AWARD 2026\n              Recognized as o",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card text-white card__media-cover light"
+    },
+    {
+     "label": "AWARD 2025\n                Ranked #3 on ",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-blue-150 text-body card__media-top light "
+    },
+    {
+     "label": "LEADER\n                Broadridge Named ",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-blue-150 text-body card__media-top light "
+    },
+    {
+     "label": "ANALYST REPORT\n                Celent: B",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-blue-150 text-body card__media-top light "
+    },
+    {
+     "label": "Explore all analyst coverage",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-light w-full md:w-[unset]"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-medium button-light contact-us__form-button"
+    }
+   ],
+   "inputs": {
+    "borderRadius": "4px",
+    "padding": "12px 16px",
+    "border": "1px solid rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "18px"
+   },
+   "pads": {
+    "168px": 1,
+    "48px": 13
+   },
+   "contFreq": {
+    "1232px": 3,
+    "1360px": 4
+   },
+   "logo": {
+    "source": "inline-svg",
+    "sourceSelector": "header svg",
+    "svg": "<svg fill=\"none\" width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 17\">\n                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.667 1.833a5.333 5.333 0 1 0 3.27 9.547l3.591 3.591.063.056a.667.667 0 0 0 .88-.998l-3.591-3.592a5.333 5.333 0 0 0-4.213-8.604Zm0 1.334a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z\" fill=\"currentColor\"></path>\n            </svg>",
+    "width": 16,
+    "height": 16
+   },
+   "favicon": "https://www.broadridge.com/_Static-Assets/images/favicon.ico",
+   "appleTouchIcon": null,
+   "fontFaces": [
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: swiper-icons; src: url(\"data:application/font-woff;charset=utf-8;base64, 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\"); font-weight: 400; font-style: normal; }",
+     "family": "swiper-icons",
+     "weight": "400",
+     "style": "normal",
+     "display": "",
+     "src": "url(\"data:application/font-woff;charset=utf-8;base64, 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\")"
+    }
+   ],
+   "iconFont": null,
+   "navItems": [
+    "Client access",
+    "Careers Opens in new tab",
+    "Search",
+    "Contact us"
+   ],
+   "footerHeadings": [
+    "Company information",
+    "Company information",
+    "Who we serve"
+   ],
+   "faviconSaved": "stardust/current/assets/favicon.ico"
+  },
+  "who-we-serve-capital-markets": {
+   "colors": {
+    "rgb(0, 12, 54)": {
+     "count": 396,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "nav": 1,
+      "span.primary-nav-link": 1,
+      "span": 1
+     }
+    },
+    "rgb(255, 255, 255)": {
+     "count": 850,
+     "usedAs": {
+      "text": 1,
+      "background": 1,
+      "border": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "a.utility-nav-link": 1,
+      "span.sr-only": 1,
+      "span": 1
+     }
+    },
+    "rgb(38, 98, 252)": {
+     "count": 54,
+     "usedAs": {
+      "background": 1,
+      "text": 1,
+      "border": 1
+     },
+     "sels": {
+      "button.button": 1,
+      "span": 1,
+      "span.swiper-pagination-bullet": 1,
+      "button.slider-button-next": 1
+     }
+    },
+    "rgb(249, 249, 249)": {
+     "count": 502,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "main.main": 1,
+      "a.card": 1,
+      "div.insights__wrap": 1,
+      "input.contact-us__form-input": 1
+     }
+    },
+    "rgb(0, 31, 90)": {
+     "count": 418,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "div.image-cover": 1,
+      "a.card": 1,
+      "span.text-atom": 1
+     }
+    },
+    "rgb(26, 26, 26)": {
+     "count": 244,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1,
+      "div.text-atom": 1
+     }
+    },
+    "rgb(0, 0, 0)": {
+     "count": 89,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1,
+      "span.sr-only": 1,
+      "div.text-atom": 1,
+      "span.con_us_b_col1": 1
+     }
+    },
+    "rgb(231, 241, 252)": {
+     "count": 239,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "button.tabs__trigger-item": 1,
+      "div.bento-grid-six-cards__wrap": 1,
+      "div.contact-us__wrap": 1
+     }
+    },
+    "rgb(15, 61, 181)": {
+     "count": 157,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "a.card": 1,
+      "div.text-atom": 1,
+      "span.badge": 1
+     }
+    },
+    "rgb(217, 217, 217)": {
+     "count": 5,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "span.swiper-pagination-bullet": 1
+     }
+    },
+    "rgb(179, 179, 179)": {
+     "count": 10,
+     "usedAs": {
+      "border": 1
+     },
+     "sels": {
+      "button.slider-button-prev": 1,
+      "input.contact-us__form-input": 1,
+      "div.select": 1,
+      "textarea.contact-us__form-input": 1
+     }
+    },
+    "rgb(186, 209, 245)": {
+     "count": 30,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "span.badge": 1,
+      "a": 1,
+      "span.open_dns": 1,
+      "span.sr-only": 1
+     }
+    },
+    "rgb(8, 36, 133)": {
+     "count": 20,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1
+     }
+    },
+    "rgb(115, 115, 115)": {
+     "count": 4,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "div.select-value": 1
+     }
+    },
+    "rgb(106, 170, 228)": {
+     "count": 5,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "div.ot-floating-button__front": 1
+     }
+    }
+   },
+   "radii": {
+    "2px": 37,
+    "4px": 20,
+    "9999px": 4,
+    "100px": 2
+   },
+   "shadows": {
+    "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 12, 54, 0.15) 1px 1px 56px 0px": 1,
+    "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px": 2
+   },
+   "gradients": {},
+   "headings": [
+    {
+     "level": 2,
+     "text": "Search",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 1,
+     "text": "Capital Markets",
+     "fontSize": "56px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "64.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Setting the standard for global trading and operations",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Enhance every aspect of the trade lifecycle",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Order Management",
+     "fontSize": "36px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "41.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "See how we can help you drive measurable growth",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Recognized by the industry",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Insights & perspectives",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "DLT in the Real World 2026",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Bank balance sheet benefits from intraday Distributed Ledger Repo",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "APAC Capital Markets Solutions: Overview and use cases",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "DLT in the Real World 2025",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Next-gen markets: The rise and reality of tokenization",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Extended Overnight Trading: Opportunities and Considerations",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "SEC central clearing rule changes: Determining the right Treasury market clearing model for your firm",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Solving the Collateral Mobility Puzzle in a Fragmented Market",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Simplification, innovation, and transformation at every step",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "What's next for your business?",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   ],
+   "bodySamples": [
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px"
+    }
+   ],
+   "buttons": [
+    {
+     "label": "Skip to main content",
+     "background": "rgb(0, 12, 54)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "0px",
+     "padding": "8px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "skip-link"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "16px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-small button-light modal-trigger"
+    },
+    {
+     "label": "Order Management",
+     "background": "rgb(231, 241, 252)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "0px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "24px",
+     "border": "0px solid rgba(0, 0, 0, 0)",
+     "shadow": "none",
+     "cls": "tabs__trigger-item active"
+    },
+    {
+     "label": "Order Management \n                      ",
+     "background": "rgb(15, 61, 181)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "22px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card mb-16 lg:mb-0  text-white  bg-blue-550 card__media-top light"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(179, 179, 179)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(179, 179, 179)",
+     "shadow": "none",
+     "cls": "slider-button-prev btn-blue swiper-button-disabled"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "slider-button-next btn-blue"
+    },
+    {
+     "label": "AWARD 2026\n                       \n     ",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card text-white bg-blue-750  card__media-toplight"
+    },
+    {
+     "label": "AWARD 2026\n                       \n     ",
+     "background": "rgb(249, 249, 249)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-neutral-100 card__media-toplight"
+    },
+    {
+     "label": "AWARD 2026\n                       \n     ",
+     "background": "rgb(249, 249, 249)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-neutral-100 card__media-toplight"
+    },
+    {
+     "label": "AWARD 2026\n                       \n     ",
+     "background": "rgb(249, 249, 249)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-neutral-100 card__media-toplight"
+    },
+    {
+     "label": "AWARD 2026\n                       \n     ",
+     "background": "rgb(249, 249, 249)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-neutral-100 card__media-toplight"
+    },
+    {
+     "label": "AWARD 2025\n                       \n     ",
+     "background": "rgb(249, 249, 249)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card text-body bg-neutral-100 card__media-toplight"
+    },
+    {
+     "label": "Explore all awards and recognition",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-light w-full md:w-[unset]"
+    },
+    {
+     "label": "REPORT\n                        DLT in th",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark active"
+    },
+    {
+     "label": "WHITEPAPER\n                        Bank ",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark swiper-slide-next"
+    },
+    {
+     "label": "RESOURCE\n                        APAC Ca",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "REPORT\n                        DLT in th",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "WHITEPAPER\n                        Next-",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "RESOURCE\n                        Extende",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "WHITEPAPER\n                        SEC c",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "INSIGHT\n                        Solving ",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(179, 179, 179)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(179, 179, 179)",
+     "shadow": "none",
+     "cls": "slider-button-prev btn-blue swiper-button-disabled"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "slider-button-next btn-blue"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-medium button-light contact-us__form-button"
+    }
+   ],
+   "inputs": {
+    "borderRadius": "4px",
+    "padding": "12px 16px",
+    "border": "1px solid rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "18px"
+   },
+   "pads": {
+    "48px": 16
+   },
+   "contFreq": {
+    "1232px": 3,
+    "1360px": 7
+   },
+   "logo": {
+    "source": "inline-svg",
+    "sourceSelector": "header svg",
+    "svg": "<svg fill=\"none\" width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 17\">\n                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.667 1.833a5.333 5.333 0 1 0 3.27 9.547l3.591 3.591.063.056a.667.667 0 0 0 .88-.998l-3.591-3.592a5.333 5.333 0 0 0-4.213-8.604Zm0 1.334a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z\" fill=\"currentColor\"></path>\n            </svg>",
+    "width": 16,
+    "height": 16
+   },
+   "favicon": "https://www.broadridge.com/_Static-Assets/images/favicon.ico",
+   "appleTouchIcon": null,
+   "fontFaces": [
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: swiper-icons; src: url(\"data:application/font-woff;charset=utf-8;base64, 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\"); font-weight: 400; font-style: normal; }",
+     "family": "swiper-icons",
+     "weight": "400",
+     "style": "normal",
+     "display": "",
+     "src": "url(\"data:application/font-woff;charset=utf-8;base64, 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\")"
+    }
+   ],
+   "iconFont": null,
+   "navItems": [
+    "Client access",
+    "Careers Opens in new tab",
+    "Search",
+    "Contact us"
+   ],
+   "footerHeadings": [
+    "Company information",
+    "Company information",
+    "Who we serve"
+   ]
+  },
+  "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy": {
+   "colors": {
+    "rgb(0, 12, 54)": {
+     "count": 549,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "nav": 1,
+      "span.primary-nav-link": 1,
+      "h2.heading": 1
+     }
+    },
+    "rgb(255, 255, 255)": {
+     "count": 579,
+     "usedAs": {
+      "text": 1,
+      "background": 1,
+      "border": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "a.utility-nav-link": 1,
+      "span.sr-only": 1,
+      "span": 1
+     }
+    },
+    "rgb(38, 98, 252)": {
+     "count": 69,
+     "usedAs": {
+      "background": 1,
+      "text": 1,
+      "border": 1
+     },
+     "sels": {
+      "button.button": 1,
+      "a": 1,
+      "button.cta": 1,
+      "span": 1
+     }
+    },
+    "rgb(249, 249, 249)": {
+     "count": 353,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "main.main": 1,
+      "div.insights__wrap": 1,
+      "input.contact-us__form-input": 1,
+      "div.select": 1
+     }
+    },
+    "rgb(8, 36, 133)": {
+     "count": 24,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "span": 1,
+      "h2.heading": 1
+     }
+    },
+    "rgb(0, 0, 0)": {
+     "count": 164,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h1.heading": 1,
+      "div.text-atom": 1,
+      "h2.heading": 1,
+      "span.sr-only": 1
+     }
+    },
+    "rgb(0, 31, 90)": {
+     "count": 269,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "div.wrapper": 1,
+      "a.card": 1,
+      "span.text-atom": 1
+     }
+    },
+    "rgb(231, 241, 252)": {
+     "count": 533,
+     "usedAs": {
+      "text": 1,
+      "background": 1
+     },
+     "sels": {
+      "h2.heading": 1,
+      "div.heading": 1,
+      "div.text-atom": 1,
+      "div.products-solution__wrap": 1
+     }
+    },
+    "rgb(29, 31, 37)": {
+     "count": 51,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "span.gen-style-2": 1
+     }
+    },
+    "rgb(26, 26, 26)": {
+     "count": 58,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1,
+      "div.text-atom": 1
+     }
+    },
+    "rgb(15, 61, 181)": {
+     "count": 75,
+     "usedAs": {
+      "text": 1,
+      "background": 1
+     },
+     "sels": {
+      "div.text-atom": 1,
+      "span.badge": 1
+     }
+    },
+    "rgb(217, 217, 217)": {
+     "count": 1,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "span.swiper-pagination-bullet": 1
+     }
+    },
+    "rgb(179, 179, 179)": {
+     "count": 9,
+     "usedAs": {
+      "border": 1
+     },
+     "sels": {
+      "button.slider-button-prev": 1,
+      "input.contact-us__form-input": 1,
+      "div.select": 1,
+      "textarea.contact-us__form-input": 1
+     }
+    },
+    "rgb(115, 115, 115)": {
+     "count": 4,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "div.select-value": 1
+     }
+    },
+    "rgb(186, 209, 245)": {
+     "count": 27,
+     "usedAs": {
+      "border": 1,
+      "text": 1
+     },
+     "sels": {
+      "div.faqs__block": 1,
+      "a": 1,
+      "span.open_dns": 1,
+      "span.sr-only": 1
+     }
+    },
+    "rgb(106, 170, 228)": {
+     "count": 5,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "div.ot-floating-button__front": 1
+     }
+    }
+   },
+   "radii": {
+    "2px": 24,
+    "4px": 10,
+    "9999px": 2,
+    "100px": 2
+   },
+   "shadows": {
+    "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 12, 54, 0.15) 1px 1px 56px 0px": 1,
+    "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px": 2
+   },
+   "gradients": {},
+   "headings": [
+    {
+     "level": 2,
+     "text": "Search",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 1,
+     "text": "Issuer Proxy",
+     "fontSize": "56px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "64.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Discover your proxy advantage",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Specialized issuer proxy services",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Determine your best path to success",
+     "fontSize": "36px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "41.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Inform and engage shareholders",
+     "fontSize": "36px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "41.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Leverage proven practices",
+     "fontSize": "36px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "41.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 3,
+     "text": "Rely on a single source",
+     "fontSize": "36px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "41.4px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Choose pioneering proxy innovation",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Insights & perspectives",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Broadridge ProxyPulseTM 2025",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Canadian Best Practices - Virtual Shareholder Meetings",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Registered Issuer Guidebook",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Broadridge and Novisto Address Rising Demand for Sustainability Data Management and Reporting Platforms",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "27.6px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "What's next for your business?",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Issuer Proxy FAQs",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   ],
+   "bodySamples": [
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    }
+   ],
+   "buttons": [
+    {
+     "label": "Skip to main content",
+     "background": "rgb(0, 12, 54)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "0px",
+     "padding": "8px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "skip-link"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "16px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-small button-light modal-trigger"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-light products-solution__cta modal-trigger"
+    },
+    {
+     "label": "Explore the service",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-dark b1-cta-banner__cta"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(179, 179, 179)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(179, 179, 179)",
+     "shadow": "none",
+     "cls": "slider-button-prev btn-blue swiper-button-disabled"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "slider-button-next btn-blue"
+    },
+    {
+     "label": "Login\n                Opens in new tab",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-dark b1-cta-banner__cta"
+    },
+    {
+     "label": "REPORT\n                        Broadridg",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark active"
+    },
+    {
+     "label": "REPORT\n                        Canadian ",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark swiper-slide-next"
+    },
+    {
+     "label": "RESOURCE\n                        Registe",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "PRESS RELEASE\n                        Br",
+     "background": "rgb(0, 31, 90)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "card insights__slider-slide swiper-slide card__media-top dark "
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-medium button-light contact-us__form-button"
+    }
+   ],
+   "inputs": {
+    "borderRadius": "4px",
+    "padding": "12px 16px",
+    "border": "1px solid rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "18px"
+   },
+   "pads": {
+    "48px": 14
+   },
+   "contFreq": {
+    "1232px": 2,
+    "1360px": 9
+   },
+   "logo": {
+    "source": "inline-svg",
+    "sourceSelector": "header svg",
+    "svg": "<svg fill=\"none\" width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 17\">\n                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.667 1.833a5.333 5.333 0 1 0 3.27 9.547l3.591 3.591.063.056a.667.667 0 0 0 .88-.998l-3.591-3.592a5.333 5.333 0 0 0-4.213-8.604Zm0 1.334a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z\" fill=\"currentColor\"></path>\n            </svg>",
+    "width": 16,
+    "height": 16
+   },
+   "favicon": "https://www.broadridge.com/_Static-Assets/images/favicon.ico",
+   "appleTouchIcon": null,
+   "fontFaces": [
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: swiper-icons; src: url(\"data:application/font-woff;charset=utf-8;base64, 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\"); font-weight: 400; font-style: normal; }",
+     "family": "swiper-icons",
+     "weight": "400",
+     "style": "normal",
+     "display": "",
+     "src": "url(\"data:application/font-woff;charset=utf-8;base64, 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\")"
+    }
+   ],
+   "iconFont": null,
+   "navItems": [
+    "Client access",
+    "Careers Opens in new tab",
+    "Search",
+    "Contact us"
+   ],
+   "footerHeadings": [
+    "Company information",
+    "Company information",
+    "Who we serve"
+   ]
+  },
+  "insights-2026-digital-transformation-study": {
+   "colors": {
+    "rgb(0, 12, 54)": {
+     "count": 856,
+     "usedAs": {
+      "background": 1,
+      "text": 1,
+      "border": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "nav": 1,
+      "span.primary-nav-link": 1,
+      "h4": 1
+     }
+    },
+    "rgb(255, 255, 255)": {
+     "count": 700,
+     "usedAs": {
+      "text": 1,
+      "background": 1,
+      "border": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "a.utility-nav-link": 1,
+      "span.sr-only": 1,
+      "span": 1
+     }
+    },
+    "rgb(38, 98, 252)": {
+     "count": 61,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "button.button": 1,
+      "span": 1,
+      "button.play": 1,
+      "a.cta": 1
+     }
+    },
+    "rgb(249, 249, 249)": {
+     "count": 212,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "main.main": 1,
+      "input.download-form__form-input": 1,
+      "div.select": 1,
+      "div.dropdown": 1
+     }
+    },
+    "rgb(231, 241, 252)": {
+     "count": 187,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "div.content-blocks": 1,
+      "div.download-form__wrap": 1
+     }
+    },
+    "rgb(8, 36, 133)": {
+     "count": 14,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1
+     }
+    },
+    "rgb(0, 31, 90)": {
+     "count": 23,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "p": 1
+     }
+    },
+    "rgb(179, 179, 179)": {
+     "count": 5,
+     "usedAs": {
+      "border": 1
+     },
+     "sels": {
+      "input.download-form__form-input": 1,
+      "div.select": 1
+     }
+    },
+    "rgb(0, 0, 0)": {
+     "count": 159,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "span.sr-only": 1,
+      "span.faq__title": 1
+     }
+    },
+    "rgb(115, 115, 115)": {
+     "count": 4,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "div.select-value": 1
+     }
+    },
+    "rgb(186, 209, 245)": {
+     "count": 27,
+     "usedAs": {
+      "border": 1,
+      "text": 1
+     },
+     "sels": {
+      "div.faqs__block": 1,
+      "a": 1,
+      "span.open_dns": 1,
+      "span.sr-only": 1
+     }
+    },
+    "rgb(106, 170, 228)": {
+     "count": 5,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "div.ot-floating-button__front": 1
+     }
+    }
+   },
+   "radii": {
+    "2px": 12,
+    "4px": 7,
+    "9999px": 1,
+    "100px": 2
+   },
+   "shadows": {
+    "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 12, 54, 0.15) 1px 1px 56px 0px": 1,
+    "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px": 2
+   },
+   "gradients": {},
+   "headings": [
+    {
+     "level": 2,
+     "text": "Search",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 1,
+     "text": "Transformation Accelerated",
+     "fontSize": "48px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "55.2px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 4,
+     "text": "2026 Digital Transformation & Next-Gen Technology Study",
+     "fontSize": "32px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "36.8px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Get the winner’s playbook",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "FAQs: Digital Transformation & Next‑Gen Technology Study",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   ],
+   "bodySamples": [
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "22px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "28.6px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    },
+    {
+     "tag": "P",
+     "fontSize": "24px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "31.2px"
+    }
+   ],
+   "buttons": [
+    {
+     "label": "Skip to main content",
+     "background": "rgb(0, 12, 54)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "0px",
+     "padding": "8px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "skip-link"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "16px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-small button-light modal-trigger"
+    },
+    {
+     "label": "Download the full report",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium white cta-dark card-slider__cta"
+    },
+    {
+     "label": "Play Video",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "8px",
+     "fontWeight": "500",
+     "fontSize": "18px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "play group btn-primary btn-medium btn-light modal-trigger"
+    },
+    {
+     "label": "Get the full report",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-light"
+    },
+    {
+     "label": "Download the full report",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-dark b1-cta-banner__cta"
+    },
+    {
+     "label": "Download the full report",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-medium button-light download-form__form-button"
+    }
+   ],
+   "inputs": {
+    "borderRadius": "4px",
+    "padding": "12px 16px",
+    "border": "1px solid rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "18px"
+   },
+   "pads": {
+    "168px": 1,
+    "48px": 17
+   },
+   "contFreq": {
+    "1232px": 2,
+    "906px": 1,
+    "1360px": 8
+   },
+   "logo": {
+    "source": "inline-svg",
+    "sourceSelector": "header svg",
+    "svg": "<svg fill=\"none\" width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 17\">\n                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.667 1.833a5.333 5.333 0 1 0 3.27 9.547l3.591 3.591.063.056a.667.667 0 0 0 .88-.998l-3.591-3.592a5.333 5.333 0 0 0-4.213-8.604Zm0 1.334a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z\" fill=\"currentColor\"></path>\n            </svg>",
+    "width": 16,
+    "height": 16
+   },
+   "favicon": "https://www.broadridge.com/_Static-Assets/images/favicon.ico",
+   "appleTouchIcon": null,
+   "fontFaces": [
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: swiper-icons; src: url(\"data:application/font-woff;charset=utf-8;base64, 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\"); font-weight: 400; font-style: normal; }",
+     "family": "swiper-icons",
+     "weight": "400",
+     "style": "normal",
+     "display": "",
+     "src": "url(\"data:application/font-woff;charset=utf-8;base64, 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\")"
+    }
+   ],
+   "iconFont": null,
+   "navItems": [
+    "Client access",
+    "Careers Opens in new tab",
+    "Search",
+    "Contact us"
+   ],
+   "footerHeadings": [
+    "Company information",
+    "Company information",
+    "Who we serve"
+   ]
+  },
+  "about": {
+   "colors": {
+    "rgb(0, 12, 54)": {
+     "count": 410,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "nav": 1,
+      "span.primary-nav-link": 1,
+      "h2.heading": 1
+     }
+    },
+    "rgb(255, 255, 255)": {
+     "count": 736,
+     "usedAs": {
+      "text": 1,
+      "background": 1,
+      "border": 1
+     },
+     "sels": {
+      "a.skip-link": 1,
+      "a.utility-nav-link": 1,
+      "span.sr-only": 1,
+      "span": 1
+     }
+    },
+    "rgb(38, 98, 252)": {
+     "count": 81,
+     "usedAs": {
+      "background": 1,
+      "border": 1,
+      "text": 1
+     },
+     "sels": {
+      "button.button": 1,
+      "button.play": 1,
+      "span.swiper-pagination-bullet": 1,
+      "button.slider-button-next": 1
+     }
+    },
+    "rgb(249, 249, 249)": {
+     "count": 256,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "main.main": 1,
+      "input.contact-us__form-input": 1,
+      "div.select": 1,
+      "div.dropdown": 1
+     }
+    },
+    "rgb(26, 26, 26)": {
+     "count": 127,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1,
+      "div.text-atom": 1
+     }
+    },
+    "rgb(15, 61, 181)": {
+     "count": 56,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "div.text-atom": 1
+     }
+    },
+    "rgb(217, 217, 217)": {
+     "count": 6,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "span.swiper-pagination-bullet": 1
+     }
+    },
+    "rgb(179, 179, 179)": {
+     "count": 10,
+     "usedAs": {
+      "border": 1
+     },
+     "sels": {
+      "button.slider-button-prev": 1,
+      "input.contact-us__form-input": 1,
+      "div.select": 1,
+      "textarea.contact-us__form-input": 1
+     }
+    },
+    "rgb(231, 241, 252)": {
+     "count": 186,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "div.c1b-card-grid__wrap": 1,
+      "div.contact-us__wrap": 1
+     }
+    },
+    "rgb(0, 31, 90)": {
+     "count": 76,
+     "usedAs": {
+      "background": 1,
+      "text": 1
+     },
+     "sels": {
+      "div.b1-cta-banner__content": 1,
+      "span.text-atom": 1
+     }
+    },
+    "rgb(0, 0, 0)": {
+     "count": 76,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1,
+      "span.text-atom": 1,
+      "span.sr-only": 1,
+      "div.text-atom": 1
+     }
+    },
+    "rgb(186, 209, 245)": {
+     "count": 36,
+     "usedAs": {
+      "border": 1,
+      "text": 1
+     },
+     "sels": {
+      "div.partnership__slider-slide": 1,
+      "a": 1,
+      "span.open_dns": 1,
+      "span.sr-only": 1
+     }
+    },
+    "rgb(8, 36, 133)": {
+     "count": 20,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "h2.heading": 1
+     }
+    },
+    "rgb(115, 115, 115)": {
+     "count": 4,
+     "usedAs": {
+      "text": 1
+     },
+     "sels": {
+      "div.select-value": 1
+     }
+    },
+    "rgb(106, 170, 228)": {
+     "count": 5,
+     "usedAs": {
+      "background": 1
+     },
+     "sels": {
+      "div.ot-floating-button__front": 1
+     }
+    }
+   },
+   "radii": {
+    "2px": 28,
+    "4px": 22,
+    "9999px": 5,
+    "100px": 2
+   },
+   "shadows": {
+    "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 12, 54, 0.15) 1px 1px 56px 0px": 1,
+    "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px": 2
+   },
+   "gradients": {},
+   "headings": [
+    {
+     "level": 2,
+     "text": "Search",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Shaping the financial world of today and tomorrow",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "For 60 years,  clients have trusted us to solve the industry’s mission-critical challenges",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Explore how we bring our commitment to life",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "Our global partner ecosystem",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    },
+    {
+     "level": 2,
+     "text": "What's next for your business?",
+     "fontSize": "40px",
+     "fontWeight": "400",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "46px",
+     "letterSpacing": "normal",
+     "transform": "none"
+    }
+   ],
+   "bodySamples": [
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    },
+    {
+     "tag": "LI",
+     "fontSize": "16px",
+     "fontWeight": "500",
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "lineHeight": "24px"
+    }
+   ],
+   "buttons": [
+    {
+     "label": "Skip to main content",
+     "background": "rgb(0, 12, 54)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "0px",
+     "padding": "8px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "skip-link"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "16px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-small button-light modal-trigger"
+    },
+    {
+     "label": "Play Video (01.51)",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "8px",
+     "fontWeight": "500",
+     "fontSize": "18px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "play group btn-primary btn-medium btn-light modal-trigger"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(179, 179, 179)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(179, 179, 179)",
+     "shadow": "none",
+     "cls": "slider-button-prev btn-blue swiper-button-disabled"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "slider-button-next btn-blue"
+    },
+    {
+     "label": "Meet our leaders",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-white text-body card__media-top  "
+    },
+    {
+     "label": "Our history",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-white text-body card__media-top  "
+    },
+    {
+     "label": "Our culture",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-white text-body card__media-top  "
+    },
+    {
+     "label": "Our locations",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-white text-body card__media-top  "
+    },
+    {
+     "label": "Sustainability",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-white text-body card__media-top  "
+    },
+    {
+     "label": "Analyst coverage",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(0, 12, 54)",
+     "borderRadius": "4px",
+     "padding": "0px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "0px solid rgb(0, 12, 54)",
+     "shadow": "none",
+     "cls": "card bg-white text-body card__media-top  "
+    },
+    {
+     "label": "Explore opportunities with us   \n       ",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-light mt-24 md:mt-32"
+    },
+    {
+     "label": "Visit investor relations\n               ",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-dark b1-cta-banner__cta"
+    },
+    {
+     "label": "Access our newsroom",
+     "background": "rgb(255, 255, 255)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-dark b1-cta-banner__cta"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(179, 179, 179)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(179, 179, 179)",
+     "shadow": "none",
+     "cls": "slider-button-prev btn-blue swiper-button-disabled"
+    },
+    {
+     "label": "",
+     "background": "rgba(0, 0, 0, 0)",
+     "color": "rgb(38, 98, 252)",
+     "borderRadius": "9999px",
+     "padding": "16px",
+     "fontWeight": "400",
+     "fontSize": "16px",
+     "border": "1px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "slider-button-next btn-blue"
+    },
+    {
+     "label": "Explore all partners",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(255, 255, 255)",
+     "shadow": "none",
+     "cls": "cta group cta-primary cta-medium cta-light w-full md:w-[unset]"
+    },
+    {
+     "label": "Contact us",
+     "background": "rgb(38, 98, 252)",
+     "color": "rgb(255, 255, 255)",
+     "borderRadius": "2px",
+     "padding": "16px 24px",
+     "fontWeight": "500",
+     "fontSize": "20px",
+     "border": "0px solid rgb(38, 98, 252)",
+     "shadow": "none",
+     "cls": "button button-primary button-medium button-light contact-us__form-button"
+    }
+   ],
+   "inputs": {
+    "borderRadius": "4px",
+    "padding": "12px 16px",
+    "border": "1px solid rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)",
+    "fontSize": "18px"
+   },
+   "pads": {
+    "48px": 16
+   },
+   "contFreq": {
+    "1232px": 3,
+    "1360px": 6
+   },
+   "logo": {
+    "source": "inline-svg",
+    "sourceSelector": "header svg",
+    "svg": "<svg fill=\"none\" width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 17\">\n                <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.667 1.833a5.333 5.333 0 1 0 3.27 9.547l3.591 3.591.063.056a.667.667 0 0 0 .88-.998l-3.591-3.592a5.333 5.333 0 0 0-4.213-8.604Zm0 1.334a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z\" fill=\"currentColor\"></path>\n            </svg>",
+    "width": 16,
+    "height": 16
+   },
+   "favicon": "https://www.broadridge.com/_Static-Assets/images/favicon.ico",
+   "appleTouchIcon": null,
+   "fontFaces": [
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/88700a/00000000000000007735d65d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 400; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "400",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/ef537d/00000000000000007735d667/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/baf92f/00000000000000007735d66e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 700; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "700",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/30b557/00000000000000007735d677/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/a52caf/00000000000000007735d680/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 300; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "300",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/07d293/00000000000000007735d687/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/8bf433/00000000000000007735d68b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 500; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "500",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/7a748f/00000000000000007735d690/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\"); font-display: swap; font-style: normal; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "normal",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/f8c2c1/00000000000000007735d696/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: freight-sans-pro; src: url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\"); font-display: swap; font-style: italic; font-weight: 600; font-stretch: normal; }",
+     "family": "freight-sans-pro",
+     "weight": "600",
+     "style": "italic",
+     "display": "swap",
+     "src": "url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff2\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"woff\"), url(\"https://use.typekit.net/af/2af2dc/00000000000000007735d69a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3\") format(\"opentype\")"
+    },
+    {
+     "cssText": "@font-face { font-family: swiper-icons; src: url(\"data:application/font-woff;charset=utf-8;base64, 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\"); font-weight: 400; font-style: normal; }",
+     "family": "swiper-icons",
+     "weight": "400",
+     "style": "normal",
+     "display": "",
+     "src": "url(\"data:application/font-woff;charset=utf-8;base64, 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\")"
+    }
+   ],
+   "iconFont": null,
+   "navItems": [
+    "Client access",
+    "Careers Opens in new tab",
+    "Search",
+    "Contact us"
+   ],
+   "footerHeadings": [
+    "Company information",
+    "Company information",
+    "Who we serve"
+   ]
+  }
+ },
+ "savedFonts": [
+  {
+   "url": "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+   "localPath": "stardust/current/assets/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ-8139a402.woff2",
+   "bytes": 34668
+  },
+  {
+   "url": "https://assets.qualified.com/packs/media/Inter-Regular.f1f0c35b32.woff2",
+   "localPath": "stardust/current/assets/fonts/Inter-Regular.f1f0c35b32-d612f121.woff2",
+   "bytes": 98868
+  },
+  {
+   "url": "https://assets.qualified.com/packs/media/Inter-SemiBold.fcb100c760.woff2",
+   "localPath": "stardust/current/assets/fonts/Inter-SemiBold.fcb100c760-15226129.woff2",
+   "bytes": 105804
+  }
+ ]
+}

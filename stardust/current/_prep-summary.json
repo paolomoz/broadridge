@@ -1,0 +1,16 @@
+{
+ "inventory": 2208,
+ "provenanceLive": 2208,
+ "provenanceBad": [],
+ "types": {
+  "landing": 492,
+  "article": 1560,
+  "program": 103,
+  "unique": 4,
+  "form": 3,
+  "static": 44,
+  "listing": 2
+ },
+ "headingRepeatCandidates": 7,
+ "threshold": 110
+}

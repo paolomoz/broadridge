@@ -1,0 +1,630 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:extract",
+  "writtenAt": "2026-08-24T12:15:00Z",
+  "readArtifacts": [
+   "https://www.broadridge.com/",
+   "stardust/current/pages/about.json",
+   "stardust/current/pages/capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy.json",
+   "stardust/current/pages/index.json",
+   "stardust/current/pages/insights-2026-digital-transformation-study.json",
+   "stardust/current/pages/who-we-serve-capital-markets.json"
+  ],
+  "synthesizedInputs": [],
+  "stardustVersion": "0.18.1",
+  "notes": [
+   "Legacy /sitemap.xml (3,696 URLs) is stale; authoritative inventory is /us-en/sitemap.xml (1,044 URLs, robots.txt Sitemap directive). Old IA (/financial-services/...) 301-redirects to new IA (/who-we-serve/, /capability/).",
+   "Roboto + Inter font files captured on the wire belong to third-party widgets (Qualified chat); brand type is freight-sans-pro via Adobe Typekit only.",
+   "Cookie consent banner is late-loading; project crawl.mjs patched to retry dismissal after wait.",
+   "Capital Markets mid-page blank band in screenshot is a Vimeo iframe (player.vimeo.com/915043880) \u2014 captured in media.iframes.",
+   "Home hero is a promo carousel: slide 1 = NAVIGATE tokenized markets (display 128px H1).",
+   "Palette: #000000 clustered into #1a1a1a text-primary (near-duplicate); dropped from top-8: #bad1f5 border (162), #082485 (98), #b3b3b3 border (42), #6aaae4 (25)."
+  ]
+ },
+ "site": {
+  "name": "Broadridge",
+  "tagline": "Powering the pulse of the financial industry",
+  "originUrl": "https://www.broadridge.com"
+ },
+ "origins": [
+  {
+   "origin": "https://www.broadridge.com",
+   "role": "primary",
+   "pagesCaptured": 5,
+   "contributedSignals": []
+  }
+ ],
+ "logo": {
+  "source": "img",
+  "sourceSelector": "header a img",
+  "url": "https://www.broadridge.com/_Static-Assets/images/brodridgeLogo.svg",
+  "localPath": "stardust/current/assets/logo.svg",
+  "format": "svg",
+  "intrinsicWidth": 160,
+  "intrinsicHeight": 36,
+  "synthesized": false,
+  "synthesizedBasis": null
+ },
+ "palette": [
+  {
+   "role": "background",
+   "value": "#ffffff",
+   "occurrences": 3563,
+   "usedAs": [
+    "background",
+    "border",
+    "text"
+   ],
+   "sourceSelectors": [
+    "a.skip-link",
+    "a.utility-nav-link"
+   ]
+  },
+  {
+   "role": "secondary",
+   "value": "#000c36",
+   "occurrences": 2703,
+   "usedAs": [
+    "background",
+    "border",
+    "text"
+   ],
+   "sourceSelectors": [
+    "a.skip-link",
+    "nav"
+   ]
+  },
+  {
+   "role": "surface",
+   "value": "#f9f9f9",
+   "occurrences": 1579,
+   "usedAs": [
+    "background"
+   ],
+   "sourceSelectors": [
+    "a.card",
+    "div.insights__wrap",
+    "input.contact-us__form-input",
+    "input.download-form__form-input"
+   ]
+  },
+  {
+   "role": "surface-tint",
+   "value": "#e7f1fc",
+   "occurrences": 1571,
+   "usedAs": [
+    "background",
+    "text"
+   ],
+   "sourceSelectors": [
+    "a.card",
+    "button.tabs__trigger-item",
+    "div.bento-grid-six-cards__wrap",
+    "div.c1b-card-grid__wrap"
+   ]
+  },
+  {
+   "role": "text-primary",
+   "value": "#1a1a1a",
+   "occurrences": 1138,
+   "usedAs": [
+    "text"
+   ],
+   "sourceSelectors": [
+    "div.text-atom",
+    "h2.heading"
+   ]
+  },
+  {
+   "role": "accent-navy",
+   "value": "#001f5a",
+   "occurrences": 1108,
+   "usedAs": [
+    "background",
+    "text"
+   ],
+   "sourceSelectors": [
+    "a.card",
+    "article.card",
+    "div.b1-cta-banner__content",
+    "div.image-cover"
+   ]
+  },
+  {
+   "role": "accent-link",
+   "value": "#0f3db5",
+   "occurrences": 362,
+   "usedAs": [
+    "background",
+    "text"
+   ],
+   "sourceSelectors": [
+    "a.card",
+    "div.text-atom",
+    "span.badge"
+   ]
+  },
+  {
+   "role": "primary",
+   "value": "#2662fc",
+   "occurrences": 338,
+   "usedAs": [
+    "background",
+    "border",
+    "text"
+   ],
+   "sourceSelectors": [
+    "a.cta-primary",
+    "button.button-primary"
+   ]
+  }
+ ],
+ "type": {
+  "headingFamily": {
+   "name": "FreightSans Pro",
+   "stack": "freight-sans-pro, sans-serif",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "sizes": [
+    "128px",
+    "40px",
+    "36px",
+    "32px"
+   ],
+   "perLevel": {
+    "h1": {
+     "fontSize": "128px",
+     "fontWeight": 700,
+     "count": 1
+    },
+    "h2": {
+     "fontSize": "40px",
+     "fontWeight": 400,
+     "count": 31
+    },
+    "h3": {
+     "fontSize": "36px",
+     "fontWeight": 400,
+     "count": 6
+    },
+    "h4": {
+     "fontSize": "32px",
+     "fontWeight": 400,
+     "count": 1
+    }
+   },
+   "lineHeights": [
+    1.15,
+    1.15,
+    1.2
+   ],
+   "letterSpacing": [
+    "normal"
+   ],
+   "sourceSelectors": [
+    "h1",
+    "h2",
+    "h3"
+   ]
+  },
+  "bodyFamily": {
+   "name": "FreightSans Pro",
+   "stack": "freight-sans-pro, sans-serif",
+   "weights": [
+    400,
+    500
+   ],
+   "sizes": [
+    "16px",
+    "20px"
+   ],
+   "lineHeights": [
+    1.5
+   ],
+   "letterSpacing": [
+    "normal"
+   ],
+   "sourceSelectors": [
+    "p",
+    "li"
+   ]
+  },
+  "monoFamily": null,
+  "scaleRatio": null,
+  "scaleAudit": {
+   "kind": "ad-hoc",
+   "ratios": [
+    3.2,
+    1.111,
+    1.125
+   ],
+   "matchedScale": null
+  },
+  "loadStrategy": "swap",
+  "files": [
+   {
+    "family": "freight-sans-pro",
+    "style": "normal",
+    "weight": 600,
+    "localPath": "stardust/current/assets/fonts/l-04451ba2.woff2",
+    "source": "use.typekit.net",
+    "licensingFlag": "private"
+   },
+   {
+    "family": "freight-sans-pro",
+    "style": "normal",
+    "weight": 300,
+    "localPath": "stardust/current/assets/fonts/l-35060336.woff2",
+    "source": "use.typekit.net",
+    "licensingFlag": "private"
+   },
+   {
+    "family": "freight-sans-pro",
+    "style": "normal",
+    "weight": 400,
+    "localPath": "stardust/current/assets/fonts/l-5b721b38.woff2",
+    "source": "use.typekit.net",
+    "licensingFlag": "private"
+   },
+   {
+    "family": "freight-sans-pro",
+    "style": "normal",
+    "weight": 700,
+    "localPath": "stardust/current/assets/fonts/l-c2ba5f01.woff2",
+    "source": "use.typekit.net",
+    "licensingFlag": "private"
+   },
+   {
+    "family": "freight-sans-pro",
+    "style": "normal",
+    "weight": 500,
+    "localPath": "stardust/current/assets/fonts/l-ca90b67d.woff2",
+    "source": "use.typekit.net",
+    "licensingFlag": "private"
+   }
+  ]
+ },
+ "spacing": {
+  "baseUnit": 8,
+  "scale": [
+   8,
+   16,
+   24,
+   32,
+   48,
+   64,
+   96
+  ],
+  "sectionPadding": "48px",
+  "containerMaxWidth": "1184px (--container-width; observed wrappers 1232-1360px)",
+  "gridGap": "24px (--gutter: 1.5rem)"
+ },
+ "motifs": {
+  "borderRadius": {
+   "primary": "2px",
+   "secondary": "4px",
+   "pill": "9999px",
+   "primarySources": [
+    "index",
+    "who-we-serve-capital-markets",
+    "about"
+   ],
+   "occurrences": {
+    "2px": 130,
+    "4px": 80,
+    "9999px": 12,
+    "100px": 10
+   }
+  },
+  "shadows": [
+   {
+    "value": "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px",
+    "uses": "cards/modals"
+   },
+   {
+    "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 12, 54, 0.15) 1px 1px 56px 0px",
+    "uses": "cards/modals"
+   }
+  ],
+  "gradients": [],
+  "patterns": [
+   {
+    "name": "hero-band-navy",
+    "evidence": "full-width deep-navy (#000C36) hero band with left headline + right subcopy on all 5 pages"
+   },
+   {
+    "name": "card-grid",
+    "evidence": "4-up icon/illustration card grids (Featured solutions, Insights & perspectives) on 4/5 pages"
+   },
+   {
+    "name": "insights-rail",
+    "evidence": "Insights & perspectives card carousel with navy/photo card faces on 3/5 pages"
+   },
+   {
+    "name": "stat-carousel",
+    "evidence": "large-numeral stat carousel ($15T, 15,000, 10,000) on home, capital-markets, issuer-proxy"
+   },
+   {
+    "name": "awards-band",
+    "evidence": "Recognized by the industry tinted band with award cards on home + capital-markets"
+   },
+   {
+    "name": "tabbed-capability-list",
+    "evidence": "left link-list + right blue detail card (Our capabilities / Enhance every aspect) on 3/5 pages"
+   },
+   {
+    "name": "contact-form-band",
+    "evidence": "What's next for your business? light-blue band with embedded lead form above footer on 4/5 pages"
+   },
+   {
+    "name": "footer-mega",
+    "evidence": "navy mega-footer with 3 link columns + NYSE ticker on all pages"
+   },
+   {
+    "name": "nav-mega",
+    "evidence": "two-tier header: utility bar (Client access/Careers/Search) + primary dropdown nav"
+   },
+   {
+    "name": "line-illustration",
+    "evidence": "thin-line financial illustrations on tinted card faces (home Featured solutions)"
+   }
+  ]
+ },
+ "componentStyle": {
+  "buttons": {
+   "primary": {
+    "background": "#2662fc",
+    "color": "#ffffff",
+    "borderRadius": "2px",
+    "padding": "16px 24px",
+    "fontWeight": 500,
+    "shadow": null,
+    "hoverDelta": "darken toward #0f3db5"
+   },
+   "secondary": {
+    "background": "transparent",
+    "color": "#ffffff",
+    "borderRadius": "2px",
+    "padding": "16px 24px",
+    "fontWeight": 500,
+    "border": "1px solid #ffffff",
+    "note": "ghost on navy bands"
+   },
+   "ghost": {
+    "background": "transparent",
+    "color": "#0f3db5",
+    "borderRadius": "0",
+    "note": "text link + arrow glyph"
+   }
+  },
+  "dualCTAPattern": "primary-then-arrow-link",
+  "cards": {
+   "background": "#e7f1fc | #001f5a | photo",
+   "borderRadius": "2px",
+   "padding": "24px",
+   "shadow": null,
+   "border": "none"
+  },
+  "inputs": {
+   "borderRadius": "2px",
+   "padding": "12px 16px",
+   "border": "1px solid #b3b3b3",
+   "background": "#ffffff",
+   "focusRing": "#2662fc"
+  }
+ },
+ "systemComponents": [
+  {
+   "name": "site-header",
+   "kind": "header",
+   "occurrences": 5,
+   "headingSequence": [
+    "Who we serve",
+    "Capabilities",
+    "Insights",
+    "About us"
+   ],
+   "ctaLabels": [
+    "Client access",
+    "Careers",
+    "Search",
+    "Contact us"
+   ],
+   "exampleSlug": "index",
+   "exampleSelector": "header",
+   "examplePages": [
+    "about",
+    "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy",
+    "index",
+    "insights-2026-digital-transformation-study",
+    "who-we-serve-capital-markets"
+   ]
+  },
+  {
+   "name": "site-footer",
+   "kind": "footer",
+   "occurrences": 5,
+   "headingSequence": [
+    "Company information",
+    "Who we serve"
+   ],
+   "ctaLabels": [
+    "About Broadridge",
+    "Careers",
+    "Client access",
+    "Company newsroom",
+    "Investor relations",
+    "Manage email preferences"
+   ],
+   "exampleSlug": "index",
+   "exampleSelector": "footer",
+   "examplePages": [
+    "about",
+    "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy",
+    "index",
+    "insights-2026-digital-transformation-study",
+    "who-we-serve-capital-markets"
+   ]
+  },
+  {
+   "name": "contact-form-band",
+   "kind": "cta-band",
+   "occurrences": 4,
+   "headingSequence": [
+    "What's next for your business?"
+   ],
+   "ctaLabels": [
+    "Contact us"
+   ],
+   "exampleSlug": "index",
+   "exampleSelector": "section.contact-us",
+   "examplePages": [
+    "about",
+    "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy",
+    "index",
+    "who-we-serve-capital-markets"
+   ]
+  },
+  {
+   "name": "insights-rail",
+   "kind": "cross-promo",
+   "occurrences": 3,
+   "headingSequence": [
+    "Insights & perspectives"
+   ],
+   "ctaLabels": [
+    "Explore all insights"
+   ],
+   "exampleSlug": "index",
+   "exampleSelector": "section.insights",
+   "examplePages": [
+    "index",
+    "who-we-serve-capital-markets",
+    "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy"
+   ]
+  }
+ ],
+ "iconFont": null,
+ "voice": {
+  "heroHeadline": "NAVIGATE",
+  "heroSubcopy": "tokenized markets with confidence.",
+  "heroImage": {
+   "url": null,
+   "source": "css-background",
+   "note": "navy band with abstract line-network motif; carousel slide",
+   "localPath": null
+  },
+  "heroMedium": {
+   "kind": "carousel",
+   "mechanism": "swiper",
+   "src": null,
+   "domPath": "main .swiper",
+   "loader": "swiper",
+   "note": "home hero is a rotating promo carousel; about page hero embeds a Vimeo video (Play Video 01:51)"
+  },
+  "primaryCTALabel": "Let's go",
+  "ctaSamples": [
+   "Let's go",
+   "Contact us",
+   "Explore all insights",
+   "Explore all analyst coverage",
+   "Download the full report",
+   "Explore opportunities with us"
+  ],
+  "navItems": [
+   "Who we serve",
+   "Capabilities",
+   "Insights",
+   "About us",
+   "Client access",
+   "Careers",
+   "Search",
+   "Contact us"
+  ],
+  "footerHeadings": [
+   "Company information",
+   "Who we serve"
+  ],
+  "firstParagraph": "Broadridge is a global technology leader with trusted expertise and transformative technology, helping our clients and the financial services industry operate, innovate, and grow.",
+  "tone": {
+   "guess": "professional-formal",
+   "evidence": "institutional vocabulary (governance, post-trade, proxy), third-person claims, stat-led proof, sparse imperatives"
+  }
+ },
+ "voiceTable": {
+  "ctaFrequency": [
+   {
+    "label": "Contact us",
+    "total": 10,
+    "pageCount": 5
+   },
+   {
+    "label": "Client access",
+    "total": 10,
+    "pageCount": 5
+   },
+   {
+    "label": "Explore all insights",
+    "total": 3,
+    "pageCount": 3
+   },
+   {
+    "label": "Download the full report",
+    "total": 3,
+    "pageCount": 1
+   }
+  ],
+  "headingFrequency": [
+   {
+    "text": "What's next for your business?",
+    "total": 4,
+    "pageCount": 4,
+    "level": 2
+   },
+   {
+    "text": "Insights & perspectives",
+    "total": 3,
+    "pageCount": 3,
+    "level": 2
+   },
+   {
+    "text": "Recognized by the industry",
+    "total": 2,
+    "pageCount": 2,
+    "level": 2
+   }
+  ],
+  "toneMetrics": {
+   "headingsTotal": 64,
+   "headingsUppercasePercent": 4,
+   "distinctHeadings": 54,
+   "distinctCtaLabels": 129
+  }
+ },
+ "crossPromo": {
+  "detected": true,
+  "anchorHeading": "What's next for your business?",
+  "cluster": [
+   {
+    "text": "What's next for your business?",
+    "total": 4,
+    "pageCount": 4,
+    "overlap": 4
+   }
+  ],
+  "pages": [
+   "about",
+   "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy",
+   "index",
+   "who-we-serve-capital-markets"
+  ],
+  "pageCount": 4,
+  "totalPages": 5
+ },
+ "register": "brand"
+}

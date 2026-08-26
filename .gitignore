@@ -8,6 +8,15 @@ helix-importer-ui
 *.bak
 .idea
 
+# Migration workspace: sources and ledgers are tracked, binaries stay local
+stardust/current/assets/
+stardust/current/html/
+stardust/current/pages/
+stardust/replica/gates/
+stardust/migrated/media/
+stardust/migrated/assets/
+stardust/**/*.log
+
 # Ensure these files are tracked
 !CLAUDE.md
 !AGENTS.md

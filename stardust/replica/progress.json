@@ -1,0 +1,96 @@
+{
+ "phase": "replica",
+ "at": "2026-08-24T20:00:00Z",
+ "archetypes": {
+  "home (landing)": {
+   "slug": "index",
+   "gates": {
+    "1440": {
+     "iterations": 4,
+     "pixelDiff": "24.7% best (28.5% final after regression), height \u0394 385px",
+     "status": "residual-logged"
+    },
+    "360": {
+     "status": "visual-pass (NAVIGATE clamp fixed)"
+    }
+   },
+   "residuals": [
+    "~40px global vertical offset ghosting inflates %",
+    "hero panel composition deltas",
+    "nav spacing fine-diffs"
+   ]
+  },
+  "press-release (article)": {
+   "slug": "press-release/2022/annual-broadridge-distribution-achievement-awards",
+   "gates": {
+    "1440": {
+     "iterations": 3,
+     "pixelDiff": "15.95%, height \u0394 292px",
+     "status": "residual-logged"
+    }
+   },
+   "residuals": [
+    "text-offset ghosting",
+    "hero band height ~40px",
+    "rail composition approximate"
+   ]
+  },
+  "capability (program)": {
+   "slug": "capability/.../issuer-proxy",
+   "gates": {
+    "1440": {
+     "status": "visual-pass; product-screenshot carousel renders stacked (route products-solution\u2192carousel deferred)"
+    }
+   }
+  },
+  "segment (landing)": {
+   "slug": "who-we-serve/capital-markets",
+   "gates": {
+    "1440": {
+     "status": "visual-pass"
+    }
+   }
+  },
+  "insight-study": {
+   "slug": "insights/2026-digital-transformation-study",
+   "gates": {
+    "1440": {
+     "status": "visual-pass"
+    }
+   }
+  },
+  "listing": {
+   "slug": "press-hub",
+   "gates": {
+    "1440": {
+     "status": "dynamic listing verified: 20 items, 1305 press indexed, facets live"
+    }
+   }
+  },
+  "search": {
+   "slug": "search-results",
+   "gates": {
+    "run": "50 results for \u201cproxy\u201d \u2014 functional"
+   }
+  },
+  "de article": {
+   "slug": "de/press-release/2026/broadridge-expands-nyfix-platform",
+   "gates": {
+    "1440": {
+     "status": "visual-pass (body, fragment, rail)"
+    }
+   }
+  },
+  "cit": {
+   "slug": "cit/banks-and-trusts",
+   "gates": {
+    "1440": {
+     "status": "mini-canon css shipped; visual spot-check pending"
+    }
+   }
+  }
+ },
+ "notes": [
+  "gate scripts: bypassCSP enabled in project copy of live-session.mjs (CSP-nonce pages blocked style injection) \u2014 documented script adaptation"
+ ]
+}

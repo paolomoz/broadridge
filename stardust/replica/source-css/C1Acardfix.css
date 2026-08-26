@@ -1,0 +1,21 @@
+/* C1A Card Grid - equal height cards */
+  [data-component="C1A Card Grid"] .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+  [data-component="C1A Card Grid"] .swiper-slide {
+    display: flex;
+    height: auto !important;
+  }
+  [data-component="C1A Card Grid"] .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  [data-component="C1A Card Grid"] .card__content {
+    flex: 1;
+  }
+  [data-component="C1A Card Grid"] .grid-cover {
+    height: 100%;
+  }

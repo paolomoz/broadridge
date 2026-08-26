@@ -1,0 +1,252 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:extract",
+  "writtenAt": "2026-08-24T12:40:00Z",
+  "stardustVersion": "0.18.1"
+ },
+ "discovery": {
+  "method": "sitemap",
+  "sitemapUrl": "https://www.broadridge.com/us-en/sitemap.xml",
+  "sitemapSource": "robots.txt Sitemap directive",
+  "totalDiscovered": 1044,
+  "fetchTechnique": "headless",
+  "concurrency": 4,
+  "notes": [
+   "Legacy /sitemap.xml (3,696 URLs, entries back to 2012 press releases) is stale: sampled URLs 301-redirect to the current IA. First crawl attempt used it and captured redirect targets under wrong slugs; discarded and re-crawled from the us-en sitemap.",
+   "Locale sitemaps exist: /de, /ca, /jp, /cit (sitemap_index.xml). Out of scope for the primary us-en extraction."
+  ],
+  "filteredAsJunk": [
+   "/-test",
+   "/test-home",
+   "/master-pages/*",
+   "/search-results",
+   "/product-search",
+   "/sitemap",
+   "/email-preferences"
+  ],
+  "userChoice": "default 5-page discovery cap; selection = home + 4 template pillars (segment, capability, insight, about)"
+ },
+ "consent": {
+  "method": "auto+retry",
+  "note": "banner mounts late; project crawl.mjs patched to retry dismissal after wait"
+ },
+ "crawl": {
+  "failures": []
+ },
+ "visionCheck": [
+  {
+   "slug": "index",
+   "verdict": "recaptured",
+   "notes": "first capture showed consent banner mid-page; recaptured after dismissal patch \u2014 clean"
+  },
+  {
+   "slug": "who-we-serve-capital-markets",
+   "verdict": "ok",
+   "notes": "mid-page blank band is a Vimeo iframe (player.vimeo.com/915043880), captured in media.iframes; not a capture failure"
+  },
+  {
+   "slug": "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy",
+   "verdict": "ok",
+   "notes": ""
+  },
+  {
+   "slug": "insights-2026-digital-transformation-study",
+   "verdict": "ok",
+   "notes": "data-viz charts render; gated-report form captured"
+  },
+  {
+   "slug": "about",
+   "verdict": "ok",
+   "notes": "Vimeo hero video poster captured"
+  }
+ ],
+ "siblingCandidates": [
+  {
+   "origin": "https://www.broadridge.com/de",
+   "confidence": "high",
+   "evidence": "sitemap_index.xml locale sitemap + footer Deutschland link",
+   "decision": "excluded \u2014 locale variant of same origin, not a sibling brand"
+  },
+  {
+   "origin": "https://broadridge.wd5.myworkdayjobs.com",
+   "confidence": "low",
+   "evidence": "Careers nav link",
+   "decision": "excluded \u2014 third-party ATS"
+  },
+  {
+   "origin": "https://www.ltxtrading.com",
+   "confidence": "low",
+   "evidence": "legacy campaign URL abcd-ltx-card references LTX subsidiary",
+   "decision": "not captured \u2014 surface to user"
+  }
+ ],
+ "prep": {
+  "inventorySource": [
+   "us-en/sitemap.xml (1,044)",
+   "de/sitemap.xml (701)",
+   "jp/sitemap.xml (674)",
+   "cit/sitemap.xml (18)"
+  ],
+  "junkFiltered": 20,
+  "redirectsResolved": 240,
+  "redirectMap": "stardust/redirect-map.json",
+  "crawled": 2208,
+  "failures": [
+   {
+    "url": "https://www.broadridge.com/de/campaigns/broadridge-middle-office-solution",
+    "slug": "de-campaigns-broadridge-middle-office-solution",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T13:57:07.030Z"
+   },
+   {
+    "url": "https://www.broadridge.com/de/capability/front-office-solutions/securities-finance-collateral-trading",
+    "slug": "de-capability-front-office-solutions-securities-finance-collateral-trading",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T13:57:08.195Z"
+   },
+   {
+    "url": "https://www.broadridge.com/de/capability/middle-and-back-office-solutions/post-trade-processing/distributed-ledger-repo-solutions",
+    "slug": "de-capability-middle-and-back-office-solutions-post-trade-processing-distributed-ledger-repo-solutions",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T13:57:09.503Z"
+   },
+   {
+    "url": "https://www.broadridge.com/de/capability/governance-and-regulatory-compliance/fund-regulatory-reporting-filing/eu-and-uk-end-to-end-regulatory-services",
+    "slug": "de-capability-governance-and-regulatory-compliance-fund-regulatory-reporting-filing-eu-and-uk-end-to-end-regulatory-services",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T13:57:09.897Z"
+   },
+   {
+    "url": "https://www.broadridge.com/de/insights/2026-digital-transformation-study",
+    "slug": "de-insights-2026-digital-transformation-study",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:03:15.675Z"
+   },
+   {
+    "url": "https://www.broadridge.com/de/press-release/2026/broadridge-expands-nyfix-platform",
+    "slug": "de-press-release-2026-broadridge-expands-nyfix-platform",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:26:51.579Z"
+   },
+   {
+    "url": "https://www.broadridge.com/de/who-we-serve/asset-management",
+    "slug": "de-who-we-serve-asset-management",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:27:34.348Z"
+   },
+   {
+    "url": "https://www.broadridge.com/de/who-we-serve/capital-markets",
+    "slug": "de-who-we-serve-capital-markets",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:27:36.671Z"
+   },
+   {
+    "url": "https://www.broadridge.com/dehttps://www.broadridge.com",
+    "slug": "dehttps-www-broadridge-com",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:27:38.198Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/_assets/pdf/broadridge-eforex-report-jan-2018.pdf",
+    "slug": "jp-assets-pdf-broadridge-eforex-report-jan-2018-pdf",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:35:50.332Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/_assets/pdf/broadridge-up-to-the-challenge.pdf",
+    "slug": "jp-assets-pdf-broadridge-up-to-the-challenge-pdf",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:35:51.005Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/article/up-to-the-challenge-fx-and-liquidity-management",
+    "slug": "jp-article-up-to-the-challenge-fx-and-liquidity-management",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:37:06.843Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/capability/front-office-solutions/securities-finance-collateral-trading",
+    "slug": "jp-capability-front-office-solutions-securities-finance-collateral-trading",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:37:50.204Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/campaigns/broadridge-middle-office-solution",
+    "slug": "jp-campaigns-broadridge-middle-office-solution",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:37:50.572Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/capability/governance-and-regulatory-compliance",
+    "slug": "jp-capability-governance-and-regulatory-compliance",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:37:50.574Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/capability/governance-and-regulatory-compliance/fund-regulatory-reporting-filing/eu-and-uk-end-to-end-regulatory-services",
+    "slug": "jp-capability-governance-and-regulatory-compliance-fund-regulatory-reporting-filing-eu-and-uk-end-to-end-regulatory-services",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:37:51.350Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/capability/middle-and-back-office-solutions/post-trade-processing/distributed-ledger-repo-solutions",
+    "slug": "jp-capability-middle-and-back-office-solutions-post-trade-processing-distributed-ledger-repo-solutions",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T14:37:52.217Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/who-we-serve/asset-management",
+    "slug": "jp-who-we-serve-asset-management",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T15:01:47.497Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jp/who-we-serve/capital-markets",
+    "slug": "jp-who-we-serve-capital-markets",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T15:01:49.008Z"
+   },
+   {
+    "url": "https://www.broadridge.com/jphttps://www.broadridge.com",
+    "slug": "jphttps-www-broadridge-com",
+    "errorClass": "HTTPError",
+    "message": "HTTP 404",
+    "at": "2026-08-24T15:01:50.525Z"
+   },
+   {
+    "url": "https://www.broadridge.com/widget/company-information/about-idc-financial-insights",
+    "slug": "widget-company-information-about-idc-financial-insights",
+    "errorClass": "EmptyPageError",
+    "message": "empty page \u2014 possibly soft-404",
+    "at": "2026-08-24T15:17:29.965Z"
+   },
+   {
+    "url": "https://www.broadridge.com/widget/company-information/about-proxy-pulse-broadridge-pwc-us-pwcs-governance-insights-center-media-contacts",
+    "slug": "widget-company-information-about-proxy-pulse-broadridge-pwc-us-pwcs-governance-insights-center-media-contacts",
+    "errorClass": "EmptyPageError",
+    "message": "empty page \u2014 possibly soft-404",
+    "at": "2026-08-24T15:17:35.099Z"
+   }
+  ],
+  "note": "15 locale-sitemap URLs return HEAD 200 but GET 404 (stale locale sitemaps) \u2014 excluded from migration, logged here."
+ }
+}

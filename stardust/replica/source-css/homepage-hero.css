@@ -1,0 +1,41 @@
+/* ==========================
+   Desktop (1024px+)
+   ========================== */
+h1.heading.display-1.display-1.color-light.hero-deconstructed__main-card-title {
+    font-size: 128px !important;
+    font-weight: 700;
+    line-height: 115%;
+}
+.text-atom.hero-deconstructed__card-description.body-1 {
+    font-size: 36px !important;
+    font-weight: 300 !important;
+    line-height: 110% !important;
+}
+a.cta.group.cta-primary.cta-medium.md\:self-baseline.cta-dark {
+    font-weight: 600;
+}
+/* ==========================
+   Tablet (768px - 1023px)
+   ========================== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h1.heading.display-1.display-1.color-light.hero-deconstructed__main-card-title {
+        font-size: 75px !important;
+    }
+    .text-atom.hero-deconstructed__card-description.body-1 {
+        font-size: 30px !important;
+    }
+}
+/* ==========================
+   Mobile (0px - 767px)
+   ========================== */
+@media screen and (max-width: 767px) {
+    .hero-deconstructed.less > *:nth-child(1) .object-cover {
+        object-fit: cover !important;
+    }
+    h1.heading.display-1.display-1.color-light.hero-deconstructed__main-card-title {
+        font-size: 72px !important;
+    }
+    .text-atom.hero-deconstructed__card-description.body-1 {
+        font-size: 26px !important;
+    }
+}

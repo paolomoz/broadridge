@@ -1,0 +1,13 @@
+{"phase": "extract", "event": "end", "at": "2026-08-24T12:40:00Z", "pages": 5, "failures": 0}
+{"phase": "direct", "event": "end", "at": "2026-08-24T12:55:00Z", "mode": "A-replica", "iaFidelity": "verbatim"}
+{"phase": "extract --prep", "event": "end", "at": "2026-08-24T15:30:00Z", "pages": 2208, "provenanceLive": 2208}
+{"phase": "direct --prep", "event": "end", "at": "2026-08-24T15:45:00Z", "modules": 9, "colorReservations": 0}
+{"phase": "migrate", "event": "end", "at": "2026-08-24T20:05:00Z", "migrated": 2207}
+{"phase": "prepare-migration assets", "event": "end", "at": "2026-08-24T20:20:00Z", "favicons": 3, "fonts": "typekit-referenced"}
+{"phase": "dynamic-blocks", "event": "end", "at": "2026-08-24T20:20:00Z", "dynamic": ["listing press", "listing insights", "search"], "indexes": "helix-query.yaml"}
+{"phase": "da-delivery", "event": "end", "at": "2026-08-24T20:25:00Z", "uploaded": 2219, "failed": 0}
+{"phase": "code-delivery", "event": "blocked", "at": "2026-08-24T20:25:00Z", "reason": "gh repo creation denied by permission classifier; deliver.sh ready"}
+{"phase": "code-delivery", "event": "end", "at": "2026-08-24T21:05:00Z", "repo": "paolomoz/broadridge", "codeSync": "ok"}
+{"phase": "publish", "event": "end", "at": "2026-08-24T21:05:00Z", "published": 2223, "failedFixed": "154 nav-leak (importer <main> fallback) + 35 oversized SVGs (rasterized to DA-hosted PNG) + 3 locale index aliases"}
+{"phase": "redirects", "event": "end", "at": "2026-08-24T21:05:00Z", "rules": 4133, "note": "legacy sitemap sweep added 1,958 sources; slash variants; content-shadow rules dropped"}
+{"phase": "rollout", "event": "end", "at": "2026-08-24T21:05:00Z", "live": "https://main--broadridge--paolomoz.aem.live/"}

@@ -1,0 +1,115 @@
+{
+  "pageType": "landing",
+  "archetype": "test-b-home",
+  "prototype": {
+    "1440": {
+      "iterations": 4,
+      "result": {
+        "structuralRed": 0,
+        "visualFlags": "3 justified (cover crops)",
+        "pixelPct": 3.55,
+        "heightDelta": 4,
+        "pass": true
+      }
+    },
+    "360": {
+      "iterations": 6,
+      "result": {
+        "structuralRed": 0,
+        "visualFlags": "3 justified (cover crops)",
+        "pixelPct": 5.56,
+        "heightDelta": 2,
+        "pass": true
+      }
+    },
+    "notes": "runs 1-2 per breakpoint invalidated by instrument defects (F-B2 header CORS font kill; un-lifted text-rendering:optimizespeed)"
+  },
+  "eds": {
+    "url": "https://main--broadridge--paolomoz.aem.page/test-b",
+    "1440": {
+      "pixelPct": 6.81,
+      "heightDelta": 9,
+      "pass": true
+    },
+    "360": {
+      "pixelPct": 9.89,
+      "heightDelta": 61,
+      "pass": true,
+      "residuals": "populated-ticker trade-off, side-tabber mobile internals, phone-row columns"
+    },
+    "contentDiff": "17 structural red, all confirmed-justified block-granularity artifacts (#87)",
+    "postReviewFix": "r1 hero picture-wrapper; r2 featured icon clamp; r3 footer parity (scoped /footer-test-b) + live-probed hover/transition parity; analyst-CTA screenshot = unserved A/B variant (not reproducible at 1440/1920/1000); r4 capped header bars + utility divider/magnifier + tab sliding activator + panel fade + panel text centering"
+  },
+  "pages": {
+    "test-b": "home archetype \u2014 both gates PASS",
+    "test-b-asset-management": {
+      "1440": {
+        "pixelPct": 8.68,
+        "heightDelta": 84,
+        "pass": true,
+        "note": "functional carousels live"
+      },
+      "360": {
+        "pixelPct": 14.3,
+        "heightDelta": 76,
+        "pass": false
+      }
+    },
+    "test-b-capital-markets": {
+      "1440": {
+        "pixelPct": 8.76,
+        "pass": true
+      },
+      "360": {
+        "pixelPct": 26.25,
+        "pass": false
+      }
+    },
+    "test-b-wealth-management": {
+      "1440": {
+        "pixelPct": 9.83,
+        "heightDelta": 4,
+        "pass": true
+      },
+      "360": {
+        "pixelPct": 15.27,
+        "pass": false
+      }
+    },
+    "test-b-issuers": {
+      "1440": {
+        "pixelPct": 12.32,
+        "heightDelta": 3,
+        "pass": false
+      },
+      "360": {
+        "pixelPct": 22.28,
+        "pass": false
+      }
+    },
+    "test-b-consumer-industries": {
+      "1440": {
+        "pixelPct": 10.13,
+        "pass": false
+      },
+      "360": {
+        "pixelPct": 24.37,
+        "pass": false
+      }
+    },
+    "test-b-capability-wealth-advisor-solutions": {
+      "1440": {
+        "pixelPct": 13.72,
+        "pass": false,
+        "note": "archetype pilot"
+      }
+    },
+    "test-b-pulse-study": {
+      "1440": {
+        "pixelPct": 16.35,
+        "pass": false,
+        "note": "archetype pilot"
+      }
+    }
+  }
+}

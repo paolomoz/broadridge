@@ -1,0 +1,16 @@
+import { chromium } from 'playwright';
+const [url, out, w] = process.argv.slice(2);
+const b = await chromium.launch();
+const pg = await (await b.newContext({ viewport: { width: +w || 1440, height: 900 }, deviceScaleFactor: 1 })).newPage();
+const errors = [];
+pg.on('console', (m) => { if (m.type() === 'error') errors.push(m.text().slice(0, 200)); });
+pg.on('pageerror', (e) => errors.push(`PAGEERROR: ${String(e).slice(0, 250)}`));
+await pg.goto(url, { waitUntil: 'networkidle', timeout: 45000 }).catch((e) => errors.push(`nav: ${e.message}`));
+await pg.waitForTimeout(1500);
+await pg.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+await pg.waitForTimeout(600);
+await pg.evaluate(() => window.scrollTo(0, 0));
+await pg.waitForTimeout(400);
+await pg.screenshot({ path: out, fullPage: true });
+console.log('errors:', JSON.stringify(errors.slice(0, 12), null, 1));
+await b.close();

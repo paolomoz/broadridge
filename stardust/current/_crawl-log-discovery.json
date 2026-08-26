@@ -1,0 +1,83 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:extract",
+  "writtenAt": "2026-08-24T12:40:00Z",
+  "stardustVersion": "0.18.1"
+ },
+ "discovery": {
+  "method": "sitemap",
+  "sitemapUrl": "https://www.broadridge.com/us-en/sitemap.xml",
+  "sitemapSource": "robots.txt Sitemap directive",
+  "totalDiscovered": 1044,
+  "fetchTechnique": "headless",
+  "concurrency": 4,
+  "notes": [
+   "Legacy /sitemap.xml (3,696 URLs, entries back to 2012 press releases) is stale: sampled URLs 301-redirect to the current IA. First crawl attempt used it and captured redirect targets under wrong slugs; discarded and re-crawled from the us-en sitemap.",
+   "Locale sitemaps exist: /de, /ca, /jp, /cit (sitemap_index.xml). Out of scope for the primary us-en extraction."
+  ],
+  "filteredAsJunk": [
+   "/-test",
+   "/test-home",
+   "/master-pages/*",
+   "/search-results",
+   "/product-search",
+   "/sitemap",
+   "/email-preferences"
+  ],
+  "userChoice": "default 5-page discovery cap; selection = home + 4 template pillars (segment, capability, insight, about)"
+ },
+ "consent": {
+  "method": "auto+retry",
+  "note": "banner mounts late; project crawl.mjs patched to retry dismissal after wait"
+ },
+ "crawl": {
+  "failures": []
+ },
+ "visionCheck": [
+  {
+   "slug": "index",
+   "verdict": "recaptured",
+   "notes": "first capture showed consent banner mid-page; recaptured after dismissal patch \u2014 clean"
+  },
+  {
+   "slug": "who-we-serve-capital-markets",
+   "verdict": "ok",
+   "notes": "mid-page blank band is a Vimeo iframe (player.vimeo.com/915043880), captured in media.iframes; not a capture failure"
+  },
+  {
+   "slug": "capability-governance-and-regulatory-compliance-proxy-services-issuer-proxy",
+   "verdict": "ok",
+   "notes": ""
+  },
+  {
+   "slug": "insights-2026-digital-transformation-study",
+   "verdict": "ok",
+   "notes": "data-viz charts render; gated-report form captured"
+  },
+  {
+   "slug": "about",
+   "verdict": "ok",
+   "notes": "Vimeo hero video poster captured"
+  }
+ ],
+ "siblingCandidates": [
+  {
+   "origin": "https://www.broadridge.com/de",
+   "confidence": "high",
+   "evidence": "sitemap_index.xml locale sitemap + footer Deutschland link",
+   "decision": "excluded \u2014 locale variant of same origin, not a sibling brand"
+  },
+  {
+   "origin": "https://broadridge.wd5.myworkdayjobs.com",
+   "confidence": "low",
+   "evidence": "Careers nav link",
+   "decision": "excluded \u2014 third-party ATS"
+  },
+  {
+   "origin": "https://www.ltxtrading.com",
+   "confidence": "low",
+   "evidence": "legacy campaign URL abcd-ltx-card references LTX subsidiary",
+   "decision": "not captured \u2014 surface to user"
+  }
+ ]
+}

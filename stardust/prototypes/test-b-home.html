@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broadridge - Broadridge | Global Leader - Financial Technology Solutions</title>
+<meta name="description" content="Broadridge, a global technology leader with solutions that power investing, governance, and communications for clients and the financial industry.">
+<link rel="stylesheet" href="https://use.typekit.net/xmw3hcn.css">
+<style>
+/* ---- tokens (lifted from live styles.css + computed styles, 2026-08-25) ---- */
+:root {
+  --navy: #000c36;        /* rgb(0,12,54) text/body + promo bar */
+  --blue-750: #001f5a;    /* dark card bg */
+  --blue-650: #082485;    /* contact heading */
+  --blue-550: #0f3db5;    /* badge-light bg, side-tabber panel */
+  --blue: #2662fc;        /* primary CTA */
+  --blue-250: #bad1f5;    /* badge-dark bg, footer legal links, tab borders */
+  --blue-150: #e7f1fc;    /* light card bg */
+  --neutral-100: #f9f9f9; /* page bg, input bg */
+  --input-border: #b3b3b3;
+  --divider: #d9d9d9;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: freight-sans-pro, sans-serif;
+  font-size: 16px; line-height: 1.5; color: #000;
+  background: #fff;
+  text-rendering: optimizespeed;
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+}
+img { display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+button { font-family: inherit; background: none; border: 0; padding: 0; cursor: pointer; color: inherit; }
+
+.arrow-icon { width: 24px; height: 24px; flex: none; }
+
+/* ---------- header (sticky: promo bar scrolls away, main bar pins) ---------- */
+.site-header {
+  position: sticky; top: -38px; margin-bottom: -118px; z-index: 50;
+  width: 100%;
+}
+.promo-bar { background: var(--navy); height: 38px; }
+.promo-bar__inner {
+  max-width: 1312px; margin: 0 auto; height: 38px; padding: 0 64px;
+  display: flex; align-items: center; justify-content: flex-end; gap: 24px;
+}
+.promo-bar__inner a, .promo-bar__inner button {
+  font-size: 14px; font-weight: 500; color: #fff; line-height: 16px;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.promo-bar__divider { width: 1px; height: 16px; background: #fff; }
+.main-bar { background: #fff; height: 80px; }
+.main-bar__inner {
+  max-width: 1312px; margin: 0 auto; height: 80px; padding: 0 64px;
+  display: flex; align-items: center;
+}
+.main-bar__logo img { width: 160px; height: 36px; }
+.main-bar__nav { display: flex; align-items: center; gap: 32px; margin-left: auto; }
+.main-bar__nav button {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 500; color: var(--navy); line-height: 1;
+  padding: 16px 0; height: 48px;
+}
+.main-bar__nav .chev { width: 10px; height: 6px; }
+.btn-contact {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--blue); color: #fff; border-radius: 2px;
+  font-size: 16px; font-weight: 500; line-height: 16px;
+  padding: 16px 24px; height: 48px; margin-left: 32px;
+}
+.hamburger { display: none; }
+
+/* ---------- main / shared ---------- */
+.main { background: var(--neutral-100); }
+.section { padding: 48px 0; }
+.container-1312 { max-width: 1360px; margin: 0 auto; padding: 0 24px; }
+.container-1184 { max-width: 1232px; margin: 0 auto; padding: 0 24px; }
+.container-1344 { max-width: 1360px; margin: 0 auto; padding: 0 8px; }
+.section-h2 { font-size: 40px; font-weight: 400; line-height: 46px; color: #000; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: 2px; padding: 1px 6.5px 3px;
+  font-size: 14px; line-height: 1.15; font-weight: 400;
+  align-self: flex-start;
+}
+.badge-light { background: var(--blue-550); color: #fff; }
+.badge-dark { background: var(--blue-250); color: var(--navy); }
+
+.cta-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--blue); color: #fff; border-radius: 2px;
+  font-size: 20px; font-weight: 500; line-height: 20px; padding: 16px 24px;
+}
+
+.card { border-radius: 4px; overflow: hidden; position: relative; }
+.card__cta { display: flex; margin-top: auto; }
+
+/* ---------- hero ---------- */
+.hero { padding: 168px 0 48px; }
+.hero__grid {
+  display: grid; grid-template-columns: 876px 420px; gap: 16px;
+  justify-content: center;
+}
+.hero__main {
+  background: var(--blue-750); color: #fff; height: 480px;
+}
+.hero__main .card__image, .hero__side .card__image {
+  position: absolute; inset: 0; z-index: 0;
+}
+.hero__main .card__image img, .hero__side .card__image img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.hero__main .card__content {
+  position: relative; z-index: 1; height: 100%;
+  display: flex; flex-direction: column; padding: 64px;
+}
+.hero__h1 {
+  font-size: 128px; font-weight: 700; line-height: 1.15; color: #fff;
+}
+.hero__sub { font-size: 36px; font-weight: 300; line-height: 1.1; color: #fff; margin-top: 8px; }
+.hero__cta {
+  margin-top: auto; align-self: flex-start;
+  display: inline-flex; align-items: center;
+  background: #fff; color: var(--blue); border-radius: 2px;
+  font-size: 20px; font-weight: 600; line-height: 20px; padding: 16px 24px;
+}
+.hero__right { display: grid; grid-template-rows: 199px 265px; gap: 16px; }
+.hero__side { background: var(--blue-750); color: #fff; display: block; }
+.hero__side .card__content {
+  position: relative; z-index: 1; height: 100%;
+  display: flex; flex-direction: column; gap: 16px; padding: 24px;
+}
+.hero__side--bottom .card__content { justify-content: flex-end; }
+.hero__side .text-group { display: flex; flex-direction: column; gap: 8px; }
+.hero__side h3 { font-size: 24px; font-weight: 400; line-height: 1.15; color: #fff; }
+.hero__side .card__cta { margin-top: 0; color: #fff; }
+
+/* ---------- featured solutions ---------- */
+.featured__head { margin-bottom: 48px; }
+.featured__grid { display: grid; grid-template-columns: repeat(4, 272px); gap: 32px; }
+.featured__card {
+  background: var(--blue-150); color: var(--navy);
+  display: flex; flex-direction: column;
+}
+.featured__card .card__image {
+  height: 204px; position: relative; overflow: hidden; flex: none;
+}
+.featured__card .card__image img {
+  width: 356px; height: 356px; position: absolute; left: 48px; top: -148px;
+}
+.featured__card .card__content {
+  padding: 24px; display: flex; flex-direction: column; gap: 16px;
+  min-height: 250px; flex: 1;
+}
+.featured__card .text-group { display: flex; flex-direction: column; gap: 8px; }
+.featured__title { font-size: 28px; font-weight: 400; line-height: 1.15; }
+.featured__desc { font-size: 22px; font-weight: 400; line-height: 1.3; }
+.featured__card .card__cta { margin-left: 10px; color: var(--navy); }
+
+/* ---------- insights ---------- */
+.insights__wrap { background: #fff; border-radius: 4px; padding: 64px; }
+.insights__slider { margin-top: 32px; overflow: hidden; }
+.insights__track { display: flex; gap: 32px; align-items: stretch; }
+.insights__card {
+  width: 280px; flex: none; background: var(--blue-750); color: #fff;
+  display: flex; flex-direction: column; min-height: 429px;
+}
+.insights__card .card__image img { width: 280px; aspect-ratio: 3/2; object-fit: cover; }
+.insights__card .card__content {
+  padding: 24px; display: flex; flex-direction: column; gap: 16px; flex: 1;
+}
+.insights__card .text-group { display: flex; flex-direction: column; gap: 8px; }
+.insights__card h2 { font-size: 24px; font-weight: 400; line-height: 1.15; color: #fff; }
+.insights__card .card__cta { color: #fff; }
+.slider-controls { display: none; }
+.insights__cta { margin-top: 64px; display: flex; justify-content: flex-end; }
+
+/* ---------- top-tabber ---------- */
+.top-tabber__head {
+  display: grid; grid-template-columns: 576px 576px; gap: 32px;
+  justify-content: space-between; margin-bottom: 48px;
+}
+.top-tabber__intro { font-size: 24px; font-weight: 400; line-height: 1.3; color: #000; }
+.top-tabber__tabs {
+  display: flex; justify-content: space-between;
+  border-bottom: 1px solid var(--divider); position: relative;
+}
+.top-tabber__tab {
+  font-size: 24px; font-weight: 400; line-height: 1.15; color: var(--navy);
+  padding: 0 12px 24px; text-align: left;
+  display: flex; align-items: flex-start; justify-content: space-between;
+}
+.top-tabber__tab.active { color: var(--blue); box-shadow: inset 0 -3px 0 var(--blue); }
+.top-tabber__tab .tab-icon { display: none; }
+.top-tabber__panels { border-bottom: 1px solid var(--blue-250); padding-bottom: 40px; margin-top: 48px; }
+.top-tabber__panel { display: none; }
+.top-tabber__panel.active {
+  display: grid; grid-template-columns: 509px 509px; gap: 96px; align-items: center;
+}
+.top-tabber__panel img { width: 509px; aspect-ratio: 4/3; object-fit: cover; }
+.top-tabber__panel-title { font-size: 36px; font-weight: 400; line-height: 1.3; margin-bottom: 16px; }
+.top-tabber__panel-desc { font-size: 22px; font-weight: 400; line-height: 1.3; color: #000; }
+.top-tabber__panel-cta {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 32px;
+  font-size: 18px; font-weight: 500; color: var(--navy);
+}
+
+/* ---------- side-tabber ---------- */
+.side-tabber__wrap {
+  background: #fff; border-radius: 4px; padding: 64px;
+  max-width: 1312px; margin: 0 auto;
+}
+.side-tabber__head {
+  display: grid; grid-template-columns: 576px 576px; gap: 32px;
+  justify-content: space-between; margin-bottom: 48px; min-height: 108px;
+}
+.side-tabber__desc { font-size: 22px; font-weight: 400; line-height: 1.3; color: #000; }
+.side-tabber__cols {
+  display: grid; grid-template-columns: 576px 576px; gap: 32px;
+  justify-content: space-between;
+}
+.side-tabber__tabs { display: flex; flex-direction: column; gap: 8px; }
+.side-tabber__tab {
+  font-size: 24px; font-weight: 400; line-height: 1.15; color: var(--navy);
+  padding: 16px 0; text-align: left;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.side-tabber__tab.active { background: var(--blue-150); color: var(--blue); padding: 16px; }
+.side-tabber__tab .tab-icon { display: none; }
+.side-tabber__tab.active .tab-icon { display: block; width: 24px; height: 24px; color: var(--blue); }
+.side-tabber__panel { display: none; }
+.side-tabber__panel.active { display: block; }
+.side-tabber__card {
+  background: var(--blue-550); color: #fff; height: 464px; display: flex;
+}
+.side-tabber__card .card__content {
+  display: flex; flex-direction: column; gap: 24px; padding: 64px; width: 100%;
+}
+.side-tabber__title { font-size: 36px; font-weight: 400; line-height: 1.15; color: #fff; }
+.side-tabber__card-desc { font-size: 22px; font-weight: 400; line-height: 1.3; color: #fff; }
+.side-tabber__card .card__cta { color: #fff; }
+
+/* ---------- analyst recognition ---------- */
+.analyst { padding: 48px 0; }
+.analyst__wrap { max-width: 1312px; margin: 0 auto; padding: 64px; }
+.analyst__wrap .section-h2 { color: var(--navy); }
+.analyst__grid {
+  display: grid; grid-template-columns: 576px 576px; gap: 32px;
+  margin-top: 48px;
+}
+.analyst__photo-card { background: var(--blue-150); color: #fff; display: flex; height: 580px; }
+.analyst__photo-card .card__image { position: absolute; inset: 0; }
+.analyst__photo-card .card__image img { width: 100%; height: 100%; object-fit: cover; }
+.analyst__photo-card .card__content {
+  position: relative; z-index: 1; margin: 24px; margin-top: auto;
+  background: var(--blue-750); padding: 24px;
+  display: flex; flex-direction: column; gap: 16px; width: calc(100% - 48px);
+}
+.analyst__photo-card .text-group,
+.analyst__sub-card .text-group { display: flex; flex-direction: column; gap: 8px; }
+.analyst__photo-card h2 { font-size: 28px; font-weight: 400; line-height: 1.15; color: #fff; }
+.analyst__photo-card .card__cta { margin-top: 0; color: #fff; }
+.analyst__sub { display: grid; gap: 32px; align-content: start; }
+.analyst__sub-card { background: var(--blue-150); color: var(--navy); display: flex; }
+.analyst__sub-card .card__content {
+  padding: 24px; display: flex; flex-direction: column; gap: 16px; width: 100%;
+}
+.analyst__sub-card h2 { font-size: 24px; font-weight: 400; line-height: 1.15; color: var(--navy); }
+.analyst__sub-card .card__cta { color: var(--navy); }
+.analyst__cta { margin-top: 48px; display: flex; justify-content: flex-end; }
+
+/* ---------- contact band ---------- */
+.contact { margin-top: 32px; }
+.contact__wrap {
+  max-width: 1312px; margin: 0 auto; background: var(--blue-150);
+  border-radius: 4px; padding: 64px;
+  display: grid; grid-template-columns: 456px 664px;
+  grid-template-rows: 588px auto; gap: 64px;
+}
+.contact__top { grid-column: 1; grid-row: 1; }
+.contact__specialist { grid-column: 1; grid-row: 2; }
+.contact__form-card { grid-column: 2; grid-row: 1 / span 2; }
+.contact__h2 { font-size: 40px; font-weight: 400; line-height: 46px; color: var(--blue-650); }
+.contact__intro { font-size: 22px; font-weight: 400; line-height: 1.3; color: var(--blue-650); margin-top: 60px; }
+.contact__specialist { grid-column: 1; grid-row: 2; }
+.contact__specialist-title { font-size: 20px; font-weight: 400; line-height: 1.15; color: #000; }
+.contact__phones { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.contact__phone-row { display: flex; font-size: 18px; line-height: 1.3; color: #000; }
+.contact__phone-row .region { min-width: 124px; }
+.contact__phone-row a { text-decoration: underline; color: var(--navy); font-weight: 400; font-size: 18px; }
+.contact__form-card {
+  background: #fff; border-radius: 4px; padding: 32px;
+  box-shadow: 0 8px 16px 0 rgba(0, 12, 54, 0.08);
+}
+.contact__form { display: grid; grid-template-columns: 284px 284px; gap: 40px 32px; }
+.form-item { display: flex; flex-direction: column; }
+.form-item.span2 { grid-column: span 2; }
+.form-item label { font-size: 16px; color: var(--navy); line-height: 20px; margin-bottom: 8px; }
+.form-item label.required::after { content: " *"; color: #cc3932; }
+.form-item.tight { margin-top: -8px; }
+.form-item input, .form-item textarea, .form-item .select {
+  height: 56px; background: var(--neutral-100);
+  border: 1px solid var(--input-border); border-radius: 2px;
+  font-family: inherit; font-size: 16px; color: #000; padding: 0 16px;
+}
+.form-item input::placeholder, .form-item textarea::placeholder { color: #757575; }
+.form-item textarea { padding-top: 16px; resize: none; }
+.form-item .select {
+  display: flex; align-items: center; justify-content: space-between; color: var(--navy);
+  height: 54px;
+}
+.form-submit {
+  grid-column: span 2; margin-top: 8px;
+}
+.form-submit button {
+  width: 100%; height: 52px; background: var(--blue); color: #fff;
+  font-size: 20px; font-weight: 500; border-radius: 2px;
+}
+.form-disclaimer { font-size: 12px; line-height: 1.28; color: #333; margin-top: 16px; }
+.form-disclaimer a { color: var(--blue); }
+
+/* ---------- footer ---------- */
+.footer { background: var(--navy); color: #fff; padding: 64px 0; }
+.footer__inner {
+  max-width: 1232px; margin: 0 auto; padding: 0 24px;
+  display: flex; gap: 133px;
+}
+.footer__left { width: 373px; flex: none; display: flex; flex-direction: column; gap: 24px; }
+.footer__logo img { width: 158px; height: 32px; }
+.footer__desc { font-size: 16px; line-height: 1.3; display: flex; flex-direction: column; gap: 16px; }
+.footer__ticker { display: inline-flex; align-items: center; gap: 4px; font-size: 16px; }
+.footer__ticker a { text-decoration: underline; }
+.footer__social { display: flex; gap: 32px; margin-top: 8px; }
+.footer__social img { width: 50px; height: 50px; }
+.footer__websites { display: flex; gap: 24px; font-size: 16px; min-height: 40px; align-items: flex-start; }
+.footer__copyright { font-size: 14px; line-height: 1.3; }
+.footer__right { flex: 1; display: flex; flex-direction: column; gap: 32px; }
+.footer__nav-grid { display: flex; gap: 100px; }
+.footer__nav-grid ul { flex: 1; }
+.footer__nav-title { font-size: 18px; line-height: 1.3; margin-bottom: 9px; }
+.footer__nav-title.invisible { visibility: hidden; }
+.footer__nav-grid li { font-size: 16px; line-height: 1.3; margin-bottom: 8px; }
+.footer__hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.3); margin: 0; }
+.footer__legal {
+  display: flex; flex-wrap: wrap; gap: 12px 24px;
+  font-size: 14px; line-height: 1.3; color: var(--blue-250); max-width: 677px;
+}
+.footer__legal a { display: inline-flex; align-items: center; gap: 6px; }
+.footer__legal img { width: 32px; height: 16px; display: inline-block; }
+.footer__accordions { display: none; }
+.footer__right .footer__websites, .footer__right .footer__copyright { display: none; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ================= mobile (gate width 360) ================= */
+@media (max-width: 833px) {
+  .promo-bar__inner { padding: 0 8px; }
+  .promo-bar__inner .hide-mobile { display: none; }
+  .promo-bar__divider { display: none; }
+  .main-bar__inner { padding: 0 8px; }
+  .main-bar__logo { margin-left: 16px; }
+  .main-bar__logo img { width: 152px; height: 34px; }
+  .main-bar__nav { display: none; }
+  .btn-contact {
+    margin-left: auto; width: 100px; height: 64px;
+    white-space: normal; text-align: center; line-height: 1.2; padding: 8px;
+  }
+  .hamburger {
+    display: flex; flex-direction: column; gap: 6px; margin: 0 16px 0 24px;
+  }
+  .hamburger span { width: 36px; height: 4px; border-radius: 2px; background: var(--blue); }
+
+  .section { padding: 32px 0; }
+  .container-1312, .container-1344 { padding: 0 8px; }
+  .container-1184 { padding: 0 24px; }
+  .section-h2 { font-size: 32px; line-height: 36.8px; }
+
+  .hero { padding: 150px 0 32px; }
+  .hero__grid { grid-template-columns: 1fr; gap: 8px; justify-content: stretch; }
+  .hero__main { height: auto; min-height: 316px; }
+  .hero__main .card__content { padding: 24px; }
+  .hero__h1 { font-size: 72px; line-height: 1.15; white-space: nowrap; }
+  .hero__sub { font-size: 26px; line-height: 1.1; }
+  .hero__cta { margin-top: 68px; }
+  .hero__right { grid-template-rows: none; gap: 8px; }
+  .hero__side--bottom { min-height: 266px; }
+
+  .featured__head { margin-bottom: 32px; }
+  .featured__grid { grid-template-columns: 312px; gap: 16px; justify-content: center; }
+  .featured__card .card__image { display: none; }
+  .featured__card .card__content { min-height: 0; }
+  .hero__side .text-group, .featured__card .text-group, .insights__card .text-group,
+  .analyst__photo-card .text-group, .analyst__sub-card .text-group { gap: 16px; }
+  .featured__card { min-height: 183px; }
+  .featured__desc { font-size: 18px; }
+
+  .insights__wrap { padding: 32px 16px; }
+  .insights__slider { margin-top: 24px; }
+  .insights__track { gap: 16px; }
+  .insights__card { width: 218px; min-height: 451px; }
+  .insights__card .card__image img { width: 218px; }
+  .slider-controls {
+    display: flex; align-items: center; justify-content: space-between; margin-top: 24px;
+  }
+  .slider-bullets { display: flex; gap: 12px; align-items: center; }
+  .slider-bullets span { width: 20px; height: 5px; border-radius: 2px; background: var(--divider); }
+  .slider-bullets span.active { background: var(--blue); }
+  .slider-arrows { display: flex; gap: 16px; }
+  .slider-arrows button {
+    width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--blue);
+    display: flex; align-items: center; justify-content: center; color: var(--blue);
+  }
+  .slider-arrows button[disabled] { border-color: var(--divider); color: #999; }
+  .slider-arrows .arrow-icon { width: 20px; height: 20px; }
+  .slider-arrows .prev .arrow-icon { transform: rotate(180deg); }
+  .insights__cta { margin-top: 24px; }
+  .insights__cta .cta-primary { width: 100%; }
+
+  .top-tabber__head { grid-template-columns: 1fr; gap: 32px; margin-bottom: 32px; min-height: 0; }
+  .top-tabber__intro { font-size: 24px; }
+  .top-tabber__tabs { flex-direction: column; justify-content: flex-start; border-bottom: 0; }
+  .top-tabber__tab {
+    padding: 16px 0; border-bottom: 1px solid var(--blue-250);
+    align-items: center; width: 100%;
+  }
+  .top-tabber__tab.active { color: var(--navy); box-shadow: none; }
+  .top-tabber__tab .tab-icon { display: block; width: 24px; height: 24px; color: var(--navy); }
+  .top-tabber__panels { display: none; }
+
+  .side-tabber__wrap { padding: 24px 16px; max-width: none; margin: 0; }
+  .side-tabber__head { grid-template-columns: 1fr; gap: 32px; margin-bottom: 32px; min-height: 0; }
+  .side-tabber__desc { font-size: 24px; line-height: 1.5; }
+  .side-tabber__cols { grid-template-columns: 1fr; gap: 0; }
+  .side-tabber__tab { border-bottom: 1px solid var(--blue-250); }
+  .side-tabber__tab.active { background: none; color: var(--navy); padding: 16px 0; }
+  .side-tabber__tabs { gap: 0; }
+  .side-tabber__tab .tab-icon { display: block; color: var(--navy); }
+  .side-tabber__tab.active .tab-icon { color: var(--navy); }
+  .side-tabber__panel { display: none !important; }
+
+  .analyst { padding: 32px 0; }
+  .analyst__wrap { padding: 24px 16px; max-width: none; margin: 0; }
+  .analyst__sub { gap: 16px; }
+  .analyst__grid { grid-template-columns: 1fr; margin-top: 32px; }
+  .analyst__photo-card { height: 406px; }
+  .analyst__cta { margin-top: 32px; }
+  .analyst__cta .cta-primary { width: 100%; }
+
+  .contact__wrap { padding: 32px 16px; grid-template-columns: 1fr; grid-template-rows: none; gap: 24px; max-width: none; }
+  .contact__top { grid-row: 1; grid-column: 1; }
+  .contact__form-card { grid-row: 2; grid-column: 1; }
+  .contact__specialist { grid-row: 3; grid-column: 1; }
+  .contact__h2 { font-size: 32px; line-height: 36.8px; }
+  .contact__intro { margin-top: 32px; }
+  .contact__specialist { margin-top: 24px; }
+  .contact__form { grid-template-columns: 1fr; gap: 40px; }
+  .contact__form .form-item:nth-of-type(2) { margin-top: -8px; }
+  .form-disclaimer { line-height: 1.5; }
+  .form-item.span2 { grid-column: auto; }
+  .form-submit { grid-column: auto; }
+
+  .footer { padding: 32px 0; }
+  .footer__inner { flex-direction: column; gap: 20px; }
+  .footer__left { width: auto; }
+
+  .footer__left .footer__websites, .footer__left .footer__copyright { display: none; }
+  .footer__nav-grid { display: none; }
+  .footer__accordions { display: block; }
+  .footer__accordion-trigger {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    font-size: 24px; font-weight: 400; color: #fff; padding: 11px 0;
+  }
+  .footer__accordion-trigger svg { width: 24px; height: 24px; }
+  .footer__accordion-content { display: none; }
+  .footer__right { gap: 24px; }
+  .footer__right .footer__websites {
+    display: flex; flex-direction: column; gap: 40px; margin-top: 0; min-height: 0;
+  }
+  .footer__right .footer__copyright { display: block; margin-top: 0; }
+  .footer__legal { flex-direction: row; }
+  .footer__legal a { width: 100%; }
+  .footer__legal a.inline { width: auto; }
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5805 11.0058L12.2904 6.71885C11.8904 6.31915 11.8904 5.68961 12.2894 5.2999C12.6794 4.9002 13.3094 4.9002 13.7094 5.2989L19.7094 11.2945C19.9603 11.5388 20.0498 11.8907 19.9778 12.2144C19.9264 12.453 19.789 12.6607 19.6 12.8032L13.6995 18.6992C13.5095 18.8791 13.2495 18.989 12.9895 18.989L12.9995 19C12.7295 19 12.4695 18.8901 12.2895 18.7102C11.8895 18.3205 11.8895 17.681 12.2795 17.2913V17.2813L16.5596 13.0043H5C4.44 13.0043 4 12.5547 4 12.0051C4 11.4455 4.44 11.0058 5 11.0058H16.5805Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9933 4.88338C12.9355 4.38604 12.5128 4 12 4C11.4477 4 11 4.44772 11 5V11H5L4.88338 11.0067C4.38604 11.0645 4 11.4872 4 12C4 12.5523 4.44772 13 5 13H11V19L11.0067 19.1166C11.0645 19.614 11.4872 20 12 20C12.5523 20 13 19.5523 13 19V13H19L19.1166 12.9933C19.614 12.9355 20 12.5128 20 12C20 11.4477 19.5523 11 19 11H13V5L12.9933 4.88338Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-chev" viewBox="0 0 10 6">
+    <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 16 16">
+    <circle cx="7" cy="7" r="5.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header id="site-header" class="site-header">
+  <a class="sr-only" href="#main-content">Skip to main content</a>
+  <div class="promo-bar">
+    <div class="promo-bar__inner">
+      <a class="hide-mobile" href="/client-access/">Client access</a>
+      <a class="hide-mobile" href="https://broadridge.wd5.myworkdayjobs.com/Careers" target="_blank" rel="noreferrer">Careers<span class="sr-only"> Opens in new tab</span></a>
+      <span class="promo-bar__divider"></span>
+      <button type="button">Search <svg class="arrow-icon" style="width:16px;height:16px"><use href="#i-search"/></svg></button>
+    </div>
+  </div>
+  <div class="main-bar">
+    <div class="main-bar__inner">
+      <a class="main-bar__logo" href="/" aria-label="Broadridge home">
+        <img src="https://www.broadridge.com/_Static-Assets/images/brodridgeLogo.svg" alt="brodridgeLogo">
+      </a>
+      <nav class="main-bar__nav" aria-label="Main">
+        <button type="button">Who we serve <svg class="chev"><use href="#i-chev"/></svg></button>
+        <button type="button">Capabilities <svg class="chev"><use href="#i-chev"/></svg></button>
+        <button type="button">Insights <svg class="chev"><use href="#i-chev"/></svg></button>
+        <button type="button">About us <svg class="chev"><use href="#i-chev"/></svg></button>
+      </nav>
+      <button type="button" class="btn-contact">Contact us</button>
+      <button type="button" class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content" class="main">
+
+  <!-- hero -->
+  <section class="section hero">
+    <div class="container-1312 hero__grid">
+      <article class="card hero__main">
+        <div class="card__image">
+          <picture>
+            <source media="(min-width:1140px)" srcset="https://www.broadridge.com/us-en/assets/images/corporate/BG-HP-IMG-H1-Deconstructed-Hero-Tokenization-260701-Dark.svg">
+            <source media="(min-width:834px)" srcset="https://www.broadridge.com/us-en/assets/images/corporate/BG-HP-IMG-H1-Deconstructed-Hero-Tokenization-260701-tab-Dark.png">
+            <img src="https://www.broadridge.com/us-en/assets/images/corporate/BG-HP-IMG-H1-Deconstructed-Hero-Tokenization-260701-Mobile-Dark.svg" alt="Broadridge Image">
+          </picture>
+        </div>
+        <div class="card__content">
+          <h1 class="hero__h1">NAVIGATE</h1>
+          <div class="hero__sub"><p>tokenized markets with confidence.</p></div>
+          <a class="hero__cta" href="/hub/tokenization" aria-label="Let's go"><span>Let's go</span></a>
+        </div>
+      </article>
+      <div class="hero__right">
+        <a class="card hero__side" href="/press-release/2026/broadridge-and-payward-empower-xstocks-holders" aria-label="Payward Services and Broadridge collaborate to give xStocks holders a voice in corporate governance">
+          <div class="card__image"></div>
+          <div class="card__content">
+            <div class="text-group">
+              <div style="display:flex"><span class="badge badge-light">PRESS RELEASE</span></div>
+              <h3>Payward Services and Broadridge collaborate to give xStocks holders a voice in corporate governance</h3>
+            </div>
+            <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+          </div>
+        </a>
+        <a class="card hero__side hero__side--bottom" href="/insights/tokenization-pulse-study" aria-label="Tokenization Pulse Study: Key insights shaping what’s next">
+          <div class="card__image">
+            <picture>
+              <img src="https://www.broadridge.com/us-en/assets/images/corporate/BG-IMG-H1-Deconstructed-Hero-Btn-Right.svg" alt="Broadridge Image">
+            </picture>
+          </div>
+          <div class="card__content">
+            <div class="text-group">
+              <div style="display:flex"><span class="badge badge-light">REPORT</span></div>
+              <h3>Tokenization Pulse Study: Key insights shaping what’s next</h3>
+            </div>
+            <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- featured solutions -->
+  <section class="section featured">
+    <div class="container-1184">
+      <div class="featured__head"><h2 class="section-h2">Featured solutions </h2></div>
+      <div class="featured__grid">
+        <a class="card featured__card" href="/capability/governance-and-regulatory-compliance/proxy-services/" aria-label="Proxy Services">
+          <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/icons/Proxy-Services@2x.svg" alt="Laptop"></div>
+          <div class="card__content">
+            <div class="text-group">
+              <div class="featured__title">Proxy Services</div>
+              <span class="featured__desc"><p>Secure, accurate, turnkey proxy solutions</p></span>
+            </div>
+            <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+          </div>
+        </a>
+        <a class="card featured__card" href="/hub/tokenization" aria-label="Tokenization">
+          <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/icons/IMG-M4_Tokenization.svg" alt="Chart"></div>
+          <div class="card__content">
+            <div class="text-group">
+              <div class="featured__title">Tokenization</div>
+              <span class="featured__desc"><p>End-to-end capabilities for evolving financial markets</p></span>
+            </div>
+            <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+          </div>
+        </a>
+        <a class="card featured__card" href="/capability/middle-and-back-office-solutions/asset-servicing/" aria-label="Asset Servicing">
+          <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/icons/Asset-Servicing@2x.svg" alt="Building"></div>
+          <div class="card__content">
+            <div class="text-group">
+              <div class="featured__title">Asset Servicing</div>
+              <span class="featured__desc"><p>Harmonize operations across the asset lifecycle</p></span>
+            </div>
+            <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+          </div>
+        </a>
+        <a class="card featured__card" href="/capability/front-office-solutions/connectivity/" aria-label="Global Trading">
+          <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/icons/Connectivity@2x.svg" alt="Globe"></div>
+          <div class="card__content">
+            <div class="text-group">
+              <div class="featured__title">Global Trading</div>
+              <span class="featured__desc"><p>Multi asset class trading solutions</p></span>
+            </div>
+            <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- insights -->
+  <section class="section insights">
+    <div class="container-1344">
+      <div class="insights__wrap">
+        <h2 class="section-h2">Insights &amp; perspectives</h2>
+        <div class="insights__slider">
+          <div class="insights__track">
+            <a class="card insights__card" href="/insights/real-transformation-real-results" aria-label="Card 1: Visit the  CASE STUDIES page titled See how firms are modernizing platforms to unlock scale, efficiency, and growth">
+              <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/corporate/Wealth-DT-Case-Studies-Card.svg" alt="" role="presentation"></div>
+              <div class="card__content" aria-hidden="true">
+                <div class="text-group">
+                  <span class="badge badge-light">CASE STUDIES</span>
+                  <h2>See how firms are modernizing platforms to unlock scale, efficiency, and growth</h2>
+                </div>
+                <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+              </div>
+            </a>
+            <a class="card insights__card" href="/insights/dlt-in-the-real-world-2026" aria-label="Card 2: Visit the  REPORT page titled Distributed ledger technology is delivering real-world results">
+              <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/corporate/Finadium-Intraday-Report.png" alt="" role="presentation"></div>
+              <div class="card__content" aria-hidden="true">
+                <div class="text-group">
+                  <span class="badge badge-light">REPORT</span>
+                  <h2>Distributed ledger technology is delivering real-world results</h2>
+                </div>
+                <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+              </div>
+            </a>
+            <a class="card insights__card" href="/next/articles/from-pilot-to-production-5-keys-to-scaling-agentic-ai-in-financial-services?utm_medium=DigitalAsset&amp;utm_source=LandingPage&amp;utm_campaign=NEXT_Q4FY26__ENT_Roger-Ai-Track-Link&amp;content_id=07554&amp;campaign_id=701RN00000kGx1kYAC" target="_blank" rel="noreferrer" aria-label="Card 3: Visit the  ARTICLE page titled From pilot to production: 5 keys to scaling agentic AI in financial services">
+              <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/corporate/From-pilot-to-production.png" alt="" role="presentation"></div>
+              <div class="card__content" aria-hidden="true">
+                <div class="text-group">
+                  <span class="badge badge-light">ARTICLE</span>
+                  <h2>From pilot to production: 5 keys to scaling agentic AI in financial services</h2>
+                </div>
+                <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+              </div>
+            </a>
+            <a class="card insights__card" href="/insights/2026-digital-transformation-study?utm_medium=DigitalAsset&amp;utm_source=LandingPage&amp;utm_campaign=2026-Dig-Trans_Q3FY26_WB_ENT_Homepage-hero-anim&amp;utm_content=v1&amp;content_id=04993&amp;campaign_id=701RN00000dfLjdYAE" aria-label="Card 4: Visit the  REPORT page titled Insights from 900+ financial services leaders on AI, tokenization, and more">
+              <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/corporate/DT26-cc-image.png" alt="" role="presentation"></div>
+              <div class="card__content" aria-hidden="true">
+                <div class="text-group">
+                  <span class="badge badge-light">REPORT</span>
+                  <h2>Insights from 900+ financial services leaders on AI, tokenization, and more</h2>
+                </div>
+                <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <div class="slider-bullets">
+            <span class="active" role="button" aria-label="Go to slide 1"></span>
+            <span role="button" aria-label="Go to slide 2"></span>
+            <span role="button" aria-label="Go to slide 3"></span>
+            <span role="button" aria-label="Go to slide 4"></span>
+          </div>
+          <div class="slider-arrows">
+            <button type="button" class="prev" aria-label="Previous slide" disabled><svg class="arrow-icon"><use href="#i-arrow"/></svg></button>
+            <button type="button" class="next" aria-label="Next slide"><svg class="arrow-icon"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <div class="insights__cta">
+          <a class="cta-primary" href="/insight-pages/broadridge-insights" aria-label="  Explore all insights  "><span>  Explore all insights  </span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- top tabber -->
+  <section class="section top-tabber">
+    <div class="container-1184">
+      <div class="top-tabber__head">
+        <h2 class="section-h2"> Powering the pulse of the financial industry </h2>
+        <span class="top-tabber__intro"> Our technology and expertise stand as the heartbeat of investing, corporate governance, and communications to improve performance and transform investor experience. </span>
+      </div>
+      <div class="top-tabber__tabs">
+        <button type="button" class="top-tabber__tab active" aria-label="Asset Management"><span>Asset Management</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+        <button type="button" class="top-tabber__tab" aria-label="Capital Markets"><span>Capital Markets</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+        <button type="button" class="top-tabber__tab" aria-label="Issuers"><span>Issuers</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+        <button type="button" class="top-tabber__tab" aria-label="Wealth Management"><span>Wealth Management</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+        <button type="button" class="top-tabber__tab" aria-label="Consumer Industries"><span>Consumer Industries</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+      </div>
+      <div class="top-tabber__panels">
+        <div class="top-tabber__panel active">
+          <picture><img src="https://www.broadridge.com/us-en/assets/images/Card-Images/M9-Top-Tabber-Asset-Management.png" alt="top tabber"></picture>
+          <div>
+            <div class="top-tabber__panel-title"> Asset Management </div>
+            <p class="top-tabber__panel-desc">We empower asset managers with flexible technology solutions, insights, and regulatory communications, fostering resilient growth and high performance.</p>
+            <a class="top-tabber__panel-cta" href="/who-we-serve/asset-management" aria-label="Explore Asset Management"><span> Explore Asset Management </span><svg class="arrow-icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="top-tabber__panel">
+          <picture><img src="https://www.broadridge.com/us-en/assets/images/Card-Images/M9-Top-Tabber-Capital-Markets.png" alt="top tabber"></picture>
+          <div>
+            <div class="top-tabber__panel-title"> Capital Markets </div>
+            <p class="top-tabber__panel-desc">Our global, multi-asset class solutions power the future of global trading and operations and deliver simplification and innovation across the trade lifecycle.</p>
+            <a class="top-tabber__panel-cta" href="/who-we-serve/capital-markets" aria-label="Explore Capital Markets"><span> Explore Capital Markets </span><svg class="arrow-icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="top-tabber__panel">
+          <picture><img src="https://www.broadridge.com/us-en/assets/images/Card-Images/M9-Top-Tabber-Corporate-Issuer-Solutions.png" alt="top tabber"></picture>
+          <div>
+            <div class="top-tabber__panel-title"> Issuers </div>
+            <p class="top-tabber__panel-desc">Effectively meet governance and regulatory obligations and drive investor engagement with timely intelligence and proven solutions.</p>
+            <a class="top-tabber__panel-cta" href="/who-we-serve/issuers" aria-label="Explore Issuers"><span> Explore Issuers </span><svg class="arrow-icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="top-tabber__panel">
+          <picture><img src="https://www.broadridge.com/us-en/assets/images/Card-Images/M9-Top-Tabber-Wealth-Management.png" alt="top tabber"></picture>
+          <div>
+            <div class="top-tabber__panel-title"> Wealth Management </div>
+            <p class="top-tabber__panel-desc">Our solutions digitize operations, boost advisor productivity, and customize investor experiences – reshaping how wealth is managed.</p>
+            <a class="top-tabber__panel-cta" href="/who-we-serve/wealth-management" aria-label="Explore Wealth Management"><span> Explore Wealth Management </span><svg class="arrow-icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="top-tabber__panel">
+          <picture><img src="https://www.broadridge.com/us-en/assets/images/Card-Images/M9-Top-Tabber-Consumer-Industries.png" alt="top tabber"></picture>
+          <div>
+            <div class="top-tabber__panel-title"> Consumer Industries </div>
+            <p class="top-tabber__panel-desc">Automate and efficiently deliver key customer communications across industries with industry leading expertise and omni-channel capabilities.</p>
+            <a class="top-tabber__panel-cta" href="/who-we-serve/consumer-industries" aria-label="Explore Consumer Industries"><span> Explore Consumer Industries </span><svg class="arrow-icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- side tabber -->
+  <section class="section side-tabber">
+    <div class="container-1344">
+      <div class="side-tabber__wrap">
+        <div class="side-tabber__head">
+          <h2 class="section-h2">Our capabilities</h2>
+          <div class="side-tabber__desc"><p>Explore the breadth and depth of our capabilities and technology - to operate with greater efficiency and fuel meaningful growth</p></div>
+        </div>
+        <div class="side-tabber__cols">
+          <div class="side-tabber__tabs">
+            <button type="button" class="side-tabber__tab active" aria-label="Wealth Advisor Solutions"><span>Wealth Advisor Solutions</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-arrow"/></svg></span></button>
+            <button type="button" class="side-tabber__tab" aria-label="Front Office Solutions"><span>Front Office Solutions</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+            <button type="button" class="side-tabber__tab" aria-label="Middle &amp; Back Office Solutions"><span>Middle &amp; Back Office Solutions</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+            <button type="button" class="side-tabber__tab" aria-label="Governance &amp; Regulatory Compliance"><span>Governance &amp; Regulatory Compliance</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+            <button type="button" class="side-tabber__tab" aria-label="Customer Communications"><span>Customer Communications</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+            <button type="button" class="side-tabber__tab" aria-label="Data, Analytics &amp; Intelligence"><span>Data, Analytics &amp; Intelligence</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+            <button type="button" class="side-tabber__tab" aria-label="Consulting"><span>Consulting</span><span class="tab-icon"><svg class="arrow-icon"><use href="#i-plus"/></svg></span></button>
+          </div>
+          <div>
+            <div class="side-tabber__panel active">
+              <a class="card side-tabber__card" href="/capability/wealth-advisor-solutions/" aria-label="Front">
+                <div class="card__content">
+                  <div class="text-group" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 class="side-tabber__title"> Wealth Advisor Solutions </h3>
+                    <span class="side-tabber__card-desc"><p>Discover wealth advisor solutions that enhance advisory productivity, optimize client portfolios, and drive growth and retention</p></span>
+                  </div>
+                  <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+                </div>
+              </a>
+            </div>
+            <div class="side-tabber__panel">
+              <a class="card side-tabber__card" href="/capability/front-office-solutions/" aria-label="Front">
+                <div class="card__content">
+                  <div class="text-group" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 class="side-tabber__title"> Front Office Solutions </h3>
+                    <span class="side-tabber__card-desc"><p>Transform your front office with technology and solutions designed to streamline operations, improve client interactions, and boost productivity</p></span>
+                  </div>
+                  <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+                </div>
+              </a>
+            </div>
+            <div class="side-tabber__panel">
+              <a class="card side-tabber__card" href="/capability/middle-and-back-office-solutions/" aria-label="Front">
+                <div class="card__content">
+                  <div class="text-group" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 class="side-tabber__title"> Middle &amp; Back Office Solutions </h3>
+                    <span class="side-tabber__card-desc"><p>Enable efficiency and accuracy in your operations with our proven experience and comprehensive suite of solutions</p></span>
+                  </div>
+                  <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+                </div>
+              </a>
+            </div>
+            <div class="side-tabber__panel">
+              <a class="card side-tabber__card" href="/capability/governance-and-regulatory-compliance/" aria-label="Front">
+                <div class="card__content">
+                  <div class="text-group" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 class="side-tabber__title"> Governance &amp; Regulatory Compliance </h3>
+                    <span class="side-tabber__card-desc"><p>Navigate complex regulations with ease using our governance and regulatory compliance solutions, ensuring your organization stays compliant and secure</p></span>
+                  </div>
+                  <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+                </div>
+              </a>
+            </div>
+            <div class="side-tabber__panel">
+              <a class="card side-tabber__card" href="/capability/customer-communications/" aria-label="Front">
+                <div class="card__content">
+                  <div class="text-group" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 class="side-tabber__title"> Customer Communications </h3>
+                    <span class="side-tabber__card-desc"><p>Engage your clients effectively with our tailored customer communication solutions, designed to deliver clear, personalized, and impactful messages</p></span>
+                  </div>
+                  <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+                </div>
+              </a>
+            </div>
+            <div class="side-tabber__panel">
+              <a class="card side-tabber__card" href="/capability/data-analytics-and-intelligence/" aria-label="Front">
+                <div class="card__content">
+                  <div class="text-group" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 class="side-tabber__title"> Data, Analytics &amp; Intelligence </h3>
+                    <span class="side-tabber__card-desc"><p>Unlock the power of your data with our advanced analytics and intelligence solutions, providing actionable insights to drive informed decision-making</p></span>
+                  </div>
+                  <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+                </div>
+              </a>
+            </div>
+            <div class="side-tabber__panel">
+              <a class="card side-tabber__card" href="/capability/consulting/" aria-label="Front">
+                <div class="card__content">
+                  <div class="text-group" style="display:flex;flex-direction:column;gap:8px">
+                    <h3 class="side-tabber__title"> Consulting </h3>
+                    <span class="side-tabber__card-desc"><p>Leverage our expert consulting services to identify opportunities, overcome challenges, and implement strategies that propel your business forward</p></span>
+                  </div>
+                  <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- analyst recognition -->
+  <section class="analyst" id="abc">
+    <div class="container-1344">
+      <div class="analyst__wrap">
+        <h2 class="section-h2">Recognized by the industry  </h2>
+        <div class="analyst__grid">
+          <a class="card analyst__photo-card" href="/press-release/2026/broadridge-recognized-as-worlds-most-admired-companies" aria-label="AWARD 2026">
+            <div class="card__image"><img src="https://www.broadridge.com/us-en/assets/images/m2-accordion-feature/IMG-ABS-018.jpg" alt="Alt"></div>
+            <div class="card__content">
+              <div class="text-group">
+                <span class="badge badge-dark">AWARD 2026</span>
+                <h2>Recognized as one of Fortune Magazine’s ‘World’s Most Admired Companies’ in the financial services category for the twelfth time</h2>
+              </div>
+              <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+            </div>
+          </a>
+          <div class="analyst__sub">
+            <a class="card analyst__sub-card" href="/press-release/2025/broadridge-ranked-3-in-2025-idc-fintech-100" aria-label="AWARD 2025">
+              <div class="card__content">
+                <div class="text-group">
+                  <span class="badge badge-dark">AWARD 2025</span>
+                  <h2>Ranked #3 on the 2025 IDC FinTech Rankings Top 100, Wins Capital Markets Transformation Award</h2>
+                </div>
+                <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+              </div>
+            </a>
+            <a class="card analyst__sub-card" href="/press-release/2025/broadridge-named-a-leader-in-wealth-management-technology-in-idc-marketscape-2025-assessment" aria-label="LEADER">
+              <div class="card__content">
+                <div class="text-group">
+                  <span class="badge badge-dark">LEADER</span>
+                  <h2>Broadridge Named a Leader in Wealth Management Technology in IDC MarketScape 2025 Assessment</h2>
+                </div>
+                <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+              </div>
+            </a>
+            <a class="card analyst__sub-card" href="/campaign/advisor-onboarding-solution" aria-label="ANALYST REPORT">
+              <div class="card__content">
+                <div class="text-group">
+                  <span class="badge badge-dark">ANALYST REPORT</span>
+                  <h2>Celent: Broadridge is Streamlining the Advisor Onboarding Process</h2>
+                </div>
+                <div class="card__cta"><svg class="arrow-icon"><use href="#i-arrow"/></svg></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="analyst__cta">
+          <a class="cta-primary" href="/about/analyst-coverage" aria-label="Explore all analyst coverage"><span>Explore all analyst coverage</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact band -->
+  <section class="section contact">
+    <div class="container-1344">
+      <div class="contact__wrap">
+        <div class="contact__top">
+          <h2 class="contact__h2"> What's next for your business? </h2>
+          <div class="contact__intro"><span> We want to hear more about what you need to improve your business and drive transformative innovation, efficiency, and growth. </span></div>
+        </div>
+        <div class="contact__specialist">
+            <div class="contact__specialist-title"> Want to speak with a specialist? </div>
+            <div class="contact__phones">
+              <div class="contact__phone-row"><span class="region">North America</span><span><a href="tel:+18003530103" aria-label="+1 800 353 0103"><span>+1 800 353 0103</span></a><span>(option 3)</span></span></div>
+              <div class="contact__phone-row"><span class="region">EMEA</span><a href="tel:+441625919082" aria-label="+44 162 591 9082"><span>+44 162 591 9082</span></a></div>
+              <div class="contact__phone-row"><span class="region">Hong Kong</span><a href="tel:+85230043094" aria-label="+852 3004 3094"><span>+852 3004 3094</span></a></div>
+              <div class="contact__phone-row"><span class="region">Singapore</span><a href="tel:+6531351278" aria-label="+65 3135 1278"><span>+65 31 351 278</span></a></div>
+            </div>
+        </div>
+        <div class="contact__form-card">
+          <form class="contact__form" action="#" method="post">
+            <div class="form-item">
+              <label for="fname" class="required">First name<span class="sr-only">required</span></label>
+              <input id="fname" name="fname" type="text" placeholder="First name">
+            </div>
+            <div class="form-item">
+              <label for="lname" class="required">Last name<span class="sr-only">required</span></label>
+              <input id="lname" name="lname" type="text" placeholder="Last name">
+            </div>
+            <div class="form-item span2">
+              <label for="email" class="required">Work email address<span class="sr-only">required</span></label>
+              <input id="email" name="email" type="email" placeholder="name@email.com">
+            </div>
+            <div class="form-item">
+              <label for="phone" class="required">Telephone<span class="sr-only">required</span></label>
+              <input id="phone" name="phone" type="text" placeholder="+1 _ _ _ - _ _ _ - _ _ _ _">
+            </div>
+            <div class="form-item">
+              <label for="jobtitle" class="required">Job title<span class="sr-only">required</span></label>
+              <input id="jobtitle" name="jobtitle" type="text" placeholder="Job title">
+            </div>
+            <div class="form-item span2">
+              <label for="company" class="required">Company name<span class="sr-only">required</span></label>
+              <input id="company" name="company" type="text" placeholder="Your company name">
+            </div>
+            <div class="form-item span2 tight">
+              <label class="required">Country<span class="sr-only">required</span></label>
+              <button type="button" class="select"><span>Choose country</span><svg class="chev" style="width:14px;height:8px;color:var(--navy)"><use href="#i-chev"/></svg></button>
+            </div>
+            <div class="form-item span2 tight">
+              <label for="message" class="required">What would you like a Broadridge specialist to contact you about?<span class="sr-only">required</span></label>
+              <textarea id="message" name="message" placeholder="Please describe your request so we can better address your inquiry"></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" aria-label="Contact us"><span>Contact us</span></button>
+              <div class="form-disclaimer"> By proceeding, you agree that Broadridge can use your personal information to respond to your inquiry and send you occasional updates about Broadridge solutions and thought leadership. You can unsubscribe from our communications at any time. To learn more, view our <a href="/legal/privacy-statement-english">Privacy Statement</a>. </div>
+            </div>
+            <div class="form-hidden-mirror" style="display:none" aria-hidden="true">
+              <span>required</span>
+              <ul>
+              <li><span> United States</span></li>
+              <li><span> Canada</span></li>
+              <li><span> United Kingdom</span></li>
+              <li><span> Afghanistan</span></li>
+              <li><span> Aland Islands</span></li>
+              <li><span> Albania</span></li>
+              <li><span> Algeria</span></li>
+              <li><span> Andorra</span></li>
+              <li><span> Angola</span></li>
+              <li><span> Anguilla</span></li>
+              <li><span> Antarctica</span></li>
+              <li><span> Antigua and Barbuda</span></li>
+              <li><span> Argentina</span></li>
+              <li><span> Armenia</span></li>
+              <li><span> Aruba</span></li>
+              <li><span> Australia</span></li>
+              <li><span> Austria</span></li>
+              <li><span> Azerbaijan</span></li>
+              <li><span> Bahamas</span></li>
+              <li><span> Bahrain</span></li>
+              <li><span> Bangladesh</span></li>
+              <li><span> Barbados</span></li>
+              <li><span> Belarus</span></li>
+              <li><span> Belgium</span></li>
+              <li><span> Belize</span></li>
+              <li><span> Benin</span></li>
+              <li><span> Bermuda</span></li>
+              <li><span> Bhutan</span></li>
+              <li><span> Bolivia, Plurinational State of</span></li>
+              <li><span> Bonaire, Sint Eustatius and Saba</span></li>
+              <li><span> Bosnia and Herzegovina</span></li>
+              <li><span> Botswana</span></li>
+              <li><span> Bouvet Island</span></li>
+              <li><span> Brazil</span></li>
+              <li><span> British Indian Ocean Territory</span></li>
+              <li><span> Brunei Darussalam</span></li>
+              <li><span> Bulgaria</span></li>
+              <li><span> Burkina Faso</span></li>
+              <li><span> Burundi</span></li>
+              <li><span> Cambodia</span></li>
+              <li><span> Cameroon</span></li>
+              <li><span> Cape Verde</span></li>
+              <li><span> Cayman Islands</span></li>
+              <li><span> Central African Republic</span></li>
+              <li><span> Chad</span></li>
+              <li><span> Chile</span></li>
+              <li><span> China</span></li>
+              <li><span> Chinese Taipei</span></li>
+              <li><span> Christmas Island</span></li>
+              <li><span> Cocos (Keeling) Islands</span></li>
+              <li><span> Colombia</span></li>
+              <li><span> Comoros</span></li>
+              <li><span> Congo</span></li>
+              <li><span> Congo, the Democratic Republic of the</span></li>
+              <li><span> Cook Islands</span></li>
+              <li><span> Costa Rica</span></li>
+              <li><span> Cote d'Ivoire</span></li>
+              <li><span> Croatia</span></li>
+              <li><span> Cuba</span></li>
+              <li><span> Curacao</span></li>
+              <li><span> Cyprus</span></li>
+              <li><span> Czech Republic</span></li>
+              <li><span> Denmark</span></li>
+              <li><span> Djibouti</span></li>
+              <li><span> Dominica</span></li>
+              <li><span> Dominican Republic</span></li>
+              <li><span> Ecuador</span></li>
+              <li><span> Egypt</span></li>
+              <li><span> El Salvador</span></li>
+              <li><span> Equatorial Guinea</span></li>
+              <li><span> Eritrea</span></li>
+              <li><span> Estonia</span></li>
+              <li><span> Ethiopia</span></li>
+              <li><span> Falkland Islands (Malvinas)</span></li>
+              <li><span> Faroe Islands</span></li>
+              <li><span> Fiji</span></li>
+              <li><span> Finland</span></li>
+              <li><span> France</span></li>
+              <li><span> French Guiana</span></li>
+              <li><span> French Polynesia</span></li>
+              <li><span> French Southern Territories</span></li>
+              <li><span> Gabon</span></li>
+              <li><span> Gambia</span></li>
+              <li><span> Georgia</span></li>
+              <li><span> Germany</span></li>
+              <li><span> Ghana</span></li>
+              <li><span> Gibraltar</span></li>
+              <li><span> Greece</span></li>
+              <li><span> Greenland</span></li>
+              <li><span> Grenada</span></li>
+              <li><span> Guadeloupe</span></li>
+              <li><span> Guatemala</span></li>
+              <li><span> Guernsey</span></li>
+              <li><span> Guinea</span></li>
+              <li><span> Guinea-Bissau</span></li>
+              <li><span> Guyana</span></li>
+              <li><span> Haiti</span></li>
+              <li><span> Heard Island and McDonald Islands</span></li>
+              <li><span> Holy See (Vatican City State)</span></li>
+              <li><span> Honduras</span></li>
+              <li><span> Hong Kong</span></li>
+              <li><span> Hungary</span></li>
+              <li><span> Iceland</span></li>
+              <li><span> India</span></li>
+              <li><span> Indonesia</span></li>
+              <li><span> Iran, Islamic Republic of</span></li>
+              <li><span> Iraq</span></li>
+              <li><span> Ireland</span></li>
+              <li><span> Isle of Man</span></li>
+              <li><span> Israel</span></li>
+              <li><span> Italy</span></li>
+              <li><span> Jamaica</span></li>
+              <li><span> Japan</span></li>
+              <li><span> Jersey</span></li>
+              <li><span> Jordan</span></li>
+              <li><span> Kazakhstan</span></li>
+              <li><span> Kenya</span></li>
+              <li><span> Kiribati</span></li>
+              <li><span> Korea, Democratic People's Republic of</span></li>
+              <li><span> Korea, Republic of</span></li>
+              <li><span> Kosovo</span></li>
+              <li><span> Kuwait</span></li>
+              <li><span> Kyrgyzstan</span></li>
+              <li><span> Lao People's Democratic Republic</span></li>
+              <li><span> Latvia</span></li>
+              <li><span> Lebanon</span></li>
+              <li><span> Lesotho</span></li>
+              <li><span> Liberia</span></li>
+              <li><span> Libyan Arab Jamahiriya</span></li>
+              <li><span> Liechtenstein</span></li>
+              <li><span> Lithuania</span></li>
+              <li><span> Luxembourg</span></li>
+              <li><span> Macao</span></li>
+              <li><span> Macedonia, the former Yugoslav Republic of</span></li>
+              <li><span> Madagascar</span></li>
+              <li><span> Malawi</span></li>
+              <li><span> Malaysia</span></li>
+              <li><span> Maldives</span></li>
+              <li><span> Mali</span></li>
+              <li><span> Malta</span></li>
+              <li><span> Martinique</span></li>
+              <li><span> Mauritania</span></li>
+              <li><span> Mauritius</span></li>
+              <li><span> Mayotte</span></li>
+              <li><span> Mexico</span></li>
+              <li><span> Moldova, Republic of</span></li>
+              <li><span> Monaco</span></li>
+              <li><span> Mongolia</span></li>
+              <li><span> Montenegro</span></li>
+              <li><span> Montserrat</span></li>
+              <li><span> Morocco</span></li>
+              <li><span> Mozambique</span></li>
+              <li><span> Myanmar</span></li>
+              <li><span> Namibia</span></li>
+              <li><span> Nauru</span></li>
+              <li><span> Nepal</span></li>
+              <li><span> Netherlands</span></li>
+              <li><span> New Caledonia</span></li>
+              <li><span> New Zealand</span></li>
+              <li><span> Nicaragua</span></li>
+              <li><span> Niger</span></li>
+              <li><span> Nigeria</span></li>
+              <li><span> Niue</span></li>
+              <li><span> Norfolk Island</span></li>
+              <li><span> Norway</span></li>
+              <li><span> Oman</span></li>
+              <li><span> Pakistan</span></li>
+              <li><span> Palestinian Territory, Occupied</span></li>
+              <li><span> Panama</span></li>
+              <li><span> Papua New Guinea</span></li>
+              <li><span> Paraguay</span></li>
+              <li><span> Peru</span></li>
+              <li><span> Philippines</span></li>
+              <li><span> Pitcairn</span></li>
+              <li><span> Poland</span></li>
+              <li><span> Portugal</span></li>
+              <li><span> Qatar</span></li>
+              <li><span> Republic of Palau</span></li>
+              <li><span> Reunion</span></li>
+              <li><span> Romania</span></li>
+              <li><span> Russian Federation</span></li>
+              <li><span> Rwanda</span></li>
+              <li><span> Saint Barth?lemy</span></li>
+              <li><span> Saint Helena, Ascension and Tristan da Cunha</span></li>
+              <li><span> Saint Kitts and Nevis</span></li>
+              <li><span> Saint Lucia</span></li>
+              <li><span> Saint Martin (French part)</span></li>
+              <li><span> Saint Pierre and Miquelon</span></li>
+              <li><span> Saint Vincent and the Grenadines</span></li>
+              <li><span> Samoa</span></li>
+              <li><span> San Marino</span></li>
+              <li><span> Sao Tome and Principe</span></li>
+              <li><span> Saudi Arabia</span></li>
+              <li><span> Senegal</span></li>
+              <li><span> Serbia</span></li>
+              <li><span> Seychelles</span></li>
+              <li><span> Sierra Leone</span></li>
+              <li><span> Singapore</span></li>
+              <li><span> Sint Maarten (Dutch part)</span></li>
+              <li><span> Slovakia</span></li>
+              <li><span> Slovenia</span></li>
+              <li><span> Solomon Islands</span></li>
+              <li><span> Somalia</span></li>
+              <li><span> South Africa</span></li>
+              <li><span> South Georgia and the South Sandwich Islands</span></li>
+              <li><span> South Sudan</span></li>
+              <li><span> Spain</span></li>
+              <li><span> Sri Lanka</span></li>
+              <li><span> Sudan</span></li>
+              <li><span> Suriname</span></li>
+              <li><span> Svalbard and Jan Mayen</span></li>
+              <li><span> Swaziland</span></li>
+              <li><span> Sweden</span></li>
+              <li><span> Switzerland</span></li>
+              <li><span> Syrian Arab Republic</span></li>
+              <li><span> Taiwan, R.O.C</span></li>
+              <li><span> Tajikistan</span></li>
+              <li><span> Tanzania, United Republic of</span></li>
+              <li><span> Thailand</span></li>
+              <li><span> Timor-Leste</span></li>
+              <li><span> Togo</span></li>
+              <li><span> Tokelau</span></li>
+              <li><span> Tonga</span></li>
+              <li><span> Trinidad and Tobago</span></li>
+              <li><span> Tunisia</span></li>
+              <li><span> Turkey</span></li>
+              <li><span> Turkmenistan</span></li>
+              <li><span> Turks and Caicos Islands</span></li>
+              <li><span> Tuvalu</span></li>
+              <li><span> Uganda</span></li>
+              <li><span> Ukraine</span></li>
+              <li><span> United Arab Emirates</span></li>
+              <li><span> Uruguay</span></li>
+              <li><span> Uzbekistan</span></li>
+              <li><span> Vanuatu</span></li>
+              <li><span> Venezuela, Bolivarian Republic of</span></li>
+              <li><span> Viet Nam</span></li>
+              <li><span> Virgin Islands, British</span></li>
+              <li><span> Wallis and Futuna</span></li>
+              <li><span> Western Sahara</span></li>
+              <li><span> Yemen</span></li>
+              <li><span> Zambia</span></li>
+              <li><span> Zimbabwe</span></li>
+              </ul>
+              <div> Thank you for your interest in Broadridge. A representative will contact you within 24 business hours. </div>
+              <div> Something went wrong with our form submission. Please try again. </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script type="application/ld+json" nonce="03blJaBrgQOcFmbWxMOqVA==" nonce1="">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Broadridge | Financial Technology Solutions- Asset Management, Capital Markets, Issuers, Wealth Management, Consumer Industries, Banks, Financial Services",
+  "alternateName": "Broadridge Financial Solution",
+  "url": "/",
+  "logo": "/_Static-Assets/images/brodridgeLogo.svg",
+  "description": "Broadridge, a global technology leader with solutions that power investing, governance, and communications for clients and the financial industry.",
+  "foundingDate": "2007",
+  "numberOfEmployees": "14000+",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5 Dakota Drive, Suite 300",
+    "addressLocality": "Lake Success",
+    "addressRegion": "NY",
+    "postalCode": "11042",
+    "addressCountry": "US"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1 800 353 0103",
+      "contactType": "customer support",
+      "areaServed": "North America",
+      "availableLanguage": ["English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+44 162 591 9082",
+      "contactType": "customer support",
+      "areaServed": "EMEA",
+      "availableLanguage": ["English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+617 4356 9934",
+      "contactType": "customer support",
+      "areaServed": "Australia",
+      "availableLanguage": ["English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+852 3004 3094",
+      "contactType": "customer support",
+      "areaServed": "Hong Kong",
+      "availableLanguage": ["English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+65 3135 1278",
+      "contactType": "customer support",
+      "areaServed": "Singapore",
+      "availableLanguage": ["English"]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/Broadridge",
+    "https://x.com/Broadridge",
+    "https://www.instagram.com/broadridge/",
+    "https://www.youtube.com/c/broadridge",
+    "https://www.linkedin.com/company/broadridge-financial-solutions",
+    "https://en.wikipedia.org/wiki/Broadridge_Financial_Solutions"
+  ],
+  "keywords": "investor communications platform, proxy voting services, regulatory compliance solutions, financial technology solutions for businesses, wealth management technology, governance and risk compliance software solution, capital markets technology, investor communications, financial operations automation, digital transformation in financial services"
+}
+</script>
+</main>
+
+<footer class="footer" id="footer-section">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <div class="footer__logo"><img src="https://www.broadridge.com/_Static-Assets/images/logomark.webp" alt="Broadridge Logo"></div>
+      <div class="footer__desc">
+        <div> Broadridge is a global technology leader with trusted expertise and transformative technology, helping our clients and the financial services industry operate, innovate, and grow. We power investing, governance, and communications for our clients &ndash; driving operational resilience, elevating business performance, and transforming investor experiences. </div>
+        <span class="footer__ticker">
+          <a href="http://www.broadridge-ir.com/stock-information/stock-chart.aspx" target="_blank" rel="noreferrer">BR</a>&nbsp;(NYSE)
+          <svg width="12" height="15" viewBox="0 0 5 8" xmlns="http://www.w3.org/2000/svg"><polygon stroke="none" fill="#64A348" points="3.125 8 1.875 8 1.875 3.28125 0 3.28125 2.5 0 5 3.28125 3.125 3.28125"></polygon></svg>
+          <svg width="12" height="15" viewBox="-1 0 6 8" xmlns="http://www.w3.org/2000/svg"><polygon stroke="none" fill="#CC3932" transform="translate(2.5, 4) rotate(-180) translate(-2.5, -4)" points="3.125 8 1.875 8 1.875 3.28125 0 3.28125 2.5 0 5 3.28125 3.125 3.28125"></polygon></svg>
+        </span>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/company/broadridge-financial-solutions/" target="_blank" rel="noreferrer" aria-label="Visit Broadridge on linkedin"><img src="https://www.broadridge.com/_Static-Assets/images/linkedIn.png" alt="" role="presentation"></a>
+        <a href="https://instagram.com/broadridge" target="_blank" rel="noreferrer" aria-label="Visit Broadridge on Instagram"><img src="https://www.broadridge.com/_Static-Assets/images/instagram.png" alt="" role="presentation"></a>
+        <a href="https://www.youtube.com/broadridge" target="_blank" rel="noreferrer" aria-label="Visit Broadridge on Youtube"><img src="https://www.broadridge.com/_Static-Assets/images/youTube.png" alt="" role="presentation"></a>
+      </div>
+      <div class="footer__websites">
+        <a href="https://www.broadridge.com/fr/" target="_blank" rel="noreferrer">Canada - Français</a>
+        <a href="https://www.broadridge.com/de/" target="_blank" rel="noreferrer">Deutschland</a>
+        <a href="https://www.broadridge.com/jp/" target="_blank" rel="noreferrer">日本</a>
+      </div>
+      <div class="footer__copyright">© 2026 Broadridge Financial Solutions, Inc. All Rights Reserved. </div>
+    </div>
+    <div class="footer__right">
+      <div class="footer__nav-grid">
+        <ul>
+          <li class="footer__nav-title">Company information</li>
+          <li><a href="/about/">About Broadridge </a></li>
+          <li><a href="https://broadridge.wd5.myworkdayjobs.com/Careers" target="_blank" rel="noreferrer">Careers</a></li>
+          <li><a href="/client-access/">Client access</a></li>
+          <li><a href="/news-room">Company newsroom</a></li>
+          <li><a href="https://www.broadridge-ir.com/" target="_blank" rel="noreferrer">Investor relations</a></li>
+          <li><a href="https://pages.broadridge.com/email-preferences" target="_blank" rel="noreferrer">Manage email preferences</a></li>
+        </ul>
+        <ul>
+          <li class="footer__nav-title invisible">Company information</li>
+          <li><a href="/contact-us">Office locations</a></li>
+          <li><a href="/about/the-broadridge-culture">Our culture</a></li>
+          <li><a href="/about/our-partner-program">Partner program</a></li>
+          <li><a href="/about/security-capabilities">Security capabilities</a></li>
+          <li><a href="https://www.broadridge.com/about/sustainability/">Sustainability</a></li>
+        </ul>
+        <ul>
+          <li class="footer__nav-title">Who we serve  </li>
+          <li><a href="/who-we-serve/asset-management">Asset Management</a></li>
+          <li><a href="/who-we-serve/capital-markets">Capital Markets</a></li>
+          <li><a href="/who-we-serve/issuers">Issuers</a></li>
+          <li><a href="/who-we-serve/wealth-management">Wealth Management</a></li>
+          <li><a href="/who-we-serve/consumer-industries">Consumer Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer__accordions">
+        <button type="button" class="footer__accordion-trigger" aria-label="Company information"><span>Company information</span><svg><use href="#i-plus"/></svg></button>
+        <div class="footer__accordion-content">
+          <ul>
+            <li><a href="/about/">About Broadridge </a></li>
+            <li><a href="https://broadridge.wd5.myworkdayjobs.com/Careers" target="_blank" rel="noreferrer">Careers </a></li>
+            <li><a href="/client-access/">Client access </a></li>
+            <li><a href="/news-room">Company newsroom </a></li>
+            <li><a href="https://www.broadridge-ir.com/" target="_blank" rel="noreferrer">Investor relations </a></li>
+            <li><a href="https://pages.broadridge.com/email-preferences" target="_blank" rel="noreferrer">Manage email preferences </a></li>
+            <li><a href="/contact-us">Office locations </a></li>
+            <li><a href="/about/the-broadridge-culture">Our culture </a></li>
+            <li><a href="/about/our-partner-program">Partner program </a></li>
+            <li><a href="/about/security-capabilities">Security capabilities </a></li>
+            <li><a href="https://www.broadridge.com/about/sustainability/">Sustainability </a></li>
+          </ul>
+        </div>
+        <button type="button" class="footer__accordion-trigger" aria-label="Who we serve"><span>Who we serve  </span><svg><use href="#i-plus"/></svg></button>
+        <div class="footer__accordion-content">
+          <ul>
+            <li><a href="/who-we-serve/asset-management">Asset Management </a></li>
+            <li><a href="/who-we-serve/capital-markets">Capital Markets </a></li>
+            <li><a href="/who-we-serve/issuers">Issuers </a></li>
+            <li><a href="/who-we-serve/wealth-management">Wealth Management </a></li>
+            <li><a href="/who-we-serve/consumer-industries">Consumer Industries </a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer__hr">
+      <div class="footer__legal">
+        <a class="inline" href="https://www.broadridge.com/legal/accessibility">Accessibility Statement  </a>
+        <a class="inline" href="#">Do Not Sell My Personal Information</a>
+        <a class="inline" href="https://www.broadridge.com/legal/legal-statements">Legal Statements</a>
+        <a class="inline" href="https://www.broadridge.com/_assets/pdf/broadridge-uk-modern-slavery-act-statement.pdf" target="_blank" rel="noreferrer">Modern Slavery</a>
+        <a class="inline" href="https://www.broadridge.com/legal/terms-of-use">Terms of Use &amp; Linking Policy</a>
+        <a class="inline" href="https://www.broadridge.com/legal/privacy-statement-english">Privacy Statement</a>
+        <a class="inline" href="https://www.broadridge.com/legal/your-privacy-choices"> Your Privacy Choices <img src="https://www.broadridge.com/_Static-Assets/images/privacy-logo.png" alt="Alt"></a>
+      </div>
+      <div class="footer__websites">
+        <a href="https://www.broadridge.com/fr/" target="_blank" rel="noreferrer">Canada - Français</a>
+        <a href="https://www.broadridge.com/de/" target="_blank" rel="noreferrer">Deutschland</a>
+        <a href="https://www.broadridge.com/jp/" target="_blank" rel="noreferrer">日本</a>
+      </div>
+      <div class="footer__copyright">© 2026 Broadridge Financial Solutions, Inc. All Rights Reserved. </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

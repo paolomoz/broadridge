@@ -1,0 +1,5815 @@
+{
+ "url": "https://www.broadridge.com/who-we-serve/asset-management",
+ "widths": {
+  "360": {
+   "doc": 7826,
+   "sections": [
+    {
+     "cls": "section hero-general themedark text-white",
+     "rect": [
+      0,
+      516,
+      0,
+      360
+     ]
+    },
+    {
+     "cls": "section c2-text-slider type-1",
+     "rect": [
+      516,
+      458,
+      0,
+      360
+     ]
+    },
+    {
+     "cls": "section side-tabber ",
+     "rect": [
+      974,
+      697,
+      0,
+      360
+     ]
+    },
+    {
+     "cls": "section key-stats",
+     "rect": [
+      1671,
+      450,
+      0,
+      360
+     ]
+    },
+    {
+     "cls": "section bento-grid-four-plus-one py-32 lg:py-48   ",
+     "rect": [
+      2121,
+      1634,
+      0,
+      360
+     ]
+    },
+    {
+     "cls": "section insights theme-light",
+     "rect": [
+      3755,
+      688,
+      0,
+      360
+     ]
+    },
+    {
+     "cls": "section c2-text-slider type-1",
+     "rect": [
+      4442,
+      536,
+      0,
+      360
+     ]
+    },
+    {
+     "cls": "section contact-us",
+     "rect": [
+      5010,
+      1841,
+      0,
+      360
+     ]
+    }
+   ],
+   "hero": {
+    "tag": "section",
+    "cls": "section hero-general themedark text-white",
+    "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+    "rect": [
+     0,
+     516,
+     0,
+     360
+    ],
+    "t": {
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "lineHeight": "24px",
+     "color": "rgb(255, 255, 255)",
+     "letterSpacing": "normal",
+     "textTransform": "none"
+    },
+    "b": {
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "backgroundImage": "none",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "borderRadius": "0px",
+     "display": "grid",
+     "gridTemplateColumns": "360px",
+     "gap": "normal",
+     "flexDirection": "row",
+     "alignItems": "normal",
+     "justifyContent": "normal",
+     "position": "relative",
+     "overflow": "hidden",
+     "marginTop": "0px",
+     "marginBottom": "0px",
+     "maxWidth": "none",
+     "opacity": "1",
+     "objectFit": "fill",
+     "zIndex": "auto"
+    },
+    "kids": [
+     {
+      "tag": "div",
+      "cls": "image-cover bg-blue-750 ",
+      "text": "",
+      "rect": [
+       0,
+       516,
+       0,
+       360
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "16px",
+       "fontWeight": "400",
+       "lineHeight": "24px",
+       "color": "rgb(255, 255, 255)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgb(0, 31, 90)",
+       "backgroundImage": "none",
+       "paddingTop": "0px",
+       "paddingRight": "0px",
+       "paddingBottom": "0px",
+       "paddingLeft": "0px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "absolute",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "none",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "1"
+      },
+      "kids": []
+     },
+     {
+      "tag": "div",
+      "cls": "hero-general__content",
+      "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+      "rect": [
+       0,
+       516,
+       0,
+       360
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "24px",
+       "fontWeight": "400",
+       "lineHeight": "27.6px",
+       "color": "rgb(255, 255, 255)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgba(0, 0, 0, 0)",
+       "backgroundImage": "none",
+       "paddingTop": "150px",
+       "paddingRight": "0px",
+       "paddingBottom": "32px",
+       "paddingLeft": "0px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "static",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "none",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "2"
+      },
+      "kids": [
+       {
+        "tag": "div",
+        "cls": "container-fluid",
+        "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+        "rect": [
+         150,
+         334,
+         0,
+         360
+        ],
+        "t": {
+         "fontFamily": "freight-sans-pro, sans-serif",
+         "fontSize": "24px",
+         "fontWeight": "400",
+         "lineHeight": "27.6px",
+         "color": "rgb(255, 255, 255)",
+         "letterSpacing": "normal",
+         "textTransform": "none"
+        },
+        "b": {
+         "backgroundColor": "rgba(0, 0, 0, 0)",
+         "backgroundImage": "none",
+         "paddingTop": "0px",
+         "paddingRight": "24px",
+         "paddingBottom": "0px",
+         "paddingLeft": "24px",
+         "borderRadius": "0px",
+         "display": "block",
+         "gridTemplateColumns": "none",
+         "gap": "normal",
+         "flexDirection": "row",
+         "alignItems": "normal",
+         "justifyContent": "normal",
+         "position": "static",
+         "overflow": "visible",
+         "marginTop": "0px",
+         "marginBottom": "0px",
+         "maxWidth": "1232px",
+         "opacity": "1",
+         "objectFit": "fill",
+         "zIndex": "auto"
+        },
+        "kids": [
+         {
+          "tag": "div",
+          "cls": "hero-general__content-wrap",
+          "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+          "rect": [
+           150,
+           334,
+           24,
+           312
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "24px",
+           "fontWeight": "400",
+           "lineHeight": "27.6px",
+           "color": "rgb(255, 255, 255)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "flex",
+           "gridTemplateColumns": "none",
+           "gap": "32px",
+           "flexDirection": "column",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "hero-general__heading hero-general--row",
+            "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+            "rect": [
+             150,
+             334,
+             24,
+             312
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "24px",
+             "fontWeight": "400",
+             "lineHeight": "27.6px",
+             "color": "rgb(255, 255, 255)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "32px",
+             "flexDirection": "column",
+             "alignItems": "flex-start",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "heroImgs": [],
+   "sliders": [
+    {
+     "tag": "section",
+     "cls": "section c2-text-slider type-1",
+     "text": "Agile technology and insights for resilient performance Manage complex",
+     "rect": [
+      516,
+      458,
+      0,
+      360
+     ],
+     "t": {
+      "fontFamily": "freight-sans-pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "color": "rgb(0, 0, 0)",
+      "letterSpacing": "normal",
+      "textTransform": "none"
+     },
+     "b": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "paddingTop": "32px",
+      "paddingRight": "0px",
+      "paddingBottom": "32px",
+      "paddingLeft": "0px",
+      "borderRadius": "0px",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "flexDirection": "row",
+      "alignItems": "normal",
+      "justifyContent": "normal",
+      "position": "relative",
+      "overflow": "hidden",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "opacity": "1",
+      "objectFit": "fill",
+      "zIndex": "auto"
+     },
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "container-extended",
+       "text": "Agile technology and insights for resilient performance Manage complex",
+       "rect": [
+        548,
+        394,
+        0,
+        360
+       ],
+       "t": {
+        "fontFamily": "freight-sans-pro, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "color": "rgb(0, 0, 0)",
+        "letterSpacing": "normal",
+        "textTransform": "none"
+       },
+       "b": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "paddingTop": "0px",
+        "paddingRight": "8px",
+        "paddingBottom": "0px",
+        "paddingLeft": "8px",
+        "borderRadius": "0px",
+        "display": "block",
+        "gridTemplateColumns": "none",
+        "gap": "normal",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "position": "static",
+        "overflow": "visible",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "maxWidth": "1360px",
+        "opacity": "1",
+        "objectFit": "fill",
+        "zIndex": "auto"
+       },
+       "kids": [
+        {
+         "tag": "div",
+         "cls": "c2-text-slider__wrap bg-white text-dark ",
+         "text": "Agile technology and insights for resilient performance Manage complex",
+         "rect": [
+          548,
+          394,
+          8,
+          344
+         ],
+         "t": {
+          "fontFamily": "freight-sans-pro, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "color": "rgb(26, 26, 26)",
+          "letterSpacing": "normal",
+          "textTransform": "none"
+         },
+         "b": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "paddingTop": "24px",
+          "paddingRight": "16px",
+          "paddingBottom": "24px",
+          "paddingLeft": "16px",
+          "borderRadius": "0px",
+          "display": "grid",
+          "gridTemplateColumns": "312px",
+          "gap": "32px",
+          "flexDirection": "row",
+          "alignItems": "normal",
+          "justifyContent": "normal",
+          "position": "static",
+          "overflow": "visible",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "maxWidth": "none",
+          "opacity": "1",
+          "objectFit": "fill",
+          "zIndex": "auto"
+         },
+         "kids": [
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__header",
+           "text": "Agile technology and insights for resilient performance",
+           "rect": [
+            572,
+            110,
+            24,
+            312
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gridTemplateColumns": "2.15fr 1fr",
+            "gap": "16px",
+            "flexDirection": "column",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "h2",
+             "cls": "heading   c2-text-slider__title",
+             "text": "Agile technology and insights for resilient performance",
+             "rect": [
+              572,
+              110,
+              24,
+              312
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "32px",
+              "fontWeight": "400",
+              "lineHeight": "36.8px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "block",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__slider swiper-initialized swiper-horizontal swiper-backface-hidden",
+           "text": "Manage complexity and risk with confidence with our global regulatory ",
+           "rect": [
+            715,
+            122,
+            24,
+            312
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "block",
+            "gridTemplateColumns": "none",
+            "gap": "normal",
+            "flexDirection": "row",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "hidden auto",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "100%",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "swiper-wrapper",
+             "text": "Manage complexity and risk with confidence with our global regulatory ",
+             "rect": [
+              715,
+              122,
+              24,
+              312
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "relative",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "1"
+             }
+            },
+            {
+             "tag": "span",
+             "cls": "swiper-notification",
+             "text": "",
+             "rect": [
+              836,
+              0,
+              24,
+              0
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "inline",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "slider-controls",
+           "text": "",
+           "rect": [
+            868,
+            50,
+            24,
+            312
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gridTemplateColumns": "none",
+            "gap": "24px",
+            "flexDirection": "row",
+            "alignItems": "center",
+            "justifyContent": "space-between",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "slider-pagination swiper-pagination light swiper-pagination-clickable swiper-pagination-bullets swip",
+             "text": "",
+             "rect": [
+              891,
+              5,
+              24,
+              172
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "24px 12px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "10"
+             }
+            },
+            {
+             "tag": "div",
+             "cls": "flex gap-16",
+             "text": "",
+             "rect": [
+              868,
+              50,
+              220,
+              116
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "16px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "tag": "section",
+     "cls": "section c2-text-slider type-1",
+     "text": "Serving the industry with smart and strategic solutions Asset Managers",
+     "rect": [
+      4442,
+      536,
+      0,
+      360
+     ],
+     "t": {
+      "fontFamily": "freight-sans-pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "color": "rgb(0, 0, 0)",
+      "letterSpacing": "normal",
+      "textTransform": "none"
+     },
+     "b": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "paddingTop": "32px",
+      "paddingRight": "0px",
+      "paddingBottom": "32px",
+      "paddingLeft": "0px",
+      "borderRadius": "0px",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "flexDirection": "row",
+      "alignItems": "normal",
+      "justifyContent": "normal",
+      "position": "relative",
+      "overflow": "hidden",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "opacity": "1",
+      "objectFit": "fill",
+      "zIndex": "auto"
+     },
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "container-extended",
+       "text": "Serving the industry with smart and strategic solutions Asset Managers",
+       "rect": [
+        4474,
+        472,
+        0,
+        360
+       ],
+       "t": {
+        "fontFamily": "freight-sans-pro, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "color": "rgb(0, 0, 0)",
+        "letterSpacing": "normal",
+        "textTransform": "none"
+       },
+       "b": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "paddingTop": "0px",
+        "paddingRight": "8px",
+        "paddingBottom": "0px",
+        "paddingLeft": "8px",
+        "borderRadius": "0px",
+        "display": "block",
+        "gridTemplateColumns": "none",
+        "gap": "normal",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "position": "static",
+        "overflow": "visible",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "maxWidth": "1360px",
+        "opacity": "1",
+        "objectFit": "fill",
+        "zIndex": "auto"
+       },
+       "kids": [
+        {
+         "tag": "div",
+         "cls": "c2-text-slider__wrap bg-white text-dark ",
+         "text": "Serving the industry with smart and strategic solutions Asset Managers",
+         "rect": [
+          4474,
+          472,
+          8,
+          344
+         ],
+         "t": {
+          "fontFamily": "freight-sans-pro, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "color": "rgb(26, 26, 26)",
+          "letterSpacing": "normal",
+          "textTransform": "none"
+         },
+         "b": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "paddingTop": "24px",
+          "paddingRight": "16px",
+          "paddingBottom": "24px",
+          "paddingLeft": "16px",
+          "borderRadius": "0px",
+          "display": "grid",
+          "gridTemplateColumns": "312px",
+          "gap": "32px",
+          "flexDirection": "row",
+          "alignItems": "normal",
+          "justifyContent": "normal",
+          "position": "static",
+          "overflow": "visible",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "maxWidth": "none",
+          "opacity": "1",
+          "objectFit": "fill",
+          "zIndex": "auto"
+         },
+         "kids": [
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__header",
+           "text": "Serving the industry with smart and strategic solutions",
+           "rect": [
+            4498,
+            110,
+            24,
+            312
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gridTemplateColumns": "2.15fr 1fr",
+            "gap": "16px",
+            "flexDirection": "column",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "h2",
+             "cls": "heading   c2-text-slider__title",
+             "text": "Serving the industry with smart and strategic solutions",
+             "rect": [
+              4498,
+              110,
+              24,
+              312
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "32px",
+              "fontWeight": "400",
+              "lineHeight": "36.8px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "block",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__slider swiper-initialized swiper-horizontal swiper-backface-hidden",
+           "text": "Asset Managers Streamline operations, comply with changing regulations",
+           "rect": [
+            4641,
+            200,
+            24,
+            312
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "block",
+            "gridTemplateColumns": "none",
+            "gap": "normal",
+            "flexDirection": "row",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "hidden auto",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "100%",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "swiper-wrapper",
+             "text": "Asset Managers Streamline operations, comply with changing regulations",
+             "rect": [
+              4641,
+              200,
+              24,
+              312
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "relative",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "1"
+             }
+            },
+            {
+             "tag": "span",
+             "cls": "swiper-notification",
+             "text": "",
+             "rect": [
+              4840,
+              0,
+              24,
+              0
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "inline",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "slider-controls",
+           "text": "",
+           "rect": [
+            4872,
+            50,
+            24,
+            312
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gridTemplateColumns": "none",
+            "gap": "24px",
+            "flexDirection": "row",
+            "alignItems": "center",
+            "justifyContent": "space-between",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "slider-pagination swiper-pagination light swiper-pagination-clickable swiper-pagination-bullets swip",
+             "text": "",
+             "rect": [
+              4895,
+              5,
+              24,
+              172
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "24px 12px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "10"
+             }
+            },
+            {
+             "tag": "div",
+             "cls": "flex gap-16",
+             "text": "",
+             "rect": [
+              4872,
+              50,
+              220,
+              116
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "16px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "stats": {
+    "tag": "section",
+    "cls": "section key-stats",
+    "text": "An unparalleled global industry view $100T Global AUM tracked, providi",
+    "rect": [
+     1671,
+     450,
+     0,
+     360
+    ],
+    "t": {
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "lineHeight": "24px",
+     "color": "rgb(0, 0, 0)",
+     "letterSpacing": "normal",
+     "textTransform": "none"
+    },
+    "b": {
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "backgroundImage": "none",
+     "paddingTop": "32px",
+     "paddingRight": "0px",
+     "paddingBottom": "32px",
+     "paddingLeft": "0px",
+     "borderRadius": "0px",
+     "display": "block",
+     "gridTemplateColumns": "none",
+     "gap": "normal",
+     "flexDirection": "row",
+     "alignItems": "normal",
+     "justifyContent": "normal",
+     "position": "relative",
+     "overflow": "hidden",
+     "marginTop": "0px",
+     "marginBottom": "0px",
+     "maxWidth": "none",
+     "opacity": "1",
+     "objectFit": "fill",
+     "zIndex": "auto"
+    },
+    "kids": [
+     {
+      "tag": "div",
+      "cls": "container-extended",
+      "text": "An unparalleled global industry view $100T Global AUM tracked, providi",
+      "rect": [
+       1703,
+       386,
+       0,
+       360
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "16px",
+       "fontWeight": "400",
+       "lineHeight": "24px",
+       "color": "rgb(0, 0, 0)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgba(0, 0, 0, 0)",
+       "backgroundImage": "none",
+       "paddingTop": "0px",
+       "paddingRight": "8px",
+       "paddingBottom": "0px",
+       "paddingLeft": "8px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "static",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "1360px",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "auto"
+      },
+      "kids": [
+       {
+        "tag": "div",
+        "cls": "key-stats__wrap bg-white text-dark ",
+        "text": "An unparalleled global industry view $100T Global AUM tracked, providi",
+        "rect": [
+         1703,
+         386,
+         8,
+         344
+        ],
+        "t": {
+         "fontFamily": "freight-sans-pro, sans-serif",
+         "fontSize": "16px",
+         "fontWeight": "400",
+         "lineHeight": "24px",
+         "color": "rgb(26, 26, 26)",
+         "letterSpacing": "normal",
+         "textTransform": "none"
+        },
+        "b": {
+         "backgroundColor": "rgb(255, 255, 255)",
+         "backgroundImage": "none",
+         "paddingTop": "24px",
+         "paddingRight": "16px",
+         "paddingBottom": "24px",
+         "paddingLeft": "16px",
+         "borderRadius": "0px",
+         "display": "grid",
+         "gridTemplateColumns": "312px",
+         "gap": "32px",
+         "flexDirection": "row",
+         "alignItems": "normal",
+         "justifyContent": "normal",
+         "position": "static",
+         "overflow": "hidden auto",
+         "marginTop": "0px",
+         "marginBottom": "0px",
+         "maxWidth": "none",
+         "opacity": "1",
+         "objectFit": "fill",
+         "zIndex": "auto"
+        },
+        "kids": [
+         {
+          "tag": "div",
+          "cls": "key-stats__header",
+          "text": "An unparalleled global industry view",
+          "rect": [
+           1727,
+           74,
+           24,
+           312
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(26, 26, 26)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "flex",
+           "gridTemplateColumns": "2.15fr 1fr",
+           "gap": "16px",
+           "flexDirection": "column",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "h2",
+            "cls": "heading   key-stats__title ",
+            "text": "An unparalleled global industry view",
+            "rect": [
+             1727,
+             74,
+             24,
+             312
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "32px",
+             "fontWeight": "400",
+             "lineHeight": "36.8px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "block",
+             "gridTemplateColumns": "none",
+             "gap": "normal",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": []
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "key-stats__slider swiper-initialized swiper-horizontal swiper-backface-hidden",
+          "text": "$100T Global AUM tracked, providing views into investor and asset tren",
+          "rect": [
+           1833,
+           150,
+           24,
+           312
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(26, 26, 26)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "block",
+           "gridTemplateColumns": "none",
+           "gap": "normal",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "100%",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "swiper-wrapper",
+            "text": "$100T Global AUM tracked, providing views into investor and asset tren",
+            "rect": [
+             1833,
+             150,
+             24,
+             312
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "normal",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "relative",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "1"
+            },
+            "kids": [
+             {
+              "tag": "div",
+              "cls": "key-stats__slider-slide swiper-slide swiper-slide-active",
+              "text": "$100T Global AUM tracked, providing views into investor and asset tren",
+              "rect": [
+               1833,
+               150,
+               24,
+               257
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "8px",
+               "paddingRight": "24px",
+               "paddingBottom": "8px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "relative",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "div",
+              "cls": "key-stats__slider-slide swiper-slide swiper-slide-next",
+              "text": "2B Regulatory fund communications processed annually",
+              "rect": [
+               1833,
+               150,
+               297,
+               257
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "8px",
+               "paddingRight": "24px",
+               "paddingBottom": "8px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "relative",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "div",
+              "cls": "key-stats__slider-slide swiper-slide",
+              "text": "$1.5T Assets managed on our investment management platforms",
+              "rect": [
+               1833,
+               150,
+               571,
+               257
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "8px",
+               "paddingRight": "24px",
+               "paddingBottom": "8px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "relative",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           },
+           {
+            "tag": "span",
+            "cls": "swiper-notification",
+            "text": "",
+            "rect": [
+             1983,
+             0,
+             24,
+             0
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "inline",
+             "gridTemplateColumns": "none",
+             "gap": "normal",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": []
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "slider-controls",
+          "text": "",
+          "rect": [
+           2015,
+           50,
+           24,
+           312
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(26, 26, 26)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "flex",
+           "gridTemplateColumns": "none",
+           "gap": "24px",
+           "flexDirection": "row",
+           "alignItems": "center",
+           "justifyContent": "space-between",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "slider-pagination swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pag",
+            "text": "",
+            "rect": [
+             2037,
+             5,
+             24,
+             172
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "24px 12px",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "10"
+            },
+            "kids": [
+             {
+              "tag": "span",
+              "cls": "swiper-pagination-bullet swiper-pagination-bullet-active",
+              "text": "",
+              "rect": [
+               2037,
+               5,
+               28,
+               20
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(38, 98, 252)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "2px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "span",
+              "cls": "swiper-pagination-bullet",
+              "text": "",
+              "rect": [
+               2037,
+               5,
+               68,
+               20
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(217, 217, 217)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "2px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "span",
+              "cls": "swiper-pagination-bullet",
+              "text": "",
+              "rect": [
+               2037,
+               5,
+               108,
+               20
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(217, 217, 217)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "2px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           },
+           {
+            "tag": "div",
+            "cls": "flex gap-16",
+            "text": "",
+            "rect": [
+             2015,
+             50,
+             220,
+             116
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "16px",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "button",
+              "cls": "slider-button-prev btn-blue swiper-button-disabled",
+              "text": "",
+              "rect": [
+               2015,
+               50,
+               220,
+               50
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(179, 179, 179)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "16px",
+               "paddingRight": "16px",
+               "paddingBottom": "16px",
+               "paddingLeft": "16px",
+               "borderRadius": "9999px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "button",
+              "cls": "slider-button-next btn-blue",
+              "text": "",
+              "rect": [
+               2015,
+               50,
+               286,
+               50
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(38, 98, 252)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "16px",
+               "paddingRight": "16px",
+               "paddingBottom": "16px",
+               "paddingLeft": "16px",
+               "borderRadius": "9999px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "bento": {
+    "tag": "section",
+    "cls": "section bento-grid-four-plus-one py-32 lg:py-48   ",
+    "text": "Recognized by the industry WINNER 2024 Innovation in Operations – Tail",
+    "rect": [
+     2121,
+     1634,
+     0,
+     360
+    ],
+    "t": {
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "lineHeight": "24px",
+     "color": "rgb(0, 0, 0)",
+     "letterSpacing": "normal",
+     "textTransform": "none"
+    },
+    "b": {
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "backgroundImage": "none",
+     "paddingTop": "32px",
+     "paddingRight": "0px",
+     "paddingBottom": "32px",
+     "paddingLeft": "0px",
+     "borderRadius": "0px",
+     "display": "block",
+     "gridTemplateColumns": "none",
+     "gap": "normal",
+     "flexDirection": "row",
+     "alignItems": "normal",
+     "justifyContent": "normal",
+     "position": "relative",
+     "overflow": "hidden",
+     "marginTop": "0px",
+     "marginBottom": "0px",
+     "maxWidth": "none",
+     "opacity": "1",
+     "objectFit": "fill",
+     "zIndex": "auto"
+    },
+    "kids": [
+     {
+      "tag": "div",
+      "cls": "container-extended",
+      "text": "Recognized by the industry WINNER 2024 Innovation in Operations – Tail",
+      "rect": [
+       2153,
+       1570,
+       0,
+       360
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "16px",
+       "fontWeight": "400",
+       "lineHeight": "24px",
+       "color": "rgb(0, 0, 0)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgba(0, 0, 0, 0)",
+       "backgroundImage": "none",
+       "paddingTop": "0px",
+       "paddingRight": "8px",
+       "paddingBottom": "0px",
+       "paddingLeft": "8px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "static",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "1360px",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "auto"
+      },
+      "kids": [
+       {
+        "tag": "div",
+        "cls": "bento-grid-four-plus-one__wrap bg-blue-150 text-body",
+        "text": "Recognized by the industry WINNER 2024 Innovation in Operations – Tail",
+        "rect": [
+         2153,
+         1570,
+         8,
+         344
+        ],
+        "t": {
+         "fontFamily": "freight-sans-pro, sans-serif",
+         "fontSize": "16px",
+         "fontWeight": "400",
+         "lineHeight": "24px",
+         "color": "rgb(0, 12, 54)",
+         "letterSpacing": "normal",
+         "textTransform": "none"
+        },
+        "b": {
+         "backgroundColor": "rgb(231, 241, 252)",
+         "backgroundImage": "none",
+         "paddingTop": "24px",
+         "paddingRight": "16px",
+         "paddingBottom": "24px",
+         "paddingLeft": "16px",
+         "borderRadius": "4px",
+         "display": "grid",
+         "gridTemplateColumns": "312px",
+         "gap": "32px",
+         "flexDirection": "row",
+         "alignItems": "normal",
+         "justifyContent": "normal",
+         "position": "static",
+         "overflow": "visible",
+         "marginTop": "0px",
+         "marginBottom": "0px",
+         "maxWidth": "none",
+         "opacity": "1",
+         "objectFit": "fill",
+         "zIndex": "auto"
+        },
+        "kids": [
+         {
+          "tag": "div",
+          "cls": "section-header ",
+          "text": "Recognized by the industry",
+          "rect": [
+           2177,
+           74,
+           24,
+           312
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(0, 12, 54)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "block",
+           "gridTemplateColumns": "none",
+           "gap": "normal",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "section-header__wrap ",
+            "text": "Recognized by the industry",
+            "rect": [
+             2177,
+             74,
+             24,
+             312
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(0, 12, 54)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "grid",
+             "gridTemplateColumns": "312px",
+             "gap": "16px",
+             "flexDirection": "row",
+             "alignItems": "flex-end",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "div",
+              "cls": "section-header__heading",
+              "text": "Recognized by the industry",
+              "rect": [
+               2177,
+               74,
+               24,
+               312
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "bento-grid-four-plus-one__grid",
+          "text": "WINNER 2024 Innovation in Operations – Tailored Shareholder Reports So",
+          "rect": [
+           2282,
+           1328,
+           24,
+           312
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(0, 12, 54)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "flex",
+           "gridTemplateColumns": "repeat(1, minmax(0px, 1fr))",
+           "gap": "32px",
+           "flexDirection": "column",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "a",
+            "cls": "card text-white card__media-cover light",
+            "text": "WINNER 2024 Innovation in Operations – Tailored Shareholder Reports So",
+            "rect": [
+             2282,
+             397,
+             24,
+             312
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(255, 255, 255)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgb(231, 241, 252)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "4px",
+             "display": "grid",
+             "gridTemplateColumns": "312px",
+             "gap": "normal",
+             "flexDirection": "column",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "relative",
+             "overflow": "hidden",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "div",
+              "cls": "card__image ",
+              "text": "",
+              "rect": [
+               2282,
+               397,
+               24,
+               312
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(255, 255, 255)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "0px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "absolute",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "0"
+              }
+             },
+             {
+              "tag": "div",
+              "cls": "card__content p-24 min-h-[180px] justify-end z-[2]",
+              "text": "WINNER 2024 Innovation in Operations – Tailored Shareholder Reports So",
+              "rect": [
+               2282,
+               397,
+               24,
+               312
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(255, 255, 255)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "24px",
+               "paddingRight": "24px",
+               "paddingBottom": "24px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "flex-end",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "2"
+              }
+             }
+            ]
+           },
+           {
+            "tag": "div",
+            "cls": "bento-grid-four-plus-one__grid-sub",
+            "text": "WINNER 2024 Technology Provider of the Year, Alternative Credit Invest",
+            "rect": [
+             2712,
+             899,
+             24,
+             312
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(0, 12, 54)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "grid",
+             "gridTemplateColumns": "312px",
+             "gap": "16px",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2024 Technology Provider of the Year, Alternative Credit Invest",
+              "rect": [
+               2712,
+               199,
+               24,
+               312
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2024 Best Order Management System (OMS), With Intelligence HFM ",
+              "rect": [
+               2927,
+               226,
+               24,
+               312
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2023-2024 Best Technology – Alternative Credit, With Intelligen",
+              "rect": [
+               3169,
+               226,
+               24,
+               312
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2023 Best Portfolio Management Software, With Intelligence HFM ",
+              "rect": [
+               3412,
+               199,
+               24,
+               312
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "bento-grid-four-plus-one__cta",
+          "text": "Explore all awards and recognition",
+          "rect": [
+           3643,
+           56,
+           24,
+           312
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(0, 12, 54)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "block",
+           "gridTemplateColumns": "none",
+           "gap": "normal",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "a",
+            "cls": "cta group cta-primary cta-medium cta-light w-full md:w-[unset]",
+            "text": "Explore all awards and recognition",
+            "rect": [
+             3643,
+             56,
+             24,
+             312
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "20px",
+             "fontWeight": "500",
+             "lineHeight": "20px",
+             "color": "rgb(255, 255, 255)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgb(38, 98, 252)",
+             "backgroundImage": "none",
+             "paddingTop": "16px",
+             "paddingRight": "24px",
+             "paddingBottom": "16px",
+             "paddingLeft": "24px",
+             "borderRadius": "2px",
+             "display": "inline-flex",
+             "gridTemplateColumns": "none",
+             "gap": "10px",
+             "flexDirection": "row",
+             "alignItems": "center",
+             "justifyContent": "center",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "span",
+              "cls": "",
+              "text": "Explore all awards and recognition",
+              "rect": [
+               3651,
+               40,
+               48,
+               264
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "20px",
+               "fontWeight": "500",
+               "lineHeight": "20px",
+               "color": "rgb(255, 255, 255)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "0px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "1440": {
+   "doc": 6414,
+   "sections": [
+    {
+     "cls": "section hero-general themedark text-white",
+     "rect": [
+      0,
+      384,
+      0,
+      1440
+     ]
+    },
+    {
+     "cls": "section c2-text-slider type-1",
+     "rect": [
+      384,
+      534,
+      0,
+      1440
+     ]
+    },
+    {
+     "cls": "section side-tabber ",
+     "rect": [
+      918,
+      783,
+      0,
+      1440
+     ]
+    },
+    {
+     "cls": "section key-stats",
+     "rect": [
+      1701,
+      510,
+      0,
+      1440
+     ]
+    },
+    {
+     "cls": "section bento-grid-four-plus-one py-32 lg:py-48   ",
+     "rect": [
+      2211,
+      998,
+      0,
+      1440
+     ]
+    },
+    {
+     "cls": "section insights theme-light",
+     "rect": [
+      3209,
+      851,
+      0,
+      1440
+     ]
+    },
+    {
+     "cls": "section c2-text-slider type-1",
+     "rect": [
+      4060,
+      638,
+      0,
+      1440
+     ]
+    },
+    {
+     "cls": "section contact-us",
+     "rect": [
+      4730,
+      1138,
+      0,
+      1440
+     ]
+    }
+   ],
+   "hero": {
+    "tag": "section",
+    "cls": "section hero-general themedark text-white",
+    "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+    "rect": [
+     0,
+     384,
+     0,
+     1440
+    ],
+    "t": {
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "lineHeight": "24px",
+     "color": "rgb(255, 255, 255)",
+     "letterSpacing": "normal",
+     "textTransform": "none"
+    },
+    "b": {
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "backgroundImage": "none",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "borderRadius": "0px",
+     "display": "grid",
+     "gridTemplateColumns": "1440px",
+     "gap": "normal",
+     "flexDirection": "row",
+     "alignItems": "normal",
+     "justifyContent": "normal",
+     "position": "relative",
+     "overflow": "hidden",
+     "marginTop": "0px",
+     "marginBottom": "0px",
+     "maxWidth": "none",
+     "opacity": "1",
+     "objectFit": "fill",
+     "zIndex": "auto"
+    },
+    "kids": [
+     {
+      "tag": "div",
+      "cls": "image-cover bg-blue-750 ",
+      "text": "",
+      "rect": [
+       0,
+       384,
+       0,
+       1440
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "16px",
+       "fontWeight": "400",
+       "lineHeight": "24px",
+       "color": "rgb(255, 255, 255)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgb(0, 31, 90)",
+       "backgroundImage": "none",
+       "paddingTop": "0px",
+       "paddingRight": "0px",
+       "paddingBottom": "0px",
+       "paddingLeft": "0px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "absolute",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "none",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "1"
+      },
+      "kids": []
+     },
+     {
+      "tag": "div",
+      "cls": "hero-general__content",
+      "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+      "rect": [
+       0,
+       384,
+       0,
+       1440
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "24px",
+       "fontWeight": "400",
+       "lineHeight": "27.6px",
+       "color": "rgb(255, 255, 255)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgba(0, 0, 0, 0)",
+       "backgroundImage": "none",
+       "paddingTop": "182px",
+       "paddingRight": "0px",
+       "paddingBottom": "64px",
+       "paddingLeft": "0px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "static",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "none",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "2"
+      },
+      "kids": [
+       {
+        "tag": "div",
+        "cls": "container-fluid",
+        "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+        "rect": [
+         182,
+         138,
+         104,
+         1232
+        ],
+        "t": {
+         "fontFamily": "freight-sans-pro, sans-serif",
+         "fontSize": "24px",
+         "fontWeight": "400",
+         "lineHeight": "27.6px",
+         "color": "rgb(255, 255, 255)",
+         "letterSpacing": "normal",
+         "textTransform": "none"
+        },
+        "b": {
+         "backgroundColor": "rgba(0, 0, 0, 0)",
+         "backgroundImage": "none",
+         "paddingTop": "0px",
+         "paddingRight": "24px",
+         "paddingBottom": "0px",
+         "paddingLeft": "24px",
+         "borderRadius": "0px",
+         "display": "block",
+         "gridTemplateColumns": "none",
+         "gap": "normal",
+         "flexDirection": "row",
+         "alignItems": "normal",
+         "justifyContent": "normal",
+         "position": "static",
+         "overflow": "visible",
+         "marginTop": "0px",
+         "marginBottom": "0px",
+         "maxWidth": "1232px",
+         "opacity": "1",
+         "objectFit": "fill",
+         "zIndex": "auto"
+        },
+        "kids": [
+         {
+          "tag": "div",
+          "cls": "hero-general__content-wrap",
+          "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+          "rect": [
+           182,
+           138,
+           128,
+           1184
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "24px",
+           "fontWeight": "400",
+           "lineHeight": "27.6px",
+           "color": "rgb(255, 255, 255)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "flex",
+           "gridTemplateColumns": "none",
+           "gap": "48px",
+           "flexDirection": "column",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "hero-general__heading hero-general--row",
+            "text": "Asset Management Navigate industry-wide disruption with solutions buil",
+            "rect": [
+             182,
+             138,
+             128,
+             1184
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "24px",
+             "fontWeight": "400",
+             "lineHeight": "27.6px",
+             "color": "rgb(255, 255, 255)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "32px",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "space-between",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "heroImgs": [],
+   "sliders": [
+    {
+     "tag": "section",
+     "cls": "section c2-text-slider type-1",
+     "text": "Agile technology and insights for resilient performance Manage complex",
+     "rect": [
+      384,
+      534,
+      0,
+      1440
+     ],
+     "t": {
+      "fontFamily": "freight-sans-pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "color": "rgb(0, 0, 0)",
+      "letterSpacing": "normal",
+      "textTransform": "none"
+     },
+     "b": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "paddingTop": "48px",
+      "paddingRight": "0px",
+      "paddingBottom": "48px",
+      "paddingLeft": "0px",
+      "borderRadius": "0px",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "flexDirection": "row",
+      "alignItems": "normal",
+      "justifyContent": "normal",
+      "position": "relative",
+      "overflow": "hidden",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "opacity": "1",
+      "objectFit": "fill",
+      "zIndex": "auto"
+     },
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "container-extended",
+       "text": "Agile technology and insights for resilient performance Manage complex",
+       "rect": [
+        432,
+        438,
+        40,
+        1360
+       ],
+       "t": {
+        "fontFamily": "freight-sans-pro, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "color": "rgb(0, 0, 0)",
+        "letterSpacing": "normal",
+        "textTransform": "none"
+       },
+       "b": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "paddingTop": "0px",
+        "paddingRight": "24px",
+        "paddingBottom": "0px",
+        "paddingLeft": "24px",
+        "borderRadius": "0px",
+        "display": "block",
+        "gridTemplateColumns": "none",
+        "gap": "normal",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "position": "static",
+        "overflow": "visible",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "maxWidth": "1360px",
+        "opacity": "1",
+        "objectFit": "fill",
+        "zIndex": "auto"
+       },
+       "kids": [
+        {
+         "tag": "div",
+         "cls": "c2-text-slider__wrap bg-white text-dark ",
+         "text": "Agile technology and insights for resilient performance Manage complex",
+         "rect": [
+          432,
+          438,
+          64,
+          1312
+         ],
+         "t": {
+          "fontFamily": "freight-sans-pro, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "color": "rgb(26, 26, 26)",
+          "letterSpacing": "normal",
+          "textTransform": "none"
+         },
+         "b": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "paddingTop": "64px",
+          "paddingRight": "64px",
+          "paddingBottom": "64px",
+          "paddingLeft": "64px",
+          "borderRadius": "0px",
+          "display": "grid",
+          "gridTemplateColumns": "1184px",
+          "gap": "48px",
+          "flexDirection": "row",
+          "alignItems": "normal",
+          "justifyContent": "normal",
+          "position": "static",
+          "overflow": "visible",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "maxWidth": "none",
+          "opacity": "1",
+          "objectFit": "fill",
+          "zIndex": "auto"
+         },
+         "kids": [
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__header",
+           "text": "Agile technology and insights for resilient performance",
+           "rect": [
+            496,
+            92,
+            128,
+            1184
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gridTemplateColumns": "786.281px 365.703px",
+            "gap": "32px",
+            "flexDirection": "row",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "h2",
+             "cls": "heading   c2-text-slider__title",
+             "text": "Agile technology and insights for resilient performance",
+             "rect": [
+              496,
+              92,
+              128,
+              786
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "40px",
+              "fontWeight": "400",
+              "lineHeight": "46px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "block",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__slider swiper-initialized swiper-horizontal swiper-backface-hidden",
+           "text": "Manage complexity and risk with confidence with our global regulatory ",
+           "rect": [
+            636,
+            122,
+            128,
+            1184
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "block",
+            "gridTemplateColumns": "none",
+            "gap": "normal",
+            "flexDirection": "row",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "hidden auto",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "100%",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "swiper-wrapper",
+             "text": "Manage complexity and risk with confidence with our global regulatory ",
+             "rect": [
+              636,
+              122,
+              128,
+              1184
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "relative",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "1"
+             }
+            },
+            {
+             "tag": "span",
+             "cls": "swiper-notification",
+             "text": "",
+             "rect": [
+              758,
+              0,
+              128,
+              0
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "inline",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "slider-controls",
+           "text": "",
+           "rect": [
+            806,
+            0,
+            128,
+            1184
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gridTemplateColumns": "none",
+            "gap": "24px",
+            "flexDirection": "row",
+            "alignItems": "center",
+            "justifyContent": "space-between",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "slider-pagination swiper-pagination light swiper-pagination-clickable swiper-pagination-bullets swip",
+             "text": "",
+             "rect": [
+              806,
+              0,
+              128,
+              1160
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "24px 12px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "10"
+             }
+            },
+            {
+             "tag": "div",
+             "cls": "flex gap-16",
+             "text": "",
+             "rect": [
+              806,
+              0,
+              1312,
+              0
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "16px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "tag": "section",
+     "cls": "section c2-text-slider type-1",
+     "text": "Serving the industry with smart and strategic solutions Asset Managers",
+     "rect": [
+      4060,
+      638,
+      0,
+      1440
+     ],
+     "t": {
+      "fontFamily": "freight-sans-pro, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "color": "rgb(0, 0, 0)",
+      "letterSpacing": "normal",
+      "textTransform": "none"
+     },
+     "b": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "paddingTop": "48px",
+      "paddingRight": "0px",
+      "paddingBottom": "48px",
+      "paddingLeft": "0px",
+      "borderRadius": "0px",
+      "display": "block",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "flexDirection": "row",
+      "alignItems": "normal",
+      "justifyContent": "normal",
+      "position": "relative",
+      "overflow": "hidden",
+      "marginTop": "0px",
+      "marginBottom": "0px",
+      "maxWidth": "none",
+      "opacity": "1",
+      "objectFit": "fill",
+      "zIndex": "auto"
+     },
+     "kids": [
+      {
+       "tag": "div",
+       "cls": "container-extended",
+       "text": "Serving the industry with smart and strategic solutions Asset Managers",
+       "rect": [
+        4108,
+        542,
+        40,
+        1360
+       ],
+       "t": {
+        "fontFamily": "freight-sans-pro, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "color": "rgb(0, 0, 0)",
+        "letterSpacing": "normal",
+        "textTransform": "none"
+       },
+       "b": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "paddingTop": "0px",
+        "paddingRight": "24px",
+        "paddingBottom": "0px",
+        "paddingLeft": "24px",
+        "borderRadius": "0px",
+        "display": "block",
+        "gridTemplateColumns": "none",
+        "gap": "normal",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "position": "static",
+        "overflow": "visible",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "maxWidth": "1360px",
+        "opacity": "1",
+        "objectFit": "fill",
+        "zIndex": "auto"
+       },
+       "kids": [
+        {
+         "tag": "div",
+         "cls": "c2-text-slider__wrap bg-white text-dark ",
+         "text": "Serving the industry with smart and strategic solutions Asset Managers",
+         "rect": [
+          4108,
+          542,
+          64,
+          1312
+         ],
+         "t": {
+          "fontFamily": "freight-sans-pro, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "color": "rgb(26, 26, 26)",
+          "letterSpacing": "normal",
+          "textTransform": "none"
+         },
+         "b": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "paddingTop": "64px",
+          "paddingRight": "64px",
+          "paddingBottom": "64px",
+          "paddingLeft": "64px",
+          "borderRadius": "0px",
+          "display": "grid",
+          "gridTemplateColumns": "1184px",
+          "gap": "48px",
+          "flexDirection": "row",
+          "alignItems": "normal",
+          "justifyContent": "normal",
+          "position": "static",
+          "overflow": "visible",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "maxWidth": "none",
+          "opacity": "1",
+          "objectFit": "fill",
+          "zIndex": "auto"
+         },
+         "kids": [
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__header",
+           "text": "Serving the industry with smart and strategic solutions",
+           "rect": [
+            4172,
+            92,
+            128,
+            1184
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "grid",
+            "gridTemplateColumns": "786.281px 365.703px",
+            "gap": "32px",
+            "flexDirection": "row",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "h2",
+             "cls": "heading   c2-text-slider__title",
+             "text": "Serving the industry with smart and strategic solutions",
+             "rect": [
+              4172,
+              92,
+              128,
+              786
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "40px",
+              "fontWeight": "400",
+              "lineHeight": "46px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "block",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "c2-text-slider__slider swiper-initialized swiper-horizontal swiper-backface-hidden",
+           "text": "Asset Managers Streamline operations, comply with changing regulations",
+           "rect": [
+            4312,
+            176,
+            128,
+            1184
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "block",
+            "gridTemplateColumns": "none",
+            "gap": "normal",
+            "flexDirection": "row",
+            "alignItems": "normal",
+            "justifyContent": "normal",
+            "position": "static",
+            "overflow": "hidden auto",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "100%",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "swiper-wrapper",
+             "text": "Asset Managers Streamline operations, comply with changing regulations",
+             "rect": [
+              4312,
+              176,
+              128,
+              1184
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "relative",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "1"
+             }
+            },
+            {
+             "tag": "span",
+             "cls": "swiper-notification",
+             "text": "",
+             "rect": [
+              4488,
+              0,
+              128,
+              0
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "inline",
+              "gridTemplateColumns": "none",
+              "gap": "normal",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          },
+          {
+           "tag": "div",
+           "cls": "slider-controls",
+           "text": "",
+           "rect": [
+            4536,
+            50,
+            128,
+            1184
+           ],
+           "t": {
+            "fontFamily": "freight-sans-pro, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "color": "rgb(26, 26, 26)",
+            "letterSpacing": "normal",
+            "textTransform": "none"
+           },
+           "b": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingBottom": "0px",
+            "paddingLeft": "0px",
+            "borderRadius": "0px",
+            "display": "flex",
+            "gridTemplateColumns": "none",
+            "gap": "24px",
+            "flexDirection": "row",
+            "alignItems": "center",
+            "justifyContent": "space-between",
+            "position": "static",
+            "overflow": "visible",
+            "marginTop": "0px",
+            "marginBottom": "0px",
+            "maxWidth": "none",
+            "opacity": "1",
+            "objectFit": "fill",
+            "zIndex": "auto"
+           },
+           "kids": [
+            {
+             "tag": "div",
+             "cls": "slider-pagination swiper-pagination light swiper-pagination-clickable swiper-pagination-bullets swip",
+             "text": "",
+             "rect": [
+              4558,
+              5,
+              128,
+              1044
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "24px 12px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "10"
+             }
+            },
+            {
+             "tag": "div",
+             "cls": "flex gap-16",
+             "text": "",
+             "rect": [
+              4536,
+              50,
+              1196,
+              116
+             ],
+             "t": {
+              "fontFamily": "freight-sans-pro, sans-serif",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "color": "rgb(26, 26, 26)",
+              "letterSpacing": "normal",
+              "textTransform": "none"
+             },
+             "b": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "display": "flex",
+              "gridTemplateColumns": "none",
+              "gap": "16px",
+              "flexDirection": "row",
+              "alignItems": "normal",
+              "justifyContent": "normal",
+              "position": "static",
+              "overflow": "visible",
+              "marginTop": "0px",
+              "marginBottom": "0px",
+              "maxWidth": "none",
+              "opacity": "1",
+              "objectFit": "fill",
+              "zIndex": "auto"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "stats": {
+    "tag": "section",
+    "cls": "section key-stats",
+    "text": "An unparalleled global industry view $100T Global AUM tracked, providi",
+    "rect": [
+     1701,
+     510,
+     0,
+     1440
+    ],
+    "t": {
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "lineHeight": "24px",
+     "color": "rgb(0, 0, 0)",
+     "letterSpacing": "normal",
+     "textTransform": "none"
+    },
+    "b": {
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "backgroundImage": "none",
+     "paddingTop": "48px",
+     "paddingRight": "0px",
+     "paddingBottom": "48px",
+     "paddingLeft": "0px",
+     "borderRadius": "0px",
+     "display": "block",
+     "gridTemplateColumns": "none",
+     "gap": "normal",
+     "flexDirection": "row",
+     "alignItems": "normal",
+     "justifyContent": "normal",
+     "position": "relative",
+     "overflow": "hidden",
+     "marginTop": "0px",
+     "marginBottom": "0px",
+     "maxWidth": "none",
+     "opacity": "1",
+     "objectFit": "fill",
+     "zIndex": "auto"
+    },
+    "kids": [
+     {
+      "tag": "div",
+      "cls": "container-extended",
+      "text": "An unparalleled global industry view $100T Global AUM tracked, providi",
+      "rect": [
+       1749,
+       414,
+       40,
+       1360
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "16px",
+       "fontWeight": "400",
+       "lineHeight": "24px",
+       "color": "rgb(0, 0, 0)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgba(0, 0, 0, 0)",
+       "backgroundImage": "none",
+       "paddingTop": "0px",
+       "paddingRight": "24px",
+       "paddingBottom": "0px",
+       "paddingLeft": "24px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "static",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "1360px",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "auto"
+      },
+      "kids": [
+       {
+        "tag": "div",
+        "cls": "key-stats__wrap bg-white text-dark ",
+        "text": "An unparalleled global industry view $100T Global AUM tracked, providi",
+        "rect": [
+         1749,
+         414,
+         64,
+         1312
+        ],
+        "t": {
+         "fontFamily": "freight-sans-pro, sans-serif",
+         "fontSize": "16px",
+         "fontWeight": "400",
+         "lineHeight": "24px",
+         "color": "rgb(26, 26, 26)",
+         "letterSpacing": "normal",
+         "textTransform": "none"
+        },
+        "b": {
+         "backgroundColor": "rgb(255, 255, 255)",
+         "backgroundImage": "none",
+         "paddingTop": "64px",
+         "paddingRight": "64px",
+         "paddingBottom": "64px",
+         "paddingLeft": "64px",
+         "borderRadius": "0px",
+         "display": "grid",
+         "gridTemplateColumns": "1184px",
+         "gap": "48px",
+         "flexDirection": "row",
+         "alignItems": "normal",
+         "justifyContent": "normal",
+         "position": "static",
+         "overflow": "hidden auto",
+         "marginTop": "0px",
+         "marginBottom": "0px",
+         "maxWidth": "none",
+         "opacity": "1",
+         "objectFit": "fill",
+         "zIndex": "auto"
+        },
+        "kids": [
+         {
+          "tag": "div",
+          "cls": "key-stats__header",
+          "text": "An unparalleled global industry view",
+          "rect": [
+           1813,
+           46,
+           128,
+           1184
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(26, 26, 26)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "flex",
+           "gridTemplateColumns": "2.15fr 1fr",
+           "gap": "32px",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "h2",
+            "cls": "heading   key-stats__title ",
+            "text": "An unparalleled global industry view",
+            "rect": [
+             1813,
+             46,
+             128,
+             784
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "40px",
+             "fontWeight": "400",
+             "lineHeight": "46px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "block",
+             "gridTemplateColumns": "none",
+             "gap": "normal",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "100%",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": []
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "key-stats__slider swiper-initialized swiper-horizontal swiper-backface-hidden",
+          "text": "$100T Global AUM tracked, providing views into investor and asset tren",
+          "rect": [
+           1907,
+           144,
+           128,
+           1184
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(26, 26, 26)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "block",
+           "gridTemplateColumns": "none",
+           "gap": "normal",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "hidden auto",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "100%",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "swiper-wrapper",
+            "text": "$100T Global AUM tracked, providing views into investor and asset tren",
+            "rect": [
+             1907,
+             144,
+             128,
+             1184
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "normal",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "relative",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "1"
+            },
+            "kids": [
+             {
+              "tag": "div",
+              "cls": "key-stats__slider-slide swiper-slide swiper-slide-active",
+              "text": "$100T Global AUM tracked, providing views into investor and asset tren",
+              "rect": [
+               1907,
+               144,
+               128,
+               373
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "8px",
+               "paddingRight": "24px",
+               "paddingBottom": "8px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "relative",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "div",
+              "cls": "key-stats__slider-slide swiper-slide swiper-slide-next",
+              "text": "2B Regulatory fund communications processed annually",
+              "rect": [
+               1907,
+               144,
+               533,
+               373
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "8px",
+               "paddingRight": "24px",
+               "paddingBottom": "8px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "relative",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "div",
+              "cls": "key-stats__slider-slide swiper-slide",
+              "text": "$1.5T Assets managed on our investment management platforms",
+              "rect": [
+               1907,
+               144,
+               939,
+               373
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "8px",
+               "paddingRight": "24px",
+               "paddingBottom": "8px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "relative",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           },
+           {
+            "tag": "span",
+            "cls": "swiper-notification",
+            "text": "",
+            "rect": [
+             2051,
+             0,
+             128,
+             0
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "inline",
+             "gridTemplateColumns": "none",
+             "gap": "normal",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": []
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "slider-controls",
+          "text": "",
+          "rect": [
+           2099,
+           0,
+           128,
+           1184
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(26, 26, 26)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "flex",
+           "gridTemplateColumns": "none",
+           "gap": "24px",
+           "flexDirection": "row",
+           "alignItems": "center",
+           "justifyContent": "space-between",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "slider-pagination swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pag",
+            "text": "",
+            "rect": [
+             2099,
+             0,
+             128,
+             1160
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "24px 12px",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "10"
+            },
+            "kids": [
+             {
+              "tag": "span",
+              "cls": "swiper-pagination-bullet swiper-pagination-bullet-active",
+              "text": "",
+              "rect": [
+               18,
+               0,
+               0,
+               0
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(26, 26, 26)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(38, 98, 252)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "2px",
+               "display": "none",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           },
+           {
+            "tag": "div",
+            "cls": "flex gap-16",
+            "text": "",
+            "rect": [
+             2099,
+             0,
+             1312,
+             0
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(26, 26, 26)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "flex",
+             "gridTemplateColumns": "none",
+             "gap": "16px",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "button",
+              "cls": "slider-button-prev btn-blue swiper-button-disabled swiper-button-lock",
+              "text": "",
+              "rect": [
+               18,
+               0,
+               0,
+               0
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(179, 179, 179)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "16px",
+               "paddingRight": "16px",
+               "paddingBottom": "16px",
+               "paddingLeft": "16px",
+               "borderRadius": "9999px",
+               "display": "none",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "button",
+              "cls": "slider-button-next btn-blue swiper-button-disabled swiper-button-lock",
+              "text": "",
+              "rect": [
+               18,
+               0,
+               0,
+               0
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(179, 179, 179)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "16px",
+               "paddingRight": "16px",
+               "paddingBottom": "16px",
+               "paddingLeft": "16px",
+               "borderRadius": "9999px",
+               "display": "none",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "bento": {
+    "tag": "section",
+    "cls": "section bento-grid-four-plus-one py-32 lg:py-48   ",
+    "text": "Recognized by the industry WINNER 2024 Innovation in Operations – Tail",
+    "rect": [
+     2211,
+     998,
+     0,
+     1440
+    ],
+    "t": {
+     "fontFamily": "freight-sans-pro, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "lineHeight": "24px",
+     "color": "rgb(0, 0, 0)",
+     "letterSpacing": "normal",
+     "textTransform": "none"
+    },
+    "b": {
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "backgroundImage": "none",
+     "paddingTop": "48px",
+     "paddingRight": "0px",
+     "paddingBottom": "48px",
+     "paddingLeft": "0px",
+     "borderRadius": "0px",
+     "display": "block",
+     "gridTemplateColumns": "none",
+     "gap": "normal",
+     "flexDirection": "row",
+     "alignItems": "normal",
+     "justifyContent": "normal",
+     "position": "relative",
+     "overflow": "hidden",
+     "marginTop": "0px",
+     "marginBottom": "0px",
+     "maxWidth": "none",
+     "opacity": "1",
+     "objectFit": "fill",
+     "zIndex": "auto"
+    },
+    "kids": [
+     {
+      "tag": "div",
+      "cls": "container-extended",
+      "text": "Recognized by the industry WINNER 2024 Innovation in Operations – Tail",
+      "rect": [
+       2259,
+       902,
+       40,
+       1360
+      ],
+      "t": {
+       "fontFamily": "freight-sans-pro, sans-serif",
+       "fontSize": "16px",
+       "fontWeight": "400",
+       "lineHeight": "24px",
+       "color": "rgb(0, 0, 0)",
+       "letterSpacing": "normal",
+       "textTransform": "none"
+      },
+      "b": {
+       "backgroundColor": "rgba(0, 0, 0, 0)",
+       "backgroundImage": "none",
+       "paddingTop": "0px",
+       "paddingRight": "24px",
+       "paddingBottom": "0px",
+       "paddingLeft": "24px",
+       "borderRadius": "0px",
+       "display": "block",
+       "gridTemplateColumns": "none",
+       "gap": "normal",
+       "flexDirection": "row",
+       "alignItems": "normal",
+       "justifyContent": "normal",
+       "position": "static",
+       "overflow": "visible",
+       "marginTop": "0px",
+       "marginBottom": "0px",
+       "maxWidth": "1360px",
+       "opacity": "1",
+       "objectFit": "fill",
+       "zIndex": "auto"
+      },
+      "kids": [
+       {
+        "tag": "div",
+        "cls": "bento-grid-four-plus-one__wrap bg-blue-150 text-body",
+        "text": "Recognized by the industry WINNER 2024 Innovation in Operations – Tail",
+        "rect": [
+         2259,
+         902,
+         64,
+         1312
+        ],
+        "t": {
+         "fontFamily": "freight-sans-pro, sans-serif",
+         "fontSize": "16px",
+         "fontWeight": "400",
+         "lineHeight": "24px",
+         "color": "rgb(0, 12, 54)",
+         "letterSpacing": "normal",
+         "textTransform": "none"
+        },
+        "b": {
+         "backgroundColor": "rgb(231, 241, 252)",
+         "backgroundImage": "none",
+         "paddingTop": "64px",
+         "paddingRight": "64px",
+         "paddingBottom": "64px",
+         "paddingLeft": "64px",
+         "borderRadius": "4px",
+         "display": "grid",
+         "gridTemplateColumns": "1184px",
+         "gap": "48px",
+         "flexDirection": "row",
+         "alignItems": "normal",
+         "justifyContent": "normal",
+         "position": "static",
+         "overflow": "visible",
+         "marginTop": "0px",
+         "marginBottom": "0px",
+         "maxWidth": "none",
+         "opacity": "1",
+         "objectFit": "fill",
+         "zIndex": "auto"
+        },
+        "kids": [
+         {
+          "tag": "div",
+          "cls": "section-header ",
+          "text": "Recognized by the industry",
+          "rect": [
+           2323,
+           46,
+           128,
+           1184
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(0, 12, 54)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "block",
+           "gridTemplateColumns": "none",
+           "gap": "normal",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "div",
+            "cls": "section-header__wrap ",
+            "text": "Recognized by the industry",
+            "rect": [
+             2323,
+             46,
+             128,
+             1184
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(0, 12, 54)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "grid",
+             "gridTemplateColumns": "1184px",
+             "gap": "16px 32px",
+             "flexDirection": "row",
+             "alignItems": "flex-end",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "div",
+              "cls": "section-header__heading",
+              "text": "Recognized by the industry",
+              "rect": [
+               2323,
+               46,
+               128,
+               1184
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px 32px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "bento-grid-four-plus-one__grid",
+          "text": "WINNER 2024 Innovation in Operations – Tailored Shareholder Reports So",
+          "rect": [
+           2417,
+           580,
+           128,
+           1184
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(0, 12, 54)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "grid",
+           "gridTemplateColumns": "576px 576px",
+           "gap": "0px 32px",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "a",
+            "cls": "card text-white card__media-cover light",
+            "text": "WINNER 2024 Innovation in Operations – Tailored Shareholder Reports So",
+            "rect": [
+             2417,
+             580,
+             128,
+             576
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(255, 255, 255)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgb(231, 241, 252)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "4px",
+             "display": "grid",
+             "gridTemplateColumns": "576px",
+             "gap": "normal",
+             "flexDirection": "column",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "relative",
+             "overflow": "hidden",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "div",
+              "cls": "card__image ",
+              "text": "",
+              "rect": [
+               2417,
+               580,
+               128,
+               576
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(255, 255, 255)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "0px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "absolute",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "0"
+              }
+             },
+             {
+              "tag": "div",
+              "cls": "card__content p-24 min-h-[180px] justify-end z-[2]",
+              "text": "WINNER 2024 Innovation in Operations – Tailored Shareholder Reports So",
+              "rect": [
+               2417,
+               580,
+               128,
+               576
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(255, 255, 255)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "24px",
+               "paddingRight": "24px",
+               "paddingBottom": "24px",
+               "paddingLeft": "24px",
+               "borderRadius": "0px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "16px",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "flex-end",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "2"
+              }
+             }
+            ]
+           },
+           {
+            "tag": "div",
+            "cls": "bento-grid-four-plus-one__grid-sub",
+            "text": "WINNER 2024 Technology Provider of the Year, Alternative Credit Invest",
+            "rect": [
+             2417,
+             580,
+             736,
+             576
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "16px",
+             "fontWeight": "400",
+             "lineHeight": "24px",
+             "color": "rgb(0, 12, 54)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgba(0, 0, 0, 0)",
+             "backgroundImage": "none",
+             "paddingTop": "0px",
+             "paddingRight": "0px",
+             "paddingBottom": "0px",
+             "paddingLeft": "0px",
+             "borderRadius": "0px",
+             "display": "grid",
+             "gridTemplateColumns": "272px 272px",
+             "gap": "32px",
+             "flexDirection": "row",
+             "alignItems": "normal",
+             "justifyContent": "normal",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2024 Technology Provider of the Year, Alternative Credit Invest",
+              "rect": [
+               2417,
+               274,
+               736,
+               272
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2024 Best Order Management System (OMS), With Intelligence HFM ",
+              "rect": [
+               2417,
+               274,
+               1040,
+               272
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2023-2024 Best Technology – Alternative Credit, With Intelligen",
+              "rect": [
+               2723,
+               274,
+               736,
+               272
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             },
+             {
+              "tag": "a",
+              "cls": "card bg-neutral-100 text-neutral-900 card__media-top light",
+              "text": "WINNER 2023 Best Portfolio Management Software, With Intelligence HFM ",
+              "rect": [
+               2723,
+               274,
+               1040,
+               272
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "16px",
+               "fontWeight": "400",
+               "lineHeight": "24px",
+               "color": "rgb(0, 12, 54)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgb(249, 249, 249)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "4px",
+               "display": "flex",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "column",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "hidden",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "tag": "div",
+          "cls": "bento-grid-four-plus-one__cta",
+          "text": "Explore all awards and recognition",
+          "rect": [
+           3045,
+           52,
+           128,
+           1184
+          ],
+          "t": {
+           "fontFamily": "freight-sans-pro, sans-serif",
+           "fontSize": "16px",
+           "fontWeight": "400",
+           "lineHeight": "24px",
+           "color": "rgb(0, 12, 54)",
+           "letterSpacing": "normal",
+           "textTransform": "none"
+          },
+          "b": {
+           "backgroundColor": "rgba(0, 0, 0, 0)",
+           "backgroundImage": "none",
+           "paddingTop": "0px",
+           "paddingRight": "0px",
+           "paddingBottom": "0px",
+           "paddingLeft": "0px",
+           "borderRadius": "0px",
+           "display": "block",
+           "gridTemplateColumns": "none",
+           "gap": "normal",
+           "flexDirection": "row",
+           "alignItems": "normal",
+           "justifyContent": "normal",
+           "position": "static",
+           "overflow": "visible",
+           "marginTop": "0px",
+           "marginBottom": "0px",
+           "maxWidth": "none",
+           "opacity": "1",
+           "objectFit": "fill",
+           "zIndex": "auto"
+          },
+          "kids": [
+           {
+            "tag": "a",
+            "cls": "cta group cta-primary cta-medium cta-light w-full md:w-[unset]",
+            "text": "Explore all awards and recognition",
+            "rect": [
+             3045,
+             52,
+             986,
+             326
+            ],
+            "t": {
+             "fontFamily": "freight-sans-pro, sans-serif",
+             "fontSize": "20px",
+             "fontWeight": "500",
+             "lineHeight": "20px",
+             "color": "rgb(255, 255, 255)",
+             "letterSpacing": "normal",
+             "textTransform": "none"
+            },
+            "b": {
+             "backgroundColor": "rgb(38, 98, 252)",
+             "backgroundImage": "none",
+             "paddingTop": "16px",
+             "paddingRight": "24px",
+             "paddingBottom": "16px",
+             "paddingLeft": "24px",
+             "borderRadius": "2px",
+             "display": "inline-flex",
+             "gridTemplateColumns": "none",
+             "gap": "10px",
+             "flexDirection": "row",
+             "alignItems": "center",
+             "justifyContent": "center",
+             "position": "static",
+             "overflow": "visible",
+             "marginTop": "0px",
+             "marginBottom": "0px",
+             "maxWidth": "none",
+             "opacity": "1",
+             "objectFit": "fill",
+             "zIndex": "auto"
+            },
+            "kids": [
+             {
+              "tag": "span",
+              "cls": "",
+              "text": "Explore all awards and recognition",
+              "rect": [
+               3061,
+               20,
+               1010,
+               278
+              ],
+              "t": {
+               "fontFamily": "freight-sans-pro, sans-serif",
+               "fontSize": "20px",
+               "fontWeight": "500",
+               "lineHeight": "20px",
+               "color": "rgb(255, 255, 255)",
+               "letterSpacing": "normal",
+               "textTransform": "none"
+              },
+              "b": {
+               "backgroundColor": "rgba(0, 0, 0, 0)",
+               "backgroundImage": "none",
+               "paddingTop": "0px",
+               "paddingRight": "0px",
+               "paddingBottom": "0px",
+               "paddingLeft": "0px",
+               "borderRadius": "0px",
+               "display": "block",
+               "gridTemplateColumns": "none",
+               "gap": "normal",
+               "flexDirection": "row",
+               "alignItems": "normal",
+               "justifyContent": "normal",
+               "position": "static",
+               "overflow": "visible",
+               "marginTop": "0px",
+               "marginBottom": "0px",
+               "maxWidth": "none",
+               "opacity": "1",
+               "objectFit": "fill",
+               "zIndex": "auto"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

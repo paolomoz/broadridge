@@ -1,0 +1,55 @@
+<nav id="promo-nav" role="banner">
+            <div class="nav-container">
+                <div class="promo-bar" x-data="promoBar" x-bind="promoBar">
+                    <div class="utility-nav" role="navigation" aria-label="Utility Navigation">
+                        <ul class="utility-nav-list">
+                            <li class="nav-item"> <a href='/client-access/' role="button" class="utility-nav-link" tracker-event data-tracker-identifier="navigation_global" aria-label="Client access">Client access</a> </li>
+                            <li class="nav-item"> <a href='https://broadridge.wd5.myworkdayjobs.com/Careers' target='_blank' rel="noreferrer" role="button" class="utility-nav-link" tracker-event data-tracker-identifier="navigation_global" aria-label="Careers ">Careers </a> </li>
+                        </ul>
+                    </div>
+<div class="promo-search">
+    <div class="search-open" tracker-event data-tracker-identifier="navigation_global">
+        <button class="button button-secondary button-small button-dark" aria-label="Open search" aria-controls="searchpanel" aria-expanded="false" x-bind="openSearch" role="button">
+            <span>Search</span>
+            <svg fill="none" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.667 1.833a5.333 5.333 0 1 0 3.27 9.547l3.591 3.591.063.056a.667.667 0 0 0 .88-.998l-3.591-3.592a5.333 5.333 0 0 0-4.213-8.604Zm0 1.334a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" fill="currentColor"></path>
+            </svg>
+        </button>
+        <span class="sr-only">Open search</span>
+    </div>
+    <div class="search-panel" id="searchpanel" aria-labelledby="search-title" x-data="headerSearch" x-bind="searchPanel">
+        <h2 id="search-title" class="sr-only">Search</h2>
+        <div class="search-box">
+            <form role="search" method="GET" action="/search-results" autocomplete="off" class="search-form" x-ref="searchForm">
+                <div class="search-input-cover">
+                    <input type="text" name="q" class="search-input" id="search-input" placeholder="Search..." aria-label="Search" aria-haspopup="listbox" aria-autocomplete="list" aria-controls="recomandations" autocomplete="off" @input="updateQuery" x-ref="searchInput"/>
+                    <button class="button button-secondary button-small button-dark clear-button" type="button" aria-label="Clear search" x-show="show" @click="clearHandler" role="button">
+                        <span>Clear</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.6129 5.2097C6.22061 4.90468 5.65338 4.93241 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929L5.2097 17.3871C4.90468 17.7794 4.93241 18.3466 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071L17.3871 18.7903C17.7794 19.0953 18.3466 19.0676 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711L18.7903 6.6129C19.0953 6.22061 19.0676 5.65338 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289L6.6129 5.2097Z" fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <div class="recomandation-panel" id="recomandations" role="listbox" x-show="suggestions.length" x-transition>
+                        <ul class="recomandation-list" aria-label="suggestion list">
+                            <template x-for="(item, index) in suggestions" :key="index">
+                                <li>
+                                    <div role="button" class="recomandation-item" @click="searchHandler" :data-value="item" x-html="highlightHandler"></div>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <button class="button button-primary button-medium button-light icon-square search-close" @click="isSearchBar" data-value="false" role="button" aria-label="close search bar">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.6129 5.2097C6.22061 4.90468 5.65338 4.93241 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929L5.2097 17.3871C4.90468 17.7794 4.93241 18.3466 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071L17.3871 18.7903C17.7794 19.0953 18.3466 19.0676 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711L18.7903 6.6129C19.0953 6.22061 19.0676 5.65338 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289L6.6129 5.2097Z" fill="currentColor"></path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </nav>
