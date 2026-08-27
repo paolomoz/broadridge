@@ -1,0 +1,358 @@
+/* bento — Figma web kit M1 Bento Grid (set 2315:132824, core set 2315:128939,
+   card unit A7 Cards /Bento 552:7995, Padding=24 / Content Align=Distribute
+   pinned by the module; media tile = Align Bottom group 552:8403).
+   Kit geometry (component-set metadata):
+   - Desktop 2315:132795 (1184w): header 46 (Heading-2 40) / module gap 48 /
+     Bento 580: media core 576x580 + 32 + cards core 2x2 of 272x274 gap 32 /
+     gap 48 / CTA 56 right-aligned.
+   - Tablet 2315:133799 (690w): gaps 32; media 690x320, cards 333x200 gap 24;
+     CTA left hug.
+   - Mobile 2315:134332 (382w): gaps 32; media 382x382, then 32, cards
+     382x172 gap 16; CTA full width.
+   - Media strip (A9 552:8403): bottom inset 24, pad 25 desktop/tablet
+     (I2315:127741;552:8403) / 20 mobile (I2315:130582;552:8403); fill =
+     kit surface/mid in dark mode = #001f5a = --color-surface-accent-03.
+   Wide tiles (576/690 x row height) come from the core's secondTop/
+   secondBottom booleans (usage boards 2315:134865, 2315:136110). */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.bento-container > div.bento-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* kit sets lining/proportional figures on all text */
+.bento {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px; /* 382 content in 430 = 24px side offset */
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+/* ---- header row (A9 Content Groups 2315:133303) ---- */
+
+.bento .bento-header :is(h1, h2, h3, h4, p) {
+  margin: 0;
+}
+
+.bento .bento-header :is(h1, h2, h3, h4) {
+  font-weight: var(--type-heading-2-font-weight);
+  font-size: var(--type-heading-2-font-size); /* ramps 32/36/40 */
+  font-style: var(--type-heading-2-font-style);
+  line-height: var(--type-heading-2-line-height);
+  letter-spacing: var(--type-heading-2-letter-spacing);
+}
+
+/* ---- tile grid ---- */
+
+/* mobile: single column, card gap 16 (2315:130626 Top/Bottom + rows) */
+.bento .bento-tiles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--grid-gutter-mobile);
+}
+
+/* A7 Cards /Bento, Padding=24 (2315:130628 mobile 382x172) */
+.bento .bento-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 172px; /* kit mobile tile (2315:130628; no token) */
+  padding: var(--space-component-24);
+  overflow: hidden;
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-base); /* 2315:127791 default */
+}
+
+/* media tile (core Style=Media): image-backed card, strip at the bottom.
+   Mobile 382x382 (2315:130582); media->cards gap is 32, not the 16 card
+   gap (2315:134334: core 2 at y=414) — grid gap 16 + margin 16 */
+.bento .bento-tile.media {
+  justify-content: flex-end;
+  min-height: 382px;
+  margin-bottom: var(--grid-gutter-mobile);
+  background-color: var(--color-surface-accent-03); /* under the image */
+  box-shadow: var(--box-shadow-dim-large); /* dim/large (2315:127741) */
+}
+
+.bento .bento-tile.media picture {
+  position: absolute;
+  inset: 0;
+}
+
+.bento .bento-tile.media picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* strip = A9 group 552:8403; kit fill is surface/mid in the card's dark
+   variable mode (#001f5a) at every section theme (2315:134865, 2315:136112) */
+.bento .bento-strip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px; /* mobile strip pad (I2315:130582;552:8403; kit raw) */
+  background-color: var(--color-surface-accent-03);
+  color: var(--color-content-primary-inverse);
+}
+
+/* ---- tile anatomy: badge / heading / text / arrow link ---- */
+
+/* A2 Badge (I2315:130404;552:8223;304:1875): Functional/Badge/Small */
+.bento .bento-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  box-sizing: border-box;
+  min-height: 20px; /* label min 16 + 2x2 padding */
+  margin: 0 0 var(--space-component-8); /* Content gap 8 (304:1874) */
+  padding: var(--space-component-2) var(--space-component-6);
+  border-radius: var(--border-radius-radius-sm);
+  background-color: var(--color-edge-badge-surface);
+  color: var(--color-edge-badge-content);
+  font-weight: 400;
+  font-size: 14px; /* Functional/Badge/Small (446:6176) */
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* card title = Title-2 (I2315:130404;552:8223;304:1876); Copy pb 16 */
+.bento .bento-tile :is(h3, h4) {
+  margin: 0 0 var(--space-component-16);
+  font-weight: var(--type-title-2-font-weight);
+  font-size: var(--type-title-2-font-size);
+  font-style: var(--type-title-2-font-style);
+  line-height: var(--type-title-2-line-height);
+  letter-spacing: var(--type-title-2-letter-spacing);
+  color: inherit;
+}
+
+/* media strip title = Title-1 (I2315:127741;552:8403;492:35923) */
+.bento .bento-tile.media :is(h3, h4) {
+  font-size: var(--type-title-1-font-size);
+  line-height: var(--type-title-1-line-height);
+}
+
+/* optional text cell: Copy group gap 8 above (375:8175), pb 16 below */
+.bento .bento-tile :is(h3, h4):has(+ .bento-text) {
+  margin-bottom: var(--space-component-8);
+}
+
+.bento .bento-text {
+  margin: 0 0 var(--space-component-16);
+  font-weight: var(--type-body-3-book-font-weight);
+  font-size: var(--type-body-3-book-font-size);
+  line-height: var(--type-body-3-book-line-height);
+}
+
+/* optional icon (A7 boolean layer 2341:110612, kit-hidden by default) */
+.bento .bento-tile .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: var(--space-component-16);
+}
+
+.bento .bento-tile .icon img,
+.bento .bento-tile .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* tile link renders as the kit 24px arrow glyph (Arrows/Arrow Right 24:702,
+   Link CTA 354:1603); label stays for a11y */
+.bento .bento-tile-link {
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.bento .bento-tile-link a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  color: transparent;
+  background-color: var(--color-content-primary);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* inverse contexts: strip + highlight tile */
+.bento .bento-strip .bento-tile-link a,
+.bento .bento-tile.highlight .bento-tile-link a {
+  background-color: var(--color-content-primary-inverse);
+}
+
+/* highlight tile (kit surface override, usage 2315:136110 first card:
+   #001f5a on light; badge = #0f3db5/white as in the strip) */
+.bento .bento-tile.highlight {
+  background-color: var(--color-surface-accent-03);
+  color: var(--color-content-primary-inverse);
+}
+
+.bento .bento-tile.highlight :is(h3, p:not(.bento-badge)),
+.bento .bento-strip :is(h3, p:not(.bento-badge)) {
+  color: var(--color-content-primary-inverse);
+}
+
+.bento .bento-tile.highlight .bento-badge,
+.bento .bento-strip .bento-badge {
+  background-color: var(--color-surface-accent-01); /* sampled 2315:136110 / strip badge (I2315:127741;552:8403;492:35921) */
+  color: var(--color-content-primary-inverse);
+}
+
+/* ---- CTA row (A5 Button Group) ---- */
+
+/* mobile: full-width button (2315:135642) */
+.bento .bento-cta > div {
+  width: 100%;
+}
+
+.bento .bento-cta p.button-wrapper {
+  margin: 0;
+}
+
+.bento .bento-cta p.button-wrapper a.button {
+  width: 100%;
+}
+
+/* tablet (690 content in 834 = 72px side offset) */
+@media (width >= 834px) {
+  .bento {
+    padding: 0 72px;
+  }
+
+  /* 2 columns of 333 on the 24 gutter; rows 200 (2315:130403/130406) */
+  .bento .bento-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--grid-gutter-tablet);
+  }
+
+  .bento .bento-tile {
+    min-height: 200px; /* kit tablet tile (2315:130404; no token) */
+  }
+
+  /* media full row, 320 tall; media->cards gap = grid gap 24 (2315:133801) */
+  .bento .bento-tile.media {
+    grid-column: 1 / -1;
+    min-height: 320px; /* 2315:130358 */
+    margin-bottom: 0;
+  }
+
+  .bento .bento-strip {
+    padding: 25px; /* kit strip pad (I2315:130358;552:8403; kit raw) */
+  }
+
+  /* wide tile = core with second card off -> full row (derived below 1140
+     from the desktop usage pattern; kit documents wides at desktop only) */
+  .bento .bento-tile.wide {
+    grid-column: 1 / -1;
+  }
+
+  /* CTA hugs left (2315:135596) */
+  .bento .bento-cta > div {
+    width: auto;
+  }
+
+  .bento .bento-cta p.button-wrapper a.button {
+    width: auto;
+  }
+}
+
+/* desktop (1184 content grid) */
+@media (width >= 1140px) {
+  .bento {
+    gap: var(--space-module-gap-desktop);
+    padding: 0;
+  }
+
+  /* 4 columns of 272 on the 32 gutter; rows 274 (2315:128751) */
+  .bento .bento-tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--grid-gutter-desktop);
+  }
+
+  .bento .bento-tile {
+    min-height: 274px; /* kit desktop tile (2315:127791; no token) */
+  }
+
+  /* media = half width, full height: 576x580 (2315:127741) */
+  .bento .bento-tile.media {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 580px;
+    margin-bottom: 0;
+  }
+
+  .bento .bento-strip {
+    padding: 25px; /* kit strip pad (I2315:127741;552:8403; kit raw) */
+  }
+
+  .bento .bento-tile.wide {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  /* Distribute: arrow pins to the card bottom (552:8222 justify-between);
+     the media strip keeps its flow arrow (Align Bottom group 552:8403) */
+  .bento .bento-tile .bento-tile-link {
+    margin-top: auto;
+  }
+
+  .bento .bento-strip .bento-tile-link {
+    margin-top: 0;
+  }
+
+  /* CTA right-aligned (2315:135135 justify-end) */
+  .bento .bento-cta {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* ---- section theme options (usage boards 2036:65316) ---- */
+
+/* tinted light sections: cards go surface/light (2315:134865, 2315:136110);
+   dim/base surfaces mapped the same way (derived — only tint documented) */
+main .section.tint .bento .bento-tile:not(.media, .highlight),
+main .section.surface-mid .bento .bento-tile:not(.media, .highlight),
+main .section.surface-dim .bento .bento-tile:not(.media, .highlight),
+main .section.light .bento .bento-tile:not(.media, .highlight),
+main .section.highlight .bento .bento-tile:not(.media, .highlight),
+main .section.surface-base .bento .bento-tile:not(.media, .highlight) {
+  background-color: var(--color-surface-light);
+}
+
+/* dark sections (2315:136337 sampled: cards #082485 = dark surface/base,
+   highlight #0f3db5 = dark surface/light; badges #0f3db5/white) */
+main .section.dark .bento .bento-tile:not(.media, .highlight),
+main .section.navy .bento .bento-tile:not(.media, .highlight) {
+  background-color: var(--color-surface-accent-02);
+}
+
+main .section.dark .bento .bento-tile.highlight,
+main .section.navy .bento .bento-tile.highlight {
+  background-color: var(--color-surface-accent-01);
+}
+
+main .section.dark .bento .bento-badge,
+main .section.navy .bento .bento-badge {
+  background-color: var(--color-surface-accent-01);
+  color: var(--color-content-primary-inverse);
+}
+
+main .section.dark .bento .bento-tile-link a,
+main .section.navy .bento .bento-tile-link a {
+  background-color: var(--color-content-primary-inverse);
+}
