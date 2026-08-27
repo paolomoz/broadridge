@@ -1,41 +1,159 @@
-/* cta banner — replica of .b1-cta-banner (navy/gradient band, angled edge) */
+/* cta-banner — Figma web kit B1 CTA Banner (set 784:4454).
+   Variant geometry from the kit's component symbols:
+   - Desktop 1213:214772 (1312x292): pad 64, radius 4, content row
+     justify-between items-end, text max 780, title->body 16, button 56
+   - Tablet 1213:214828 (786x339): pad 48, stacked, copy->button 32
+   - Mobile 1213:214884 (414x395): pad 32/16, stacked, full-width button
+   Type: title = Heading-1 ramp (48/40/36, lh 1.15), body = Body-1 Book.
+   Surface theming via section style options remapped onto the banner card
+   (usage boards 1914:157587 light, 1914:157223 dark). */
+
+/* the banner is an inset rounded card on the extended grid (1312), not a
+   full-bleed band: the section keeps the page background, the surface
+   option paints the block instead (usage boards show the card on the
+   page ground) */
+main .section.cta-banner-container:is(.light, .highlight, .tint, .dark, .navy, .surface-light, .surface-base, .surface-mid, .surface-dim) {
+  background-color: transparent;
+}
+
+/* extended grid: 1312 centered; side offsets 8/24 below desktop
+   (414 in 430, 786 in 834) */
+.section.cta-banner-container > div.cta-banner-wrapper {
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* mobile base (1213:214884, 430 design: pad 32 block / 16 inline) */
 .cta-banner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: center;
-  background: linear-gradient(100deg, var(--c-navy-deep) 0%, var(--c-blue-link) 100%);
-  color: var(--c-white);
-  border-radius: var(--radius-sm);
-  padding: 32px;
+  padding: var(--space-component-32) var(--space-component-16);
+  border-radius: var(--border-radius-border-radius-radius-md);
+  background-color: var(--color-surface-light); /* kit light default (1914:157591) */
+  overflow: hidden;
 }
 
-@media (width >= 834px) {
-  .cta-banner {
-    grid-template-columns: 2fr 1fr;
-    padding: 40px 48px;
-  }
-
-  .cta-banner > div > div:last-child {
-    text-align: right;
-  }
+/* content row: stacked below desktop, copy -> button group 32 */
+.cta-banner > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32);
 }
 
-.cta-banner h3 {
-  color: var(--c-white);
-  margin-bottom: 8px;
+/* copy cell — title + body on a 16px gap, measure capped at 780
+   (I1997:68346;1904:163604) */
+.cta-banner > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-16);
+  max-width: 780px; /* no token: Content max-width, I1997:68346;1904:163604 */
 }
 
+/* title — Heading-1 responsive ramp (I1997:69386;1929:356449 et al.) */
+.cta-banner :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  font-weight: var(--type-heading-1-font-weight);
+  font-size: var(--type-heading-1-font-size);
+  font-style: var(--type-heading-1-font-style);
+  line-height: var(--type-heading-1-line-height);
+  letter-spacing: var(--type-heading-1-letter-spacing);
+}
+
+/* body — Body-1 Book (I1997:68346;1904:163608) */
 .cta-banner p {
-  color: var(--c-white);
-  margin-bottom: 0;
+  margin: 0;
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
 }
 
-.cta-banner .button {
-  background-color: var(--c-blue);
+
+/* mobile: full-width button (1213:214884) */
+.cta-banner a.button {
+  width: 100%;
 }
 
-.cta-banner a:any-link:not(.button) {
-  color: var(--c-white);
-  text-decoration: underline;
+/* tablet (1213:214828, 834 design: pad 48 = space/module/padding/tablet/large) */
+@media (width >= 834px) {
+  .section.cta-banner-container > div.cta-banner-wrapper {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .cta-banner {
+    padding: var(--space-component-48);
+  }
+
+  .cta-banner a.button {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}
+
+/* desktop (1213:214772, 1440 design: pad 64, single row, button
+   bottom-aligned right) */
+@media (width >= 1140px) {
+  .section.cta-banner-container > div.cta-banner-wrapper {
+    padding: 0;
+  }
+
+  .cta-banner {
+    padding: var(--space-module-padding-desktop-large);
+  }
+
+  .cta-banner > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--grid-gutter-desktop);
+  }
+
+  .cta-banner > div > div:first-child {
+    flex: 1 0 0;
+  }
+}
+
+/* surface options — light usage board 1914:157587 (base flagged
+   "same color as the page" by the kit, kept for authors who theme the
+   page differently) */
+main .section.light.cta-banner-container .cta-banner,
+main .section.highlight.cta-banner-container .cta-banner,
+main .section.surface-base.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-base);
+}
+
+main .section.surface-light.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-light);
+}
+
+main .section.tint.cta-banner-container .cta-banner,
+main .section.surface-mid.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-mid);
+}
+
+main .section.surface-dim.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-dim);
+}
+
+/* dark usage board 1914:157223 — same accent mapping as the section
+   options in styles.css; text/button inversion comes from the shared
+   section.dark rules */
+main .section.dark.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-accent-04);
+}
+
+main .section.dark.surface-light.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-accent-01);
+}
+
+main .section.dark.surface-base.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-accent-02);
+}
+
+main .section.navy.cta-banner-container .cta-banner,
+main .section.dark.surface-mid.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-accent-03);
+}
+
+main .section.dark.surface-dim.cta-banner-container .cta-banner {
+  background-color: var(--color-surface-accent-04);
 }
