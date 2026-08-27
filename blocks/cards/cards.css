@@ -33,15 +33,12 @@
    Candidate for styles.css adoption across blocks — reported, not
    applied globally. */
 .cards {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
   gap: var(--space-module-gap-mobile);
   max-width: var(--grid-content-width);
   margin: 0 auto;
   padding: 0 24px; /* 382 content in 430 viewport (6539:127117) */
-  font-feature-settings: "lnum" 1, "pnum" 1;
 }
 
 /* ---- header — A9 Content Groups ---- */

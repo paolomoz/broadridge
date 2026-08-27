@@ -1188,6 +1188,7 @@ p {
 /* kit sets lining+proportional numerals on every text node (all design-context dumps) */
 body {
   font-feature-settings: "lnum" 1, "pnum" 1;
+  -webkit-font-smoothing: antialiased; /* EXPERIMENT: grayscale AA measured closer to kit rasterization (cards: 3.59->2.98%) */
 }
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-content-primary);
