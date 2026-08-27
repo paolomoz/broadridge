@@ -1,33 +1,500 @@
-.columns > div {
+/* columns — Figma web kit M3 Alternating Content Blocks (set 504:57165)
+   and C5 Two Column Text Feature (set 617:61637, variant
+   `columns (text-feature)`).
+   M3 kit geometry (component-set metadata):
+   - Desktop Left 504:57156 / Right 714:412998 (1184w): two 507 columns
+     on a 101 gap with a 69 trailing offset (kit-literal, left-weighted);
+     media 4:3 (507x380.25), content centered, in-group gaps 16/32.
+   - Tablet Left 714:395587 / Right 714:413386 (690w): 333/24/333 halves,
+     media 1:1, content centered.
+   - Mobile Stack Top 714:422898 (382w): media 16:9 on top, gaps 32 —
+     the kit's only mobile variant, so every row stacks media-first.
+   - Stack Bottom 714:437234 / 714:434195 (`columns (stack)`): content,
+     21:9 media, wayfinder, CTA; gaps 48 desktop / 32 tablet.
+   - C5 617:61636/61635/61634: extended-grid card (1312, radius-md,
+     surface/light), pad 64/48/32-16; two 576 cols gap 32; feature items
+     split by 1.5 border/base dividers on the gutter ramp (32/24/16). */
+
+/* full-bleed: the block manages its own container */
+.section.columns-container > div.columns-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* ---- M3 Alternating Content Blocks (default variant) ---- */
+
+/* mobile base (382 content in 430 = 24px side offset) */
+.columns:not(.text-feature) {
   display: flex;
   flex-direction: column;
+  gap: 48px; /* row rhythm below tablet: derived (kit shows one row per frame) */
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* row: mobile Stack Top (714:422898) — media first, stack gaps 32 */
+.columns:not(.text-feature) > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32);
+}
+
+.columns:not(.text-feature) > div > .columns-img-col {
+  order: -1;
 }
 
 .columns img {
   width: 100%;
 }
 
-.columns > div > div {
-  order: 1;
+/* A13 media — 16:9 at mobile (714:423705), radius-md, cover */
+.columns .columns-img-col p {
+  margin: 0;
 }
 
-.columns > div > .columns-img-col {
-  order: 0;
-}
-
-.columns > div > .columns-img-col img {
+.columns .columns-img-col picture {
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+.columns .columns-img-col img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* media carousel (multi-picture cells): full-width paged scroller */
+.columns .columns-media {
+  display: flex;
+  overflow-x: auto;
+  border-radius: var(--radius-md); /* Media frame clips (2031:63120) */
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.columns .columns-media::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .columns .columns-media {
+    scroll-behavior: smooth;
+  }
+}
+
+.columns .columns-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+/* content column — A9 Content Groups stack (714:400063):
+   heading -> body 16, copy -> CTA 32, logo/wayfinder joints 32 */
+.columns .columns-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.columns .columns-content-col > * {
+  margin: 0;
+}
+
+/* M3 heading ramp 40/32/28 (I714:400063 / I1658:241947 / I1658:248776):
+   heading-3 tokens below desktop, heading-2 at desktop */
+.columns:not(.text-feature) .columns-content-col :is(h1, h2, h3, h4) {
+  font-weight: var(--type-heading-3-font-weight);
+  font-size: var(--type-heading-3-font-size);
+  line-height: var(--type-heading-3-line-height);
+  letter-spacing: var(--type-heading-3-letter-spacing);
+}
+
+.columns .columns-content-col :is(h1, h2, h3, h4) + p {
+  margin-top: var(--space-component-16); /* Copy group gap (I714:400063;545:99569) */
+}
+
+.columns .columns-content-col p + p:not(.columns-cta, .button-wrapper) {
+  margin-top: var(--space-component-16); /* derived: kit shows one body paragraph */
+}
+
+.columns .columns-content-col > :is(.columns-cta, .button-wrapper) {
+  margin-top: var(--space-component-24); /* mobile A9 copy->CTA 24 (I1658:248776) */
+}
+
+/* kit Logo boolean (2782:339361): fixed 209x105 A13 above the copy */
+.columns .columns-content-col > .columns-logo {
+  margin-bottom: var(--space-component-32); /* content stack gap (2031:70212) */
+}
+
+.columns .columns-logo picture {
+  display: block;
+}
+
+.columns .columns-logo img {
+  display: block;
+  width: 209px; /* logo A13 209x105 (2782:339362; no token; kit raw) */
+  height: 105px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* A5 Link CTA (354:1603): 18/500/lh1 label + 24 arrow on a 10 gap */
+.columns p.columns-cta a {
+  display: inline-flex;
+  gap: 10px; /* 354:1603 (no token; kit raw) */
+  align-items: center;
+  min-height: 24px;
+  color: var(--color-action-tertiary-content-base);
+  font-weight: var(--type-label-medium-font-weight);
+  font-size: var(--type-label-medium-font-size);
+  line-height: var(--type-label-medium-line-height);
+  text-decoration: none;
+}
+
+.columns p.columns-cta a:hover {
+  color: var(--color-action-tertiary-content-hover);
+}
+
+.columns p.columns-cta a::after {
+  content: '';
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat; /* Arrows/Arrow Right (24:702) */
+}
+
+/* A22 wayfinder row (2031:71971): tabs left, arrow pair right */
+.columns .columns-wayfinding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+}
+
+.columns .columns-content-col > .columns-wayfinding {
+  margin-top: var(--space-component-32); /* content stack gap (2031:70212) */
+}
+
+.columns .columns-tabs {
+  display: flex;
+  gap: var(--space-component-12);
+}
+
+.columns .columns-tab {
+  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-radius-xs);
+  background-color: var(--color-edge-badge-surface);
+  cursor: pointer;
+}
+
+.columns .columns-tab.active {
+  background-color: var(--color-action-base);
+}
+
+.columns .columns-arrows {
+  display: flex;
+  gap: var(--space-component-16);
+}
+
+.columns .columns-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px; /* icon-round small A6 (I142:5847;6539:20183) */
+  height: 48px;
+  padding: 0;
+  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
+  border-radius: var(--border-radius-radius-full);
+  background: none;
+  color: var(--color-action-secondary-content-base);
+  cursor: pointer;
+}
+
+.columns .columns-arrow:hover {
+  border-color: var(--color-action-secondary-border-hover);
+  color: var(--color-action-secondary-content-hover);
+}
+
+.columns .columns-arrow:focus-visible {
+  outline: 3px solid var(--color-action-secondary-border-focus-ring);
+  outline-offset: -1px;
+}
+
+.columns .columns-arrow svg {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+
+/* stack CTA renders as its own row; button hugs (kit A5, 714:438782) */
+.columns p.button-wrapper a.button {
+  width: 100%; /* full width on mobile, as A5 Stack Full Width (1881:379414) */
+}
+
+/* tablet (690 content in 834 = 72px side offset) */
+@media (width >= 834px) {
+  .columns:not(.text-feature) {
+    gap: 64px; /* row rhythm (component-set frame 504:57165; no token) */
+    padding: 0 72px;
   }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  /* side-by-side rows: 333/24/333 halves, authored order = kit position
+     (Left 714:395587 / Right 714:413386), content centered */
+  .columns.columns-2-cols:not(.text-feature, .stack) > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--grid-gutter-tablet);
+    align-items: center;
   }
+
+  /* rows with another column count keep the generic equal-split row */
+  .columns:not(.text-feature, .stack, .columns-2-cols) > div {
+    display: flex;
+    flex-direction: row;
+    gap: var(--grid-gutter-tablet);
+    align-items: center;
+  }
+
+  .columns:not(.text-feature, .stack, .columns-2-cols) > div > div {
+    flex: 1;
+  }
+
+  .columns:not(.text-feature) > div > .columns-img-col {
+    order: 0;
+  }
+
+  /* A13 media is 1:1 at tablet (714:395588) */
+  .columns:not(.stack) .columns-img-col img {
+    aspect-ratio: 1;
+  }
+
+  /* copy -> CTA widens to the 32 group gap (I1658:241947 / 714:400063) */
+  .columns .columns-content-col > :is(.columns-cta, .button-wrapper) {
+    margin-top: var(--space-component-32);
+  }
+
+  .columns p.button-wrapper a.button {
+    width: auto;
+  }
+}
+
+/* desktop (1184 content grid) */
+@media (width >= 1140px) {
+  .columns:not(.text-feature) {
+    padding: 0;
+  }
+
+  /* kit-literal desktop row: 507 / 101 / 507 + 69 trailing offset
+     (504:57156 / 714:412998; no tokens — kit raw) */
+  .columns.columns-2-cols:not(.text-feature, .stack) > div {
+    column-gap: 101px;
+    padding-right: 69px;
+  }
+
+  /* A13 media is 4:3 at desktop (504:57079: 507x380.25) */
+  .columns:not(.stack) .columns-img-col img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* M3 heading = Heading-2 at desktop (I714:400063;545:99570: 40/1.15) */
+  .columns:not(.text-feature) .columns-content-col :is(h1, h2, h3, h4) {
+    font-weight: var(--type-heading-2-font-weight);
+    font-size: var(--type-heading-2-font-size);
+    line-height: var(--type-heading-2-line-height);
+    letter-spacing: var(--type-heading-2-letter-spacing);
+  }
+
+  /* body = Body-1 at desktop (I714:400063;545:99571: 24/1.3) */
+  .columns:not(.text-feature) .columns-content-col p:not(.columns-cta) {
+    font-size: var(--type-body-1-book-font-size);
+    line-height: var(--type-body-1-book-line-height);
+  }
+}
+
+/* ---- M3 Stack Bottom (variant `columns (stack)`) ---- */
+
+/* rows keep the mobile stack; media returns below the content at >=834
+   (kit mobile is Stack Top only, 714:422898) */
+@media (width >= 834px) {
+  .columns.stack > div > .columns-img-col {
+    order: 0;
+  }
+
+  /* A13 media is 21:9 in the stack (714:434198: 690x295.71) */
+  .columns.stack .columns-img-col img {
+    aspect-ratio: 21 / 9;
+  }
+
+  /* stack CTA is left-aligned at tablet (714:434199 at x=0) */
+  .columns.stack > div > .columns-row-cta {
+    align-self: flex-start;
+  }
+}
+
+@media (width >= 1140px) {
+  /* stack gaps 48 (714:437234: 124->172, 679->727, 775->823) */
+  .columns.stack > div {
+    gap: var(--space-component-48);
+  }
+
+  /* A9 copy measure caps at 780 (I1658:238730;545:99567) */
+  .columns.stack .columns-content-col > :is(h1, h2, h3, h4, p) {
+    max-width: 780px;
+  }
+
+  /* stack CTA right-aligned at desktop (714:438782 at x=1029) */
+  .columns.stack > div > .columns-row-cta {
+    align-self: flex-end;
+  }
+}
+
+/* ---- section theme options (color sets 5104:73629 / 1881:28733 /
+   5104:61074: module inherits the section surface; wayfinder and link
+   remap on dark grounds — sampled 5104:61090) ---- */
+
+main .section.dark .columns .columns-tab,
+main .section.navy .columns .columns-tab {
+  background-color: var(--color-surface-accent-01); /* inactive tab on dark (5104:61090) */
+}
+
+main .section.dark .columns .columns-tab.active,
+main .section.navy .columns .columns-tab.active {
+  background-color: var(--color-content-primary-inverse);
+}
+
+main .section.dark .columns .columns-arrow,
+main .section.navy .columns .columns-arrow {
+  border-color: var(--color-content-primary-inverse);
+  color: var(--color-content-primary-inverse);
+}
+
+main .section.dark .columns p.columns-cta a,
+main .section.navy .columns p.columns-cta a {
+  color: var(--color-content-primary-inverse);
+}
+
+/* ---- C5 Two Column Text Feature (variant `columns (text-feature)`) ---- */
+
+/* extended grid: 1312 max, page margins 8/24/64 (617:61634/35/36) */
+.section.columns-container > div.columns-wrapper:has(> .columns.text-feature) {
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* mobile card (617:61634): pad 32/16, stacked, gap 32 */
+.columns.text-feature {
+  box-sizing: border-box;
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  padding: var(--space-component-32) var(--space-component-16);
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-light);
+}
+
+.columns.text-feature > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32); /* intro -> features (617:61588 -> 1928:293553) */
+}
+
+/* intro — A9 H2 group (617:61544): heading-2 ramp + Body-1, gap 16 */
+.columns.text-feature .columns-intro :is(h1, h2, h3) {
+  margin: 0 0 var(--space-component-16);
+}
+
+.columns.text-feature .columns-intro p {
+  margin: 0;
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+}
+
+/* feature items — heading-4 ramp + Body-3 + Link CTA (1927:291620) */
+.columns.text-feature .columns-feature-item :is(h2, h3, h4, h5) {
+  margin: 0 0 var(--space-component-16);
+  font-weight: var(--type-heading-4-font-weight);
+  font-size: var(--type-heading-4-font-size);
+  line-height: var(--type-heading-4-line-height);
+  letter-spacing: var(--type-heading-4-letter-spacing);
+}
+
+.columns.text-feature .columns-feature-item p {
+  margin: 0;
+}
+
+.columns.text-feature .columns-feature-item p.columns-cta {
+  margin-top: var(--space-component-32); /* copy -> link (I1927:291620) */
+}
+
+/* A10 divider between items: 1.5 border/base drawn above a gutter-ramp
+   gap on each side (1928:293555: 16/16 at mobile). The margin backs the
+   stroke out of the gap so item tops land on the kit grid. */
+.columns.text-feature .columns-feature-item + .columns-feature-item {
+  margin-top: calc(var(--grid-gutter-mobile) - var(--border-width-94));
+  border-top: var(--border-width-94) solid var(--color-border-base);
+  padding-top: var(--grid-gutter-mobile);
+}
+
+/* tablet card (617:61635): pad 48, divider gaps 24 */
+@media (width >= 834px) {
+  .section.columns-container > div.columns-wrapper:has(> .columns.text-feature) {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .columns.text-feature {
+    padding: var(--space-component-48);
+  }
+
+  .columns.text-feature .columns-feature-item + .columns-feature-item {
+    margin-top: calc(var(--grid-gutter-tablet) - var(--border-width-94));
+    padding-top: var(--grid-gutter-tablet);
+  }
+}
+
+/* desktop card (617:61636): pad 64, two 576 cols gap 32, divider gaps 32 */
+@media (width >= 1140px) {
+  .section.columns-container > div.columns-wrapper:has(> .columns.text-feature) {
+    padding: 0 var(--grid-page-margin-desktop);
+  }
+
+  .columns.text-feature {
+    padding: var(--space-module-padding-desktop-large);
+  }
+
+  .columns.text-feature > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--grid-gutter-desktop);
+    align-items: start;
+  }
+
+  .columns.text-feature .columns-feature-item + .columns-feature-item {
+    margin-top: calc(var(--grid-gutter-desktop) - var(--border-width-94));
+    padding-top: var(--grid-gutter-desktop);
+  }
+}
+
+/* C5 dark themes: the card takes the accent surface (usage boards
+   2125:248166 / 1928:296657 / 5248:67185: accent-01..04); copy and
+   links invert via the section rules; divider stays border/base */
+main .section.dark .columns.text-feature,
+main .section.dark.surface-dim .columns.text-feature {
+  background-color: var(--color-surface-accent-04);
+}
+
+main .section.dark.surface-light .columns.text-feature {
+  background-color: var(--color-surface-accent-01);
+}
+
+main .section.dark.surface-base .columns.text-feature {
+  background-color: var(--color-surface-accent-02);
+}
+
+main .section.dark.surface-mid .columns.text-feature,
+main .section.navy .columns.text-feature {
+  background-color: var(--color-surface-accent-03);
 }
