@@ -105,8 +105,10 @@
     margin-bottom: 48px;
   }
 
-  /* side-by-side default: two 576px columns on the 32px gutter */
-  .hero:not(.stacked) .hero-content {
+  /* side-by-side default: two 576px columns on the 32px gutter —
+     only when the content row actually has two cells (real single-cell
+     content, e.g. press titles, spans the grid; found on real pages) */
+  .hero:not(.stacked) .hero-content:has(> div + div) {
     grid-template-columns: 1fr 1fr;
     gap: var(--grid-gutter-desktop);
   }
