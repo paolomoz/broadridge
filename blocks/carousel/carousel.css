@@ -1,10 +1,30 @@
-/* product carousel — replica: horizontal snap rail of cards */
+/* carousel — Figma web kit M6 Logo Slider (set 1459:104704, variant
+   `carousel (logos)`) and C2 Text Slider (set 616:57326, variant
+   `carousel (text)`). Kit geometry (component-set metadata):
+   - M6 Desktop 1459:104705 (1184w): header/row/wayfinding/CTA joints 48;
+     logo tiles 211.2x120 / gap 32, white card, 1px border/base, radius 4,
+     logo box 172x55. Tablet 1459:104729 (690w): joints 32, gap 24, row
+     bleeds +72 to the viewport edge. Mobile 1459:104753 (382w): joints 32,
+     2-row grid (row-major, gaps 16), row bleeds +24.
+   - C2 Desktop 616:57325 (1184w in a 1312 frame, pad 64): joints 48,
+     tiles 373.33 / gap 32. Tablet 616:57324 (690w): joints 32, tiles 214 /
+     gap 24. Mobile 616:57323 (382w): joints 32, one 382 tile per page.
+     Tile anatomy (616:56171): 1.5px border/base rule (overlay — Figma
+     strokes don't displace), text inset 24, pad-block 8, headline Body-1
+     Book -> body Body-3 Book on a 12 gap.
+     Fill states (2190:627177/627168): <=3 blocks fill evenly (desktop row
+     = 1312 extended grid), stack at mobile on a 24 gap; >3 = slider.
+   The classless block keeps the replica media rail (tokens-only restyle;
+   no kit counterpart — divergence register row 5). */
+
+/* ---- generic media rail (replica) ---- */
+
 .carousel > ul {
   list-style: none;
   margin: 0;
-  padding: 0 0 16px;
+  padding: 0 0 var(--space-component-16);
   display: flex;
-  gap: 24px;
+  gap: var(--space-component-24);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
@@ -12,11 +32,420 @@
 .carousel > ul > li {
   flex: 0 0 280px;
   scroll-snap-align: start;
-  background-color: var(--c-grey-surface);
-  border-radius: var(--radius-sm);
-  padding: 24px;
+  background-color: var(--color-surface-base);
+  border-radius: var(--border-radius-radius-sm);
+  padding: var(--space-component-24);
 }
 
-.carousel h3 {
+.carousel > ul h3 {
   font-size: 20px;
+}
+
+/* ---- shared kit-variant frame (M6 + C2) ---- */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.carousel-container > div.carousel-wrapper:has(> .carousel.logos, > .carousel.text) {
+  max-width: none;
+  padding: 0;
+}
+
+/* kit sets lining/proportional figures on all text */
+.carousel.logos,
+.carousel.text {
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+/* mobile base (382 content in 430 = 24px side offset) */
+.carousel.logos,
+.carousel.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  box-sizing: border-box;
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* header — A9 Content Groups (1459:104706 / 616:56168) */
+.carousel .carousel-header {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.carousel .carousel-header > div {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.carousel .carousel-header :is(h1, h2, h3, h4, p) {
+  margin: 0;
+}
+
+/* C2 title column max-width 780 (I616:56168;545:99567) */
+.carousel.text .carousel-header > div {
+  max-width: 780px;
+}
+
+/* M6 intro = Body-1 (I1459:104706;1939:201217) */
+.carousel .carousel-header p {
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* rail (1459:104708 / 616:56169) */
+.carousel .carousel-row {
+  display: flex;
+  gap: var(--grid-gutter-mobile);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel .carousel-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* slider motion: derived — no documented M6/C2 timing; mirrors the
+   gated C4 pattern (native smooth scroll), reduced-motion = instant */
+@media (prefers-reduced-motion: no-preference) {
+  .carousel .carousel-row {
+    scroll-behavior: smooth;
+  }
+}
+
+.carousel .carousel-row > .carousel-item {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+/* ---- M6 logo tiles ---- */
+
+/* mobile: 2-row grid, row-major over ceil(n/2) columns, gaps 16,
+   rail bleeds +24 to the viewport edge (1459:104755/104756) */
+.carousel.logos .carousel-row {
+  display: grid;
+  grid-template-columns: repeat(var(--carousel-logo-columns, 1), 211.2px);
+  justify-content: start;
+  gap: var(--grid-gutter-mobile);
+  margin-right: -24px;
+}
+
+.carousel.logos .carousel-item {
+  width: 211.2px; /* logo tile 1722:16355 (no token; kit raw) */
+}
+
+/* white card, 1px border/base, radius-md, logo centered (1459:104709) */
+.carousel.logos .carousel-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 120px; /* tile fixed height (1459:104709; no token) */
+  border: var(--border-width-63) solid var(--color-border-base);
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-light);
+}
+
+.carousel.logos .carousel-logo picture {
+  display: flex;
+}
+
+.carousel.logos .carousel-logo img {
+  width: 172px; /* logo box 172x55 (1459:104710; no token) */
+  height: 55px;
+  object-fit: contain;
+}
+
+/* caption — the kit's hidden Description boolean (1722:16361): 14px
+   content/secondary on an 8 pad, 4 below the card */
+.carousel.logos .carousel-caption {
+  margin: var(--space-component-4) 0 0;
+  padding: var(--space-component-8);
+  color: var(--color-content-secondary);
+  font-size: 14px; /* kit fontSize/14 (1722:16362) */
+  line-height: 1.3;
+}
+
+/* ---- C2 text tiles ---- */
+
+/* mobile: one full-width tile per page (616:57323) */
+.carousel.text .carousel-item {
+  position: relative;
+  width: 100%;
+  padding: var(--space-component-8) 0 var(--space-component-8) var(--space-module-padding-desktop-small);
+}
+
+/* the 1.5px border/base rule is an overlay, not a box border: Figma
+   strokes don't displace layout — text sits 24 from the tile edge */
+.carousel.text .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--border-width-94);
+  background-color: var(--color-border-base);
+}
+
+.carousel.text .carousel-item > * {
+  margin: 0;
+}
+
+/* headline -> body -> link on a 12 gap (616:56171) */
+.carousel.text .carousel-item > * + * {
+  margin-top: var(--space-component-12);
+}
+
+/* headline = Body-1 Book (616:56172) */
+.carousel.text .carousel-item :is(h3, h4, h5) {
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* body = Body-3 Book (3194:400824) */
+.carousel.text .carousel-item p {
+  font-weight: var(--type-body-3-book-font-weight);
+  font-size: var(--type-body-3-book-font-size);
+  line-height: var(--type-body-3-book-line-height);
+}
+
+/* trailing lone link = A5 arrow link (I2190:628117;5403:543636 shows the
+   24px arrow; label styling derived from the gated A12/M3 link CTA) */
+.carousel.text .carousel-item p.carousel-item-cta a {
+  display: inline-flex;
+  gap: 10px; /* A5 link gap (354:1603; no token; kit raw) */
+  align-items: center;
+  min-height: 24px;
+  color: var(--color-action-tertiary-content-base);
+  font-weight: var(--type-label-medium-font-weight);
+  font-size: var(--type-label-medium-font-size);
+  line-height: var(--type-label-medium-line-height);
+  text-decoration: none;
+}
+
+.carousel.text .carousel-item p.carousel-item-cta a:hover {
+  color: var(--color-action-tertiary-content-hover);
+}
+
+.carousel.text .carousel-item p.carousel-item-cta a::after {
+  content: '';
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat; /* Arrows/Arrow Right (24:702) */
+}
+
+/* <=3 blocks at mobile: stacked on a 24 gap (2190:628117) */
+.carousel.text.fill .carousel-row {
+  flex-direction: column;
+  gap: var(--space-component-24);
+  overflow: visible;
+}
+
+/* ---- wayfinding row (1459:104724 / 1711:117784): tabs left, arrows right ---- */
+
+.carousel .carousel-wayfinding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px; /* kit row height (1459:104724) */
+}
+
+.carousel .carousel-wayfinding[hidden] {
+  display: none;
+}
+
+/* A22 Wayfinder / Tabs (1459:104725): 20x5 bars, gap 12 */
+.carousel .carousel-tabs {
+  display: flex;
+  gap: var(--space-component-12);
+}
+
+.carousel .carousel-tab {
+  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-radius-xs);
+  background-color: var(--color-edge-badge-surface);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-short4, 200ms) var(--motion-easing-standard); /* derived from the A6 state transition */
+}
+
+.carousel .carousel-tab.active {
+  background-color: var(--color-action-base);
+}
+
+/* A22 arrows (142:5881): 48px round secondary icon buttons */
+.carousel .carousel-arrows {
+  display: flex;
+  gap: var(--space-component-16);
+}
+
+.carousel .carousel-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px; /* icon-round small A6 (I142:5847;6539:20183) */
+  height: 48px;
+  padding: 0;
+  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
+  border-radius: var(--border-radius-radius-full);
+  background: none;
+  color: var(--color-action-secondary-content-base);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-short4, 200ms) var(--motion-easing-standard),
+    color var(--motion-duration-short4, 200ms) var(--motion-easing-standard);
+}
+
+.carousel .carousel-arrow:hover {
+  border-color: var(--color-action-secondary-border-hover);
+  color: var(--color-action-secondary-content-hover);
+}
+
+.carousel .carousel-arrow:focus-visible {
+  outline: 3px solid var(--color-action-secondary-border-focus-ring);
+  outline-offset: -1px;
+}
+
+.carousel .carousel-arrow svg {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+
+/* ---- CTA row — A5 Button Group, right-aligned (1535:59402) ---- */
+
+.carousel .carousel-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carousel .carousel-cta > div {
+  width: 100%; /* full width on mobile, as A5 Stack Full Width (1459:104775) */
+}
+
+.carousel .carousel-cta p {
+  margin: 0;
+}
+
+.carousel .carousel-cta a.button {
+  width: 100%;
+}
+
+/* ---- tablet (690 content in 834 = 72px side offset) ---- */
+@media (width >= 834px) {
+  .carousel.logos,
+  .carousel.text {
+    padding: 0 72px;
+  }
+
+  .carousel .carousel-row {
+    gap: var(--grid-gutter-tablet);
+  }
+
+  /* M6 rail bleeds +72 to the viewport edge (1459:104732 = 762w),
+     back to a single flex row */
+  .carousel.logos .carousel-row {
+    display: flex;
+    gap: var(--grid-gutter-tablet);
+    margin-right: -72px;
+  }
+
+  .carousel.text .carousel-item {
+    width: 214px; /* tablet tile 3279:85298 (no token; kit raw) */
+  }
+
+  .carousel.text.fill .carousel-row {
+    flex-direction: row;
+    gap: var(--grid-gutter-tablet);
+    overflow-x: auto;
+  }
+
+  /* fill states: blocks share the row evenly (2190:628116 / 2190:627904) */
+  .carousel.text.fill .carousel-item {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+  }
+
+  .carousel .carousel-cta > div {
+    width: auto;
+  }
+
+  .carousel .carousel-cta a.button {
+    width: auto;
+  }
+}
+
+/* ---- desktop (1184 content grid) ---- */
+@media (width >= 1140px) {
+  .carousel.logos,
+  .carousel.text {
+    gap: var(--space-module-gap-desktop);
+    padding: 0;
+  }
+
+  /* M6 header goes two-column, top-aligned (1459:104706 Copy row is
+     items-start — unlike the bottom-aligned C4 header) */
+  .carousel.logos .carousel-header {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gutter-desktop);
+    align-items: start;
+  }
+
+  .carousel .carousel-row {
+    gap: var(--grid-gutter-desktop);
+  }
+
+  .carousel.logos .carousel-row {
+    gap: var(--grid-gutter-desktop);
+    margin-right: 0;
+  }
+
+  /* 3 tiles on the 32 gutter: (1184 - 2*32)/3 = 373.33 (616:56171) */
+  .carousel.text .carousel-item {
+    width: calc((100% - 2 * var(--grid-gutter-desktop)) / 3);
+  }
+
+  /* fill states: the row spans the 1312 extended grid (2190:628115 /
+     2190:627903 rows are 1312; symmetric bleed derived — the boards
+     stretch the instance, see tolerances.md) */
+  .carousel.text.fill .carousel-row {
+    gap: var(--grid-gutter-desktop);
+    margin-inline: calc((var(--grid-content-width) - var(--grid-extended-width)) / 2);
+  }
+}
+
+/* ---- section theme options ----
+   M6 ships no themed treatment ("No Background (only option)",
+   spec board 2125:257709) — logo cards stay white cards everywhere.
+   C2 dark grounds (usage 2125:232460, resolved variable modes on
+   2125:232464): content white (global section rule), tile rule stays
+   border/base; wayfinder remaps below (same values as the gated M3). */
+
+main .section.dark .carousel .carousel-tab,
+main .section.navy .carousel .carousel-tab {
+  background-color: var(--color-surface-accent-01); /* inactive tab on dark (2125:232464: edge/badge/surface -> #0f3db5) */
+}
+
+main .section.dark .carousel .carousel-tab.active,
+main .section.navy .carousel .carousel-tab.active {
+  background-color: var(--color-content-primary-inverse); /* action/base -> #fff */
+}
+
+main .section.dark .carousel .carousel-arrow,
+main .section.navy .carousel .carousel-arrow {
+  border-color: var(--color-content-primary-inverse); /* secondary border/content -> #fff */
+  color: var(--color-content-primary-inverse);
+}
+
+main .section.dark .carousel.text .carousel-item p.carousel-item-cta a,
+main .section.navy .carousel.text .carousel-item p.carousel-item-cta a {
+  color: var(--color-content-primary-inverse);
 }
