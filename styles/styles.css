@@ -1343,3 +1343,20 @@ a.cta-link:focus-visible {
   text-transform: uppercase;
 }
 /* ==== figma-to-eds atoms layer END ==== */
+
+/* ==== figma-to-eds facet section options (Brand Backgrounds/Static 304:1374;
+   composition per atoms-spec/facets.json — full-bleed vector planes with
+   baked gradients behind content; 3-Faces variant per H4 usage boards) ==== */
+main .section.facet-light {
+  background: var(--color-surface-mid) url('/styles/backgrounds/facet-light-hero.jpg') no-repeat 0 -172px / 100% auto; /* offset template-matched to 1893:11032 */
+}
+
+/* bright/dark facets carry inverse content: author as "dark, facet-bright" —
+   .dark supplies the text/button inversion, the facet supplies the ground */
+main .section.facet-bright {
+  background: var(--color-brand-primary-vibrant-blue) url('/styles/backgrounds/facet-bright-hero.jpg') no-repeat 0 -180px / 100% auto; /* offset template-matched to 2118:63134 */
+}
+
+main .section.facet-dark {
+  background: var(--color-surface-accent-03) url('/styles/backgrounds/facet-dark-hero.jpg') no-repeat 0 0 / 100% auto; /* offset template-matched to 2118:63342 */
+}

@@ -1,0 +1,26 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Faceds" clip-path="url(#clip0_27364_24372)">
+<rect width="1920" height="1080" fill="white"/>
+<path id="Rectangle 3842" d="M510.531 585.01L2306.63 -390.604L2082.56 1201.45L835.507 1732.63L510.531 585.01Z" fill="#2662FC"/>
+<path id="Rectangle 3840" d="M835.515 1732.62L-246.04 1374.94L-281.921 633.064L510.535 585.012L835.515 1732.62Z" fill="url(#paint0_linear_27364_24372)"/>
+<path id="Rectangle 3839" d="M72.4964 -173.494L1115.97 -342.651L2306.64 -390.605L510.54 585.005L72.4964 -173.494Z" fill="url(#paint1_linear_27364_24372)"/>
+<path id="Rectangle 3910" d="M76.8892 -201.687L510.535 585.012L-287.779 641.928L76.8892 -201.687Z" fill="url(#paint2_linear_27364_24372)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_27364_24372" x1="309.158" y1="1536.02" x2="402.529" y2="578.016" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0F3DB5"/>
+<stop offset="1" stop-color="#2662FC"/>
+</linearGradient>
+<linearGradient id="paint1_linear_27364_24372" x1="981.97" y1="596.385" x2="263.843" y2="-789.878" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2662FC"/>
+<stop offset="1" stop-color="#6CA5FE"/>
+</linearGradient>
+<linearGradient id="paint2_linear_27364_24372" x1="1236.8" y1="-119.277" x2="-264.084" y2="269.906" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0F3DB5"/>
+<stop offset="1" stop-color="#2662FC"/>
+</linearGradient>
+<clipPath id="clip0_27364_24372">
+<rect width="1920" height="1080" fill="white"/>
+</clipPath>
+</defs>
+</svg>
