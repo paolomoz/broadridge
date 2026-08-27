@@ -1,157 +1,482 @@
-/* cards — replica: tinted icon cards (featured), navy/photo cards, awards, bento */
+/* cards — Figma web kit C1A Card Grid (set 1723:60801) + C1B Card Grid
+   (set 6520:29954); variant `cards (featured)` = M4 Featured Cards
+   (set 5618:13809). Card unit: A7 Cards /Bento, Content Align=
+   Distribute, Padding=24 (552:8222); M4 unit .M4 Featured Cards / Core
+   (5618:13833).
+   Kit geometry (component-set metadata):
+   - C1A Desktop 1723:60802 (1184w): H2-group header two-col 576/32/576
+     top-aligned; module gaps 48; tiles 272 x 4 / gutter 32; wayfinding
+     row 48; CTA right. Tablet 1723:60810 (690w): gaps 32, tiles 333
+     2-col, gutters 24. Mobile Stacked 6539:127117 (382w): tiles full
+     width, gap 16. Mobile 2x2 1723:60818: tiles 183, gaps 16.
+   - C1B Desktop 6520:29988 (1184w): heading-only header spans 2 grid
+     columns (576) inside the first row; all rhythm gaps 32.
+     Tablet 6526:25755: header above (gap 32), 2-col grid, gaps 24.
+     Mobile 6526:27273: stacked, gap 16, header gap 32.
+   - M4 Desktop 5618:13810: header gap 48; cards 272x454 = media band
+     204 + content 250 (fixed, 5618:13836); gutter 32.
+     Tablet 5618:13817: full-width horizontal cards 165 tall, media
+     band 198 right, gap 24. Mobile 5618:13824: no media, gap 24.
+     Hover 5618:13841 (desktop-only kit spec): surface-hover/mid +
+     media contained at 193x204. */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.cards-container > div.cards-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* kit sets lining/proportional figures on every text node.
+   Grayscale antialiasing matches the kit's (Figma) text rasterization —
+   without it the module's dense 24px Title-2 tiles render visibly
+   heavier than the design (C1B is ~all text; see tolerances.md).
+   Candidate for styles.css adoption across blocks — reported, not
+   applied globally. */
+.cards {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px; /* 382 content in 430 viewport (6539:127117) */
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+/* ---- header — A9 Content Groups ---- */
+
+.cards .cards-header > div {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.cards .cards-header :is(h1, h2, h3, h4, p) {
+  margin: 0;
+}
+
+.cards .cards-header :is(h1, h2) {
+  max-width: 780px; /* A9 content max width (I5618:13811;545:99567) */
+}
+
+/* intro paragraph = Body-1 (1723:60803 Sub Paragraph) */
+.cards .cards-header p {
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* ---- card grid ---- */
+
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: var(--grid-gutter-mobile); /* stacked tiles gap 16 (6539:127119) */
 }
 
-@media (width >= 834px) {
-  .cards > ul {
+/* kit Mobile 2x2 variant (1723:60818) — authored `cards (mobile-grid)`;
+   a mobile-only arrangement, tablet/desktop layouts are unchanged */
+@media (width < 834px) {
+  .cards.mobile-grid > ul {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (width >= 1140px) {
-  .cards > ul {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .cards.bento > ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* awards — captured: 2-col, photo card spans rows, tinted side cards */
-  .cards.awards > ul {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .cards.awards > ul > li:first-child {
-    grid-row: span 2;
+  .cards.mobile-grid > ul > li {
+    min-height: 256px; /* 2x2 tile 1723:60821 */
   }
 }
 
+/* A7 Cards /Bento, Padding=24 (552:8222); the kit fixes the tile row
+   height per variant (Bento rows 6539:127119 mobile 144 / 1723:60820
+   2x2 256 / 1723:60804 desktop-tablet 172) — honored as min-heights,
+   content still grows them (no token; kit raw) */
 .cards > ul > li {
-  background-color: var(--c-grey-surface);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  min-height: 144px;
+  padding: var(--space-component-24);
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-light);
 }
 
-/* featured — captured: blue-tint faces, line illustration, arrow cta */
-.cards.featured > ul > li {
-  background-color: var(--c-blue-tint);
-}
-
-.cards .cards-card-image {
+/* C1B inline header rides the grid as a bare tile (6520:29989) */
+.cards > ul > li.cards-header-tile {
+  grid-column: 1 / -1;
+  min-height: 0;
   padding: 0;
-}
-
-.cards .cards-card-image img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-.cards.featured .cards-card-image img {
-  object-fit: contain;
-  padding-top: 16px;
+  border-radius: 0;
+  background: none;
+  /* header-to-grid gap is 32 at every device (6526:30517/30249):
+     grid row gap 16 + 16 */
+  margin-bottom: var(--space-component-16);
 }
 
 .cards .cards-card-body {
-  padding: 24px;
+  display: flex;
   flex: 1;
+  flex-direction: column;
 }
 
-.cards .cards-card-body h3 {
-  font-size: 22px;
-  margin-bottom: 8px;
+/* copy — Title-2 + Body-3, gap 8, block padding-bottom 16 (375:8175);
+   Content Align=Distribute pins the CTA to the card foot */
+.cards .cards-card-body :is(h3, h4, h5, h6) {
+  margin: 0;
+  font-weight: var(--type-title-2-font-weight);
+  font-size: var(--type-title-2-font-size);
+  font-style: var(--type-title-2-font-style);
+  line-height: var(--type-title-2-line-height);
+  letter-spacing: var(--type-title-2-letter-spacing);
 }
 
-.cards .cards-card-body h3 a:any-link {
-  color: var(--c-text);
-  text-decoration: none;
+.cards .cards-card-body p:not(.cards-card-cta) {
+  margin: var(--space-component-8) 0 0;
+  font-weight: var(--type-body-3-book-font-weight);
+  font-size: var(--type-body-3-book-font-size);
+  line-height: var(--type-body-3-book-line-height);
+  letter-spacing: var(--type-body-3-book-letter-spacing);
 }
 
-.cards .cards-card-body h3 a:hover {
-  color: var(--c-blue-link);
-}
-
-.cards .cards-card-body p {
-  font-size: 15px;
-  margin-bottom: 0;
-}
-
-.cards .cards-card-body em {
-  display: inline-block;
-  font-style: normal;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-/* awards — captured: blue-tint side cards, navy photo card */
-.cards.awards > ul > li {
-  background-color: var(--c-blue-tint);
-}
-
-.cards.awards > ul > li:first-child {
-  background-color: var(--c-navy-deep);
-  color: var(--c-white);
-  position: relative;
-}
-
-.cards.awards > ul > li:first-child .cards-card-image {
-  padding: 0;
-}
-
-.cards.awards > ul > li:first-child .cards-card-image img {
-  width: 100%;
-  height: 100%;
-  max-height: none;
-  object-fit: cover;
-  position: absolute;
-  inset: 0;
-}
-
-.cards.awards > ul > li:first-child .cards-card-body {
-  position: relative;
+/* icon-only Link CTA (354:1603): 24px arrow, action/tertiary colors */
+.cards .cards-card-cta {
+  display: flex;
+  margin: 0;
   margin-top: auto;
-  background-color: var(--c-navy-deep);
-  max-width: 80%;
+  padding-top: var(--space-component-16); /* Copy pb (375:8175) */
 }
 
-.cards.awards > ul > li:first-child h3 a:any-link,
-.cards.awards > ul > li:first-child p {
-  color: var(--c-white);
+.cards .cards-card-cta a:any-link {
+  display: inline-flex;
+  color: var(--color-action-tertiary-content-base);
 }
 
-/* captured: lg:min-h-[250px] card content */
+.cards .cards-card-cta a:hover {
+  color: var(--color-action-tertiary-content-hover);
+}
+
+.cards .cards-card-cta a:focus-visible {
+  outline: 3px solid var(--color-action-tertiary-border-focus-ring);
+  outline-offset: 1px;
+}
+
+.cards .cards-card-cta svg {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+/* authored link text stays for assistive tech; affordance is the arrow */
+.cards .cards-link-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---- wayfinding row (2293:81834), C1A `showcase` composition ---- */
+
+.cards .cards-wayfinding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px; /* kit row height 2293:81834 */
+}
+
+/* A22 Wayfinder / Tabs (2293:81835): 20x5 bars, gap 12, one per card */
+.cards .cards-tabs {
+  display: flex;
+  gap: var(--space-component-12);
+}
+
+.cards .cards-tab {
+  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-radius-xs);
+  background-color: var(--color-edge-badge-surface);
+  cursor: pointer;
+}
+
+.cards .cards-tab.active {
+  background-color: var(--color-action-base);
+}
+
+/* A22 Wayfinder arrows (142:5881): 48px round secondary icon buttons */
+.cards .cards-arrows {
+  display: flex;
+  gap: var(--space-component-16);
+}
+
+.cards .cards-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px; /* icon-round small A6 (I142:5847;6539:20183) */
+  height: 48px;
+  padding: 0;
+  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
+  border-radius: var(--border-radius-radius-full);
+  background: none;
+  color: var(--color-action-secondary-content-base);
+  cursor: pointer;
+}
+
+.cards .cards-arrow:hover {
+  border-color: var(--color-action-secondary-border-hover);
+  color: var(--color-action-secondary-content-hover);
+}
+
+.cards .cards-arrow:focus-visible {
+  outline: 3px solid var(--color-action-secondary-border-focus-ring);
+  outline-offset: -1px;
+}
+
+.cards .cards-arrow svg {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+
+/* ---- CTA row — A5 Button Group, right-aligned (1723:60809) ---- */
+
+.cards .cards-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cards .cards-cta > div {
+  width: 100%; /* full width on mobile, A6 Button 6539:127127 */
+}
+
+.cards .cards-cta p.button-wrapper {
+  margin: 0;
+}
+
+.cards .cards-cta p.button-wrapper a.button {
+  width: 100%;
+}
+
+/* ---- featured variant — M4 Featured Cards ---- */
+
+/* mobile core card (5618:13855): no media, surface/mid, pad 24 */
+.cards.featured > ul {
+  gap: var(--space-component-24); /* kit mobile card gap (5618:13826) */
+}
+
+.cards.featured > ul > li {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-color: var(--color-surface-mid);
+}
+
+.cards.featured .cards-card-image {
+  display: none; /* kit mobile variant carries no media (5618:13824) */
+}
+
+.cards.featured .cards-card-body {
+  padding: var(--space-component-24); /* module/padding/small (5618:13836) */
+}
+
+/* M4 copy — Title-1 + Body-2 at every device (5618:13838/13839) */
+.cards.featured .cards-card-body :is(h3, h4, h5, h6) {
+  font-weight: var(--type-title-1-font-weight);
+  font-size: var(--type-title-1-font-size);
+  font-style: var(--type-title-1-font-style);
+  line-height: var(--type-title-1-line-height);
+  letter-spacing: var(--type-title-1-letter-spacing);
+}
+
+.cards.featured .cards-card-body p:not(.cards-card-cta) {
+  font-weight: var(--type-body-2-book-font-weight);
+  font-size: var(--type-body-2-book-font-size);
+  line-height: var(--type-body-2-book-line-height);
+  letter-spacing: var(--type-body-2-book-letter-spacing);
+}
+
+/* ---- tablet (690 content in 834 = 72px side offset) ---- */
+@media (width >= 834px) {
+  .cards {
+    gap: var(--space-module-gap-tablet);
+    padding: 0 72px;
+  }
+
+  .cards > ul {
+    grid-template-columns: repeat(2, 1fr); /* tiles 333 (1723:60812) */
+    gap: var(--grid-gutter-tablet);
+  }
+
+  .cards > ul > li.cards-header-tile {
+    /* 32 total: grid row gap 24 + 8 (6526:30249) */
+    margin-bottom: var(--space-component-8);
+    min-height: 0;
+  }
+
+  .cards:not(.featured) > ul > li:not(.cards-header-tile) {
+    min-height: 172px; /* kit tablet/desktop tile rows (1723:60812) */
+  }
+
+  .cards .cards-cta > div {
+    width: auto;
+  }
+
+  .cards .cards-cta p.button-wrapper a.button {
+    width: auto;
+  }
+
+  /* M4 tablet core (5618:13848): full-width horizontal card 165 tall,
+     content left, media band 198 right with a 228px bleeding square */
+  .cards.featured > ul {
+    grid-template-columns: 1fr;
+    gap: var(--grid-gutter-tablet);
+  }
+
+  .cards.featured > ul > li {
+    /* content left, media right (5618:13849/13854) */
+    flex-direction: row-reverse;
+    min-height: 165px; /* kit tablet card height (5618:13848; no token) */
+  }
+
+  .cards.featured .cards-card-image {
+    display: block;
+    position: relative;
+    flex: 0 0 198px; /* media band 690-492 (5618:13854; no token) */
+  }
+
+  .cards.featured .cards-card-image img {
+    position: absolute;
+    top: -33px; /* A13 Media 228px square, bleeds 33/30 (5618:13854) */
+    left: 0;
+    width: 228px;
+    max-width: none; /* the A13 square intentionally bleeds off the card */
+    height: 228px;
+    object-fit: cover;
+    border-radius: var(--border-radius-radius-md);
+  }
+}
+
+/* ---- desktop (1184 content grid) ---- */
 @media (width >= 1140px) {
+  .cards {
+    gap: var(--space-component-32); /* C1B rhythm (6520:29988) */
+    padding: 0;
+  }
+
+  /* C1A `showcase` rhythm: 48 between header/grid/wayfinding/CTA */
+  .cards.showcase,
+  .cards.featured {
+    gap: var(--space-module-gap-desktop); /* 1723:60802 / 5618:13810 */
+  }
+
+  /* header with intro goes two-column, top-aligned (1723:60803);
+     heading-only headers stay single-column (5618:13811) */
+  .cards .cards-header > div:has(> p) {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gutter-desktop);
+    align-items: start;
+  }
+
+  .cards > ul {
+    grid-template-columns: repeat(4, 1fr); /* tiles 272 (1723:60804) */
+    gap: var(--grid-gutter-desktop);
+  }
+
+  /* C1B: heading-only header spans two columns of the first row */
+  .cards > ul > li.cards-header-tile {
+    grid-column: span 2;
+    margin-bottom: 0;
+  }
+
+  /* M4 desktop core (5618:13834): vertical card, media band 204 +
+     content 250; media is a 353px cover square anchored to bleed off
+     the top-right corner (5618:13835) */
+  .cards.featured > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gutter-desktop);
+  }
+
+  .cards.featured > ul > li {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .cards.featured .cards-card-image {
+    flex: 0 0 204px; /* media band (5618:13834 pt-204; no token) */
+  }
+
+  .cards.featured .cards-card-image img {
+    top: -149px; /* A13 Media 353px square (5618:13835; kit raw) */
+    left: 50px;
+    width: 353px;
+    height: 353px;
+  }
+
   .cards.featured .cards-card-body {
-    min-height: 250px;
+    min-height: 250px; /* kit content height (5618:13836; no token) */
   }
 
-  .cards.awards > ul > li {
-    min-height: 300px;
-    padding: 8px;
+  /* M4 hover — desktop-only kit state (5618:13841): surface darkens
+     to surface-hover/mid, media settles contained at 193x204 */
+  .cards.featured > ul > li:hover {
+    background-color: var(--color-surface-hover-mid);
+  }
+
+  .cards.featured > ul > li:hover .cards-card-image img {
+    top: 0;
+    left: 39px; /* (272-193)/2, kit 5618:13847 */
+    width: 193px;
+    height: 204px;
   }
 }
 
-.cards .cards-card-body::after {
-  content: '\2192';
-  display: block;
-  margin-top: 16px;
-  font-size: 22px;
-  color: var(--c-text);
+@media (width >= 1140px) and (prefers-reduced-motion: no-preference) {
+  /* kit ships no exportable M4 motion spec; Figma smart-animate
+     defaults mapped to motion tokens (derived) */
+  .cards.featured > ul > li {
+    transition: background-color var(--motion-duration-medium2) var(--motion-easing-standard);
+  }
+
+  .cards.featured .cards-card-image img {
+    transition:
+      top var(--motion-duration-medium2) var(--motion-easing-standard),
+      left var(--motion-duration-medium2) var(--motion-easing-standard),
+      width var(--motion-duration-medium2) var(--motion-easing-standard),
+      height var(--motion-duration-medium2) var(--motion-easing-standard);
+  }
 }
 
-.cards.awards > ul > li:first-child .cards-card-body::after {
-  color: var(--c-white);
+/* ---- dark section themes (usage boards 2125:248916 instance
+   2788:67346, 6520:30023 instance 6526:38527): cards remap
+   surface/light -> accent-01; tabs, arrows and card arrows invert ---- */
+
+main .section.dark .cards > ul > li:not(.cards-header-tile),
+main .section.navy .cards > ul > li:not(.cards-header-tile) {
+  background-color: var(--color-surface-accent-01);
+}
+
+main .section.dark .cards .cards-card-cta a:any-link,
+main .section.navy .cards .cards-card-cta a:any-link {
+  color: var(--color-content-primary-inverse);
+}
+
+main .section.dark .cards .cards-tab,
+main .section.navy .cards .cards-tab {
+  background-color: var(--color-surface-accent-01); /* sampled 2788:67346 */
+}
+
+main .section.dark .cards .cards-tab.active,
+main .section.navy .cards .cards-tab.active {
+  background-color: var(--color-content-primary-inverse);
+}
+
+main .section.dark .cards .cards-arrow,
+main .section.navy .cards .cards-arrow {
+  border-color: var(--color-content-primary-inverse);
+  color: var(--color-content-primary-inverse);
 }
