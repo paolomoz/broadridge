@@ -1,37 +1,550 @@
-/* faqs accordion — replica of .faqs-section rows */
-.accordion details {
-  border-bottom: 1px solid var(--c-neutral-300);
+/* accordion — Figma web kit A1 Accordion (set 1955:334445), M2 Accordion
+   Feature (set 1568:70602, variant `accordion (feature)`) and M14 FAQ
+   Accordion (set 14196:37097, variant `accordion (faq)`); FAQ item unit is
+   A26 FAQ Accordion (14192:54997) + A27 FAQ Content (14192:66790).
+   Kit geometry (component-set metadata):
+   - A1 item (1955:334443): py 16, label Title-2 (24/1.15) + 24px plus/close
+     icon, border-b accordion/border/base; open (1955:334446) gap 32 to
+     content. Focus (1955:334460): 3px focusring, radius-sm, inset 0 0 -1px.
+   - M2 Desktop 1952:309363 (1184w): content col + 576px media col, gap 32;
+     header (H2 40 + Body-1 24, gap 16) -> items gap 32 -> CTA gap 48.
+     Tablet 1801:178306 (690w): single col, H2 36, media inside open item
+     (gap 24, h 253.125). Mobile 1801:178320 (382w): H2 40 (Display-2
+     Mobile) + Body-3 18, media gap 16, CTA gap 32, full-width button.
+   - M2 dark (usage instance 2190:568017): module becomes a Background=Yes
+     card — bg surface accent-01 (#0f3db5 sampled), pad 64, extended grid
+     1312; border #6ca5fe, closed label #f9f9f9, open label #bad1f5.
+   - M14 Desktop 14192:2283 (1312w): white card radius-md pad 64; head H2 40
+     (kit pins Heading/Desktop/Heading-2 at ALL devices, 14196:37197),
+     pb 16 + gap 32 -> body border-t; items px 8 / py 24 (h 76).
+     Tablet 14196:37098 (786w): pad 48. Mobile 14196:37191 (414w): pad 32/16.
+     No Background (14197:45344): bg/vertical padding dropped, same grid.
+   - A27 content (via A26 Active 14192:55006 / Tablet 14203:95676 / Mobile
+     14203:95712): pt 24/16/16, pl 32/24/0, pb 32/24/12 under the 32 label
+     gap; blocks gap 32, copy gap 16 max-w 880; bullets pl 8, gap 12, pb 12,
+     max-w 778.667, 7px circle marker (accent-02). Body copy Body-1. */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.accordion-container > div.accordion-wrapper {
+  max-width: none;
+  padding: 0;
 }
 
-.accordion summary {
+/* ---- A1 / A26 item (shared) ---- */
+
+/* Figma strokes don't displace layout: the kit's 60px closed item includes
+   the bottom rule as an overlay (1955:334443), so the rule is drawn without
+   entering the box model */
+.accordion .accordion-item {
   position: relative;
-  padding: 20px 48px 20px 0;
-  font-size: 18px;
-  font-weight: 500;
+  padding-bottom: var(--space-component-16);
+}
+
+.accordion .accordion-item::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: var(--border-width-63);
+  background-color: var(--color-action-accordion-border-base);
+}
+
+.accordion .accordion-item-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-component-16);
+  padding-top: var(--space-component-16);
+  color: var(--color-action-accordion-content-base);
+  font-weight: var(--type-title-2-font-weight);
+  font-size: var(--type-title-2-font-size);
+  line-height: var(--type-title-2-line-height);
+  letter-spacing: var(--type-title-2-letter-spacing);
   cursor: pointer;
   list-style: none;
+  transition: color var(--motion-duration-short4) var(--motion-easing-standard);
 }
 
-.accordion summary::-webkit-details-marker {
+.accordion .accordion-item-label::-webkit-details-marker {
   display: none;
 }
 
-.accordion summary::after {
-  content: '+';
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  font-weight: 300;
-  color: var(--c-blue-link);
+/* Math/Plus 24px (1955:334425), swaps to System/Close when open (1955:334449);
+   currentColor tracks the kit's per-state icon fills */
+.accordion .accordion-item-label::after {
+  content: "";
+  flex: 0 0 var(--size-icon-md);
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 4C12.5128 4 12.9354 4.38645 12.9932 4.88379L13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5128 19.6135 12.9354 19.1162 12.9932L19 13H13V19C13 19.5523 12.5523 20 12 20C11.4872 20 11.0646 19.6135 11.0068 19.1162L11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4872 4.38645 11.0646 4.88379 11.0068L5 11H11V5C11 4.44772 11.4477 4 12 4Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-.accordion details[open] summary::after {
-  content: '–';
+.accordion .accordion-item[open] > .accordion-item-label::after {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17.2929 5.29289C17.6834 4.90237 18.3164 4.90237 18.707 5.29289C19.0674 5.65338 19.095 6.22091 18.79 6.61321L18.707 6.70696L13.414 11.9999L18.707 17.2929C19.0975 17.6834 19.0975 18.3164 18.707 18.707C18.3465 19.0674 17.7789 19.095 17.3866 18.79L17.2929 18.707L11.9999 13.414L6.70696 18.707C6.31643 19.0975 5.68342 19.0975 5.29289 18.707C4.93241 18.3465 4.90486 17.7789 5.20989 17.3866L5.29289 17.2929L10.5859 11.9999L5.29289 6.70696C4.90237 6.31643 4.90237 5.68342 5.29289 5.29289C5.65338 4.93241 6.22091 4.90486 6.61321 5.20989L6.70696 5.29289L11.9999 10.5859L17.2929 5.29289Z'/%3E%3C/svg%3E");
 }
 
+.accordion .accordion-item-label:hover {
+  color: var(--color-action-accordion-content-hover);
+}
+
+.accordion .accordion-item[open] > .accordion-item-label {
+  color: var(--color-action-accordion-content-active);
+}
+
+/* focus ring spans the item, 1px past the bottom border (1955:334467) */
+.accordion .accordion-item-label:focus-visible {
+  outline: none;
+}
+
+.accordion .accordion-item:has(> .accordion-item-label:focus-visible) {
+  border-radius: var(--border-radius-radius-sm);
+  box-shadow: inset 0 0 0 var(--border-width-188) var(--color-action-accordion-border-focus-ring);
+}
+
+/* open content sits a 32px gap below the label (1955:334446) */
 .accordion .accordion-item-body {
-  padding: 0 0 20px;
-  max-width: 900px;
+  padding-top: var(--space-component-32);
+}
+
+.accordion .accordion-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion .accordion-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* body is height-animated by accordion.js (400ms medium4, derived from the
+   kit's M9 accordion prototype; M2/M14 boards document no motion) */
+.accordion .accordion-item:not([open]) .accordion-item-body {
+  display: none;
+}
+
+/* ---- M2 Accordion Feature (variant `accordion (feature)`) ---- */
+
+/* mobile base (382 content in 430 = 24px side offset, 1801:178320) */
+.accordion.feature {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* content stack rhythm — the kit draws the open item without its own top
+   padding, so header->label reads 32 at tablet/mobile (1801:178306/178320)
+   and 48 at desktop (2463:26497): items carry pt 16, the stack adds the rest */
+.accordion.feature .accordion-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.accordion.feature .accordion-header + .accordion-items {
+  margin-top: var(--space-component-16);
+}
+
+.accordion.feature .accordion-cta {
+  margin-top: var(--space-component-32); /* items -> A6 button gap 32 (1801:178332) */
+}
+
+/* header — A9 Content Groups: title + intro, gap 16 (2463:26498) */
+.accordion.feature .accordion-header {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.accordion.feature .accordion-header > div {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.accordion.feature .accordion-header :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+/* mobile title = Display-2 Mobile 40px, intro = Body-3 18 (1801:178321) */
+.accordion.feature .accordion-header :is(h1, h2) {
+  font-size: var(--type-display-2-font-size);
+}
+
+.accordion.feature .accordion-header p {
+  font-weight: var(--type-body-3-book-font-weight);
+  font-size: var(--type-body-3-book-font-size);
+  line-height: var(--type-body-3-book-line-height);
+  letter-spacing: var(--type-body-3-book-letter-spacing);
+}
+
+/* open item content — A8 Content Frame, H3 Group Stack (1955:335506):
+   heading + 16 + Body-2 copy, CTA link 32 below */
+.accordion.feature .accordion-item-body :is(h3, h4) {
+  margin: 0 0 var(--space-component-16);
+}
+
+.accordion.feature .accordion-item-body p {
+  margin: 0;
+  font-weight: var(--type-body-2-book-font-weight);
+  font-size: var(--type-body-2-book-font-size);
+  line-height: var(--type-body-2-book-line-height);
+  letter-spacing: var(--type-body-2-book-letter-spacing);
+}
+
+/* A5 Button Group with Link CTA only (2712:448655): 18/500 + 24px arrow */
+.accordion.feature .accordion-item-body p:has(> a.cta-link) {
+  display: flex; /* A5 group row — keeps the 24px link flush at the 32 gap */
+  gap: var(--space-component-16);
+  margin-top: var(--space-component-32);
+}
+
+.accordion.feature a.cta-link::after {
+  content: "";
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat; /* Arrows/Arrow Right (24:702) */
+}
+
+/* media — desktop right column; tablet/mobile inside the open item.
+   Mobile gap 16, h 253.125 kit raw (3094:372687) */
+.accordion.feature .accordion-media {
+  margin-top: var(--space-component-16);
+  border-radius: var(--border-radius-radius-md);
+  overflow: hidden;
+}
+
+.accordion.feature .accordion-item-body .accordion-media {
+  height: 253.125px; /* A13 Media fixed box (1801:178312; no token) */
+}
+
+.accordion.feature .accordion-media :is(picture, img) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* media not yet placed in an open item stays hidden below desktop */
+.accordion.feature > .accordion-media {
+  display: none;
+}
+
+/* CTA — A6 Button, gap 32 at mobile/tablet (1801:178332), full width mobile */
+.accordion.feature .accordion-cta p {
+  margin: 0;
+}
+
+.accordion.feature .accordion-cta a.button {
+  width: 100%;
+}
+
+/* tablet (690 content in 834 = 72px side offset, 1801:178306) */
+@media (width >= 834px) {
+  .accordion.feature {
+    padding: 0 72px;
+  }
+
+  /* tablet title = H2 36 via token, intro Body-1 24 (1801:178308) */
+  .accordion.feature .accordion-header :is(h1, h2) {
+    font-size: var(--type-heading-2-font-size);
+  }
+
+  .accordion.feature .accordion-header p {
+    font-weight: var(--type-body-1-book-font-weight);
+    font-size: var(--type-body-1-book-font-size);
+    line-height: var(--type-body-1-book-line-height);
+    letter-spacing: var(--type-body-1-book-letter-spacing);
+  }
+
+  /* media gap 24 inside the open item (1801:178310) */
+  .accordion.feature .accordion-media {
+    margin-top: var(--space-module-padding-tablet-small);
+  }
+
+  .accordion.feature .accordion-cta a.button {
+    width: auto;
+  }
+}
+
+/* desktop (1184 grid: content col + 576 media col, 1952:309363) */
+@media (width >= 1140px) {
+  .accordion.feature {
+    flex-direction: row;
+    gap: var(--grid-gutter-desktop);
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .accordion.feature .accordion-content {
+    flex: 1 1 0;
+    max-width: 778.667px; /* Features Block cap (2463:26495; no token) */
+  }
+
+  /* desktop rhythm: header->label 48 (2463:26497), items->CTA 48 (2463:26495) */
+  .accordion.feature .accordion-header + .accordion-items {
+    margin-top: var(--space-component-32);
+  }
+
+  .accordion.feature .accordion-cta {
+    margin-top: var(--space-module-gap-desktop);
+  }
+
+  .accordion.feature > .accordion-media {
+    display: block;
+    flex: 0 0 576px; /* media col (1952:309376; no token) */
+    max-height: 676px; /* kit media box 576x676 (1952:309376; no token) */
+    height: 676px;
+    margin-top: 0;
+  }
+
+  .accordion.feature .accordion-item-body .accordion-media {
+    display: none; /* media lives in the right column at desktop */
+  }
+}
+
+/* M2 dark treatment (usage instance 2190:568017): Background=Yes card on the
+   dark section — accent-01 surface, pad 64, extended grid; sampled colors:
+   border #6ca5fe, closed label #f9f9f9, open label #bad1f5, copy white */
+main .section.dark .accordion.feature,
+main .section.navy .accordion.feature {
+  max-width: var(--grid-extended-width);
+  padding: var(--space-module-padding-mobile-medium) 16px; /* derived below-desktop scaling, mirrors M14 card */
+  background-color: var(--color-surface-accent-01);
+}
+
+main :is(.section.dark, .section.navy) .accordion.feature .accordion-item::after {
+  background-color: var(--color-brand-primary-fresh-blue);
+}
+
+/* the Background=Yes master closes the open item with pb 24, not 16
+   (1557:63022, sampled via 2190:568017) */
+main :is(.section.dark, .section.navy) .accordion.feature .accordion-item[open] {
+  padding-bottom: var(--space-component-24);
+}
+
+main :is(.section.dark, .section.navy) .accordion.feature .accordion-item-label {
+  color: var(--color-brand-primary-neutral);
+}
+
+main :is(.section.dark, .section.navy) .accordion.feature .accordion-item[open] > .accordion-item-label {
+  color: var(--color-brand-primary-open-blue);
+}
+
+main :is(.section.dark, .section.navy) .accordion.feature a.cta-link {
+  color: var(--color-content-primary-inverse);
+}
+
+@media (width >= 834px) {
+  main .section.dark .accordion.feature,
+  main .section.navy .accordion.feature {
+    padding: var(--space-module-padding-tablet-large); /* derived */
+  }
+}
+
+@media (width >= 1140px) {
+  main .section.dark .accordion.feature,
+  main .section.navy .accordion.feature {
+    padding: var(--space-module-padding-desktop-large); /* kit pad 64 (2190:568017) */
+  }
+}
+
+/* extended-grid page margins for the dark card (mirrors B2/M14 pattern) */
+main :is(.section.dark, .section.navy).accordion-container > div.accordion-wrapper:has(> .accordion.feature) {
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+@media (width >= 834px) {
+  main :is(.section.dark, .section.navy).accordion-container > div.accordion-wrapper:has(> .accordion.feature) {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+}
+
+@media (width >= 1140px) {
+  main :is(.section.dark, .section.navy).accordion-container > div.accordion-wrapper:has(> .accordion.feature) {
+    padding: 0 var(--grid-page-margin-desktop);
+  }
+}
+
+/* ---- M14 FAQ Accordion (variant `accordion (faq)`) ---- */
+
+/* extended grid: 1312 max, page margins 8/24/64 (14196:37191/98, 14192:2283) */
+.section.accordion-container > div.accordion-wrapper:has(> .accordion.faq) {
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* mobile card (14196:37191): pad 32/16 */
+.accordion.faq {
+  box-sizing: border-box;
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  padding: var(--space-module-padding-mobile-medium) 16px;
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-light);
+}
+
+/* head — Copy gap 16, pb 16, then 32 to the body (14191:25971) */
+.accordion.faq .accordion-header {
+  display: grid;
+  gap: var(--space-component-16);
+  padding-bottom: var(--space-component-48); /* 16 head pb + 32 accordion gap */
+}
+
+.accordion.faq .accordion-header > div {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.accordion.faq .accordion-header :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+.accordion.faq .accordion-header :is(h1, h2) {
+  font-size: 40px; /* kit pins Heading/Desktop/Heading-2 at all devices (14196:37197) */
+}
+
+/* sub paragraph = Body-1 (14192:53267) */
+.accordion.faq .accordion-header p {
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* body opens with a top rule (14191:25973) — overlay, like item rules */
+.accordion.faq .accordion-items {
+  position: relative;
+}
+
+.accordion.faq .accordion-items::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: var(--border-width-63);
+  background-color: var(--color-action-accordion-border-base);
+}
+
+/* A26 item: px 8 / py 24 -> closed height 76 (14192:54998) */
+.accordion.faq .accordion-item {
+  padding-bottom: var(--space-component-24);
+}
+
+.accordion.faq .accordion-item-label {
+  padding: var(--space-component-24) var(--space-component-8) 0;
+}
+
+/* A27 content, Active Mobile (14203:95712): 32 gap + pt 16, pb 12, pl 0 */
+.accordion.faq .accordion-item-body {
+  padding: var(--space-component-48) 0 var(--space-component-12);
+}
+
+/* copy blocks: optional heading + Body-1 copy, gap 16, max-w 880 (14192:66804) */
+.accordion.faq .accordion-item-body :is(h3, h4) {
+  max-width: 880px;
+  margin: 0 0 var(--space-component-16);
+}
+
+.accordion.faq .accordion-item-body p {
+  max-width: 880px;
+  margin: 0;
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* A4 bullets (14192:66807): 32 block gap, pl 8, row gap 12, pb 12 */
+.accordion.faq .accordion-item-body ul {
+  max-width: 778.667px; /* kit bullets cap (14192:66807; no token) */
+  margin: var(--space-component-32) 0;
+  padding: 0 0 var(--space-component-12) var(--space-component-8);
+  list-style: none;
+}
+
+.accordion.faq .accordion-item-body li {
+  display: flex;
+  gap: var(--space-component-12);
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+.accordion.faq .accordion-item-body li + li {
+  margin-top: var(--space-component-12);
+}
+
+/* 7px circle marker on the first line, accent-02 (395:739) */
+.accordion.faq .accordion-item-body li::before {
+  content: "";
+  flex: 0 0 10px;
+  height: 33px; /* Bullet/18px icon box (395:739; no token) */
+  background-color: var(--color-surface-accent-02);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 33'%3E%3Ccircle cx='5' cy='16.5' r='3.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* CTA — A6 Button 48 below the items (14191:25969) */
+.accordion.faq .accordion-cta {
+  margin-top: var(--space-module-gap-desktop);
+}
+
+.accordion.faq .accordion-cta p {
+  margin: 0;
+}
+
+/* No Background variant (14197:45344): bg + vertical padding dropped */
+.accordion.faq.no-background {
+  padding-block: 0;
+  border-radius: 0;
+  background: none;
+}
+
+/* the white card keeps dark copy even on dark sections (derived; M14 has no
+   dark boards) */
+main :is(.section.dark, .section.navy) .accordion.faq {
+  color: var(--color-content-primary);
+}
+
+main :is(.section.dark, .section.navy) .accordion.faq :is(h1, h2, h3, h4, p) {
+  color: var(--color-content-primary);
+}
+
+/* tablet card (14196:37098): pad 48; A27 pt 16 / pl 24 / pb 24 */
+@media (width >= 834px) {
+  .section.accordion-container > div.accordion-wrapper:has(> .accordion.faq) {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .accordion.faq {
+    padding: var(--space-component-48); /* kit tablet card pad 48 (14196:37098) */
+  }
+
+  .accordion.faq.no-background {
+    padding-block: 0;
+  }
+
+  .accordion.faq .accordion-item-body {
+    padding: var(--space-component-48) 0 var(--space-component-24) var(--space-component-24);
+  }
+}
+
+/* desktop card (14192:2283): pad 64; A27 pt 24 / pl 32 / pb 32; head col cap */
+@media (width >= 1140px) {
+  .section.accordion-container > div.accordion-wrapper:has(> .accordion.faq) {
+    padding: 0 var(--grid-page-margin-desktop);
+  }
+
+  .accordion.faq {
+    padding: var(--space-module-padding-desktop-large);
+  }
+
+  .accordion.faq.no-background {
+    padding-block: 0;
+  }
+
+  .accordion.faq .accordion-header {
+    max-width: 778.667px; /* head Copy cap (14192:53265; no token) */
+  }
+
+  .accordion.faq .accordion-item-body {
+    padding: 56px 0 var(--space-component-32) var(--space-component-32); /* 32 gap + A27 pt 24 (14193:5739) */
+  }
 }
