@@ -198,34 +198,65 @@ main > .section:first-of-type {
   }
 }
 
-/* section palette variants — captured surface alternation */
+/* section theme/surface options — kit section options (H4 usage boards
+   1893:11958 light x4, 1893:11338 dark x4; sampled bg == surface tokens).
+   Replica class names kept: their captured values coincide with kit tokens
+   (dark=#000c36=Accent-04, navy=#001f5a=Accent-03, tint=#e7f1fc=surface/mid,
+   light|highlight=#f9f9f9=surface/base). */
 main .section.light,
-main .section.highlight {
-  background-color: var(--c-grey-surface);
+main .section.highlight,
+main .section.surface-base {
+  background-color: var(--color-surface-base);
 }
 
-main .section.tint {
-  background-color: var(--c-blue-tint);
+main .section.surface-light {
+  background-color: var(--color-surface-light);
+}
+
+main .section.tint,
+main .section.surface-mid {
+  background-color: var(--color-surface-mid);
+}
+
+main .section.surface-dim {
+  background-color: var(--color-surface-dim);
 }
 
 main .section.dark,
 main .section.navy {
-  background-color: var(--c-navy-deep);
-  color: var(--c-white);
+  color: var(--color-content-primary-inverse);
 }
 
-main .section.dark h1,
-main .section.dark h2,
-main .section.dark h3,
-main .section.dark p,
-main .section.navy h1,
-main .section.navy h2,
-main .section.navy h3 {
-  color: var(--c-white);
+main .section.dark.surface-light { background-color: var(--color-surface-accent-01); }
+main .section.dark.surface-base { background-color: var(--color-surface-accent-02); }
+main .section.dark.surface-mid,
+main .section.navy { background-color: var(--color-surface-accent-03); }
+main .section.dark,
+main .section.dark.surface-dim { background-color: var(--color-surface-accent-04); }
+
+main .section.dark :is(h1, h2, h3, h4, h5, h6, p),
+main .section.navy :is(h1, h2, h3, h4, h5, h6, p) {
+  color: inherit;
 }
 
-main .section.dark a:any-link:not(.button) {
-  color: var(--c-blue-350);
+main .section.dark a:any-link:not(.button),
+main .section.navy a:any-link:not(.button) {
+  color: var(--color-content-primary-inverse);
+}
+
+/* dark theme button inversion (sampled 1893:11806: white fill, action-blue label) */
+main .section.dark a.button,
+main .section.navy a.button {
+  background-color: var(--color-action-accent);
+  border-color: var(--color-action-accent);
+  color: var(--color-action-base);
+}
+
+main .section.dark a.button:hover,
+main .section.navy a.button:hover {
+  background-color: var(--color-surface-hover-light);
+  border-color: var(--color-surface-hover-light);
+  color: var(--color-action-hover);
 }
 
 /* lead-form band inherits the captured tint ground */

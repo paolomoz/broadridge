@@ -17,10 +17,8 @@
   padding: 0;
 }
 
-.hero-wrapper {
-  background-color: var(--color-surface-light);
-  color: var(--color-content-primary);
-}
+/* background comes from the section theme/surface option; kit default is
+   surface/light which equals the page background */
 
 /* mobile base (430 design: 32px block padding, 24px side offset = 8 margin + 16 ext) */
 .hero {
@@ -54,7 +52,7 @@
 }
 
 /* content row — single column below desktop, title->body 16px */
-.hero .hero-breadcrumb + div {
+.hero .hero-content {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
@@ -78,7 +76,7 @@
 }
 
 /* button row */
-.hero .hero-breadcrumb + div + div {
+.hero .hero-cta {
   margin-top: 32px;
 }
 
@@ -108,17 +106,28 @@
   }
 
   /* side-by-side default: two 576px columns on the 32px gutter */
-  .hero:not(.stacked) .hero-breadcrumb + div {
+  .hero:not(.stacked) .hero-content {
     grid-template-columns: 1fr 1fr;
     gap: var(--grid-gutter-desktop);
   }
 
   /* stacked variant: single column, text measure capped at 780 (15760:23393) */
-  .hero.stacked .hero-breadcrumb + div {
+  .hero.stacked .hero-content {
     max-width: 780px;
   }
 
-  .hero .hero-breadcrumb + div + div {
+  .hero .hero-cta {
     margin-top: 48px;
   }
+}
+
+/* dark theme: breadcrumb links invert; current crumb = Fresh-Blue (1893:11806) */
+main .section.dark .hero .hero-breadcrumb,
+main .section.navy .hero .hero-breadcrumb {
+  color: var(--color-brand-primary-fresh-blue);
+}
+
+main .section.dark .hero .hero-breadcrumb a,
+main .section.navy .hero .hero-breadcrumb a {
+  color: var(--color-content-primary-inverse);
 }
