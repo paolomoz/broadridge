@@ -1,154 +1,629 @@
-/* tabs — replica of .top-tabber / .side-tabber / .list-c3a */
-.tabs {
-  display: grid;
-  gap: 24px;
+/* tabs — Figma web kit M9 Top Tabber (set 492:53960) and M8 Side Tabber
+   (set 800:291230, variant `tabs (side)`).
+   Kit geometry (component-set metadata):
+   - M9 Desktop 492:53959 (1184w x 669.25): A9 header 93, gap 48, A18
+     tab row 52 (hug tabs justify-between, label px 12, label->line 24,
+     active 3px underline), gap 48, panel 380.25 (media 507 @4:3, gap
+     101, copy 507, pad-right 69), gap 48, A10 divider 1.5.
+   - M8 Desktop 800:291231 (1184w x 609): header 93, gap 48, A19 rail
+     576 (rows 60 = 16+28+16, gap 8; active row tinted, p 16, arrow) +
+     A7 Cards/Tabs 576x468 (pad 64, radius-md, accent-01, white).
+     With Image 800:291264: A7 Cards/Default — media 21:9 (576x246.86),
+     content pad 24, min 280.
+   - Tablet/Mobile (492:53958/57, 800:291236/50): BOTH modules collapse
+     to the A1 Accordion stack — rows 60 (py 16 + Title-2 label + 1px
+     accordion border), label->content 32, content->border 16. M9 panel
+     tablet: 2 cols gap 24, media 1:1; mobile: stacked gap 32, media
+     16:9. M8 panel: the A7 card, pad 32 tablet / 24 mobile.
+   State matrix: --color-action-tab-* (A18 125:1182 / A19 504:58415);
+   accordion rows use --color-action-accordion-*.
+   Motion (proto 5120:145253 / 1212:89398): 400ms medium4, standard
+   decelerate; opacity/y on tab switch, height + icon.rotate.45 on
+   accordion; gated behind .tabs-motion, off under reduced motion. */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.tabs-container > div.tabs-wrapper {
+  max-width: none;
+  padding: 0;
 }
 
-.tabs .tabs-list {
+/* kit sets lining/proportional figures on every text node */
+.tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  border-bottom: 1px solid var(--c-neutral-300);
-  padding: 0;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px; /* 382 content in 430 (492:53957) */
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+/* ---- header — A9 Content Groups H2 Group (1939:201212) ---- */
+
+.tabs .tabs-header {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.tabs .tabs-header > div {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.tabs .tabs-header :is(h1, h2, h3, h4, p) {
   margin: 0;
+}
+
+/* intro paragraph = Body-1 (1939:201217) */
+.tabs .tabs-header p {
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* ---- tablist (desktop only; accordion below) ---- */
+
+.tabs .tabs-list {
+  display: none;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.tabs .tabs-list button {
+.tabs .tabs-list li {
+  display: contents;
+}
+
+/* ---- accordion presentation (base: mobile + tablet) ----
+   A1 Accordion rows (511:93846 / 800:291238) */
+
+/* row divider drawn as an inset overlay — Figma strokes are inside and
+   don't displace layout (m2 precedent), so the row stays exactly 60 */
+.tabs .tabs-item {
+  box-shadow: inset 0 calc(-1 * var(--border-width-63)) var(--color-action-accordion-border-base);
+}
+
+.tabs .tabs-accordion {
+  display: flex;
+  gap: var(--space-component-8);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
   border: 0;
-  border-bottom: 2px solid transparent;
   background: none;
-  padding: 12px 16px;
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--c-text);
   cursor: pointer;
+  text-align: left;
+  /* row = 16 + label 28 + 16 where the closing 16 CONTAINS the 1px
+     inside-stroke divider (A1 row fixed 60; 2-line 88). The kit floors
+     the Title-2 line box to 28 (24 x 1.15 = 27.6 in the browser), so
+     the label line-height is pinned to the kit's rendered 28px —
+     otherwise every row accumulates 0.6px of drift down the stack */
+  padding: var(--space-component-16) 0;
+  font-family: inherit;
+  font-weight: var(--type-title-2-font-weight);
+  font-size: var(--type-title-2-font-size);
+  line-height: 28px; /* kit A1 label line box (1955:334447; token 1.15 floors to 28) */
+  color: var(--color-action-accordion-content-base);
 }
 
-.tabs .tabs-list button[aria-selected='true'] {
-  color: var(--c-blue-link);
-  border-bottom-color: var(--c-blue);
+.tabs .tabs-accordion:hover {
+  color: var(--color-action-accordion-content-hover);
 }
 
-.tabs [role='tabpanel'][hidden] {
-  display: none;
+.tabs .tabs-accordion:focus-visible {
+  outline: var(--border-width-188) solid var(--color-action-accordion-border-focus-ring);
+  outline-offset: -3px;
+  border-radius: var(--border-radius-radius-sm);
 }
 
-/* side variant — captured: left link list + right blue detail card */
-.tabs.side {
-  grid-template-columns: 1fr;
+.tabs .tabs-item.open .tabs-accordion {
+  color: var(--color-action-accordion-content-active);
 }
 
-@media (width >= 900px) {
-  .tabs.side {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
-
-  .tabs.side .tabs-list {
-    flex-direction: column;
-    border-bottom: 0;
-  }
-
-  .tabs.side .tabs-list button {
-    text-align: left;
-    border-bottom: 1px solid var(--c-neutral-300);
-    padding: 16px 8px;
-    width: 100%;
-    font-size: 18px;
-  }
-
-  .tabs.side .tabs-list button[aria-selected='true'] {
-    color: var(--c-blue-link);
-  }
-
-  .tabs.side [role='tabpanel'] {
-    background-color: var(--c-blue);
-    color: var(--c-white);
-    border-radius: var(--radius-sm);
-    padding: 32px;
-    min-height: 280px;
-  }
-
-  .tabs.side [role='tabpanel'] h3,
-  .tabs.side [role='tabpanel'] p,
-  .tabs.side [role='tabpanel'] a:any-link {
-    color: var(--c-white);
-  }
+.tabs .tabs-accordion-icon {
+  display: flex;
+  flex: 0 0 auto;
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
 }
 
-/* top-tabber panel: media LEFT, text right (captured layout) */
-@media (width >= 900px) {
-  .tabs:not(.side) [role='tabpanel'] {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-    min-height: 480px;
-  }
-
-  .tabs:not(.side) [role='tabpanel'] img {
-    grid-column: 1;
-    grid-row: 1 / span 6;
-    max-height: 480px;
-    width: 100%;
-    object-fit: contain;
-    border-radius: var(--radius-sm);
-  }
-
-  .tabs:not(.side) [role='tabpanel'] > :not(img) {
-    grid-column: 2;
-  }
-
-  .tabs.side .tabs-list button {
-    padding: 24px 8px;
-    font-size: 20px;
-  }
-
-  .tabs.side [role='tabpanel'] {
-    min-height: 520px;
-  }
+/* plus -> X: prototype icon.rotate.45 (5120:145253) */
+.tabs .tabs-item.open .tabs-accordion-icon {
+  transform: rotate(45deg);
 }
 
-/* hidden beats layout display — keep after all layout rules */
-.tabs [role='tabpanel'][hidden] {
-  display: none !important;
+/* expand/contract — content.frame.expand.height (grid-rows trick) */
+.tabs .tabs-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
 }
 
-/* panel headings are content headings, not link-blue (source) */
-.tabs [role='tabpanel'] h3,
-.tabs [role='tabpanel'] h3 a:any-link {
-  color: var(--c-text);
+.tabs .tabs-collapse-inner {
+  overflow: hidden;
+  visibility: hidden;
+  min-height: 0;
+}
+
+.tabs .tabs-item.open .tabs-collapse {
+  grid-template-rows: 1fr;
+}
+
+.tabs .tabs-item.open .tabs-collapse-inner {
+  visibility: visible;
+}
+
+/* label->content 32, content->border 16 (511:93839: label bottom 44 ->
+   content 76, content bottom -> row end 16); the accordion button
+   already contributes 16 below the label, and the divider is an
+   overlay, so both margins are the plain kit 16 */
+.tabs .tabs-panel {
+  margin: var(--space-component-16) 0;
+}
+
+/* ---- panel content (shared) ---- */
+
+.tabs .tabs-panel :is(h1, h2, h3, h4, p, ul, ol) {
+  margin: 0;
+}
+
+.tabs .tabs-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-16); /* title -> body (545:99569) */
+}
+
+/* body = Body-2 below desktop (I511:93839...545:99764) */
+.tabs .tabs-copy p {
+  font-weight: var(--type-body-2-book-font-weight);
+  font-size: var(--type-body-2-book-font-size);
+  line-height: var(--type-body-2-book-line-height);
+}
+
+/* A12 Link — functional/link-medium + 24px arrow, gap 10 (2712:438048) */
+.tabs a.tabs-link {
+  display: inline-flex;
+  gap: 10px; /* kit link gap (24:767; no token) */
+  align-items: center;
+  align-self: flex-start;
+  margin-top: var(--space-component-8); /* copy gap 16 + 8 = 24 (mobile A9 gap) */
+  font-weight: var(--type-link-medium-font-weight);
+  font-size: var(--type-link-medium-font-size);
+  line-height: var(--type-link-medium-line-height);
+  color: var(--color-action-tertiary-content-base);
   text-decoration: none;
 }
 
-.tabs.side [role='tabpanel'] h3,
-.tabs.side [role='tabpanel'] h3 a:any-link {
-  color: var(--c-white);
+.tabs a.tabs-link:hover {
+  color: var(--color-action-tertiary-content-hover);
 }
 
-/* side variant: active trigger gets the captured tint + arrow */
-@media (width >= 900px) {
-  .tabs.side .tabs-list button[aria-selected='true'] {
-    background-color: var(--c-blue-tint);
-    border-radius: var(--radius-sm);
-    position: relative;
+.tabs a.tabs-link svg {
+  flex: 0 0 auto;
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+/* ---- M9 panel — A8 Content Frame ---- */
+
+/* mobile: Stack Top (I511:93975), media 16:9, gap 32 */
+.tabs:not(.side) .tabs-panel {
+  display: grid;
+  gap: var(--space-module-gap-mobile);
+  align-items: center;
+}
+
+.tabs:not(.side) .tabs-panel picture img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--border-radius-radius-md);
+}
+
+/* ---- M8 panel — A7 Cards (Tabs / Default) ---- */
+
+/* mobile card: pad 24 (800:291257) */
+.tabs.side .tabs-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--border-radius-radius-md);
+  /* kit binding is surface/light resolved to #0f3db5 on the card
+     instance (545:101257) == surface/accent-01 */
+  background-color: var(--color-surface-accent-01);
+  color: var(--color-content-primary-inverse);
+}
+
+.tabs.side .tabs-copy {
+  flex: 1 1 auto;
+  padding: var(--space-component-24);
+}
+
+.tabs.side .tabs-panel :is(h1, h2, h3, h4, p, a.tabs-link) {
+  color: var(--color-content-primary-inverse);
+}
+
+/* card copy -> link = the 16 flex gap alone below desktop: kit tablet
+   card content 180 = 37 + 16 + 86 + 16 + 24 (I800:291243;545:101260),
+   mobile 233 likewise — no extra margin */
+.tabs.side a.tabs-link {
+  margin-top: 0;
+}
+
+/* …but the with-image Cards/Default keeps Content Settings gap 32
+   (553:33446): flex 16 + margin 16 */
+.tabs.side .tabs-panel.has-media a.tabs-link {
+  margin-top: var(--space-component-16);
+}
+
+/* with image — A7 Cards/Default (800:291268): media 21:9 on top */
+.tabs.side .tabs-panel.has-media picture img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 576 / 246.857; /* kit media box (I800:291268;553:33444) */
+  object-fit: cover;
+}
+
+/* Card Content declares min 280 at every device (553:33445 min-h) */
+.tabs.side .tabs-panel.has-media .tabs-copy {
+  box-sizing: border-box;
+  min-height: 280px; /* kit Card Content min (553:33445; no token) */
+}
+
+/* ---- tablet (690 content in 834; 492:53958 / 800:291236) ---- */
+@media (width >= 834px) {
+  .tabs {
+    padding: 0 72px;
   }
 
-  .tabs.side .tabs-list button[aria-selected='true']::after {
-    content: '\2192';
-    position: absolute;
-    right: 16px;
-    color: var(--c-blue-link);
+  /* A8 Content Frame tablet: media left 1:1, cols (690-24)/2 (1955:335506) */
+  .tabs:not(.side) .tabs-panel.has-media {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--grid-gutter-tablet);
+  }
+
+  .tabs:not(.side) .tabs-panel picture img {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* A9 gap 32 at tablet+: copy gap 16 + 16 */
+  .tabs a.tabs-link {
+    margin-top: var(--space-component-16);
+  }
+
+  /* tablet card: pad 32 (800:291243) */
+  .tabs.side .tabs-copy {
+    padding: var(--space-component-32);
   }
 }
 
-/* section header with intro copy: h2 left, paragraph right (source pattern) */
-@media (width >= 900px) {
-  .tabs-container .default-content-wrapper:has(> h2 + p) {
+/* with image — TABLET ONLY is the kit's side-by-side Cards/Default
+   (800:291283): Card Content left (pad 24, Content Settings
+   justify-between pins the link to the foot), A13 media right filling
+   the half column at 3:4 (345x460 — four 3:1 spacer rows) */
+@media (width >= 834px) and (width < 1140px) {
+  .tabs.side .tabs-panel.has-media {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+  }
+
+  .tabs.side .tabs-panel.has-media .tabs-copy {
+    order: -1; /* content is the LEFT column; media right */
+    padding: var(--space-component-24);
+  }
+
+  .tabs.side .tabs-panel.has-media picture img {
+    aspect-ratio: 3 / 4; /* kit media box 345x460 (I800:291283;492:39117) */
+  }
+
+  .tabs.side .tabs-panel.has-media a.tabs-link {
+    margin-top: auto;
+    padding-top: var(--space-component-16); /* min copy->link 32 = gap 16 + 16 */
+  }
+}
+
+/* ---- desktop (1184 grid; 492:53959 / 800:291231) ---- */
+@media (width >= 1140px) {
+  .tabs {
+    gap: var(--space-module-gap-desktop);
+    padding: 0;
+  }
+
+  /* header two-column, TOP-aligned: kit heading/sub both sit at y0
+     (492:44061 heading y0 h92 / sub y0 h93; M8 800:291232 confirms —
+     the desktop diff showed the end-aligned heading doubled) */
+  .tabs .tabs-header {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gutter-desktop);
     align-items: start;
+  }
+
+  /* accordion chrome disappears; the tablist takes over */
+  .tabs .tabs-accordion {
+    display: none;
+  }
+
+  .tabs .tabs-item {
+    display: none;
+    box-shadow: none;
+  }
+
+  .tabs .tabs-item.open {
+    display: block;
+  }
+
+  .tabs .tabs-collapse,
+  .tabs .tabs-item.open .tabs-collapse {
+    display: block;
+  }
+
+  .tabs .tabs-collapse-inner {
+    overflow: visible;
+    visibility: visible;
+  }
+
+  .tabs .tabs-panel {
+    margin: 0;
+  }
+
+  /* A18 Tabs Horizontal (504:56394): hug tabs, space-between, row
+     underline 1.5 border/base drawn as overlay (Figma inside stroke) */
+  .tabs:not(.side) .tabs-list {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-x: auto;
+  }
+
+  .tabs:not(.side) .tabs-list::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--border-width-94);
+    background-color: var(--color-border-base);
+  }
+
+  /* tab = Title-2 label (px 12) + 24 to the bottom line (125:2023) */
+  .tabs:not(.side) .tabs-list button {
+    position: relative;
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    padding: 0 var(--space-component-12) var(--space-component-24);
+    font-family: inherit;
+    font-weight: var(--type-title-2-font-weight);
+    font-size: var(--type-title-2-font-size);
+    line-height: var(--type-title-2-line-height);
+    white-space: nowrap;
+    color: var(--color-action-tab-content-base);
+  }
+
+  /* active indicator: 3px border/active at the row baseline (504:56659) */
+  .tabs:not(.side) .tabs-list button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: var(--border-width-188);
+    background-color: transparent;
+  }
+
+  .tabs:not(.side) .tabs-list button:hover {
+    color: var(--color-action-tab-content-hover);
+  }
+
+  .tabs:not(.side) .tabs-list button[aria-selected='true'] {
+    color: var(--color-action-tab-content-active);
+  }
+
+  .tabs:not(.side) .tabs-list button[aria-selected='true']::after {
+    background-color: var(--color-action-tab-border-active);
+  }
+
+  /* focus frame: 3px focus ring, radius-sm (1636:231556) */
+  .tabs .tabs-list button:focus-visible {
+    outline: var(--border-width-188) solid var(--color-action-tab-border-focus-ring);
+    outline-offset: -3px;
+    border-radius: var(--border-radius-radius-sm);
+    color: var(--color-action-tab-content-focus);
+  }
+
+  .tabs .tabs-list button:disabled {
+    color: var(--color-action-tab-content-disabled);
+    cursor: default;
+  }
+
+  /* M9 panel: media 507 @4:3 left, gap 101, copy 507, pad-right 69
+     (504:57252; raw kit px — no grid token covers this split) */
+  .tabs:not(.side) .tabs-panel.has-media {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 101px;
+    padding-right: 69px;
+  }
+
+  .tabs:not(.side) .tabs-panel picture img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* copy title = 40px (545:99570; heading-2 desktop size) */
+  .tabs:not(.side) .tabs-copy :is(h2, h3, h4) {
+    font-size: var(--type-heading-2-font-size);
+  }
+
+  /* body = Body-1 at desktop (545:99571) */
+  .tabs:not(.side) .tabs-copy p {
+    font-weight: var(--type-body-1-book-font-weight);
+    font-size: var(--type-body-1-book-font-size);
+    line-height: var(--type-body-1-book-line-height);
+  }
+
+  /* A10 divider closes the module (504:57355) */
+  .tabs:not(.side) {
+    border-bottom: var(--border-width-94) solid var(--color-border-base);
+    padding-bottom: calc(var(--space-module-gap-desktop) - var(--border-width-94));
+  }
+
+  /* M9 body: tab row -> content gap 48 (492:53959: 193 -> 241) */
+  .tabs:not(.side) .tabs-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-module-gap-desktop);
+  }
+
+  /* M8: rail + card on the two 576 columns (800:291233, gap 32) */
+  .tabs.side .tabs-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--grid-gutter-desktop);
+    align-items: start;
+  }
+
+  /* A19 Tabs Vertical (800:291234): rows gap 8 */
+  .tabs.side .tabs-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-component-8);
+  }
+
+  /* row: fixed 60 (16+28+16, .VerticalTabCount), pr 16, pl 0 resting
+     (504:58414); explicit height pins the kit's floored label line box */
+  .tabs.side .tabs-list button {
+    display: flex;
+    gap: var(--space-component-8);
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px; /* kit row (504:58900; no token) */
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0 var(--space-component-16) 0 0;
+    font-family: inherit;
+    font-weight: var(--type-title-2-font-weight);
+    font-size: var(--type-title-2-font-size);
+    line-height: var(--type-title-2-line-height);
+    color: var(--color-action-tab-content-base);
+  }
+
+  /* hover indents to p 16 (504:58416) */
+  .tabs.side .tabs-list button:hover {
+    padding-left: var(--space-component-16);
+    color: var(--color-action-tab-content-hover);
+  }
+
+  /* active: tinted row, p 16, arrow (504:58424) */
+  .tabs.side .tabs-list button[aria-selected='true'] {
+    padding-left: var(--space-component-16);
+    background-color: var(--color-action-tab-surface-active);
+    color: var(--color-action-tab-content-active);
+  }
+
+  .tabs.side .tabs-tab-arrow {
+    display: none;
+    flex: 0 0 auto;
+    width: var(--size-icon-md);
+    height: var(--size-icon-md);
+  }
+
+  .tabs.side .tabs-list button[aria-selected='true'] .tabs-tab-arrow {
+    display: flex;
+  }
+
+  /* A7 Cards/Tabs: pad 64, fixed 468 (545:101257) */
+  .tabs.side .tabs-panel {
+    min-height: 468px; /* kit card height (545:101257; no token) */
+  }
+
+  .tabs.side .tabs-copy {
+    padding: var(--space-module-padding-desktop-large);
+  }
+
+  /* link pinned to the card foot (A9 justify-between, 545:101258) */
+  .tabs.side a.tabs-link {
+    margin-top: auto;
+    padding-top: var(--space-component-16);
+  }
+
+  /* A7 Cards/Default: media on top, content pad 24 min 280 (553:33445) */
+  .tabs.side .tabs-panel.has-media {
+    min-height: 0;
+  }
+
+  .tabs.side .tabs-panel.has-media .tabs-copy {
+    box-sizing: border-box;
+    min-height: 280px; /* kit Card Content incl. pad (553:33445; no token) */
+    padding: var(--space-component-24);
+  }
+
+  /* with-image link follows the copy at gap 32, not the card foot
+     (Content Settings flex gap 32, 553:33446) */
+  .tabs.side .tabs-panel.has-media a.tabs-link {
+    margin-top: var(--space-component-16);
+    padding-top: 0;
+  }
+
+  /* with-image card title = 40px (I800:291268;553:33446;545:99570) */
+  .tabs.side .tabs-panel.has-media .tabs-copy :is(h2, h3, h4) {
+    font-size: var(--type-heading-2-font-size);
+  }
+
+  .tabs.side .tabs-panel.has-media .tabs-copy p {
+    font-weight: var(--type-body-1-book-font-weight);
+    font-size: var(--type-body-1-book-font-size);
+    line-height: var(--type-body-1-book-line-height);
+  }
+}
+
+/* ---- motion — medium4 / standard.decelerate (5120:145253) ----
+   armed by JS on first interaction only; no load-time motion */
+@media (prefers-reduced-motion: no-preference) {
+  .tabs.tabs-motion .tabs-collapse {
+    transition: grid-template-rows var(--motion-duration-medium4) var(--motion-easing-standard-decelerate);
+  }
+
+  .tabs.tabs-motion .tabs-collapse-inner {
+    transition: visibility var(--motion-duration-medium4);
+  }
+
+  .tabs.tabs-motion .tabs-accordion,
+  .tabs.tabs-motion .tabs-list button {
+    transition:
+      color var(--motion-duration-medium4) var(--motion-easing-standard-decelerate),
+      background-color var(--motion-duration-medium4) var(--motion-easing-standard-decelerate),
+      padding-left var(--motion-duration-medium4) var(--motion-easing-standard-decelerate);
+  }
+
+  .tabs.tabs-motion .tabs-accordion-icon {
+    transition: transform var(--motion-duration-medium4) var(--motion-easing-standard-decelerate);
+  }
+
+  @media (width >= 1140px) {
+    /* content.frame.opacity + content.y-position (y amount derived: 16px) */
+    .tabs.tabs-motion .tabs-item.open .tabs-panel {
+      animation: tabs-panel-in var(--motion-duration-medium4) var(--motion-easing-standard-decelerate);
+    }
+  }
+}
+
+@keyframes tabs-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }

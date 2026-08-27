@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: m8 side tabber, tablet/mobile (kit device frames 800:291236 / 800:291250)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+    /* pixel-gate harness: the kit device frames are content-only
+       (690 / 382 wide) — strip the section side padding so the .tabs
+       element box equals the frame; the auto margins keep the content
+       at the production offsets (72 / 24), so geometry is unchanged */
+    main .tabs { padding: 0; max-width: 382px; }
+    @media (width >= 834px) { main .tabs { max-width: 690px; } }
+    @media (width >= 1140px) { main .tabs { max-width: var(--grid-content-width); } }
+  </style>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="tabs side">
+        <div>
+          <div><h2>Our capabilities</h2></div>
+          <div><p>Lorem ipsum dolor sit amet consectetur. Purus vitae facilisi nibh sit lectus in odio pellentesque vitae. Sociis dignissim ultrices elit tincidunt. Elit congue egestas suspendisse.</p></div>
+        </div>
+        <div>
+          <div>Wealth Advisor Solutions</div>
+          <div>
+            <h3>Wealth Advisor Solutions</h3>
+            <p>Financial technology services designed to provide comprehensive support for wealth advisors, enhancing their ability to manage and grow their clients&rsquo; portfolios.</p>
+            <p><a href="#one" aria-label="Learn more"></a></p>
+          </div>
+        </div>
+        <div>
+          <div>Front Office Solutions</div>
+          <div>
+            <h3>Front Office Solutions</h3>
+            <p>Financial technology services designed to provide comprehensive support for wealth advisors, enhancing their ability to manage and grow their clients&rsquo; portfolios.</p>
+            <p><a href="#two" aria-label="Learn more"></a></p>
+          </div>
+        </div>
+        <div>
+          <div>Middle &amp; Back Office Solutions</div>
+          <div>
+            <h3>Middle &amp; Back Office Solutions</h3>
+            <p>Financial technology services designed to provide comprehensive support for wealth advisors, enhancing their ability to manage and grow their clients&rsquo; portfolios.</p>
+            <p><a href="#three" aria-label="Learn more"></a></p>
+          </div>
+        </div>
+        <div>
+          <div>Governance &amp; Regulatory Compliance</div>
+          <div>
+            <h3>Governance &amp; Regulatory Compliance</h3>
+            <p>Financial technology services designed to provide comprehensive support for wealth advisors, enhancing their ability to manage and grow their clients&rsquo; portfolios.</p>
+            <p><a href="#four" aria-label="Learn more"></a></p>
+          </div>
+        </div>
+        <div>
+          <div>Customer Communications</div>
+          <div>
+            <h3>Customer Communications</h3>
+            <p>Financial technology services designed to provide comprehensive support for wealth advisors, enhancing their ability to manage and grow their clients&rsquo; portfolios.</p>
+            <p><a href="#five" aria-label="Learn more"></a></p>
+          </div>
+        </div>
+        <div>
+          <div>Data, Analytics, &amp; Intelligence</div>
+          <div>
+            <h3>Data, Analytics, &amp; Intelligence</h3>
+            <p>Financial technology services designed to provide comprehensive support for wealth advisors, enhancing their ability to manage and grow their clients&rsquo; portfolios.</p>
+            <p><a href="#six" aria-label="Learn more"></a></p>
+          </div>
+        </div>
+        <div>
+          <div>Consulting</div>
+          <div>
+            <h3>Consulting</h3>
+            <p>Financial technology services designed to provide comprehensive support for wealth advisors, enhancing their ability to manage and grow their clients&rsquo; portfolios.</p>
+            <p><a href="#seven" aria-label="Learn more"></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

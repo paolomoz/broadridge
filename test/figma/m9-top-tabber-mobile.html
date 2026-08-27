@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: m9 top tabber, mobile (kit frame 492:53957)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+    /* pixel-gate harness: the kit device frames are content-only
+       (690 / 382 wide) — strip the section side padding so the .tabs
+       element box equals the frame; the auto margins keep the content
+       at the production offsets (72 / 24), so geometry is unchanged */
+    main .tabs { padding: 0; max-width: 382px; }
+    @media (width >= 834px) { main .tabs { max-width: 690px; } }
+    @media (width >= 1140px) { main .tabs { max-width: var(--grid-content-width); } }
+  </style>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="tabs">
+        <div>
+          <div><h2>Powering the pulse of<br>the financial industry</h2></div>
+          <div><p>Our technology and expertise stand as the heartbeat of investing, corporate governance, and communications to improve performance and transform investor experience.</p></div>
+        </div>
+        <div>
+          <div>Asset Management</div>
+          <div>
+            <picture><img src="/test/figma/_assets/m9-media-mob.png" alt=""></picture>
+            <h3>Asset Management</h3>
+            <p>Our global, multi-asset class solutions power the future of global trading and operations. We deliver simplification and innovation across trade lifecycle. </p>
+            <p><a href="#asset">Link label</a></p>
+          </div>
+        </div>
+        <div>
+          <div>Capital Markets</div>
+          <div>
+            <picture><img src="/test/figma/_assets/m9-media-mob.png" alt=""></picture>
+            <h3>Capital Markets</h3>
+            <p>Our global, multi-asset class solutions power the future of global trading and operations. We deliver simplification and innovation across trade lifecycle. </p>
+            <p><a href="#capital">Link label</a></p>
+          </div>
+        </div>
+        <div>
+          <div>Issuers</div>
+          <div>
+            <picture><img src="/test/figma/_assets/m9-media-mob.png" alt=""></picture>
+            <h3>Issuers</h3>
+            <p>Our global, multi-asset class solutions power the future of global trading and operations. We deliver simplification and innovation across trade lifecycle. </p>
+            <p><a href="#issuers">Link label</a></p>
+          </div>
+        </div>
+        <div>
+          <div>Wealth Management</div>
+          <div>
+            <picture><img src="/test/figma/_assets/m9-media-mob.png" alt=""></picture>
+            <h3>Wealth Management</h3>
+            <p>Our global, multi-asset class solutions power the future of global trading and operations. We deliver simplification and innovation across trade lifecycle. </p>
+            <p><a href="#wealth">Link label</a></p>
+          </div>
+        </div>
+        <div>
+          <div>Non-financial</div>
+          <div>
+            <picture><img src="/test/figma/_assets/m9-media-mob.png" alt=""></picture>
+            <h3>Non-financial</h3>
+            <p>Our global, multi-asset class solutions power the future of global trading and operations. We deliver simplification and innovation across trade lifecycle. </p>
+            <p><a href="#non">Link label</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script>
+    // kit device frames show the SECOND tab open (492:53958 / 492:53957);
+    // select it statically (motion class stripped for deterministic capture)
+    const pick = setInterval(() => {
+      const tabs = document.querySelectorAll('.tabs [role="tab"]');
+      if (tabs.length > 1) {
+        clearInterval(pick);
+        tabs[1].click();
+        document.querySelector('.tabs').classList.remove('tabs-motion');
+      }
+    }, 50);
+  </script>
+</body>
+</html>
