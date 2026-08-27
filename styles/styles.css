@@ -1185,6 +1185,10 @@ p, li {
 p {
   margin-block: 0 var(--type-body-3-book-paragraph-spacing);
 }
+/* kit sets lining+proportional numerals on every text node (all design-context dumps) */
+body {
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-content-primary);
 }

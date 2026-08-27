@@ -1,37 +1,423 @@
-/* proof-stat carousel — replica of .key-stats large numerals */
-.stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+/* stats — Figma web kit C4 Key Stats (set 617:57448) and B2 Stat Banner
+   (set 1589:90232, variant `stats (banner)`). Shared unit: A17 Stat
+   (set 2127:35608, Device x Background axes).
+   Kit geometry (component-set metadata):
+   - C4 Desktop 617:57447 (1184w): rows gap 48; tiles 373.33 / gap 32
+     (4th tile off-canvas -> carousel); wayfinding row 48; CTA right.
+     Tablet 746:16951 (690w): gaps 32, tiles 293.33 / gap 24.
+     Mobile 746:17008 (382w): gaps 32, tiles 315.67 / gap 16.
+     Stack variants 2190:625069 / 2190:616392: tiles wrap, no wayfinding.
+   - B2 Desktop 1589:90231 (1312w): pad 64, radius-md, content col 576 +
+     card row gap 32. Tablet 1589:90229 (786w): pad 48, stacked, cards
+     329 / gap 32. Mobile 1589:90230 (414w): pad 32/16, cards gap 32.
+   - A17 Stat: numeral Display-2 (40/48/56) in content/accent-01, caption
+     Body-3; Background=No (2126:20191) -> border-left 1.5 border/base;
+     Background=Yes (2712:608813) -> surface/light card + shadow dim/large. */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.stats-container > div.stats-wrapper {
+  max-width: none;
+  padding: 0;
 }
 
-@media (width >= 834px) {
-  .stats {
-    grid-template-columns: repeat(3, 1fr);
+/* kit sets lining/proportional figures on all text (fontFeatureSettings
+   on every kit text node); numerals depend on it */
+.stats {
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+/* ---- C4 Key Stats (default variant) ---- */
+
+/* mobile base (382 content in 430 = 24px side offset) */
+.stats:not(.banner) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* header — A9 Content Groups, H2 Group (3094:157941): title + intro */
+.stats .stats-header {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.stats .stats-header > div {
+  display: grid;
+  gap: var(--space-component-16);
+}
+
+.stats .stats-header :is(h1, h2, h3, h4, p) {
+  margin: 0;
+}
+
+/* intro paragraph = Body-1 (1939:256330) */
+.stats .stats-header p {
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* stat row — carousel scroller (617:57366) */
+.stats:not(.banner) .stats-row {
+  display: flex;
+  gap: var(--grid-gutter-mobile);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.stats:not(.banner) .stats-row::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stats:not(.banner) .stats-row {
+    scroll-behavior: smooth;
   }
 }
 
-.stats > div > div {
-  border-left: 1px solid var(--c-neutral-250);
-  padding-left: 24px;
+/* A17 Stat, Background=No (2126:20191). The 1.5px rule is an overlay,
+   not a box border: Figma strokes don't displace layout, so kit text
+   sits 24px from the tile edge. */
+.stats:not(.banner) .stat {
+  position: relative;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 315.667px; /* mobile tile 2127:36462 (no token; kit raw) */
+  scroll-snap-align: start;
 }
 
-.stats strong {
-  display: block;
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 400;
-  color: var(--c-blue-link);
-  line-height: 1.1;
-  margin-bottom: 8px;
+.stats:not(.banner) .stat::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--border-width-94);
+  background-color: var(--color-border-base);
 }
 
-.section.dark .stats strong,
-.section.navy .stats strong {
-  color: var(--c-white);
+/* numeral = Display-2, content/accent-01 (2126:20188) */
+.stats .stat-value {
+  margin: 0;
+  padding: var(--space-component-8) var(--space-component-24);
+  font-weight: var(--type-display-2-font-weight);
+  font-size: var(--type-display-2-font-size);
+  font-style: var(--type-display-2-font-style);
+  line-height: var(--type-display-2-line-height);
+  letter-spacing: var(--type-display-2-letter-spacing);
+  color: var(--color-content-accent-01);
 }
 
-.stats p {
-  font-size: 14px;
-  color: inherit;
-  max-width: 300px;
+/* caption = Body-3, no right padding (2126:20189) */
+.stats .stat-info {
+  margin: 0;
+  padding: var(--space-component-8) 0 var(--space-component-8) var(--space-component-24);
+  font-weight: var(--type-body-3-book-font-weight);
+  font-size: var(--type-body-3-book-font-size);
+  line-height: var(--type-body-3-book-line-height);
+}
+
+/* wayfinding row (737:73286): tabs left, arrow pair right */
+.stats .stats-wayfinding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px; /* kit row height 737:73286 */
+}
+
+.stats .stats-wayfinding[hidden] {
+  display: none;
+}
+
+/* A22 Wayfinder / Tabs (737:73287): 20x5 bars, gap 12 */
+.stats .stats-tabs {
+  display: flex;
+  gap: var(--space-component-12);
+}
+
+.stats .stats-tab {
+  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-radius-xs);
+  background-color: var(--color-edge-badge-surface);
+  cursor: pointer;
+}
+
+.stats .stats-tab.active {
+  background-color: var(--color-action-base);
+}
+
+/* A22 Wayfinder arrows (142:5881): 48px round secondary icon buttons */
+.stats .stats-arrows {
+  display: flex;
+  gap: var(--space-component-16);
+}
+
+.stats .stats-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px; /* icon-round small A6 (I142:5847;6539:20183) */
+  height: 48px;
+  padding: 0;
+  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
+  border-radius: var(--border-radius-radius-full);
+  background: none;
+  color: var(--color-action-secondary-content-base);
+  cursor: pointer;
+}
+
+.stats .stats-arrow:hover {
+  border-color: var(--color-action-secondary-border-hover);
+  color: var(--color-action-secondary-content-hover);
+}
+
+.stats .stats-arrow:focus-visible {
+  outline: 3px solid var(--color-action-secondary-border-focus-ring);
+  outline-offset: -1px;
+}
+
+.stats .stats-arrow svg {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+
+/* CTA row — A5 Button Group, right-aligned in C4 (1914:174947) */
+.stats .stats-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stats .stats-cta > div {
+  width: 100%; /* full width on mobile, as A5 Stack Full Width (1881:379414) */
+}
+
+.stats .stats-cta p.button-wrapper a.button {
+  width: 100%;
+}
+
+/* stack variant — Tablet Stack 2190:625069 / Mobile Stack 2190:616392:
+   tiles wrap instead of scrolling, no wayfinding */
+.stats.stack .stats-row {
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+/* tablet (690 content in 834 = 72px side offset) */
+@media (width >= 834px) {
+  .stats:not(.banner) {
+    padding: 0 72px;
+  }
+
+  .stats:not(.banner) .stats-row {
+    gap: var(--grid-gutter-tablet);
+  }
+
+  .stats:not(.banner) .stat {
+    width: 293.333px; /* tablet tile 2127:35368 (no token; kit raw) */
+  }
+
+  .stats .stats-cta > div {
+    width: auto;
+  }
+
+  .stats .stats-cta p.button-wrapper a.button {
+    width: auto;
+  }
+}
+
+/* desktop (1184 content grid) */
+@media (width >= 1140px) {
+  .stats:not(.banner) {
+    gap: var(--space-module-gap-desktop);
+    padding: 0;
+  }
+
+  /* header goes two-column, bottom-aligned (H2 Group/Two Column 1939:201212) */
+  .stats:not(.banner) .stats-header {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gutter-desktop);
+    align-items: end;
+  }
+
+  .stats:not(.banner) .stats-row {
+    gap: var(--grid-gutter-desktop);
+  }
+
+  /* 3 tiles on the 32px gutter: (1184 - 2*32)/3 = 373.33 (2127:27956) */
+  .stats:not(.banner) .stat {
+    width: calc((100% - 2 * var(--grid-gutter-desktop)) / 3);
+  }
+}
+
+/* ---- B2 Stat Banner (variant `stats (banner)`) ---- */
+
+/* extended grid: 1312 max, page margins 8/24/64 (1589:90230/29/31) */
+.section.stats-container > div.stats-wrapper:has(> .stats.banner) {
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* mobile banner (1589:90230): pad 32/16, stacked, gap 32 */
+.stats.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32);
+  box-sizing: border-box;
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  padding: var(--space-component-32) var(--space-component-16);
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-light);
+}
+
+/* authored picture row becomes the banner background (Any Image, 1589:90231) */
+.stats.banner .stats-background {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.stats.banner .stats-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats.banner > :not(.stats-background) {
+  position: relative;
+}
+
+.stats.banner .stats-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32);
+}
+
+/* A17 Stat, Background=Yes (2712:608823 mobile): card, no border */
+.stats.banner .stat {
+  border-left: 0;
+  background-color: var(--color-surface-light);
+  box-shadow: var(--box-shadow-dim-large);
+}
+
+.stats.banner .stat-value {
+  padding: var(--space-component-12) var(--space-component-16) var(--space-component-8);
+}
+
+.stats.banner .stat-info {
+  padding: var(--space-component-8) 0 var(--space-component-16) var(--space-component-16);
+}
+
+/* tablet banner (1589:90229): pad 48, cards in a row */
+@media (width >= 834px) {
+  .section.stats-container > div.stats-wrapper:has(> .stats.banner) {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .stats.banner {
+    padding: var(--space-component-48); /* kit pad 48 (1589:90229) */
+  }
+
+  .stats.banner .stats-row {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--grid-gutter-desktop); /* card gap 32 at tablet (2712:608997) */
+    min-height: 143px; /* kit tablet Stats container fixed 143, cards centered (2712:608997; no token) */
+  }
+
+  .stats.banner .stat {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* A17 Background=Yes desktop/tablet paddings (2712:608813) */
+  .stats.banner .stat-value {
+    padding: var(--space-component-16) var(--space-component-24) var(--space-component-8);
+  }
+
+  .stats.banner .stat-info {
+    padding: var(--space-component-8) 0 var(--space-component-24) var(--space-component-24);
+  }
+}
+
+/* desktop banner (1589:90231): pad 64, content col 576 + cards right */
+@media (width >= 1140px) {
+  .section.stats-container > div.stats-wrapper:has(> .stats.banner) {
+    padding: 0 var(--grid-page-margin-desktop);
+  }
+
+  .stats.banner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--grid-gutter-desktop);
+    padding: var(--space-module-padding-desktop-large);
+  }
+
+  .stats.banner .stats-header {
+    flex: 0 0 auto;
+    width: 576px; /* content group fixed col (1589:90161; no token) */
+  }
+
+  .stats.banner .stats-row {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* ---- section theme options (usage boards 1927:291064 / 1927:291050) ---- */
+
+/* light themes: banner takes the surface color, cards stay white */
+main .section.light .stats.banner,
+main .section.highlight .stats.banner,
+main .section.surface-base .stats.banner {
+  background-color: var(--color-surface-base); /* kit flags base-on-base as do-not-use (5094:46766) */
+}
+
+main .section.tint .stats.banner,
+main .section.surface-mid .stats.banner {
+  background-color: var(--color-surface-mid); /* 1933:298858 */
+}
+
+main .section.surface-dim .stats.banner {
+  background-color: var(--color-surface-dim); /* 1933:298881 */
+}
+
+/* dark themes: banner takes the accent surface; cards remap
+   surface/light -> accent-01 (sampled 1932:298697..1933:298789) */
+main .section.dark .stats.banner,
+main .section.dark.surface-dim .stats.banner {
+  background-color: var(--color-surface-accent-04);
+}
+
+main .section.dark.surface-light .stats.banner {
+  background-color: var(--color-surface-accent-01);
+}
+
+main .section.dark.surface-base .stats.banner {
+  background-color: var(--color-surface-accent-02);
+}
+
+main .section.dark.surface-mid .stats.banner,
+main .section.navy .stats.banner {
+  background-color: var(--color-surface-accent-03);
+}
+
+main .section.dark .stats.banner .stat,
+main .section.navy .stats.banner .stat {
+  background-color: var(--color-surface-accent-01); /* dark surface/light (1932:298697) */
+}
+
+/* dark content: numeral = content/accent-01 dark value = Fresh-Blue
+   (1932:298697; A17 color sets 2127:38626); captions inherit white */
+main .section.dark .stats .stat-value,
+main .section.navy .stats .stat-value {
+  color: var(--color-brand-primary-fresh-blue);
 }
