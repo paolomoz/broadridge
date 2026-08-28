@@ -1,0 +1,409 @@
+/* sticky-nav — Figma web kit F3 Sticky Nav (set 1793:55789, core states
+   set 2921:54955).
+   Kit geometry (variant metadata):
+   - Desktop 1793:55799 (1312x72 on the extended grid, side offsets
+     64/24/8): bar py 12 pr 24 pl 0, radius-md, shadow dim/medium; list
+     lead-in 48, items flex-equal h 48 px 24 with 2px border/base
+     dividers; label box p 8 min-h 24, Functional/Link/Medium 18/1/500;
+     left back-to-top A6 overlay (wrapper px 24, surface/mid, z 2);
+     right overflow-scroll A6 (48, p 12, radius-sm, surface/mid) flush
+     right over the pr 24.
+   - Tablet 2837:26905 (786x72): items hug (no grow), dividers 1.5
+     (border-width/94), list lead-in 78; same paddles.
+   - Mobile 1793:56296 (414x72): bar pl 16 py 8; back-to-top A6; current
+     link label h 56 flex-1 (18px); chevron cell 58x48 with 1px
+     border/base divider, icon 20.
+   - Mobile Open 3232:556706 (430x932): full-screen sheet, surface/mid
+     at 80% + backdrop blur 10, links 22/1/500 ls -2% (Functional/Link/
+     Large) stacked centered, gap 48 (space/layout/48), radius-md bottom.
+   Core states (2921:54955): Resting action/tertiary/content/base; Hover
+   action/tertiary/content/hover; Active same + 2px action/base
+   underline INSIDE the label box (Figma inside stroke -> inset
+   box-shadow overlay, m9 precedent); Focus 1px action/focus-ring ring,
+   radius-sm, hover color. No Mobile Hover variant (touch).
+   Sticky contract (spec 3232:558250): sticks 8px beneath the pinned
+   site header; both carry a background shadow and never overlap.
+   A20 Timer (2810:10536) is hidden/futureTimer=false in every variant —
+   not built. */
+
+/* the section is the sticky element: position:sticky needs a containing
+   block that spans the rest of the page (main), so the section itself
+   sticks — the block must be authored in its own section */
+main .section.sticky-nav-container {
+  position: sticky;
+  z-index: 1; /* below the site header (header z 2), above content */
+
+  /* pinned header = --site-header-height once the utility bar has
+     scrolled away (header.css sticky top) + kit 8px gap (3232:558250) */
+  top: calc(var(--site-header-height) + var(--space-component-8));
+  padding: 0;
+}
+
+/* the open drawer overlays the full screen incl. the header
+   (usage 3232:561134: the F3 Mobile Open sheet covers the viewport) */
+main .section.sticky-nav-container:has(.sticky-nav.open) {
+  z-index: 3;
+}
+
+main .section.sticky-nav-container > div.sticky-nav-wrapper {
+  max-width: none;
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* kit sets lining/proportional figures on every label */
+.sticky-nav {
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+/* ---- bar (Nav 2837:26784 / mobile 1793:56296) ---- */
+
+.sticky-nav .sticky-nav-bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: var(--color-surface-mid);
+  border-radius: var(--border-radius-radius-md);
+
+  /* kit effect style dim/medium; the F3 instance resolves offset-y 16 =
+     radius 16 but the curated dim/medium token is 0 8px 16px — the
+     named token wins (recorded in tolerances) */
+  box-shadow: var(--box-shadow-dim-medium);
+  padding: var(--space-component-8) 0 var(--space-component-8) var(--space-component-16);
+}
+
+/* ---- back-to-top — A6 Button (1793:56416, primary) ---- */
+
+.sticky-nav .sticky-nav-totop-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.sticky-nav button.sticky-nav-totop {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 48px; /* A6 48 = icon 24 + p 12 (1793:56416) */
+  height: 48px;
+  margin: 0;
+  padding: var(--space-component-12);
+  border: 0;
+  border-radius: var(--border-radius-radius-sm);
+  background-color: var(--color-action-primary-surface-base);
+  color: var(--color-action-primary-content-base);
+  cursor: pointer;
+}
+
+.sticky-nav button.sticky-nav-totop:hover {
+  background-color: var(--color-action-primary-surface-hover);
+}
+
+.sticky-nav button.sticky-nav-totop:focus-visible {
+  outline: var(--border-width-188) solid var(--color-action-primary-border-focus-ring);
+  outline-offset: 2px;
+}
+
+.sticky-nav .sticky-nav-totop svg,
+.sticky-nav .sticky-nav-more svg {
+  display: block;
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+/* ---- links (.F3 Sticky Nav Core) ---- */
+
+.sticky-nav .sticky-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sticky-nav .sticky-nav-list li {
+  display: contents;
+}
+
+.sticky-nav a.sticky-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* label box: p 8, min-h 24 (3232:550393); Functional/Link/Medium */
+.sticky-nav .sticky-nav-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--size-icon-md);
+  padding: var(--space-component-8);
+  font-weight: var(--type-link-medium-font-weight);
+  font-size: var(--type-link-medium-font-size);
+  line-height: var(--type-link-medium-line-height);
+  letter-spacing: var(--type-link-medium-letter-spacing);
+  color: var(--color-action-tertiary-content-base);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* hover (3232:556639); hovering never takes the active state away
+   (spec 3232:568349) */
+.sticky-nav a.sticky-nav-link:hover .sticky-nav-label {
+  color: var(--color-action-tertiary-content-hover);
+  text-decoration: none;
+}
+
+/* active (2921:54953): 2px action/base underline drawn INSIDE the label
+   box (Figma inside stroke — inset overlay so the box stays 34) */
+.sticky-nav a.sticky-nav-link.active .sticky-nav-label {
+  color: var(--color-action-tertiary-content-hover);
+  box-shadow: inset 0 calc(-1 * var(--border-width-125)) var(--color-action-base);
+}
+
+/* focus (3232:556642): 1px focus ring on the label box, radius-sm */
+.sticky-nav a.sticky-nav-link:focus-visible {
+  outline: none;
+}
+
+.sticky-nav a.sticky-nav-link:focus-visible .sticky-nav-label {
+  outline: var(--border-width-63) solid var(--color-action-focus-ring);
+  outline-offset: -1px;
+  border-radius: var(--border-radius-radius-sm);
+  color: var(--color-action-tertiary-content-hover);
+}
+
+/* ---- mobile presentation (base, < 834): closed bar + drawer ---- */
+
+/* toggle = current link label + chevron (1793:56296) */
+.sticky-nav button.sticky-nav-toggle {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 0;
+  height: 56px; /* kit core cell 3232:556651 (no token) */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.sticky-nav .sticky-nav-current {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: var(--size-icon-md);
+  padding: var(--space-component-8);
+  font-weight: var(--type-link-medium-font-weight);
+  font-size: var(--type-link-medium-font-size);
+  line-height: var(--type-link-medium-line-height);
+  color: var(--color-action-tertiary-content-base);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* chevron cell 58x48, 1px border/base divider, icon 20 (3232:556654) */
+.sticky-nav .sticky-nav-toggle-icon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 48px;
+  border-left: var(--border-width-63) solid var(--color-border-base);
+  color: var(--color-content-primary);
+}
+
+.sticky-nav .sticky-nav-toggle-icon svg {
+  width: 20px; /* kit icon (3232:556655; no icon-20 token) */
+  height: 20px;
+}
+
+.sticky-nav.open .sticky-nav-toggle-icon svg {
+  transform: rotate(180deg);
+}
+
+@media (width < 834px) {
+  .sticky-nav .sticky-nav-scroller {
+    display: none;
+  }
+
+  .sticky-nav .sticky-nav-more {
+    display: none;
+  }
+
+  /* Mobile Open (3232:556706): full-screen sheet, surface/mid at 80% +
+     backdrop blur 10 (kit raw rgba(231,241,252,0.8)), radius-md bottom */
+  .sticky-nav.open .sticky-nav-scroller {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    padding-left: var(--space-component-16); /* kit sheet pl 16, pr 0 (3232:556706) */
+    background-color: color-mix(in srgb, var(--color-surface-mid) 80%, transparent);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 var(--border-radius-radius-md) var(--border-radius-radius-md);
+    overflow-y: auto;
+  }
+
+  /* stack centered, gap 48 = kit space/layout/48 (no layout tokens in
+     styles.css — same-value --space-component-48); auto margins center
+     when the stack fits and keep the top reachable when it scrolls */
+  .sticky-nav.open .sticky-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-component-48);
+    align-items: center;
+    margin: auto;
+    padding: var(--space-component-48) 0;
+  }
+
+  /* drawer links: Functional/Link/Large 22/1/500, ls -2% -> -0.02em
+     (token value "-2%" is not a CSS letter-spacing) */
+  .sticky-nav.open .sticky-nav-label {
+    font-size: var(--type-link-large-font-size);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ---- tablet + desktop bar (2837:26905 / 1793:55799) ---- */
+
+@media (width >= 834px) {
+  main .section.sticky-nav-container > div.sticky-nav-wrapper {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .sticky-nav .sticky-nav-bar {
+    padding: var(--space-component-12) var(--space-component-24) var(--space-component-12) 0;
+  }
+
+  .sticky-nav button.sticky-nav-toggle {
+    display: none;
+  }
+
+  /* back-to-top overlays the scrolling list (Button Wrapper
+     3232:558006: absolute left 0, px 24, surface/mid, z 2) */
+  .sticky-nav .sticky-nav-totop-wrap {
+    position: absolute;
+    top: var(--space-component-12);
+    left: 0;
+    z-index: 2;
+    height: 48px;
+    padding: 0 var(--space-component-24);
+    background-color: var(--color-surface-mid);
+  }
+
+  .sticky-nav .sticky-nav-scroller {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .sticky-nav .sticky-nav-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* tablet list lead-in 78 (2837:26908; kit raw), items hug */
+  .sticky-nav .sticky-nav-list {
+    display: flex;
+    width: 100%;
+    min-width: max-content;
+    padding-left: 78px;
+  }
+
+  .sticky-nav a.sticky-nav-link {
+    flex: 0 0 auto;
+    height: 48px;
+    padding: 0 var(--space-component-24);
+  }
+
+  /* divider: tablet 1.5 border-width/94 (2837:26910) — inset overlay,
+     Figma inside strokes don't displace layout (kit items stay equal) */
+  .sticky-nav .sticky-nav-list li:not(:first-child) a.sticky-nav-link {
+    box-shadow: inset var(--border-width-94) 0 var(--color-border-base);
+  }
+
+  /* overflow-scroll paddle — A6 Button (2777:312132): 48, p 12,
+     surface/mid, radius-sm, flush right over the bar pr 24; flips to
+     point left when fully scrolled (spec 3232:558166) */
+  .sticky-nav button.sticky-nav-more {
+    display: flex;
+    position: absolute;
+    top: var(--space-component-12);
+    right: 0;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: var(--space-component-12);
+    border: 0;
+    border-radius: var(--border-radius-radius-sm);
+    background-color: var(--color-surface-mid);
+    color: var(--color-action-base);
+    cursor: pointer;
+  }
+
+  .sticky-nav button.sticky-nav-more[hidden] {
+    display: none;
+  }
+
+  .sticky-nav button.sticky-nav-more:focus-visible {
+    outline: var(--border-width-188) solid var(--color-action-secondary-border-focus-ring);
+    outline-offset: -3px;
+  }
+
+  .sticky-nav button.sticky-nav-more.flipped svg {
+    transform: scaleX(-1);
+  }
+}
+
+/* ---- desktop (1793:55799): list lead-in 48, flex-equal items,
+   2px dividers ---- */
+
+@media (width >= 1140px) {
+  main .section.sticky-nav-container > div.sticky-nav-wrapper {
+    padding: 0 var(--grid-page-margin-desktop);
+  }
+
+  .sticky-nav .sticky-nav-list {
+    padding-left: 48px; /* kit list lead-in (1793:55802; no token) */
+  }
+
+  /* flex 1 0 0: equal widths when the row fits (kit 155 each), hug at
+     max-content when it overflows (overflow boards 3232:556930..) */
+  .sticky-nav a.sticky-nav-link {
+    flex: 1 0 0;
+  }
+
+  .sticky-nav .sticky-nav-list li:not(:first-child) a.sticky-nav-link {
+    box-shadow: inset var(--border-width-125) 0 var(--color-border-base); /* desktop divider 2 (1793:55804) */
+  }
+}
+
+/* ---- motion — color/transform transitions only, armed on first
+   interaction (tabs precedent), off under reduced motion; the kit
+   publishes no F3 motion spec (prototype uncaptured — open row) ---- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .sticky-nav.sticky-nav-motion .sticky-nav-label,
+  .sticky-nav.sticky-nav-motion .sticky-nav-totop,
+  .sticky-nav.sticky-nav-motion .sticky-nav-current {
+    transition:
+      color var(--motion-duration-short4) var(--motion-easing-standard),
+      background-color var(--motion-duration-short4) var(--motion-easing-standard);
+  }
+
+  .sticky-nav.sticky-nav-motion .sticky-nav-toggle-icon svg,
+  .sticky-nav.sticky-nav-motion .sticky-nav-more svg {
+    transition: transform var(--motion-duration-short4) var(--motion-easing-standard);
+  }
+}

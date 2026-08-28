@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: f3 sticky nav — mobile open drawer (3232:556706)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+    main > div.f3-target, main > div.f3-intro { min-height: 900px; }
+    /* the kit Mobile Open export bakes the sheet's 80% surface/mid over
+       the #f9f9f9 canvas ground (corners sampled 249,249,249) — match
+       the gate page ground to the export (figma-mcp-recipes export trap) */
+    body { background-color: #f9f9f9; }
+  </style>
+  <script>
+    // gate harness: open the drawer once the block is decorated
+    // (production behavior unchanged — this fixture only clicks the toggle)
+    const t = setInterval(() => {
+      const b = document.querySelector('.sticky-nav .sticky-nav-toggle');
+      if (b && window.getComputedStyle(b).display !== 'none') {
+        clearInterval(t);
+        b.click();
+        if (document.activeElement) document.activeElement.blur();
+      }
+    }, 50);
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="sticky-nav">
+        <div><div><ul>
+          <li><a href="#link-1">Link 1</a></li>
+          <li><a href="#link-2">Link 2</a></li>
+          <li><a href="#link-3">Link 3</a></li>
+          <li><a href="#link-4">Link 4</a></li>
+          <li><a href="#link-5">Link 5</a></li>
+          <li><a href="#link-6">Link 6</a></li>
+          <li><a href="#link-7">Link 7</a></li>
+          <li><a href="#link-8">Link 8</a></li>
+        </ul></div></div>
+      </div>
+    </div>
+    <div class="f3-intro"><p>Intro spacer.</p></div>
+    <div class="f3-target"><h2 id="link-1">Link 1</h2></div>
+    <div class="f3-target"><h2 id="link-2">Link 2</h2></div>
+    <div class="f3-target"><h2 id="link-3">Link 3</h2></div>
+    <div class="f3-target"><h2 id="link-4">Link 4</h2></div>
+    <div class="f3-target"><h2 id="link-5">Link 5</h2></div>
+    <div class="f3-target"><h2 id="link-6">Link 6</h2></div>
+    <div class="f3-target"><h2 id="link-7">Link 7</h2></div>
+    <div class="f3-target"><h2 id="link-8">Link 8</h2></div>
+  </main>
+  <footer></footer>
+</body>
+</html>
