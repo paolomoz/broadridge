@@ -1,90 +1,333 @@
-/* Insights & perspectives rail — replica of .insights card slider */
+/* insights — Figma web kit M5 Insights (set 492:55962, gate 800:438181).
+   Card unit: A7 Cards / Default (I800:438184) — the card's variable set
+   resolves in the kit's dark mode on every M5 variant (sampled via
+   variable defs on 800:438184): surface/mid -> #001f5a (= accent-03),
+   edge/badge/surface -> #0f3db5 (= accent-01), content/primary and
+   action/tertiary/content/base -> #ffffff (= content-primary-inverse).
+   Kit geometry (component-set metadata):
+   - Desktop 4 Cards 800:438181 (1184w): rhythm 48; cards 272 x 4,
+     gutter 32; card = A13 media 3:2 + fixed 280 content band;
+     wayfinding row 48 (tabs 116x5 left, arrow pair 112x48 right);
+     CTA row right, button 56.
+   - Desktop 2 Cards 808:83953: cards 576 x 2, gutter 32, no wayfinding.
+   - Tablet 800:447374 (690w): rhythm 32; 4-card rail keeps fixed 272
+     cards, gutter 24, clipped at the module edge (rail 800:447981 is
+     wider than the module); 2 Cards 808:88309: 333 x 2, gutter 24.
+   - Mobile 694:2197 (382w): rhythm 32; 4-card rail fixed 272 cards,
+     gutter 16 (808:75747); 2 Cards 808:102062: stacked 382, gap 16;
+     CTA full width (701:36178).
+   - 3-card mid state (usage board 2190:649869, derived): desktop 3-up
+     grid without wayfinding; tablet/mobile behave as the 4-card rail
+     (2190:650265 / 2190:651061). */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.insights-container > div.insights-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* grayscale AA matches the kit's text rasterization; the M5 card is
+   ~all light-on-dark text where default subpixel AA renders visibly
+   heavier than the design (same as cards, see tolerances.md) */
 .insights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  max-width: var(--grid-content-width);
+  margin: 0 auto;
+  padding: 0 24px; /* 382 content in 430 viewport (694:2197) */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- header — A9 Content Groups, heading-only (800:438182) ---- */
+
+.insights .insights-header :is(h1, h2, h3, h4, p) {
+  margin: 0;
+}
+
+.insights .insights-header :is(h1, h2) {
+  max-width: 780px; /* A9 content max width (545:99567) */
+}
+
+/* ---- card rail ---- */
+
+/* mobile default (>=3 cards): clipped horizontal rail of fixed 272px
+   cards (808:75747); the A22 wayfinder is the scroll affordance — the
+   kit shows no scrollbar (derived) */
+.insights .insights-rail {
+  display: flex;
+  gap: var(--grid-gutter-mobile);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.insights .insights-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.insights .insights-rail > .insights-card {
+  flex: 0 0 272px; /* kit fixed rail card width (808:75748; no token) */
+}
+
+/* duo (<=2 cards): stacked full-width cards, gap 16 (808:102064) */
+.insights.duo .insights-rail {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  overflow: visible;
 }
 
-@media (width >= 834px) {
-  .insights {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.insights.duo .insights-rail > .insights-card {
+  flex: none;
 }
 
-@media (width >= 1140px) {
-  .insights {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+/* ---- card — A7 Cards / Default (I800:438184) ---- */
 
-.insights > div {
-  background-color: var(--c-navy);
-  color: var(--c-white);
-  border-radius: var(--radius-sm);
+.insights .insights-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  border-radius: var(--border-radius-radius-md);
+  /* kit surface/mid resolves to #001f5a in the card's dark mode
+     (sampled 800:438184) */
+  background-color: var(--color-surface-accent-03);
 }
 
-.insights > div > div {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.insights img {
+/* A13 Media band, 3:2 (I800:438184;553:33444) — enrichment-added
+   images conform to the same band (cover crop) */
+.insights .insights-card-image img {
+  display: block;
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  display: block;
 }
 
-.insights em {
-  display: inline-block;
+/* Card Content: fixed 280 band, pad 24 (I800:438184;553:33445;
+   no token for the 280) — honored as min-height, content still grows */
+.insights .insights-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 280px;
+  padding: var(--space-component-24);
+}
+
+.insights .insights-card-body p {
+  margin: 0;
+}
+
+/* A2 Badge (I800:438184;553:33446;304:1875) — .badge atom recolored to
+   the card's dark mode: edge/badge/surface -> accent-01, content ->
+   inverse (sampled). The wrapper paragraph becomes a flex row so the
+   badge box pins to the content-band top (the paragraph's own line box
+   would drop it ~3px below the kit's pad-24 position) */
+.insights .insights-card-body p:has(> em.badge) {
+  display: flex;
+}
+
+.insights .insights-card-body em.badge {
   align-self: flex-start;
   font-style: normal;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: 1px solid var(--c-white);
-  border-radius: var(--radius-sm);
-  padding: 3px 8px;
-  margin: 16px 16px 0;
+  background-color: var(--color-surface-accent-01);
+  color: var(--color-content-primary-inverse);
 }
 
-.insights h3 {
-  font-size: 18px;
-  font-weight: 400;
-  margin: 12px 16px 16px;
+/* Title-2 (I800:438184;553:33446;304:1876), gap 8 below the badge */
+.insights .insights-card-body h3 {
+  margin: var(--space-component-8) 0 0;
+  font-weight: var(--type-title-2-font-weight);
+  font-size: var(--type-title-2-font-size);
+  font-style: var(--type-title-2-font-style);
+  line-height: var(--type-title-2-line-height);
+  letter-spacing: var(--type-title-2-letter-spacing);
+  color: var(--color-content-primary-inverse);
 }
 
-.insights h3 a:any-link {
-  color: var(--c-white);
+.insights .insights-card-body h3 a:any-link {
+  color: var(--color-content-primary-inverse);
   text-decoration: none;
 }
 
-.insights h3 a:hover {
+.insights .insights-card-body h3 a:hover {
   text-decoration: underline;
 }
 
-@media (width >= 1140px) {
-  .insights > div {
-    min-height: 540px;
-  }
+.insights .insights-card-body h3 a:focus-visible {
+  outline: 3px solid var(--color-action-tertiary-border-focus-ring);
+  outline-offset: 1px;
 }
 
-/* arrow affordance (source cards carry arrow glyph bottom-left) */
-.insights > div > div::after {
-  content: '\2192';
-  display: block;
-  margin: auto 16px 16px;
-  font-size: 22px;
-  color: var(--c-white);
+/* Body-3 description (I808:84152;553:33446;304:1877), Copy gap 8 */
+.insights .insights-card-body p:not(:has(> em.badge)) {
+  margin: var(--space-component-8) 0 0;
+  font-weight: var(--type-body-3-book-font-weight);
+  font-size: var(--type-body-3-book-font-size);
+  line-height: var(--type-body-3-book-line-height);
+  letter-spacing: var(--type-body-3-book-letter-spacing);
+  color: var(--color-content-primary-inverse);
 }
 
-/* Explore CTA renders as a right-aligned blue button (source) */
+/* icon-only Link CTA (354:1603) pinned to the card foot; Copy pb 16
+   (375:8175); kit action/tertiary/content/base resolves white in the
+   card's dark mode (sampled) */
+.insights .insights-card-cta {
+  display: flex;
+  margin-top: auto;
+  padding-top: var(--space-component-16);
+  color: var(--color-content-primary-inverse);
+}
+
+.insights .insights-card-cta svg {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+/* ---- wayfinding row (1612:29277) — A22 atoms, as in cards ---- */
+
+.insights .insights-wayfinding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px; /* kit row height 1612:29277 */
+}
+
+/* A22 Wayfinder / Tabs (1612:29278): 20x5 bars, gap 12, one per card */
+.insights .insights-tabs {
+  display: flex;
+  gap: var(--space-component-12);
+}
+
+.insights .insights-tab {
+  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-radius-xs);
+  background-color: var(--color-edge-badge-surface);
+  cursor: pointer;
+}
+
+.insights .insights-tab.active {
+  background-color: var(--color-action-base);
+}
+
+/* A22 Wayfinder arrows (1612:29279): 48px round secondary icon buttons */
+.insights .insights-arrows {
+  display: flex;
+  gap: var(--space-component-16);
+}
+
+.insights .insights-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 48px; /* icon-round small A6 (142:5847) */
+  height: 48px;
+  padding: 0;
+  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
+  border-radius: var(--border-radius-radius-full);
+  background: none;
+  color: var(--color-action-secondary-content-base);
+  cursor: pointer;
+}
+
+.insights .insights-arrow:hover {
+  border-color: var(--color-action-secondary-border-hover);
+  color: var(--color-action-secondary-content-hover);
+}
+
+.insights .insights-arrow:focus-visible {
+  outline: 3px solid var(--color-action-secondary-border-focus-ring);
+  outline-offset: -1px;
+}
+
+.insights .insights-arrow svg {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+
+/* ---- CTA row — A5 Button Group, right-aligned (800:438188) ---- */
+
+.insights .insights-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.insights .insights-cta > div {
+  width: 100%; /* full width on mobile, A6 Button 701:36178 */
+}
+
+.insights .insights-cta p.button-wrapper {
+  margin: 0;
+}
+
+.insights .insights-cta p.button-wrapper a.button {
+  width: 100%;
+}
+
+/* Explore CTA authored as sibling default content renders right-aligned
+   (curated-content compatibility; same A5 right alignment) */
 .insights-wrapper ~ .default-content-wrapper,
 .insights-container .default-content-wrapper:last-child {
   text-align: right;
+}
+
+/* ---- tablet (690 content in 834 = 72px side offset) ---- */
+@media (width >= 834px) {
+  .insights {
+    padding: 0 72px;
+  }
+
+  .insights .insights-rail {
+    gap: var(--grid-gutter-tablet); /* rail gutter 24 (800:447981) */
+  }
+
+  /* duo: 333 x 2, gutter 24 (808:88311) */
+  .insights.duo .insights-rail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insights .insights-cta > div {
+    width: auto;
+  }
+
+  .insights .insights-cta p.button-wrapper a.button {
+    width: auto;
+  }
+}
+
+/* ---- desktop (1184 content grid) ---- */
+@media (width >= 1140px) {
+  .insights {
+    gap: var(--space-module-gap-desktop); /* rhythm 48 (800:438181) */
+    padding: 0;
+  }
+
+  /* 4-col grid, gutter 32 (800:438183); >4 authored cards wrap
+     (derived — the kit documents no >4 desktop arrangement) */
+  .insights .insights-rail {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gutter-desktop);
+    overflow: visible;
+  }
+
+  .insights .insights-rail > .insights-card {
+    flex: none;
+  }
+
+  /* trio mid state (2190:649869, derived): 3-up, no wayfinding */
+  .insights.trio .insights-rail {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .insights.trio .insights-wayfinding {
+    display: none;
+  }
+
+  /* duo: 576 x 2 (808:83955) */
+  .insights.duo .insights-rail {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
