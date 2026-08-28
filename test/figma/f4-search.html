@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: f4 search bar (general search)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>.consent-banner { display: none; }</style>
+  <script>
+    /* gate harness: mock query-index whose title initials reproduce the
+       kit's General Search letter availability exactly — enabled
+       # A B C D E F G I K M N O P R S T V W, disabled H J L Q U X Y Z
+       (3099:80713). Production code path does the fetch/parse. */
+    (() => {
+      const titles = ['#1 Annual Report', 'Asset Servicing', 'Bank Broker-Dealer', 'Capital Markets',
+        'Data Aggregation', 'Enterprise Solutions', 'Fund Communications', 'Global Technology',
+        'Investor Communications', 'Key Insights', 'Mutual Funds', 'Network Transformation',
+        'Operations Software', 'Proxy Services', 'Regulatory Solutions', 'Securities Processing',
+        'Trade Processing', 'Virtual Shareholder Meetings', 'Wealth Management'];
+      const mock = { total: titles.length, offset: 0, limit: 5000,
+        data: titles.map((t, i) => ({ path: `/mock/${i}`, title: `Broadridge - ${t}`,
+          description: `${t} description.`, template: 'landing', category: '', lastModified: `${1756000000 + i}` })) };
+      const orig = window.fetch.bind(window);
+      window.fetch = (u, ...a) => (String(u).includes('/query-index.json')
+        ? Promise.resolve(new Response(JSON.stringify(mock), { status: 200, headers: { 'Content-Type': 'application/json' } }))
+        : orig(u, ...a));
+      /* first-interaction prefetch through the production focusin path */
+      const t = setInterval(() => {
+        const input = document.querySelector('.search input[type="search"]');
+        if (input) { clearInterval(t); input.focus(); input.blur(); }
+      }, 50);
+    })();
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="search quick-find">
+        <div>
+          <div>auto</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

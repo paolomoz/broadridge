@@ -1,40 +1,309 @@
-.search .search-controls {
+/* search — Figma web kit F4 Search Bar (set 1809:125607).
+   Variant geometry from the kit's component symbols:
+   - Desktop dropdown-filters 1809:131418 (1312x308): white card pad 64
+     on the extended grid, radius 4, dim/large shadow, module gap 48;
+     search row gap 16 (A11 input flex + A6 button 142x56); filter row
+     gap 32, three flexible min-250 fields (label 20 / gap 8 / select 48)
+   - Desktop general 1809:125608 (1312x254): same shell; quick-find
+     letter row 22 tall, space-between across the content width
+   - Tablet 1809:131445 / 1809:125635 (786): pad 48, search gap 24,
+     filter/letter gap 24 (letters wrap centered)
+   - Mobile 1809:131472 / 1809:125662 (414): pad 32, stacked search on a
+     16 gap (full-width button), filter gap 16, letters wrap centered
+   F4A Search No Results (3490:44235/36/37) renders on the CONTENT grid
+   below the card: Heading-3 message + Body-1 line, then two flexible
+   columns on a 32 gap (Body-2 title / gap 16 / Body-4 rows on a 26
+   rhythm). Result rows have no kit exhibit — styled with kit tokens,
+   recorded as derived in the gate tolerances. */
+
+/* the module is an inset card on the extended grid (like F1/B1) */
+.section.search-container > div.search-wrapper {
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* card shell — mobile base (1809:131472: pad 32, stack gap 32) */
+.search .search-card {
   display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  padding: var(--space-module-padding-mobile-medium);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-light);
+  box-shadow: var(--box-shadow-dim-large); /* effect style dim/large (1809:131418) */
 }
 
-.search input[type='search'],
-.search select {
-  border: 1px solid var(--c-border);
+/* search row — mobile stacks input -> button on a 16 gap (1809:131473) */
+.search .search-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-16);
+}
+
+/* A11 input anatomy (I1809:131420;473:6332) — 56 tall, pad 16.
+   The kit F4 mobile instance stretches its input to 58 (1809:131474);
+   the A11 token height wins (recorded divergence). */
+.search input[type='search'] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  padding: 0 var(--space-component-16);
+  border: 1px solid var(--color-form-border-default);
   border-radius: var(--radius-sm);
-  padding: 12px 16px;
+  background-color: var(--color-form-surface-default);
+  color: var(--color-form-placeholder-filled);
+  font-family: var(--body-font-family);
   font-size: 16px;
-  min-width: 220px;
+  letter-spacing: 0.015em; /* kit input tracking 0.24px */
 }
 
-.search .search-results {
-  list-style: none;
+.search input[type='search']::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.search ::placeholder {
+  color: var(--color-form-placeholder-default);
+  opacity: 1;
+}
+
+/* focus — A11 State=Focus (466:5798), same anatomy as form.css */
+.search :is(input, select):focus-visible {
+  outline: none;
+  border-color: var(--color-form-border-focus);
+  box-shadow: 0 0 0 1px var(--color-form-border-focus), 0 0 0 3px var(--color-form-border-focus-ring);
+}
+
+/* A6 submit (1809:131421): icon 24 + gap 4 (atom) + label px 6; the kit
+   box is borderless py 16/px 24 — the atom's 2px border is compensated
+   so the 56x142 box holds */
+.search button.search-submit {
+  padding: 14px 22px;
+}
+
+.search .search-submit svg {
+  flex: none;
+  width: 24px;
+  height: 24px;
+}
+
+.search .search-submit span {
+  padding-inline: 6px; /* button/label/padding/medium (I1809:131421;2058:4213383) */
+}
+
+/* dropdown filters (2285:14160 mobile: stacked, gap 16 = gridgap/mobile —
+   no --space-gridgap token in styles.css, component token carries it) */
+.search .search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-component-16);
+}
+
+.search .search-filter {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: var(--space-component-8); /* label -> select (2285:13636) */
+  min-width: 250px; /* kit field min-width (A11) */
+}
+
+/* Label (I2285:13637;466:4245): 16 medium / 1.25 = the kit's 20 box */
+.search .search-filter label {
+  color: var(--color-form-content-label);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+/* F4 Select (2285:13639): 48 tall (module-specific, not A11's 56),
+   pad 16, chevron 16 inset 16 (Arrows/Chevron Down) */
+.search .search-filter select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-component-48) 0 var(--space-component-16);
+  border: 1px solid var(--color-form-border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-form-surface-default);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.5286 5.5286C3.76892 5.28827 4.14707 5.26979 4.4086 5.47314L4.4714 5.5286L8 9.05667L11.5286 5.5286C11.7689 5.28827 12.1471 5.26979 12.4086 5.47314L12.4714 5.5286C12.7117 5.76892 12.7302 6.14707 12.5269 6.4086L12.4714 6.4714L8.4714 10.4714C8.23108 10.7117 7.85293 10.7302 7.5914 10.5269L7.5286 10.4714L3.5286 6.4714C3.26825 6.21106 3.26825 5.78895 3.5286 5.5286Z' fill='%23000C36'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-component-16) center;
+  background-size: 16px;
+  color: var(--color-form-placeholder-default); /* 466:5959 placeholder ink */
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  letter-spacing: 0.015em;
+  appearance: none;
+  cursor: pointer;
+}
+
+.search .search-filter select.filled {
+  color: var(--color-form-placeholder-filled); /* 582:56087 filled ink */
+}
+
+.search .search-filter select option {
+  color: var(--color-form-placeholder-filled);
+}
+
+/* quick find (3099:80892 mobile: centered wrap, gap 24; letters are
+   Functional/Link/Large — 22 medium / 1 / -2% (3099:80713)) */
+.search .search-quickfind {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-component-24);
+  justify-content: center;
+}
+
+.search .search-letter {
   margin: 0;
   padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-action-base-alt); /* available letters (3099:80714) */
+  font-family: var(--body-font-family);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: -0.02em; /* kit -2% (Functional/Link/Large) */
+  cursor: pointer;
+}
+
+.search .search-letter:hover {
+  color: var(--color-action-hover); /* derived from the link atom states */
+}
+
+.search .search-letter:disabled {
+  color: var(--color-action-disabled); /* content-less letters (3099:80722) */
+  cursor: default;
+}
+
+.search .search-letter:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-form-border-focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* ==== results surface — F4A sits on the CONTENT grid below the card
+   (F4A symbol widths 1184/690/382 = extended minus 64/48/16 sides) ==== */
+.search .search-body {
+  margin-inline: 16px;
+}
+
+/* status: derived Body-1 count line; becomes the F4A Heading-3 message
+   (3490:44180) in the no-results state */
+.search .search-status {
+  margin-block: var(--space-module-gap-mobile) 0;
+  color: var(--color-content-primary);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+}
+
+.search .search-status:empty {
+  display: none;
+}
+
+.search.no-results .search-status {
+  font-size: var(--type-heading-3-font-size); /* responsive 28/32/36 = kit F4A per device */
+  line-height: var(--type-heading-3-line-height);
+}
+
+/* F4A body: "Try searching again above." (Body-1, 3490:44181) then the
+   two columns on a 32 gap (3490:44182) */
+.search .search-noresults {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32);
+  margin-top: var(--space-component-16); /* message gap — 24 from 834 up */
+}
+
+.search .search-noresults-again {
+  margin: 0;
+  color: var(--color-content-primary);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+}
+
+.search .search-noresults-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-component-32); /* gridgap/desktop; row gap 32 when stacked (3490:44220) */
+}
+
+.search .search-noresults-columns > div {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: var(--space-component-16); /* title -> stack (3490:44183) */
+  min-width: 280px; /* stacks on the 382 mobile content column */
+}
+
+/* column titles: Body-2 (3490:44184) */
+.search .search-noresults-title {
+  margin: 0;
+  color: var(--color-content-primary);
+  font-size: var(--type-body-2-book-font-size);
+  line-height: var(--type-body-2-book-line-height);
+}
+
+/* stacks: Body-4 rows on an 8 gap (3490:44185) */
+.search .search-noresults-columns ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search .search-noresults-columns li {
+  font-size: var(--type-body-4-book-font-size);
+  line-height: var(--type-body-4-book-line-height);
+}
+
+.search .search-suggest a {
+  color: var(--color-action-base); /* 3490:44185 link ink */
+  text-decoration: none;
+}
+
+.search .search-suggest a:hover {
+  text-decoration: underline;
+}
+
+.search .search-tips li {
+  color: var(--color-content-primary);
+}
+
+/* result rows — DERIVED: the kit publishes no result-row exhibit
+   (tolerances.md open row); styled with kit tokens: Functional/Link/Large
+   title in action/base, Body-3-shaped description, A11 border divider */
+.search .search-results {
+  margin-top: var(--space-component-24);
+  padding: 0;
+  list-style: none;
+}
+
+.search .search-results:empty {
+  display: none;
 }
 
 .search .search-item {
-  border-bottom: 1px solid var(--c-neutral-300);
+  border-bottom: 1px solid var(--color-form-border-default);
 }
 
 .search .search-item a:any-link {
   display: block;
-  padding: 20px 0;
+  padding: var(--space-component-24) 0;
   color: inherit;
   text-decoration: none;
 }
 
 .search .search-item h3 {
-  font-size: 20px;
-  margin-bottom: 6px;
-  color: var(--c-blue-link);
+  margin: 0 0 var(--space-component-8);
+  color: var(--color-action-base);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
 }
 
 .search .search-item a:hover h3 {
@@ -42,11 +311,78 @@
 }
 
 .search .search-item p {
-  margin-bottom: 4px;
-  font-size: 15px;
+  margin: 0;
+  color: var(--color-content-secondary);
+  font-size: 16px;
+  line-height: 1.3;
 }
 
-.search .search-meta {
-  font-size: 13px;
-  color: #555f6e;
+/* tablet (786 design @ 834: pad 48, search/filter/letter gaps 24) */
+@media (width >= 834px) {
+  .section.search-container > div.search-wrapper {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .search .search-card {
+    gap: var(--space-module-gap-tablet);
+    padding: var(--space-component-48); /* kit 48 (1809:131445) — no module-padding token carries 48 */
+  }
+
+  .search .search-form {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-component-24); /* tablet search gap (1809:131446) */
+  }
+
+  .search input[type='search'] {
+    flex: 1 0 0;
+    width: auto;
+    min-width: 250px;
+  }
+
+  .search button.search-submit {
+    flex: none;
+  }
+
+  .search .search-filters {
+    gap: var(--space-component-24); /* gridgap/tablet (2285:14020) */
+  }
+
+  .search .search-body {
+    margin-inline: var(--space-component-48);
+  }
+
+  .search .search-noresults {
+    margin-top: var(--space-component-24); /* message gap 24 (3490:44200) */
+  }
+}
+
+/* desktop (1312 design @ 1440: pad 64, module gap 48, search gap 16,
+   filter gap 32, letters space-between across the content width) */
+@media (width >= 1140px) {
+  .section.search-container > div.search-wrapper {
+    padding: 0;
+  }
+
+  .search .search-card {
+    gap: var(--space-module-gap-desktop);
+    padding: var(--space-module-padding-desktop-large);
+  }
+
+  .search .search-form {
+    gap: var(--space-component-16); /* desktop search gap (1809:131419) */
+  }
+
+  .search .search-filters {
+    gap: var(--space-component-32); /* gridgap/desktop (2285:13635) */
+  }
+
+  .search .search-quickfind {
+    gap: 0;
+    justify-content: space-between; /* 3099:80713 justified letter row */
+  }
+
+  .search .search-body {
+    margin-inline: 64px; /* content grid inside the extended grid */
+  }
 }

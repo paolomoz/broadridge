@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: f4a search no results</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>.consent-banner { display: none; }</style>
+  <script>
+    /* gate harness: mock query-index carrying the kit's F4A specimen
+       titles (3490:44185); load the page with ?q=ABC and the block's
+       production path scores 0 hits and renders the no-results anatomy
+       with these titles as its "Did you mean?" suggestions. */
+    (() => {
+      const titles = ['Advisor Compensation', 'Advisor Desktop Solutions', 'Advisor Onboarding', 'Advisor Targeting'];
+      const mock = { total: titles.length, offset: 0, limit: 5000,
+        data: titles.map((t, i) => ({ path: `/mock/${i}`, title: `Broadridge - ${t}`,
+          description: `${t} description.`, template: 'landing', category: '', lastModified: `${1756000000 + i}` })) };
+      const orig = window.fetch.bind(window);
+      window.fetch = (u, ...a) => (String(u).includes('/query-index.json')
+        ? Promise.resolve(new Response(JSON.stringify(mock), { status: 200, headers: { 'Content-Type': 'application/json' } }))
+        : orig(u, ...a));
+    })();
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="search">
+        <div>
+          <div>auto</div>
+        </div>
+        <div>
+          <div>
+            <!-- kit specimen Search-tips copy, verbatim incl. its quirks (3490:44192) -->
+            <ul>
+              <li>Make sure a words are spelled correct</li>
+              <li>Try using fewer words</li>
+              <li>Try using fewer words</li>
+              <li>Don`t start your search with a " or a ?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>
