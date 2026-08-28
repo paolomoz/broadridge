@@ -1,0 +1,248 @@
+/* anchor-banner — Figma web kit B4 Anchor Banner (set 2345:17429).
+   Variant geometry from the kit's component symbols:
+   - Desktop Right 2345:17428 / Left 2345:37005 (1312x360): pad 64 on the
+     content side, row gap 32, content 576, media 640 flush to the edge,
+     full height, radius 4, content vertically centered (header y 79).
+   - Tablet Left 2345:19314 / Right 2345:36828 (786x337.5): pad 48 on the
+     content side, gap 24, media 333 flush, content py 48, centered.
+   - Mobile Stacked 2345:25790 (414x504): media 414x225 on top, gap 32,
+     content px 16 / pb 32. Stacked is breakpoint behavior, not a class.
+   Type: eyebrow = Eyebrow-Medium (16/1, tracking 1.6px, uppercase,
+   2345:14141), title = Heading-2 ramp (40/36/32, lh 1.15,
+   I2345:14081;545:99570), body = Body-1 Book (24, lh 1.3,
+   I2345:14081;545:99571). Kit caps the copy measure at 780
+   (I2345:14081;545:99567) — unreachable inside the 1312 card (content
+   576 max), so not re-declared here.
+   Surface/facet theming via section style options remapped onto the
+   banner card (usage boards 2345:48104 light, 2345:48081 dark; the dark
+   board adds banner-level Light/Bright/Dark Facet artwork grounds). */
+
+/* the banner is an inset rounded card on the extended grid (1312): the
+   section keeps the page background, the style option paints the block
+   (usage boards show the card on the page ground) */
+main .section.anchor-banner-container:is(.light, .highlight, .tint, .dark, .navy, .surface-light, .surface-base, .surface-mid, .surface-dim, .facet-light, .facet-bright, .facet-dark) {
+  background: transparent; /* shorthand: also clears the section-level facet artwork */
+}
+
+/* extended grid: 1312 centered; side offsets 8/24 below desktop
+   (414 in 430, 786 in 834) */
+.section.anchor-banner-container > div.anchor-banner-wrapper {
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* mobile base (2345:25790): stacked, media on top (DOM keeps content
+   first — see anchor-banner.js contract) */
+.anchor-banner {
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-light); /* kit light default (2345:54332) */
+  overflow: hidden;
+}
+
+.anchor-banner > div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-component-32); /* kit space/module/gap/mobile */
+}
+
+/* content cell — eyebrow -> title -> body on a 16 rhythm (Section
+   Header gap 16 + Copy gap 16, 2345:25792); px 16 / pb 32 at mobile
+   (kit space/module/padding/mobile small/large) */
+.anchor-banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-component-16);
+  padding: 0 var(--space-component-16) var(--space-component-32);
+}
+
+/* media cell — kit A13 Media, image fill cover; mobile 414x225 with all
+   corners rounded (2345:25791). The ratio lives on the img: on the
+   container a flex item's auto min-height lets the photo's intrinsic
+   ratio win over aspect-ratio */
+.anchor-banner-media picture {
+  display: block;
+  height: 100%;
+}
+
+.anchor-banner-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 414 / 225; /* kit mobile media box, no token */
+  object-fit: cover;
+  border-radius: var(--border-radius-radius-md); /* mobile: rounded all corners (2345:25791) */
+}
+
+/* eyebrow — Eyebrow-Medium (2345:14141): 16/1, uppercase; the kit
+   letter-spacing token is 10% (no CSS % unit) = 1.6px at 16px -> 0.1em */
+.anchor-banner .anchor-banner-eyebrow {
+  font-size: var(--type-eyebrow-medium-font-size);
+  font-weight: var(--type-eyebrow-medium-font-weight);
+  line-height: var(--type-eyebrow-medium-line-height);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+/* title — Heading-2 responsive ramp (I2345:14081;545:99570 et al.) */
+.anchor-banner :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  font-weight: var(--type-heading-2-font-weight);
+  font-style: var(--type-heading-2-font-style);
+  font-size: var(--type-heading-2-font-size);
+  line-height: var(--type-heading-2-line-height);
+  letter-spacing: var(--type-heading-2-letter-spacing);
+}
+
+/* body — Body-1 Book (I2345:14081;545:99571) */
+.anchor-banner p {
+  margin: 0;
+  font-weight: var(--type-body-1-book-font-weight);
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  letter-spacing: var(--type-body-1-book-letter-spacing);
+}
+
+/* tablet (2345:19314 / 2345:36828, 834 design): side-by-side, media 333
+   flush to its edge, pad 48 on the content side, gap 24; the kit's
+   fixed variant height is 337.5 (media-driven), min-height so authored
+   content may grow */
+@media (width >= 834px) {
+  .section.anchor-banner-container > div.anchor-banner-wrapper {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .anchor-banner > div {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--grid-gutter-tablet);
+    min-height: 337.5px; /* kit variant height, no token (2345:19314) */
+    padding-inline: var(--space-component-48) 0; /* kit space/module/padding/tablet/large=48 (styles.css tablet-large token diverges at 64) */
+  }
+
+  /* image-left (authored order or variant class): mirror (2345:19314) */
+  .anchor-banner.image-left > div {
+    flex-direction: row-reverse;
+    padding-inline: 0 var(--space-component-48);
+  }
+
+  .anchor-banner-content {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: var(--space-component-48) 0; /* kit Section Header py 48 (2345:19315) */
+  }
+
+  .anchor-banner-media {
+    flex: 0 0 333px; /* kit tablet media width, no token (2345:19319) */
+    width: 333px;
+    align-self: stretch;
+    aspect-ratio: auto;
+  }
+
+  .anchor-banner-media img {
+    height: 100%;
+    aspect-ratio: auto;
+    border-radius: 0; /* outer corners come from the card's overflow clip */
+  }
+}
+
+/* desktop (2345:17428 / 2345:37005, 1440 design): pad 64, gap 32, media
+   640; kit height 360 fixed (media 16:9), content centered bare (no py) */
+@media (width >= 1140px) {
+  .section.anchor-banner-container > div.anchor-banner-wrapper {
+    padding: 0;
+  }
+
+  .anchor-banner > div {
+    gap: var(--grid-gutter-desktop);
+    min-height: 360px; /* kit variant height (2345:17428) */
+    padding-inline: var(--space-module-padding-desktop-large) 0;
+  }
+
+  .anchor-banner.image-left > div {
+    padding-inline: 0 var(--space-module-padding-desktop-large);
+  }
+
+  .anchor-banner-content {
+    padding: 0; /* kit desktop header carries no vertical padding (2345:12714) */
+  }
+
+  .anchor-banner-media {
+    flex-basis: 640px;
+    width: 640px;
+  }
+}
+
+/* surface options — light usage board 2345:48104 (Surface Base flagged
+   "Do not use... same color as the page" by the kit, kept for authors
+   who theme the page differently) */
+main .section.light.anchor-banner-container .anchor-banner,
+main .section.highlight.anchor-banner-container .anchor-banner,
+main .section.surface-base.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-base);
+}
+
+main .section.surface-light.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-light);
+}
+
+main .section.tint.anchor-banner-container .anchor-banner,
+main .section.surface-mid.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-mid);
+}
+
+main .section.surface-dim.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-dim);
+}
+
+/* dark usage board 2345:48081 — same accent mapping as the section
+   options in styles.css; text/button inversion comes from the shared
+   section.dark rules */
+main .section.dark.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-accent-04);
+}
+
+main .section.dark.surface-light.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-accent-01);
+}
+
+main .section.dark.surface-base.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-accent-02);
+}
+
+main .section.navy.anchor-banner-container .anchor-banner,
+main .section.dark.surface-mid.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-accent-03);
+}
+
+main .section.dark.surface-dim.anchor-banner-container .anchor-banner {
+  background-color: var(--color-surface-accent-04);
+}
+
+/* inverse eyebrow — kit dark-context content/secondary resolves to
+   #e7f1fc (I2345:50612;2345:14141); no *-inverse secondary token exists,
+   clear-blue is the same kit value */
+main .section:is(.dark, .navy).anchor-banner-container .anchor-banner-eyebrow {
+  color: var(--color-brand-primary-clear-blue);
+}
+
+/* banner-level facet grounds (dark board 2345:48081: Light Facet
+   2345:49123, Bright Facet 2345:49868, Dark Facet 2345:50612 — dark
+   facet artwork is also the component symbols' baked background fill).
+   Kit fills are 2880-wide artwork in FILL mode -> center/cover.
+   Bright/dark carry inverse content: author as "dark, facet-bright" /
+   "dark, facet-dark" (same contract as the section facet options);
+   facet-light keeps normal content colors. These rules follow the dark
+   surface rules so the artwork wins over the .dark base color. */
+main .section.facet-light.anchor-banner-container .anchor-banner {
+  background: var(--color-surface-mid) url('/blocks/anchor-banner/facet-light-banner.jpg') center / cover no-repeat;
+}
+
+main .section.facet-bright.anchor-banner-container .anchor-banner {
+  background: var(--color-brand-primary-vibrant-blue) url('/blocks/anchor-banner/facet-bright-banner.jpg') center / cover no-repeat;
+}
+
+main .section.facet-dark.anchor-banner-container .anchor-banner {
+  background: var(--color-surface-accent-03) url('/blocks/anchor-banner/facet-dark-banner.jpg') center / cover no-repeat;
+}

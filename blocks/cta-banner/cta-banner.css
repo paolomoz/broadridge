@@ -27,7 +27,7 @@ main .section.cta-banner-container:is(.light, .highlight, .tint, .dark, .navy, .
 /* mobile base (1213:214884, 430 design: pad 32 block / 16 inline) */
 .cta-banner {
   padding: var(--space-component-32) var(--space-component-16);
-  border-radius: var(--border-radius-border-radius-radius-md);
+  border-radius: var(--border-radius-radius-md);
   background-color: var(--color-surface-light); /* kit light default (1914:157591) */
   overflow: hidden;
 }
