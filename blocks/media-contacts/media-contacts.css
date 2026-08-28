@@ -1,17 +1,283 @@
-/* press-release media contacts / about-broadridge boilerplate rail */
-.media-contacts {
-  background-color: var(--c-grey-surface);
-  border-radius: var(--radius-sm);
-  padding: 24px;
-  font-size: 14px;
+/* media-contacts — Figma web kit C6 Media Contacts (set 2403:37488,
+   page 2403:22026; gate frame 2403:37487 Desktop 1184w).
+   Device axis: Desktop 2403:37487 / Tablet 2826:36449 / Mobile
+   2826:36651. Core Style axis (set 2832:89966): Basic 2403:42943 =
+   default; Card 2832:89967 = `media-contacts (card)`.
+   Kit geometry (component-set symbols):
+   - module: header (A9 2826:33414) -> contacts; gap 48 desktop /
+     32 tablet+mobile; header is heading (max-w 780) + optional A5
+     Link CTA row at gap 32; heading pinned Heading/Desktop/Heading-2
+     40/1.15 at ALL devices (kit-literal: header row is 102 tall in
+     Desktop, Tablet AND Mobile symbols — same ruling as M14).
+   - contacts grid: desktop 3-col gap 32 (2826:32690, cells 373.33);
+     tablet 2-col gaps 24/24 (2826:36451, cells 333); mobile stacked
+     gap 32 (2826:36653).
+   - Core Basic (2403:42943): column gap 12; person icon 24 in a
+     32px box (py 4, 2403:42926); name Body-2 Book 22/1.3; title
+     Body-3 Italic 18/1.3 content/secondary; A12 links icon 16 +
+     gap 8 + Link/Small 14/500/1 action/base (2403:42932).
+   - Core Card (2832:89967, collapsed to 1px in the kit — geometry
+     derived, see tolerances.md): surface/mid fill + radius-md +
+     padding 24 (matches the gated A7 card chrome); Top Info row =
+     A2 badge + 24px circle flag, justify-between (2836:26353); name
+     Title-1 28/1.15 (2832:89969); details Body-3 Book 18/1.3
+     secondary (2832:89970); Links block pt 24, gap 12, icon 24 +
+     gap 10 + Link/Medium 18/500/1 (2832:91366). */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.media-contacts-container > div.media-contacts-wrapper {
+  max-width: none;
+  padding: 0;
 }
 
-.media-contacts h2,
-.media-contacts h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
+/* mobile base (2826:36651: 382 content in 430 viewport) */
+.media-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-module-gap-mobile);
+  box-sizing: border-box;
+  max-width: var(--grid-content-width);
+  margin: 0 24px;
 }
 
 .media-contacts p {
-  margin-bottom: 8px;
+  margin: 0;
+}
+
+/* ---- header — A9 Content Groups (2826:33414) ---- */
+
+.media-contacts .media-contacts-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32); /* copy -> CTA (I2826:33414;545:99567 -> 2712:438048) */
+  align-items: flex-start;
+}
+
+.media-contacts .media-contacts-header :is(h1, h2, h3) {
+  max-width: 780px; /* A9 content max width (I2826:33414;545:99567) */
+  margin: 0;
+  font-weight: var(--type-heading-2-font-weight);
+  font-size: 40px; /* kit pins Heading/Desktop/Heading-2 at all devices (I2826:36652;545:99570) */
+  line-height: 1.15;
+  letter-spacing: var(--type-heading-2-letter-spacing);
+}
+
+/* A5 Button Group row (I2826:33414;2712:438048): wrap, gap 16;
+   Link CTA is label-only (354:1603) — Link/Medium, action/base */
+.media-contacts .media-contacts-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-component-16);
+  align-items: center;
+}
+
+.media-contacts .media-contacts-ctas a:any-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: var(--color-action-base);
+  font-weight: var(--type-link-medium-font-weight);
+  font-size: var(--type-link-medium-font-size);
+  line-height: var(--type-link-medium-line-height);
+  text-decoration: none;
+}
+
+/* ---- contacts grid ---- */
+
+.media-contacts .media-contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-module-gap-mobile); /* stacked contacts gap 32 (2826:36653) */
+  align-items: center; /* kit Contacts rows are y-centered (2826:32690) */
+}
+
+/* ---- contact — C6 Media Contacts Core, Style=Basic (2403:42943) ---- */
+
+.media-contacts .media-contacts-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-12); /* core rhythm (spacing/750, 2403:42943) */
+  align-items: flex-start;
+}
+
+/* icon-only A12 Link (2403:42926): 24px person glyph in a 32px box
+   (py 4); decorative — drawn by the block, content/primary */
+.media-contacts:not(.card) .media-contacts-contact::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin: 4px 0;
+  background-color: var(--color-content-primary);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14 14C16.6888 14 18.8816 16.1224 18.9951 18.7832L19 19V21C19 21.5523 18.5523 22 18 22C17.4872 22 17.0646 21.6135 17.0068 21.1162L17 21V19C17 17.4025 15.7513 16.0964 14.1768 16.0049L14 16H10C8.40248 16 7.09636 17.2487 7.00488 18.8232L7 19V21C7 21.5523 6.55228 22 6 22C5.48716 22 5.0646 21.6135 5.00684 21.1162L5 21V19C5 16.3112 7.1224 14.1184 9.7832 14.0049L10 14H14ZM12 2C14.7614 2 17 4.23858 17 7C17 9.76142 14.7614 12 12 12C9.23858 12 7 9.76142 7 7C7 4.23858 9.23858 2 12 2ZM12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* name — Body-2 Book (2403:42929), any authored tag */
+.media-contacts .media-contacts-name {
+  margin: 0;
+  color: var(--color-content-primary);
+  font-weight: var(--type-body-2-book-font-weight);
+  font-size: var(--type-body-2-book-font-size);
+  font-style: var(--type-body-2-book-font-style);
+  line-height: var(--type-body-2-book-line-height);
+  letter-spacing: var(--type-body-2-book-letter-spacing);
+}
+
+/* job title — Body-3 Italic, content/secondary (2403:42930) */
+.media-contacts .media-contacts-title {
+  color: var(--color-content-secondary);
+  font-weight: var(--type-body-3-italic-font-weight);
+  font-size: var(--type-body-3-italic-font-size);
+  font-style: var(--type-body-3-italic-font-style);
+  line-height: var(--type-body-3-italic-line-height);
+}
+
+/* contact links (A12, 2403:42932): icon 16 + gap 8 + Link/Small */
+.media-contacts .media-contacts-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-12);
+  align-items: flex-start;
+}
+
+/* the wrapping p must not add its body line box around the 16px link */
+.media-contacts .media-contacts-link {
+  display: flex;
+}
+
+.media-contacts .media-contacts-link a:any-link {
+  display: inline-flex;
+  gap: var(--space-component-8);
+  align-items: center;
+  min-height: 16px;
+  color: var(--color-action-base);
+  font-weight: var(--type-link-small-font-weight);
+  font-size: var(--type-link-small-font-size);
+  line-height: var(--type-link-small-line-height);
+  text-decoration: none;
+}
+
+.media-contacts .media-contacts-link a:focus-visible {
+  outline: 3px solid var(--color-action-tertiary-border-focus-ring);
+  outline-offset: 0;
+  border-radius: var(--border-radius-radius-sm);
+}
+
+/* icon glyphs — kit A12 leading icons (I2403:42932;24:725);
+   default (non-mailto/tel) links carry the kit login glyph (derived) */
+.media-contacts .media-contacts-link a:any-link::before {
+  content: '';
+  flex: none;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3C13.5975 3 14.9036 4.24866 14.9951 5.82324L15 6V8C15 8.55228 14.5523 9 14 9C13.4872 9 13.0646 8.61355 13.0068 8.11621L13 8V6C13 5.48716 12.6135 5.0646 12.1162 5.00684L12 5H5C4.48716 5 4.0646 5.38645 4.00684 5.88379L4 6V18C4 18.5128 4.38645 18.9354 4.88379 18.9932L5 19H12C12.5128 19 12.9354 18.6135 12.9932 18.1162L13 18V16C13 15.4477 13.4477 15 14 15C14.5128 15 14.9354 15.3865 14.9932 15.8838L15 16V18C15 19.5975 13.7513 20.9036 12.1768 20.9951L12 21H5C3.40248 21 2.09636 19.7513 2.00488 18.1768L2 18V6C2 4.40248 3.24866 3.09636 4.82324 3.00488L5 3H12ZM9.29297 8.29297C9.68349 7.90244 10.3165 7.90244 10.707 8.29297C11.0675 8.65345 11.0951 9.22099 10.79 9.61328L10.707 9.70703L9.41406 11H20C20.5128 11 20.9354 11.3865 20.9932 11.8838L21 12C21 12.5128 20.6135 12.9354 20.1162 12.9932L20 13H9.41504L10.707 14.293C11.0976 14.6835 11.0976 15.3165 10.707 15.707C10.3465 16.0675 9.77901 16.0951 9.38672 15.79L9.29297 15.707L6.33398 12.749C6.26474 12.6866 6.20436 12.6143 6.15527 12.5361L6.08105 12.3945L6.04395 12.293L6.03809 12.2754C5.95285 11.9817 5.99867 11.6483 6.2168 11.3779L6.29297 11.293L9.29297 8.29297Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.media-contacts .media-contacts-link.email a:any-link::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M12.6665 2.66686C13.7567 2.66692 14.6407 3.53913 14.6635 4.6239C14.6641 4.63369 14.6653 4.6434 14.6655 4.65319C14.6655 4.65768 14.6665 4.66237 14.6665 4.66686V11.3339C14.6662 12.4381 13.7708 13.3338 12.6665 13.3339H3.33344C2.22905 13.3339 1.33373 12.4382 1.33344 11.3339V4.66686C1.33344 3.5623 2.22887 2.66686 3.33344 2.66686H12.6665ZM8.36958 9.22155C8.17062 9.35406 7.9183 9.36856 7.70747 9.2655L7.63032 9.22155L2.66645 5.91198V11.3339C2.66673 11.7018 2.96543 11.9999 3.33344 11.9999H12.6665C13.0344 11.9998 13.3332 11.7018 13.3334 11.3339V5.91198L8.36958 9.22155ZM3.33344 3.99987C3.07586 3.99987 2.85471 4.14726 2.7436 4.3612L8.00043 7.86511L13.2553 4.3612C13.1442 4.14746 12.9239 3.99991 12.6665 3.99987H3.33344Z'/%3E%3C/svg%3E");
+}
+
+.media-contacts .media-contacts-link.phone a:any-link::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6 2C6.24534 2 6.46844 2.13443 6.58441 2.34583L6.61898 2.41907L7.95232 5.75241C8.06371 6.0309 7.97475 6.34576 7.74302 6.52598L7.67633 6.57166L6.56067 7.24067L6.6025 7.30911C7.13368 8.15255 7.84745 8.86632 8.69089 9.3975L8.75867 9.43867L9.42834 8.32367C9.58266 8.06647 9.88718 7.94678 10.1709 8.02223L10.2476 8.04768L13.5809 9.38102C13.8087 9.47213 13.9659 9.67981 13.9951 9.91916L14 10V12.6667C14 13.7712 13.1046 14.6667 11.9596 14.6654C6.24165 14.318 1.68204 9.75835 1.33333 4C1.33333 2.93488 2.16595 2.06423 3.21582 2.0034L3.33333 2H6ZM5.54867 3.33333H3.33333C2.96514 3.33333 2.66667 3.63181 2.66544 3.95956C2.97204 9.00478 6.99522 13.028 12 13.3333C12.3419 13.3333 12.6237 13.076 12.6622 12.7444L12.6667 12.6667V10.4513L10.2793 9.496L9.57166 10.6763C9.40689 10.951 9.0731 11.0665 8.77798 10.962L8.70512 10.9312C7.12583 10.1524 5.84764 8.87417 5.06876 7.29488C4.9271 7.00764 5.01067 6.66444 5.25836 6.47293L5.32367 6.42834L6.50333 5.72L5.54867 3.33333Z'/%3E%3C/svg%3E");
+}
+
+/* ---- Card style (2832:89967) — geometry derived from the collapsed
+   kit symbol + Basic layout; chrome matches the gated A7 card
+   (padding 24 / radius-md; fill is the symbol's surface/mid) ---- */
+
+.media-contacts.card .media-contacts-contact {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-component-24); /* spacing/1500 (2832:89967) */
+  border-radius: var(--border-radius-radius-md);
+  background-color: var(--color-surface-mid);
+}
+
+/* Top Info (2836:26353): badge left, 24px circle flag right */
+.media-contacts.card .media-contacts-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 24px;
+}
+
+.media-contacts.card .media-contacts-top .badge:only-child {
+  margin-right: auto;
+}
+
+.media-contacts.card .media-contacts-flag {
+  display: block;
+  margin-left: auto;
+}
+
+.media-contacts.card .media-contacts-flag img {
+  display: block;
+  width: 24px; /* United States of America / Circle (I2836:26350;14558:89132) */
+  height: 24px;
+  object-fit: cover;
+  border-radius: var(--border-radius-radius-full);
+}
+
+/* card name — Title-1 (2832:89969) */
+.media-contacts.card .media-contacts-name {
+  font-weight: var(--type-title-1-font-weight);
+  font-size: var(--type-title-1-font-size);
+  line-height: var(--type-title-1-line-height);
+  letter-spacing: var(--type-title-1-letter-spacing);
+}
+
+/* card details — Body-3 Book, not italic (2832:89970) */
+.media-contacts.card .media-contacts-title {
+  font-weight: var(--type-body-3-book-font-weight);
+  font-size: var(--type-body-3-book-font-size);
+  font-style: var(--type-body-3-book-font-style);
+  line-height: var(--type-body-3-book-line-height);
+}
+
+/* card Links block: pt 24 = core gap 12 + 12 (2832:91366) */
+.media-contacts.card .media-contacts-links {
+  margin-top: var(--space-component-12);
+}
+
+/* card links are A12 Link/Medium: icon 24 + gap 10 (2832:89971) */
+.media-contacts.card .media-contacts-link a:any-link {
+  gap: 10px;
+  min-height: 24px;
+  font-size: var(--type-link-medium-font-size);
+}
+
+.media-contacts.card .media-contacts-link a:any-link::before {
+  width: 24px;
+  height: 24px;
+}
+
+.media-contacts.card .media-contacts-link.phone a:any-link::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 3C9.36801 3 9.70266 3.20165 9.87662 3.51875L9.92848 3.62861L11.9285 8.62861C12.0956 9.04635 11.9621 9.51864 11.6145 9.78897L11.5145 9.85749L9.841 10.861L9.90374 10.9637C10.7005 12.2288 11.7712 13.2995 13.0363 14.0963L13.138 14.158L14.1425 12.4855C14.374 12.0997 14.8308 11.9202 15.2563 12.0333L15.3714 12.0715L20.3714 14.0715C20.7131 14.2082 20.9489 14.5197 20.9926 14.8787L21 15V19C21 20.6569 19.6569 22 17.9393 21.9982C9.36247 21.4769 2.52306 14.6375 2 6C2 4.40232 3.24892 3.09634 4.82373 3.00509L5 3H9ZM8.323 5H5C4.44772 5 4 5.44772 3.99816 5.93934C4.45806 13.5072 10.4928 19.5419 18 20C18.5128 20 18.9355 19.614 18.9933 19.1166L19 19V15.677L15.419 14.244L14.3575 16.0145C14.1103 16.4264 13.6096 16.5998 13.167 16.443L13.0577 16.3969C10.6887 15.2285 8.77146 13.3113 7.60314 10.9423C7.39065 10.5115 7.516 9.99665 7.88754 9.7094L7.9855 9.64251L9.755 8.58L8.323 5Z'/%3E%3C/svg%3E");
+}
+
+/* ---- tablet (2826:36449: 690 content in 834 = 72px side offset) ---- */
+@media (width >= 834px) {
+  .media-contacts {
+    gap: var(--space-module-gap-tablet); /* 32 (2826:36449) */
+    margin: 0 72px;
+  }
+
+  .media-contacts .media-contacts-grid {
+    grid-template-columns: repeat(2, 1fr); /* cells 333 (2826:36452) */
+    gap: var(--space-grid-gap-tablet); /* 24/24 (2826:36451) */
+  }
+}
+
+/* ---- desktop (2403:37487: 1184 content grid) ---- */
+@media (width >= 1140px) {
+  .media-contacts {
+    gap: var(--space-module-gap-desktop); /* 48 (2403:37487) */
+    margin: 0 auto;
+  }
+
+  .media-contacts .media-contacts-grid {
+    grid-template-columns: repeat(3, 1fr); /* cells 373.33 (2826:32690) */
+    gap: var(--space-grid-gap-desktop); /* 32 */
+  }
 }
