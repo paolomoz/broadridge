@@ -1,18 +1,316 @@
-/* testimonial — replica */
+/* quote — Figma web kit M7 Testimonials (set 617:61251, page 537:98857).
+   Style axis: Simple = default `quote`; Large Image = `quote (image)`;
+   Device axis: Desktop/Tablet/Mobile = breakpoints, Tablet Stacked =
+   `quote (stacked)` (also `quote (image stacked)`).
+   Background=Yes exists in-kit for Style=Simple ONLY (set 617:61251:
+   no Large Image + Background variant) — it maps to the section style
+   options the kit draws cards for (surface-light, tint/surface-mid,
+   surface-dim, dark, navy): a `quote` in such a section draws the kit
+   card (1743:121283); .light/.highlight/.surface-base sections stay
+   card-less (usage board 1918:223602); `quote (image)` never draws a
+   card (kit rule, enforced via :not(.image)).
+   Kit geometry (component-set symbols):
+   - LI Desktop 617:61250 (1184w): media 541.5 (4:3) / gap 104 /
+     content 538.5 (kit-literal, left-weighted); content centered;
+     quote 32; quote->meta 24; meta->link 48.
+   - LI Tablet 617:61249 (690w): media 317 (1:1) / gap 56 / 317;
+     quote 28; gaps 24/32.
+   - LI Tablet Stacked 706:37309 (690w): media 690x295.71 (21:9),
+     stack gaps 32; quote 28; gaps 24/32.
+   - LI Mobile 617:61248 (382w): media 382x286 (4:3, kit-floored),
+     stack gap 32; quote 24; quote->meta 16; meta->link 32.
+   - Simple 1552:3488/2313:19710/1552:3497/1552:3505: baked padding
+     64/48/48/32; avatar 128 circle, gap 32; quote 28/28/28/24;
+     quote->meta 24/24/24/16; meta->link 32 at every device (desktop
+     32 is kit-literal — LI and card use 48 at desktop).
+   - Card (Background=Yes) 1743:121283/1746:122329/1681:3014/
+     1918:225099: surface fill + radius-md; padding 64 / 24x48 /
+     24x48 / 32x16; avatar gap 32/24/32/32; quote 32 at desktop
+     (kit-literal: card desktop uses Quote/Large); quote->meta 24 at
+     every device; meta->link 48/32/32/32. */
+
+/* full-bleed: the block manages its own container (content grid) */
+.section.quote-container > div.quote-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* kit sets lining/proportional figures on every M7 text node */
 .quote {
-  border-left: 4px solid var(--c-blue);
-  padding: 8px 0 8px 32px;
-  max-width: 900px;
+  font-feature-settings: "lnum" 1, "pnum" 1;
 }
 
-.quote > div > div:first-child p {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.4;
+/* mobile base — Simple (1552:3505): stack, block padding 32,
+   24px side offset (382 content in 430) */
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32); /* avatar -> content (1552:3506 -> 1552:3507) */
+  box-sizing: border-box;
+  max-width: var(--grid-content-width);
+  margin: 0 24px;
+  padding: 32px; /* 1805:52387 */
 }
 
-.quote > div > div:last-child p {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 0;
+/* Large Image (617:61248): no baked padding, media flush */
+.quote.image {
+  padding: 0;
+}
+
+.quote p {
+  margin: 0;
+}
+
+/* A13 Media */
+.quote .quote-media picture {
+  display: block;
+}
+
+/* Simple avatar: 128 circle (1552:3506, radius-full) */
+.quote .quote-media img {
+  display: block;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: var(--border-radius-radius-full);
+}
+
+/* Large Image media: full-width 4:3 at mobile (617:59783 382x286,
+   kit-floored 4:3), radius-md */
+.quote.image .quote-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+}
+
+/* Content = (Quote + Meta Data) + A12 Link (617:59766) */
+.quote .quote-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32); /* meta -> link 32 below desktop (617:59781) */
+  align-items: flex-start;
+}
+
+.quote .quote-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-16); /* quote -> meta 16 at mobile (1552:3508 -> 1552:3509) */
+}
+
+/* quote text — Functional/Quote ramp, Small at mobile (617:59786) */
+.quote .quote-text p {
+  font-weight: var(--type-quote-small-book-font-weight);
+  font-size: var(--type-quote-small-book-font-size);
+  line-height: var(--type-quote-small-book-line-height);
+  letter-spacing: 0.01em; /* kit letterSpacing 1% (617:59768); CSS letter-spacing has no % unit */
+  text-indent: -0.45em; /* kit hanging quote mark (617:59768 indent -0.45 x font-size) */
+}
+
+/* meta data (617:59769): name = Title-2, job = Body-3 Italic */
+.quote .quote-meta p {
+  font-weight: var(--type-title-2-font-weight);
+  font-size: var(--type-title-2-font-size);
+  line-height: var(--type-title-2-line-height);
+  letter-spacing: var(--type-title-2-letter-spacing);
+}
+
+.quote .quote-meta p + p {
+  color: var(--color-content-secondary); /* 617:59771 */
+  font-weight: var(--type-body-3-italic-font-weight);
+  font-style: var(--type-body-3-italic-font-style);
+  font-size: var(--type-body-3-italic-font-size);
+  line-height: var(--type-body-3-italic-line-height);
+}
+
+/* A12 Link (617:59772): shared a.cta-link atom + 24px arrow */
+.quote .quote-cta a.cta-link::after {
+  content: '';
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat; /* Arrows/Arrow Right (24:702) */
+}
+
+/* tablet (690 content in 834 = 72px side offset) */
+@media (width >= 834px) {
+  .quote {
+    margin: 0 72px;
+    padding: 48px; /* 2313:19711 */
+  }
+
+  .quote.image {
+    padding: 0;
+  }
+
+  /* side-by-side (not .stacked): Simple 2313:19710 avatar row, gap 32 */
+  .quote:not(.stacked, .image) {
+    flex-direction: row;
+  }
+
+  .quote:not(.stacked, .image) .quote-content {
+    flex: 1;
+  }
+
+  /* LI tablet row (617:61249): media 317 / gap 56 / content 317,
+     content centered (617:59775 y-centered; kit-literal fractions of 690) */
+  .quote.image:not(.stacked) {
+    display: grid;
+    grid-template-columns: 45.942% 45.942%;
+    column-gap: 8.116%;
+    align-items: center;
+  }
+
+  /* A13 media is 1:1 at tablet (617:59774 317x316.5) */
+  .quote.image:not(.stacked) .quote-media img {
+    aspect-ratio: 1;
+  }
+
+  /* Tablet Stacked LI media is 21:9 (706:37310 690x295.71) */
+  .quote.image.stacked .quote-media img {
+    aspect-ratio: 21 / 9;
+  }
+
+  /* quote -> meta widens to 24 (2313:19714 -> 2313:19716) */
+  .quote .quote-body {
+    gap: var(--space-component-24);
+  }
+
+  /* quote text = Quote/Medium (2313:19715, 617:59777) */
+  .quote .quote-text p {
+    font-size: var(--type-quote-medium-book-font-size);
+    line-height: var(--type-quote-medium-book-line-height);
+  }
+}
+
+/* desktop (1184 content grid) */
+@media (width >= 1140px) {
+  .quote {
+    margin: 0 auto;
+    padding: 64px; /* 1804:52322 (--space-module-padding-desktop-large) */
+  }
+
+  .quote.image {
+    padding: 0;
+  }
+
+  /* LI desktop row (617:61250): media 541.5 / gap 104 / content 538.5
+     (kit-literal, left-weighted; no tokens) */
+  .quote.image:not(.stacked) {
+    grid-template-columns: 45.7348% 45.4814%;
+    column-gap: 8.7838%;
+  }
+
+  /* A13 media is 4:3 at desktop (617:59765 541.5x406.125) */
+  .quote.image:not(.stacked) .quote-media img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* LI desktop: quote = Quote/Large (617:59768), meta -> link 48
+     (617:59772 at gap 48 = --space-module-gap-desktop); the Simple
+     no-background desktop keeps 28 and gap 32 (1552:3492, 1552:3496 —
+     kit-literal) */
+  .quote.image .quote-text p {
+    font-size: var(--type-quote-large-book-font-size);
+    line-height: var(--type-quote-large-book-line-height);
+  }
+
+  .quote.image .quote-content {
+    gap: var(--space-module-gap-desktop);
+  }
+}
+
+/* ---- Background=Yes: kit card (Simple only — 617:61251 has no
+   Large Image + Background variant). Section style option supplies
+   the surface; the card is drawn by the block (1743:121284:
+   surface fill + radius-md). ---- */
+
+main .section:is(.surface-light, .tint, .surface-mid, .surface-dim, .dark, .navy) .quote:not(.image) {
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-mid); /* card default = surface/mid (1743:121284) */
+  padding: 32px 16px; /* mobile card 1918:225101 */
+}
+
+/* card surface follows the section's surface option (usage boards
+   1918:223605 / 6226:103896 / 1918:223864: the kit draws surface
+   light/mid/dim cards only; .light/.highlight/.surface-base sections
+   stay card-less — usage board 1918:223602 shows Simple with no card
+   on the surface-base ground) */
+main .section.surface-light .quote:not(.image) {
+  background-color: var(--color-surface-light); /* 1918:223800 */
+}
+
+main .section.surface-dim .quote:not(.image) {
+  background-color: var(--color-surface-dim); /* 1918:223866 */
+}
+
+/* dark theme cards (usage boards 2710:81559 / 2710:81562, mirrors the
+   gated C5 mapping): accent surface per dark surface option */
+main .section.dark .quote:not(.image),
+main .section.dark.surface-dim .quote:not(.image) {
+  background-color: var(--color-surface-accent-04); /* 2710:81564 */
+}
+
+main .section.dark.surface-light .quote:not(.image) {
+  background-color: var(--color-surface-accent-01);
+}
+
+main .section.dark.surface-base .quote:not(.image) {
+  background-color: var(--color-surface-accent-02);
+}
+
+main .section.dark.surface-mid .quote:not(.image),
+main .section.navy .quote:not(.image) {
+  background-color: var(--color-surface-accent-03); /* I2710:81561;1743:121284 (#001f5a) */
+}
+
+/* card quote -> meta is 24 at every device (1918:225104 -> 1918:225106) */
+main .section:is(.surface-light, .tint, .surface-mid, .surface-dim, .dark, .navy) .quote:not(.image) .quote-body {
+  gap: var(--space-component-24);
+}
+
+/* job title on dark cards: kit content/secondary dark mode = #e7f1fc
+   (I2710:81561;1743:121290) — no content-secondary-inverse token in the
+   kit sheet; surface/mid carries the same value */
+main .section:is(.dark, .navy) .quote .quote-meta p + p {
+  color: var(--color-surface-mid);
+}
+
+/* A12 Link inverts via the global dark-section link rule; keep the
+   tertiary hover off dark grounds */
+main .section:is(.dark, .navy) .quote .quote-cta a.cta-link:hover {
+  color: var(--color-content-primary-inverse);
+}
+
+@media (width >= 834px) {
+  /* tablet card 1746:122330 / 1681:8632: pad 24 x 48 */
+  main .section:is(.surface-light, .tint, .surface-mid, .surface-dim, .dark, .navy) .quote:not(.image) {
+    padding: 24px 48px;
+  }
+
+  /* tablet card avatar gap narrows to the gutter (1746:122505 at 24;
+     the stacked card keeps 32 — 1681:8682 at 160) */
+  main .section:is(.surface-light, .tint, .surface-mid, .surface-dim, .dark, .navy) .quote:not(.image, .stacked) {
+    gap: var(--space-grid-gap-tablet);
+  }
+}
+
+@media (width >= 1140px) {
+  /* desktop card 1743:121284: pad 64, avatar gap 32 */
+  main .section:is(.surface-light, .tint, .surface-mid, .surface-dim, .dark, .navy) .quote:not(.image) {
+    gap: var(--space-grid-gap-desktop);
+    padding: var(--space-module-padding-desktop-large);
+  }
+
+  /* desktop card quote = Quote/Large + meta -> link 48 (1743:121287,
+     1743:121291 — kit-literal: differs from the no-background Simple) */
+  main .section:is(.surface-light, .tint, .surface-mid, .surface-dim, .dark, .navy) .quote:not(.image) .quote-text p {
+    font-size: var(--type-quote-large-book-font-size);
+    line-height: var(--type-quote-large-book-line-height);
+  }
+
+  main .section:is(.surface-light, .tint, .surface-mid, .surface-dim, .dark, .navy) .quote:not(.image) .quote-content {
+    gap: var(--space-module-gap-desktop);
+  }
 }
