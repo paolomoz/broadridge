@@ -1444,3 +1444,282 @@ a.cta-link::after {
   background-color: currentcolor;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
+
+/* ==== figma-to-eds element styles BEGIN (C3/C7/C12 + A4/A28/A29) ==== */
+/* Default-content element styles mapped from kit modules C3A Bullet Lists
+   (12009:3404), C7 Simple Text (2800:52140), C12 Tables (17212:18670) and
+   atoms A4 Bullet (395:733), A10 Divider (504:57339), A28 Table Cell
+   (17209:479), A29 Overflow Bar (17209:535). Gate artifacts under
+   stardust/figma-to-eds/gates/components/{c3-bullet-lists,c7-simple-text,
+   c12-tables}/. Scoped to .default-content-wrapper and the narrow/card
+   section options — block wrappers are untouched. */
+
+/* default-content grid — kit content width is 1184 (12009:3405 / C12 A9
+   17212:18672), not the replica 1232-cap (which yields 1168 inside 32px
+   gutters). 1184 + 2x32 = 1248; at 1440 this puts content at x128 like
+   every gated module. <900px keeps the base 24px gutters (786 @834,
+   382 @430 — kit tablet/mobile symbols 12009:3428 / 12009:3451). */
+@media (width >= 900px) {
+  main > .section > div.default-content-wrapper {
+    max-width: calc(var(--grid-content-width) + 2 * var(--gutter-m));
+  }
+}
+
+/* ---- A4 Bullet — default-content lists (set 395:733) ----
+   Row model per atom: padding-left 16 (spacing/1000), marker box, gap 12
+   (spacing/750), text Body-N Book. At the site body scale (Body-3, li ramp
+   above) the atom is Size=Body-3 (393:732): row 25 tall, marker 6x25 with
+   a 5px dot centred at (3,12.5), fill content/tertiary (asset 6ea56618).
+   Text x-offset = 16 + 6 + 12 = 34. */
+.default-content-wrapper ul,
+.default-content-wrapper ol {
+  margin: 0 0 var(--type-body-3-book-paragraph-spacing);
+  padding-left: 0;
+  list-style: none;
+}
+
+.default-content-wrapper li {
+  position: relative;
+  min-height: 25px; /* A4 Size=Body-3 row height (393:732) */
+  padding-left: 34px;
+}
+
+/* stack spacing 16 — C3A layout redline: A4 Body-3 rows at y 44/85/126
+   (12009:4993..4995); same 16 rhythm as A9 copy gap (545:99569) */
+.default-content-wrapper li + li {
+  margin-top: var(--space-component-16);
+}
+
+.default-content-wrapper ul li::before {
+  content: '';
+  position: absolute;
+  top: 10px; /* dot cy 12.5 - r 2.5 (6ea56618) */
+  left: 16.5px; /* pl 16 + (cx 3 - r 2.5) */
+  width: 5px;
+  height: 5px;
+  border-radius: var(--border-radius-radius-full);
+  background-color: var(--color-content-tertiary); /* #082485 dot fill */
+}
+
+/* numbered lists — no kit exhibit; derived from A4 (dot slot becomes a
+   right-aligned counter in content/tertiary, text offset preserved) */
+.default-content-wrapper ol {
+  counter-reset: a4-item;
+}
+
+.default-content-wrapper ol > li {
+  counter-increment: a4-item;
+}
+
+.default-content-wrapper ol > li::before {
+  content: counter(a4-item) '.';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px; /* ends where the A4 marker box ends (16 + 6) */
+  height: auto;
+  border-radius: 0;
+  background: none;
+  color: var(--color-content-tertiary);
+  text-align: right;
+}
+
+/* heading -> list gap 16 — C3A layout redline heading h28 -> bullets y44
+   (12009:4977/4978); matches the A9 copy gap (space/component/16) */
+.default-content-wrapper :is(h1, h2, h3, h4, h5, h6):has(+ ul, + ol) {
+  margin-bottom: var(--space-component-16);
+}
+
+/* ---- A10 Divider — default-content hr (12011:9575, asset aaf920b0) ----
+   1.5px stroke color/border/base. Kit divider is a 0-height overlay with
+   24px gaps either side (C3A features gap, 12009:3407); the 1.5px flow
+   height is split off the margins so block-to-block stays 48. */
+.default-content-wrapper hr {
+  height: 0;
+  margin: calc(var(--space-component-24) - 0.75px) 0;
+  border: 0;
+  border-top: var(--border-width-94) solid var(--color-border-base);
+}
+
+/* ---- C7 Simple Text — `narrow` section option (2800:52139) ----
+   Narrow long-form text column, centred: col-8 = 778.667 on the desktop
+   grid, 690 at tablet (5713:67079), full mobile grid (5713:68164).
+   The Type axis is the author's heading level (element ramp above). */
+@media (width >= 834px) {
+  main .section.narrow > div {
+    max-width: 690px; /* tablet content column (5713:67079) */
+    padding: 0;
+  }
+}
+
+@media (width >= 1140px) {
+  main .section.narrow > div {
+    /* col-8: (1184 - 11*32)/12*8 + 7*32 = 778.667 (2800:52139) */
+    max-width: calc((var(--grid-content-width) - 11 * var(--grid-gutter-desktop)) / 12 * 8 + 7 * var(--grid-gutter-desktop));
+  }
+}
+
+/* C7 body copy is Body-1 Book at every device (5713:63363 desktop,
+   5713:68168 mobile); copy stack gap 16 (5713:63361) */
+main .section.narrow .default-content-wrapper p {
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+  margin-block: 0 var(--space-component-16);
+}
+
+main .section.narrow .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+  margin-bottom: var(--space-component-16); /* copy gap (5713:63361) */
+}
+
+/* narrow lists ride the Body-1 A4 variant (395:738: row 33, marker 10x33,
+   7px dot at (5,16.5), text x = 16 + 10 + 12 = 38) */
+main .section.narrow .default-content-wrapper li {
+  min-height: 33px;
+  padding-left: 38px;
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+}
+
+main .section.narrow .default-content-wrapper ul li::before {
+  top: 13px; /* cy 16.5 - r 3.5 (asset 6eac0742) */
+  left: 17.5px; /* pl 16 + (cx 5 - r 3.5) */
+  width: 7px;
+  height: 7px;
+}
+
+main .section.narrow .default-content-wrapper ol > li::before {
+  width: 26px; /* 16 + Body-1 marker box 10 */
+}
+
+/* A13 media in simple-text flow is radius-md (5713:64210) */
+main .section.narrow .default-content-wrapper img {
+  border-radius: var(--border-radius-radius-md);
+}
+
+/* ---- `card` section option — extended-grid module card ----
+   C3A Background=With (12009:3474: 1312 wide, 64 padding) and the C12
+   module chrome (17212:23887: surface/light, radius-md, padding 64/48/
+   32-16, page margins 64/24/8). Background color is NOT set here so the
+   surface options (surface-mid etc.) and the white page default both
+   apply to the section box, which IS the card. */
+main > .section.card {
+  width: calc(100% - 2 * var(--grid-page-margin-mobile)); /* 414 @430 (17212:18679) */
+  max-width: var(--grid-extended-width); /* 1312 */
+  margin-inline: auto;
+  padding: var(--space-component-32) var(--space-component-16); /* mobile (17212:18679) */
+  border-radius: var(--border-radius-radius-md);
+}
+
+main > .section.card > div {
+  max-width: none;
+  padding: 0; /* card padding owns the inset */
+}
+
+@media (width >= 834px) {
+  main > .section.card {
+    width: calc(100% - 2 * var(--grid-page-margin-tablet)); /* 786 @834 */
+    padding: var(--space-component-48); /* tablet (17212:18675 / 12009:3497) */
+  }
+}
+
+@media (width >= 1140px) {
+  main > .section.card {
+    width: calc(100% - 2 * var(--grid-page-margin-desktop)); /* 1312 @1440 */
+    padding: var(--space-module-padding-desktop-large); /* 64 (17212:18671 / 12009:3474) */
+  }
+}
+
+/* A9 header inside a card — heading capped 780 (545:99567), copy gap 16
+   (545:99569), sub-paragraph Body-1 Book (545:99571) */
+main .section.card .default-content-wrapper :is(h1, h2, h3) {
+  max-width: 780px;
+  margin-bottom: var(--space-component-16);
+}
+
+main .section.card .default-content-wrapper :is(h1, h2, h3) + p {
+  max-width: 780px;
+  font-size: var(--type-body-1-book-font-size);
+  line-height: var(--type-body-1-book-line-height);
+}
+
+/* ---- C12 Tables — default-content tables (17212:18670 + A28/A29) ----
+   Cell grid: 4px gaps (slot gap, I17212:23887;17212:18673), cells min
+   100px (A28 min-w), fixed 54 row = 16 + pinned 22 line box + 16
+   (17209:480; kit floors the Body-3 line box into the fixed cell), radius
+   3px raw (17209:480), label cells surface resolves #001f5a with inverse
+   bold text (I17212:23887;17212:18673;17212:23891), base cells surface/
+   mid. The table is its own scroll container (block) so overflowing
+   column sets clip at the content edge and scroll, like the kit mobile/
+   tablet usage exports (17212:24703 / 17212:24045); the 4px outer
+   border-spacing ring is pulled out with negative margins so cells sit
+   flush on the content grid. Header->table gap 48 desktop / 32 tablet+
+   mobile (17212:18671/18675/18679), spacing ring folded in. */
+.default-content-wrapper table {
+  display: block;
+  overflow-x: auto;
+  width: calc(100% + 2 * var(--space-component-4));
+  margin: calc(var(--space-component-32) - var(--space-component-4)) calc(-1 * var(--space-component-4));
+}
+
+@media (width >= 1140px) {
+  .default-content-wrapper table {
+    margin-block: calc(var(--space-component-48) - var(--space-component-4));
+  }
+}
+
+/* kit tables end flush against the card padding (17212:23887: rows end at
+   the 64 bottom inset) — only the spacing ring is pulled out */
+.default-content-wrapper table:last-child {
+  margin-bottom: calc(-1 * var(--space-component-4));
+}
+
+.default-content-wrapper table :is(thead, tbody, tfoot) {
+  display: table;
+  width: 100%;
+  border-spacing: var(--space-component-4);
+}
+
+.default-content-wrapper table :is(th, td) {
+  min-width: 100px; /* A28 17209:480 */
+  padding: var(--space-component-16) var(--space-component-12);
+  border-radius: 3px; /* raw, no radius token (17209:480) */
+  background-color: var(--color-surface-mid);
+  color: var(--color-content-primary);
+  font-size: var(--type-body-3-book-font-size);
+  font-weight: var(--type-body-3-book-font-weight);
+  line-height: 22px; /* pinned: kit fixed cell 54 = 16 + 22 + 16 (17209:480) */
+  text-align: left;
+  vertical-align: middle;
+}
+
+.default-content-wrapper table th {
+  background-color: var(--color-surface-accent-03); /* label fill resolves #001f5a */
+  color: var(--color-content-primary-inverse);
+  font-weight: var(--type-body-3-bold-font-weight); /* Body-3 Bold (17209:482) */
+}
+
+/* A29 Overflow Bar (17209:535): 12px track, neutral/200, radius 70;
+   drawn as the scroll container's own scrollbar. The kit floats the bar
+   28px below the rows (17212:24703: rows end 538, bar at 566) — the
+   28px stand-off is a transparent border on the 40px scrollbar area so
+   it only exists when the table actually overflows. Thumb color has no
+   kit spec (track-only atom): neutral/300, derived. */
+.default-content-wrapper table::-webkit-scrollbar {
+  height: 40px;
+}
+
+.default-content-wrapper table::-webkit-scrollbar-track {
+  border-top: 28px solid transparent;
+  background-color: var(--global-color-neutral-200);
+  background-clip: padding-box;
+  border-radius: 70px; /* raw (17209:536) */
+}
+
+.default-content-wrapper table::-webkit-scrollbar-thumb {
+  border-top: 28px solid transparent;
+  background-color: var(--global-color-neutral-300);
+  background-clip: padding-box;
+  border-radius: 70px;
+}
+
+/* ==== figma-to-eds element styles END ==== */
