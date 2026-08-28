@@ -1,61 +1,406 @@
-/* lead form — replica of source contact/download forms (white card on tint band) */
+/* form — Figma web kit F1 Form Feature (set 48:170).
+   Variant geometry from the kit's component symbols:
+   - Desktop 48:171 (1312x948): wrapper pad 64 on the extended grid, bg
+     surface/mid, radius 4; left copy column flexible (443), form core 677,
+     column gap 64; copy column justify-between (intro top, aside bottom)
+   - Tablet 57:2633 (786): pad 48, stacked intro -> form -> aside, gaps 32
+   - Mobile 57:3034 (414): pad 32/16, stacked, gaps 24
+   - Gated 14903:70685: same shell, shorter field set (form.js)
+   Core .F1 Form Core (576:33838): white card pad 32, radius 4,
+   dim/xx-large shadow, field rows on a 32 gap, A11 input anatomy
+   (label 16 medium / gap 8 / 56px field), states Default/Filled/Error/
+   Success. Panel + field styles are keyed on .form-panel (no .form
+   ancestor) so the F2B modal can host the same core (2425:164798). */
+
+/* the module is an inset rounded band on the extended grid (1312), like
+   B1: the section keeps the page ground, the block paints surface/mid */
+.section.form-container > div.form-wrapper {
+  max-width: var(--grid-extended-width);
+  margin: 0 auto;
+  padding: 0 var(--grid-page-margin-mobile);
+}
+
+/* mobile base (57:3034, 430 design: pad 32/16, stack gap 24) */
 .form {
-  background-color: var(--c-white);
-  border-radius: var(--radius-sm);
-  padding: 32px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
-  max-width: 560px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--space-component-24);
+  padding: var(--space-component-32) var(--space-component-16);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-mid); /* 57:2632 */
 }
 
-.form form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+/* stack order below desktop: intro -> form panel -> aside (57:2634) */
+.form .form-copy {
+  display: contents;
 }
 
-.form .form-field {
-  flex: 1 1 100%;
+.form .form-intro { order: 1; }
+.form .form-panel { order: 2; }
+.form .form-aside { order: 3; }
+
+/* intro — .F1 Form Feature Core 1 Text=Message (66:5713): Heading-2 ramp
+   in content/tertiary, 32 gap, Body-2 in content/secondary */
+.form .form-intro {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--space-component-32);
 }
 
-.form .form-field.half {
-  flex: 1 1 calc(50% - 8px);
+.form .form-intro :is(h1, h2, h3) {
+  margin: 0;
+  color: var(--color-content-tertiary); /* I66:5713;66:5710 */
+  font-weight: var(--type-heading-2-font-weight);
+  font-size: var(--type-heading-2-font-size);
+  line-height: var(--type-heading-2-line-height);
 }
 
-.form label {
-  font-size: 14px;
+.form .form-intro p {
+  margin: 0;
+  color: var(--color-content-secondary); /* I66:5713;66:5711 */
+  font-size: var(--type-body-2-book-font-size);
+  line-height: var(--type-body-2-book-line-height);
+}
+
+/* aside — .F1 Form Feature Core 1 Text=Contact (66:5775): Title-3 lead-in,
+   24 to the phone rows, rows on a 12 gap */
+.form .form-aside p {
+  margin: 0 0 var(--space-component-24);
+  color: var(--color-content-primary);
+  font-size: var(--type-title-3-font-size); /* I66:5775;66:5724 */
+  line-height: var(--type-title-3-line-height);
+}
+
+.form .form-aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-12); /* I66:5775;14903:44966 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--type-body-3-book-font-size);
+  line-height: var(--type-body-3-book-line-height);
+}
+
+.form .form-aside li {
+  display: flex;
+  gap: 6px; /* link cluster gap (I14903:70689;14903:44969) */
+  align-items: center;
+  min-height: 24px;
+}
+
+/* region column: 124px + 16 to the number (I66:5775;14903:44968) */
+.form .form-aside li em {
+  flex: 0 0 124px;
+  margin-right: 10px; /* 6 + 10 = kit 16 region gap */
+  font-style: normal;
+}
+
+/* A12 Link (24:698): 18 medium, lh 1, underline as border */
+.form .form-aside li a {
+  border-bottom: 1px solid var(--color-action-base-alt);
+  color: var(--color-content-primary);
   font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
 }
 
-.form input,
-.form select,
-.form textarea {
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  padding: 12px 16px;
+/* ==== .F1 Form Core panel (576:33838) — portable, also used in F2B ==== */
+
+.form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-32);
+  padding: var(--space-component-32);
+  border-radius: var(--radius-md);
+  background-color: var(--color-form-surface-background); /* color/surface/light */
+  box-shadow: var(--box-shadow-dim-xx-large);
+}
+
+.form-panel form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-component-32); /* rows + half gap (66:3897 / 14903:50792) */
+}
+
+/* success replaces the form (66:4278 -> 576:52774) */
+.form-panel form[hidden] {
+  display: none;
+}
+
+.form-panel .form-field {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  gap: var(--space-component-8); /* label -> field (A11 630:2712) */
+}
+
+.form-panel .form-field.half {
+  flex: 1 1 calc(50% - var(--space-component-16));
+  min-width: 250px; /* kit half min-width, wraps to a stack below (14903:50792) */
+}
+
+/* label row: 16 medium; the kit centers a 20px line in a 16px box
+   (473:6312), reproduced with -2px block margins */
+.form-panel label {
+  margin-block: -2px;
+  color: var(--color-content-primary);
+  font-weight: 500;
   font-size: 16px;
-  background-color: var(--c-white);
+  line-height: 1.25;
 }
 
-.form input:focus,
-.form select:focus,
-.form textarea:focus {
-  outline: 2px solid var(--c-blue);
-  outline-offset: 0;
+.form-panel .req {
+  color: var(--color-form-helper-error); /* I630:2712-473:6312-466:4247 */
+  font-weight: 400;
 }
 
-.form button.button {
+/* Input Field Properties (473:6332): 56 tall, pad 16, surface/default */
+.form-panel input:not([type='checkbox']),
+.form-panel select,
+.form-panel textarea,
+.form-panel .form-affix {
+  box-sizing: border-box;
   width: 100%;
-  margin: 8px 0 0;
+  height: 56px;
+  padding: 0 var(--space-component-16);
+  border: 1px solid var(--color-form-border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-form-surface-default);
+  color: var(--color-form-placeholder-filled);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  letter-spacing: 0.015em; /* kit input tracking 0.24px */
 }
 
-.form .form-status {
-  margin: 12px 0 0;
+.form-panel ::placeholder {
+  color: var(--color-form-placeholder-default);
+  opacity: 1;
+}
+
+/* focus — A11 State=Focus (466:5798): 2px focus border + 3px ring (466:5754) */
+.form-panel :is(input, select, textarea):focus-visible,
+.form-panel .form-affix:focus-within {
+  outline: none;
+  border-color: var(--color-form-border-focus);
+  box-shadow: 0 0 0 1px var(--color-form-border-focus), 0 0 0 3px var(--color-form-border-focus-ring);
+}
+
+/* Select (466:5860): chevron 16 inset 16 (Arrows/Chevron Down 720:2856) */
+.form-panel select {
+  padding-right: var(--space-component-48);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.5286 5.5286C3.76892 5.28827 4.14707 5.26979 4.4086 5.47314L4.4714 5.5286L8 9.05667L11.5286 5.5286C11.7689 5.28827 12.1471 5.26979 12.4086 5.47314L12.4714 5.5286C12.7117 5.76892 12.7302 6.14707 12.5269 6.4086L12.4714 6.4714L8.4714 10.4714C8.23108 10.7117 7.85293 10.7302 7.5914 10.5269L7.5286 10.4714L3.5286 6.4714C3.26825 6.21106 3.26825 5.78895 3.5286 5.5286Z' fill='%23000C36'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-component-16) center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+/* placeholder option state reads as placeholder (466:5959) */
+.form-panel select:required:invalid {
+  color: var(--color-form-placeholder-default);
+}
+
+.form-panel select option {
+  color: var(--color-form-placeholder-filled);
+}
+
+/* TextArea (630:19306): default single 56px line, resizable; kit resizer
+   glyph (630:22006) replaces the UA corner */
+.form-panel textarea {
+  min-height: 56px;
+  padding: 8px var(--space-component-16);
+  align-content: center; /* kit centers 1- and 2-line content (473:6332 justify-center) */
+  line-height: 1.25;
+  resize: vertical;
+}
+
+.form-panel textarea::-webkit-resizer {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M10.8622 4.19518C11.1225 3.93499 11.5443 3.93489 11.8046 4.19518C12.0649 4.45548 12.0647 4.8772 11.8046 5.13756L5.13756 11.8046C4.8772 12.0647 4.45548 12.0649 4.19518 11.8046C3.93489 11.5443 3.93499 11.1225 4.19518 10.8622L10.8622 4.19518ZM10.8602 7.52819C11.1206 7.26784 11.5432 7.26784 11.8036 7.52819C12.0637 7.78844 12.0635 8.21025 11.8036 8.47057L8.46959 11.8046C8.20927 12.0645 7.78747 12.0646 7.52721 11.8046C7.26686 11.5442 7.26686 11.1215 7.52721 10.8612L10.8602 7.52819Z' fill='%23B3B3B3'/%3E%3C/svg%3E") center / 16px no-repeat;
+}
+
+/* PhoneInput affix (466:6263): "+1" prefix in the field chrome, gap 8 */
+.form-panel .form-affix {
+  display: flex;
+  gap: var(--space-component-8);
+  align-items: center;
+}
+
+.form-panel .form-affix input {
+  flex: 1;
+  width: auto;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.form-panel .form-affix input:focus-visible {
+  border: 0;
+  box-shadow: none;
+}
+
+/* error — A11 State=Error (466:5797): 2px error border, no size shift */
+.form-panel .form-field.error :is(input:not([type='checkbox']), select, textarea, .form-affix) {
+  border-color: var(--color-form-border-error);
+  box-shadow: inset 0 0 0 1px var(--color-form-border-error);
+}
+
+/* Form Helper (466:4839): 14 italic, error color */
+.form-panel .field-helper {
+  margin: 0;
+  color: var(--color-form-helper-error);
+  font-style: italic;
   font-size: 14px;
+  line-height: 1;
 }
 
-.form .req {
-  color: #e00000; /* captured required-asterisk red */
+/* gated consent checkbox (739:139715): 18px box, 2px base-alt, radius 4 */
+.form-panel .form-field.checkbox {
+  flex-direction: row;
+  gap: var(--space-component-8);
+  align-items: center;
+  min-height: 24px; /* kit label area min-height (I739:139802;466:4764) */
+}
+
+.form-panel .form-field.checkbox input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  border: 2px solid var(--color-action-base-alt); /* 6021:156594 */
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-panel .form-field.checkbox input:checked {
+  border-color: var(--color-action-base-alt);
+  background-color: var(--color-action-base-alt); /* derived: kit "Checked" spec board 14899:119315 (hidden section) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.5 4.5 6.5 11.5 2.5 7.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-panel .form-field.checkbox input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-form-border-focus-ring);
+}
+
+.form-panel .form-field.checkbox label {
+  flex: 1;
+  margin-block: 0;
+}
+
+/* CTA + reCAPTCHA group (14902:33755): button -> privacy on a 16 gap */
+.form-panel .form-actions {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  gap: var(--space-component-16);
+}
+
+.form-panel button.button {
+  width: 100%;
+  margin: 0;
+}
+
+.form-panel .form-privacy {
+  margin: 0;
+  color: var(--color-content-primary);
+  font-weight: 500;
+  font-size: 12px; /* 14902:32108 (no functional token carries 12) */
+  line-height: 1;
+}
+
+.form-panel .form-privacy a {
+  color: var(--color-action-base);
+  text-decoration: none;
+}
+
+/* status — empty until submit resolves */
+.form-panel .form-status {
+  margin: 0;
+}
+
+.form-panel .form-status:empty {
+  display: none;
+}
+
+/* A11 Notice / Success (632:3988): green/100 ground, centered check + copy */
+.form-panel .form-status.success {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-24);
+  align-items: center;
+  justify-content: center;
+  padding: 64px; /* 632:3988 (no 64 component-space token) */
+  border-radius: var(--radius-md);
+  background-color: #ebf9e6; /* global/color/green/100 (632:3988) — no color/* token */
+  color: var(--color-content-primary);
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  min-height: 482px; /* kit Success notice height in the 546 panel (576:52774) */
+}
+
+/* submit-failure message (no kit Notice/Error capture yet — open row) */
+.form-panel .form-status.error {
+  color: var(--color-form-helper-error);
+  font-size: 16px;
+}
+
+/* tablet (57:2633, 834 design: pad 48, stack gaps 32) */
+@media (width >= 834px) {
+  .section.form-container > div.form-wrapper {
+    padding: 0 var(--grid-page-margin-tablet);
+  }
+
+  .form {
+    row-gap: var(--space-component-32);
+    padding: var(--space-component-48);
+  }
+}
+
+/* desktop (48:171, 1440 design: pad 64, copy column + 677 core on 64 gap) */
+@media (width >= 1140px) {
+  .section.form-container > div.form-wrapper {
+    padding: 0;
+  }
+
+  /* neutralize the legacy replica contact-band grid (lazy-styles.css
+     "contact band — captured"): the F1 module owns its two-column layout
+     now (48:171). Scoped to wrappers holding only the form block; mixed
+     copy+form sections keep the legacy band until they migrate. */
+  .section.form-container > div.form-wrapper:has(.form) {
+    display: block;
+  }
+
+  .form {
+    grid-template-columns: minmax(0, 1fr) 677px; /* 66:4279 core width */
+    grid-template-rows: auto 1fr;
+    column-gap: 64px; /* 57:2632 wrapper gap (no space token carries 64) */
+    row-gap: var(--space-component-32);
+    padding: 64px;
+  }
+
+  .form .form-intro {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  /* aside rides the wrapper bottom (57:2233 justify-between) */
+  .form .form-aside {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: end;
+  }
+
+  .form .form-panel {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
 }

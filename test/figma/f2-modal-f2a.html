@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: f2 modals (f2a profile bio)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+
+    /* gate fixture: the kit frames are full-height (no viewport clamp);
+       modal.css's max-height is a UX addition beyond the kit — lift it so
+       the element box equals the kit window at the gate viewport */
+    body dialog.modal { max-height: none; }
+  </style>
+  <script type="module">
+    /* consumer flow: open the F2A profile-bio modal on load (kit
+       specimen content, symbols 2187:149105/149119/149135) */
+    import { openModal } from '/scripts/modal.js';
+
+    const frag = document.createDocumentFragment();
+    const profile = document.createElement('div');
+    profile.className = 'modal-profile';
+    profile.innerHTML = `
+      <img src="/test/figma/_assets/f2a-headshot.jpg" alt="">
+      <div class="modal-heading">
+        <h2>Name &amp; Surname</h2>
+        <p class="modal-role">Chief Executive Officer, Management</p>
+      </div>
+      <div class="modal-bio">
+        <p>Tim is the Chief Executive Officer of Broadridge, having been appointed to this role in January 2019. He was elected to the Broadridge Board of Directors in 2019. Tim served as President of Broadridge from 2017 to 2020 and as Chief Operating Officer from 2012 to 2019.</p>
+        <p>He joined Broadridge in 2010 as Chief Corporate Development Officer and was responsible for the company’s growth initiatives. Prior to joining Broadridge, Tim was President of the Retail Tax business at H&amp;R Block. Earlier, he spent 13 years at McKinsey and Company. Tim also serves on the Board of C.H. Robinson Worldwide, Inc. Mr. Gokey is a member of the board of directors of the Partnership for New York City.</p>
+      </div>`;
+    const wayfinder = document.createElement('div');
+    wayfinder.className = 'modal-wayfinder';
+    wayfinder.innerHTML = '<a class="prev" href="#prev">Robert Kalenka</a><a class="next" href="#next">Chris Perry</a>';
+    frag.append(profile, wayfinder);
+    const m = await openModal(frag, { variant: 'f2a', label: 'Name & Surname' });
+    /* gate fixture: park focus — the kit frame shows the rest state */
+    m.dialog.querySelector('.modal-close').blur();
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <p>Host page content.</p>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

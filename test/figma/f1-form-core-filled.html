@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: f1 form core (filled)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+
+    /* fixture: isolate the .F1 Form Core panel (677 symbol 582:56096) —
+       strips the module shell only; the gated panel surface is untouched */
+    main .section.form-container { padding: 0; }
+    main .section.form-container > div.form-wrapper { padding: 0; }
+    main .form.block { display: block; padding: 0; border-radius: 0; background: none; }
+    main .form.block .form-copy { display: none; }
+  </style>
+  <script type="module">
+    /* drive State=Filled through real inputs (kit specimen values 582:56096) */
+    const t = setInterval(() => {
+      const form = document.querySelector('.form form');
+      if (!form) return;
+      clearInterval(t);
+      const set = (n, v) => { const el = form.querySelector(`[name="${n}"]`); el.value = v; };
+      set('firstname', 'Megan');
+      set('lastname', 'Barlow');
+      set('email', 'm.barlow@company.com');
+      set('phone', '123 - 456 - 789');
+      set('jobtitle', 'Marketing Specialist');
+      set('company', 'Broadridge');
+      set('country', 'United States');
+      set('message', 'Can I get a price estimation for Asset Management of a company sized 1,200 people?');
+    }, 50);
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="form">
+        <div><div>contact</div></div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

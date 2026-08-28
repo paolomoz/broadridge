@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: f2 modals (f2b callout window)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+
+    /* gate fixture: the kit frames are full-height (no viewport clamp);
+       modal.css's max-height is a UX addition beyond the kit — lift it so
+       the element box equals the kit window at the gate viewport */
+    body dialog.modal { max-height: none; }
+  </style>
+  <script type="module">
+    /* consumer flow: F2B callout window hosting the decorated .F1 Form
+       Core panel from the page's form block (kit 2425:164795: header
+       copy + the same 677 form core) */
+    import { openModal } from '/scripts/modal.js';
+
+    const t = setInterval(async () => {
+      const panel = document.querySelector('.form .form-panel');
+      if (!panel) return;
+      clearInterval(t);
+      const callout = document.createElement('div');
+      callout.className = 'modal-callout';
+      const copy = document.createElement('div');
+      copy.className = 'modal-callout-copy';
+      copy.innerHTML = '<h2>Call out title</h2><p>Laoreet fames ut tellus quis sollicitudin phasellus molestie ipsum. At cras imperdiet gravida ac est ac.</p>';
+      callout.append(copy, panel); /* move the live panel — form logic intact */
+      /* the kit F2B window embeds the FILLED core (2425:164798 state=Filled) */
+      const set = (n, v) => { const el = panel.querySelector(`[name="${n}"]`); if (el) el.value = v; };
+      set('firstname', 'Megan');
+      set('lastname', 'Barlow');
+      set('email', 'm.barlow@company.com');
+      set('phone', '123 - 456 - 789');
+      set('jobtitle', 'Marketing Specialist');
+      set('company', 'Broadridge');
+      set('country', 'United States');
+      set('message', 'Can I get a price estimation for Asset Management of a company sized 1,200 people?');
+      document.querySelector('.section.form-container').style.display = 'none';
+      const m = await openModal(callout, { variant: 'f2b', label: 'Call out title' });
+      /* gate fixture: park focus — the kit frame shows the rest state */
+      m.dialog.querySelector('.modal-close').blur();
+    }, 50);
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="form">
+        <div><div>contact</div></div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

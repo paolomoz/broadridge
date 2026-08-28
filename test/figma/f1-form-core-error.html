@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gate: f1 form core (error)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+
+    /* fixture: isolate the .F1 Form Core panel (677 symbol 582:56362) */
+    main .section.form-container { padding: 0; }
+    main .section.form-container > div.form-wrapper { padding: 0; }
+    main .form.block { display: block; padding: 0; border-radius: 0; background: none; }
+    main .form.block .form-copy { display: none; }
+  </style>
+  <script type="module">
+    /* drive State=Error through the real submit-validation path: email
+       empty (required) + message under minlength 25 (kit helpers
+       "Email is required" / "This field must be at least 25 characters",
+       582:56362). execCommand marks the textarea dirty so tooShort fires. */
+    const t = setInterval(() => {
+      const form = document.querySelector('.form form');
+      if (!form) return;
+      clearInterval(t);
+      const set = (n, v) => { form.querySelector(`[name="${n}"]`).value = v; };
+      set('firstname', 'Megan');
+      set('lastname', 'Barlow');
+      set('phone', '123 - 456 - 789');
+      set('jobtitle', 'Marketing Specialist');
+      set('company', 'Broadridge');
+      set('country', 'United States');
+      const msg = form.querySelector('[name="message"]');
+      msg.focus();
+      document.execCommand('insertText', false, 'Can I get a price');
+      msg.blur();
+      form.requestSubmit();
+      /* park focus: the kit error symbol shows no focus ring */
+      document.activeElement?.blur();
+    }, 50);
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="form">
+        <div><div>contact</div></div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

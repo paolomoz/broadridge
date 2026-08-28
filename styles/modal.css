@@ -1,0 +1,349 @@
+/* modal — Figma web kit F2 Modals (F2A set 2187:149104, F2B set
+   2425:164792). Loaded on demand by scripts/modal.js.
+
+   Frame (both variants): surface/base window, radius 4, dim/xx-large
+   shadow, native <dialog> centering; backdrop = the kit's Background
+   Blur surface (2425:164794). Close = System/Close 24 pinned to the
+   padding corner (inline with the content top on F2A desktop, an "Exit"
+   row above the content below desktop — 2187:149121/149137).
+
+   F2A (profile bio) content contract:
+     .modal-profile > img + .modal-heading (h2 + .modal-role) + .modal-bio
+     .modal-wayfinder > a.prev + a.next
+   F2B (callout + form) content contract:
+     .modal-callout > .modal-callout-copy (h2 + p) + .form-panel
+   (the .form-panel core is styled by blocks/form/form.css) */
+
+dialog.modal {
+  border: 0;
+  border-radius: var(--radius-md);
+  margin: auto;
+  padding: var(--space-component-24); /* mobile pad (2187:149136 / 2425:164818) */
+  background-color: var(--color-surface-base); /* 2187:149105 / 2425:164795 */
+  color: var(--color-content-primary);
+  box-shadow: var(--box-shadow-dim-xx-large);
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+}
+
+/* Background Blur surface (2425:164794) */
+dialog.modal::backdrop {
+  background: linear-gradient(125deg, rgb(239 239 239 / 60%) 10.9%, rgb(255 255 255 / 8%) 96.4%);
+  backdrop-filter: blur(10px);
+}
+
+/* Close Modal icon button (2425:164799; System/Close 24:698) */
+dialog.modal .modal-close {
+  position: absolute;
+  top: var(--space-component-24);
+  right: var(--space-component-24);
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-action-tertiary-content-base);
+  cursor: pointer;
+}
+
+dialog.modal .modal-close:hover {
+  color: var(--color-action-tertiary-content-hover);
+}
+
+dialog.modal .modal-close:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-action-tertiary-border-focus-ring);
+}
+
+/* below desktop the close button occupies an Exit row above the content:
+   24px row + 24 gap (2187:149137/149139, 2425:164820) */
+dialog.modal .modal-content {
+  margin-top: var(--space-component-48);
+}
+
+/* ==== F2A — profile bio (2187:149105 D / 149119 T / 149135 M) ==== */
+
+dialog.modal-f2a {
+  width: calc(100vw - 48px); /* 382 in 430 (2187:149135) */
+  padding-bottom: var(--space-component-48); /* mobile bottom pad (2187:149135) */
+}
+
+.modal-profile {
+  display: grid;
+  grid-template-columns: 117px minmax(0, 1fr); /* mobile avatar (2187:149141) */
+  column-gap: var(--space-component-24);
+  row-gap: var(--space-component-24);
+}
+
+.modal-profile > picture,
+.modal-profile > p:has(> picture:only-child) {
+  display: contents;
+}
+
+.modal-profile img {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius-radius-full); /* A13 Media circle (2187:149108) */
+  object-fit: cover;
+}
+
+.modal-heading {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: center; /* name block rides the headshot center (2187:149126) */
+}
+
+.modal-heading :is(h1, h2, h3) {
+  margin: 0;
+  color: var(--color-content-primary);
+  font-weight: var(--type-heading-3-font-weight); /* Heading-3 ramp 28/32/36 (2187:149111) */
+  font-size: var(--type-heading-3-font-size);
+  line-height: var(--type-heading-3-line-height);
+}
+
+.modal-heading .modal-role {
+  margin: var(--space-component-8) 0 0; /* name -> role 8 (2187:149110) */
+  color: var(--color-content-secondary);
+  font-style: italic; /* Body-3 Italic (2187:149112) */
+  font-size: var(--type-body-3-book-font-size);
+  line-height: 23px; /* kit integer line box (2187:149144: 46 = 2 x 23) */
+}
+
+.modal-bio {
+  grid-row: 2;
+  grid-column: 1 / -1;
+}
+
+.modal-bio p {
+  margin: 0;
+  color: var(--color-content-secondary);
+  font-size: var(--type-body-3-book-font-size); /* mobile bio is Body-3 (2187:149146: 414h box) */
+  line-height: 23px; /* kit integer line box: 414 = 18 lines x 23 — dense-row pin (figma-mcp-recipes) */
+}
+
+.modal-bio p + p {
+  margin-top: 1.3em; /* kit blank-line paragraph break (2187:149113) */
+}
+
+/* Bio Wayfinder (2187:149115): prev/next A12 links, 24px arrows */
+.modal-wayfinder {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-component-16);
+  margin-top: var(--space-component-32); /* content -> wayfinder 32 below desktop */
+}
+
+.modal-wayfinder a {
+  display: inline-flex;
+  gap: 10px; /* A12 link gap (2187:149117) */
+  align-items: center;
+  min-height: 24px;
+  color: var(--color-action-tertiary-content-base);
+  font-weight: 500;
+  font-size: var(--type-label-medium-font-size);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.modal-wayfinder a:hover {
+  color: var(--color-action-tertiary-content-hover);
+}
+
+.modal-wayfinder a::before,
+.modal-wayfinder a.next::after {
+  content: '';
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.2865 5.29934C10.6762 4.89993 11.3058 4.89998 11.7055 5.29934C12.0952 5.68878 12.0952 6.31787 11.7055 6.71731L7.40861 11.0113H19.0004C19.55 11.0113 20.0004 11.4511 20.0004 12.0103C20.0003 12.5594 19.5499 13.0083 19.0004 13.0083H7.42912L11.7143 17.2915C12.1039 17.671 12.1038 18.3093 11.7143 18.6988H11.7045C11.5146 18.8785 11.2544 18.9888 10.9945 18.9888L11.0063 18.9995C10.7365 18.9995 10.4762 18.8902 10.2963 18.7105L4.30119 12.7193C3.9015 12.3298 3.90177 11.6907 4.29142 11.3013V11.2905L10.2865 5.29934Z'/%3E%3C/svg%3E") center / contain no-repeat; /* Arrows/Arrow Left (24:703) */
+}
+
+.modal-wayfinder a.next::before {
+  content: none;
+}
+
+.modal-wayfinder a.next::after {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E"); /* Arrows/Arrow Right (24:702) */
+}
+
+/* ==== F2B — callout window + form core (2425:164795/164806/164818) ==== */
+
+dialog.modal-f2b {
+  width: calc(100vw - 48px); /* 382 in 430 (2425:164818) */
+}
+
+.modal-callout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-24); /* copy -> form 24 on mobile (2425:164823) */
+}
+
+.modal-callout-copy :is(h1, h2, h3) {
+  margin: 0;
+  color: var(--color-content-primary);
+  font-weight: var(--type-heading-2-font-weight); /* Heading-2 ramp (545:99570) */
+  font-size: var(--type-heading-2-font-size);
+  line-height: var(--type-heading-2-line-height);
+}
+
+.modal-callout-copy p {
+  margin: var(--space-component-16) 0 0; /* title -> para 16 (545:99569) */
+  color: var(--color-content-primary);
+  font-size: var(--type-body-1-book-font-size); /* Body-1 24 (545:99571) */
+  line-height: var(--type-body-1-book-line-height);
+}
+
+.modal-callout .form-panel {
+  width: 100%;
+}
+
+/* tablet (834 design) */
+@media (width >= 834px) {
+  dialog.modal {
+    padding: var(--space-component-48); /* 2187:149120 */
+  }
+
+  dialog.modal .modal-close {
+    top: var(--space-component-48);
+    right: var(--space-component-48);
+  }
+
+  dialog.modal-f2a {
+    width: min(var(--grid-content-width), calc(100vw - 144px)); /* 690 in 834 (2187:149119) */
+    padding-bottom: var(--space-component-48);
+  }
+
+  .modal-profile {
+    grid-template-columns: 200px minmax(0, 1fr); /* 2187:149125 */
+  }
+
+  .modal-bio p {
+    font-size: var(--type-body-2-book-font-size); /* Body-2 at tablet+ (2187:149130) */
+    line-height: 29px; /* kit integer line box: 377 = 13 lines x 29 — dense-row pin */
+  }
+
+  dialog.modal-f2b {
+    width: min(1182px, calc(100vw - 37px)); /* 797 in 834 (2425:164806) */
+    padding: 64px var(--space-component-32); /* 2425:164807 */
+  }
+
+  dialog.modal-f2b .modal-close {
+    top: 64px;
+    right: var(--space-component-32);
+  }
+
+  /* F2B tablet: close inline with the header row — no exit row */
+  dialog.modal-f2b .modal-content {
+    margin-top: 0;
+  }
+
+  .modal-callout {
+    gap: var(--space-component-32); /* header -> form 32 (2425:164811) */
+  }
+
+  .modal-callout-copy {
+    padding-right: 56px; /* clears the inline close (24 + gutter 32) */
+  }
+
+  .modal-callout .form-panel {
+    width: 677px; /* .F1 Form Core (2425:164811) */
+    max-width: 100%;
+    align-self: center;
+  }
+}
+
+/* desktop (1440 design) */
+@media (width >= 1140px) {
+  dialog.modal {
+    padding: 64px; /* module/padding/desktop/large (2187:149105) */
+  }
+
+  dialog.modal .modal-close {
+    top: 64px;
+    right: 64px;
+  }
+
+  /* close is inline with the content top on desktop (2187:149106) */
+  dialog.modal .modal-content {
+    margin-top: 0;
+  }
+
+  dialog.modal-f2a {
+    display: flex;
+    flex-direction: column;
+    width: var(--grid-content-width); /* 1184 (2187:149105) */
+    height: 578px; /* kit-fixed desktop modal height (2187:149105) */
+    padding-bottom: 64px;
+  }
+
+  dialog.modal-f2a .modal-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .modal-profile {
+    flex: 1;
+    grid-template-columns: 200px minmax(0, 1fr);
+    column-gap: var(--space-component-32); /* desktop gutter (2187:149106) */
+    row-gap: var(--space-component-16); /* name group -> bio 16 (2187:149109) */
+    align-content: start;
+    padding-right: 56px; /* bio stops before the close column (766 measure) */
+    min-height: 0;
+    overflow: hidden; /* kit clips overflowing bio in the fixed window */
+  }
+
+  .modal-profile img {
+    grid-row: 1 / span 2;
+  }
+
+  .modal-heading {
+    grid-column: 2;
+    align-self: start; /* desktop: heading tops the row (2187:149109) */
+  }
+
+  .modal-bio {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .modal-wayfinder {
+    margin-top: auto; /* rides the fixed window bottom; kit min gap 48 (2187:149105) */
+  }
+
+  dialog.modal-f2b {
+    width: 1182px; /* Callout Window (2425:164795) */
+    padding: 64px;
+  }
+
+  dialog.modal-f2b .modal-close {
+    top: 64px;
+    right: 64px;
+  }
+
+  .modal-callout {
+    flex-direction: row;
+    gap: var(--space-component-32); /* Header+Form gutter (2425:164796) */
+  }
+
+  .modal-callout-copy {
+    flex: 1;
+    min-width: 0;
+    padding-right: 0;
+  }
+
+  .modal-callout .form-panel {
+    flex: none;
+    align-self: flex-start;
+  }
+
+  /* the close sits beyond the form column (2425:164799 at x1030) */
+  dialog.modal-f2b .modal-content {
+    padding-right: 56px;
+  }
+}
