@@ -1,0 +1,176 @@
+/* .N2 Footer Core (2061:198183) — link menu inside the N2 footer.
+   Kit line boxes are floored: link 14 x 1.3 -> 18, D&T heading
+   18 x 1.3 -> 23, mobile heading 24 x 1.3 -> 31, mobile link
+   18 x 1.3 -> 23 (dense stacked rows drift otherwise). */
+
+.footer .footer-links > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .footer-links-heading {
+  margin: 0;
+
+  /* mobile accordion heading: Body-1 Bold (2055:197285) */
+  font-family: var(--body-font-family);
+  font-size: var(--type-body-1-bold-font-size);
+  font-weight: var(--type-body-1-bold-font-weight);
+  line-height: 31px; /* floored 24 x 1.3 */
+}
+
+.footer .footer-links-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between; /* heading + icon (2055:197284) */
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer .footer-links-toggle strong {
+  font-weight: inherit;
+}
+
+.footer .footer-links-toggle-icon {
+  width: 24px; /* Math/Plus + System/Close (2055:197286/197238) */
+  height: 24px;
+  background: url('./icon-plus.svg') center / contain no-repeat;
+}
+
+.footer .footer-links-toggle[aria-expanded='true'] .footer-links-toggle-icon {
+  background-image: url('./icon-close.svg');
+}
+
+/* collapsed by default on mobile (Breakpoint=Mobile Closed 2061:198180) */
+.footer .footer-links-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
+.footer .footer-links-panel-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.footer .footer-links-col.open .footer-links-panel {
+  grid-template-rows: 1fr;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .footer .footer-links-panel {
+    transition: grid-template-rows var(--motion-duration-medium2) var(--motion-easing-standard);
+  }
+}
+
+.footer .footer-links ul {
+  margin: 0;
+  padding: var(--space-component-24) 0 0; /* heading -> first link 24 (2055:197239) */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-24); /* link pitch 47 = 23 + 24 */
+  list-style: none;
+}
+
+.footer .footer-links li {
+  margin: 0;
+
+  /* mobile links: Body-3 Book (2055:197239) */
+  font-family: var(--body-font-family);
+  font-size: var(--type-body-3-book-font-size);
+  font-weight: var(--type-body-3-book-font-weight);
+  line-height: 23px; /* floored 18 x 1.3 */
+}
+
+.footer .footer-links a:any-link {
+  color: var(--color-content-primary-inverse);
+  text-decoration: none;
+}
+
+.footer .footer-links a:hover {
+  text-decoration: underline; /* derived — no kit state exhibit */
+}
+
+/* group pitch 32 (2061:198180); continuation links continue the open
+   group at the 24 link pitch (2055:197246 y 384) */
+.footer .footer-links-col + .footer-links-col {
+  margin-top: var(--space-component-32);
+}
+
+.footer .footer-links-col-cont {
+  display: none;
+}
+
+.footer .footer-links-col-cont.open {
+  display: block;
+  margin-top: var(--space-component-24);
+}
+
+.footer .footer-links-col-cont .footer-links-panel,
+.footer .footer-links-col.open .footer-links-panel {
+  grid-template-rows: 1fr;
+}
+
+.footer .footer-links-col-cont ul {
+  padding-top: 0; /* no heading above the continuation list */
+}
+
+/* D and T (2061:198182): three columns, all lists open, no toggles */
+@media (width >= 834px) {
+  .footer .footer-links > div {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 677.333px; /* core width, grid col 7 (2061:198182) */
+    max-width: 100%;
+  }
+
+  .footer .footer-links-col,
+  .footer .footer-links-col + .footer-links-col,
+  .footer .footer-links-col-cont {
+    display: block;
+    margin-top: 0;
+  }
+
+  .footer .footer-links-col-cont {
+    padding-top: var(--space-component-32); /* headless column offset (2055:197331) */
+  }
+
+  .footer .footer-links-toggle {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .footer .footer-links-heading {
+    /* D&T heading: Body-3 Bold (2055:197323) */
+    font-size: var(--type-body-3-bold-font-size);
+    font-weight: var(--type-body-3-bold-font-weight);
+    line-height: 23px; /* floored 18 x 1.3 */
+  }
+
+  .footer .footer-links-toggle-icon {
+    display: none;
+  }
+
+  .footer .footer-links-panel {
+    display: block;
+  }
+
+  .footer .footer-links ul {
+    padding-top: var(--space-component-8); /* heading -> links 8 (2055:197322 gap) */
+    gap: var(--space-component-8); /* link pitch 26 = 18 + 8 */
+  }
+
+  .footer .footer-links-col-cont ul {
+    padding-top: 0; /* the 32 column offset already carries the gap (2055:197331) */
+  }
+
+  .footer .footer-links li {
+    /* D&T links: Body-4 Book (2055:197324) */
+    font-size: var(--type-body-4-book-font-size);
+    line-height: 18px; /* floored 14 x 1.3 */
+  }
+}

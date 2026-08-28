@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="footer" content="/test/figma/n2-footer-fragment">
+  <title>gate: n2 footer mobile half open</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>.consent-banner { display: none; }</style>
+  <style>/* gate harness: state reached by click; animation is covered functionally */ .footer-links-panel { transition: none !important; }</style>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <p>gate page</p>
+    </div>
+  </main>
+  <footer></footer>
+  <script type="module">
+    // gate harness: reach Mobile Half Open through the production code path
+    const t = setInterval(() => {
+      const btns = [...document.querySelectorAll("footer .footer-links-toggle")];
+      if (btns.length >= 2) { clearInterval(t); btns[0].click(); }
+    }, 50);
+  </script>
+</body>
+</html>
