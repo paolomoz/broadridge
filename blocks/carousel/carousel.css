@@ -249,76 +249,8 @@
 
 /* ---- wayfinding row (1459:104724 / 1711:117784): tabs left, arrows right ---- */
 
-.carousel .carousel-wayfinding {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 48px; /* kit row height (1459:104724) */
-}
-
-.carousel .carousel-wayfinding[hidden] {
-  display: none;
-}
-
 /* A22 Wayfinder / Tabs (1459:104725): 20x5 bars, gap 12 */
-.carousel .carousel-tabs {
-  display: flex;
-  gap: var(--space-component-12);
-}
-
-.carousel .carousel-tab {
-  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
-  height: 5px;
-  padding: 0;
-  border: 0;
-  border-radius: var(--border-radius-radius-xs);
-  background-color: var(--color-edge-badge-surface);
-  cursor: pointer;
-  transition: background-color var(--motion-duration-short4, 200ms) var(--motion-easing-standard); /* derived from the A6 state transition */
-}
-
-.carousel .carousel-tab.active {
-  background-color: var(--color-action-base);
-}
-
 /* A22 arrows (142:5881): 48px round secondary icon buttons */
-.carousel .carousel-arrows {
-  display: flex;
-  gap: var(--space-component-16);
-}
-
-.carousel .carousel-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 48px; /* icon-round small A6 (I142:5847;6539:20183) */
-  height: 48px;
-  padding: 0;
-  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
-  border-radius: var(--border-radius-radius-full);
-  background: none;
-  color: var(--color-action-secondary-content-base);
-  cursor: pointer;
-  transition: border-color var(--motion-duration-short4, 200ms) var(--motion-easing-standard),
-    color var(--motion-duration-short4, 200ms) var(--motion-easing-standard);
-}
-
-.carousel .carousel-arrow:hover {
-  border-color: var(--color-action-secondary-border-hover);
-  color: var(--color-action-secondary-content-hover);
-}
-
-.carousel .carousel-arrow:focus-visible {
-  outline: 3px solid var(--color-action-secondary-border-focus-ring);
-  outline-offset: -1px;
-}
-
-.carousel .carousel-arrow svg {
-  width: var(--size-icon-sm);
-  height: var(--size-icon-sm);
-}
-
 /* ---- CTA row — A5 Button Group, right-aligned (1535:59402) ---- */
 
 .carousel .carousel-cta {
@@ -430,22 +362,9 @@
    border/base; wayfinder remaps below (same values as the gated M3). */
 
 main .section.dark .carousel .carousel-tab,
-main .section.navy .carousel .carousel-tab {
-  background-color: var(--color-surface-accent-01); /* inactive tab on dark (2125:232464: edge/badge/surface -> #0f3db5) */
-}
-
-main .section.dark .carousel .carousel-tab.active,
-main .section.navy .carousel .carousel-tab.active {
-  background-color: var(--color-content-primary-inverse); /* action/base -> #fff */
-}
-
-main .section.dark .carousel .carousel-arrow,
-main .section.navy .carousel .carousel-arrow {
-  border-color: var(--color-content-primary-inverse); /* secondary border/content -> #fff */
-  color: var(--color-content-primary-inverse);
-}
-
-main .section.dark .carousel.text .carousel-item p.carousel-item-cta a,
+main .section.navy main .section.dark .carousel .carousel-tab.active,
+main .section.navy main .section.dark .carousel .carousel-arrow,
+main .section.navy main .section.dark .carousel.text .carousel-item p.carousel-item-cta a,
 main .section.navy .carousel.text .carousel-item p.carousel-item-cta a {
   color: var(--color-content-primary-inverse);
 }

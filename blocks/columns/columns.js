@@ -25,6 +25,7 @@ function markLinkCtas(scope) {
     const p = a.parentElement;
     if (p.textContent.trim() === a.textContent.trim() && !a.classList.contains('button')) {
       p.classList.add('columns-cta');
+      p.querySelectorAll('a').forEach((a) => a.classList.add('cta-link'));
     }
   });
 }
@@ -45,18 +46,18 @@ function setupCarousel(col, mount) {
   col.replaceChildren(scroller);
 
   const way = document.createElement('div');
-  way.className = 'columns-wayfinding';
-  way.innerHTML = `<div class="columns-tabs"></div>
-    <div class="columns-arrows">
-      <button type="button" class="columns-arrow" aria-label="Previous slide">${ARROW_LEFT}</button>
-      <button type="button" class="columns-arrow" aria-label="Next slide">${ARROW_RIGHT}</button>
+  way.className = 'columns-wayfinding wayfinding';
+  way.innerHTML = `<div class="columns-tabs wayfinding-tabs"></div>
+    <div class="columns-arrows wayfinding-arrows">
+      <button type="button" class="columns-arrow wayfinding-arrow" aria-label="Previous slide">${ARROW_LEFT}</button>
+      <button type="button" class="columns-arrow wayfinding-arrow" aria-label="Next slide">${ARROW_RIGHT}</button>
     </div>`;
   const tabs = way.querySelector('.columns-tabs');
   const [prev, next] = way.querySelectorAll('.columns-arrow');
   tabs.replaceChildren(...pics.map((_, i) => {
     const tab = document.createElement('button');
     tab.type = 'button';
-    tab.className = 'columns-tab';
+    tab.className = 'columns-tab wayfinding-tab';
     tab.setAttribute('aria-label', `Go to slide ${i + 1}`);
     tab.addEventListener('click', () => scroller.scrollTo({ left: i * scroller.clientWidth }));
     return tab;

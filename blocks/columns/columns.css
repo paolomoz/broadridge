@@ -156,79 +156,10 @@
   color: var(--color-action-tertiary-content-hover);
 }
 
-.columns p.columns-cta a::after {
-  content: '';
-  flex: none;
-  width: 24px;
-  height: 24px;
-  background-color: currentcolor;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat; /* Arrows/Arrow Right (24:702) */
-}
-
 /* A22 wayfinder row (2031:71971): tabs left, arrow pair right */
-.columns .columns-wayfinding {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 48px;
-}
 
 .columns .columns-content-col > .columns-wayfinding {
   margin-top: var(--space-component-32); /* content stack gap (2031:70212) */
-}
-
-.columns .columns-tabs {
-  display: flex;
-  gap: var(--space-component-12);
-}
-
-.columns .columns-tab {
-  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
-  height: 5px;
-  padding: 0;
-  border: 0;
-  border-radius: var(--border-radius-radius-xs);
-  background-color: var(--color-edge-badge-surface);
-  cursor: pointer;
-}
-
-.columns .columns-tab.active {
-  background-color: var(--color-action-base);
-}
-
-.columns .columns-arrows {
-  display: flex;
-  gap: var(--space-component-16);
-}
-
-.columns .columns-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 48px; /* icon-round small A6 (I142:5847;6539:20183) */
-  height: 48px;
-  padding: 0;
-  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
-  border-radius: var(--border-radius-radius-full);
-  background: none;
-  color: var(--color-action-secondary-content-base);
-  cursor: pointer;
-}
-
-.columns .columns-arrow:hover {
-  border-color: var(--color-action-secondary-border-hover);
-  color: var(--color-action-secondary-content-hover);
-}
-
-.columns .columns-arrow:focus-visible {
-  outline: 3px solid var(--color-action-secondary-border-focus-ring);
-  outline-offset: -1px;
-}
-
-.columns .columns-arrow svg {
-  width: var(--size-icon-sm);
-  height: var(--size-icon-sm);
 }
 
 /* stack CTA renders as its own row; button hugs (kit A5, 714:438782) */
@@ -358,22 +289,9 @@
    remap on dark grounds — sampled 5104:61090) ---- */
 
 main .section.dark .columns .columns-tab,
-main .section.navy .columns .columns-tab {
-  background-color: var(--color-surface-accent-01); /* inactive tab on dark (5104:61090) */
-}
-
-main .section.dark .columns .columns-tab.active,
-main .section.navy .columns .columns-tab.active {
-  background-color: var(--color-content-primary-inverse);
-}
-
-main .section.dark .columns .columns-arrow,
-main .section.navy .columns .columns-arrow {
-  border-color: var(--color-content-primary-inverse);
-  color: var(--color-content-primary-inverse);
-}
-
-main .section.dark .columns p.columns-cta a,
+main .section.navy main .section.dark .columns .columns-tab.active,
+main .section.navy main .section.dark .columns .columns-arrow,
+main .section.navy main .section.dark .columns p.columns-cta a,
 main .section.navy .columns p.columns-cta a {
   color: var(--color-content-primary-inverse);
 }

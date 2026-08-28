@@ -196,14 +196,6 @@
   margin-top: var(--space-component-32);
 }
 
-.accordion.feature a.cta-link::after {
-  content: "";
-  width: var(--size-icon-md);
-  height: var(--size-icon-md);
-  background-color: currentcolor;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2891 5.29978C12.679 4.90015 13.309 4.90032 13.709 5.2988L19.709 11.2949C19.9553 11.5347 20.0453 11.8776 19.9805 12.1963C19.9328 12.4394 19.7956 12.65 19.6055 12.7959L13.6992 18.6992C13.5092 18.879 13.2492 18.9892 12.9893 18.9892L13 19C12.73 19 12.4691 18.8898 12.2891 18.7099C11.8894 18.3202 11.8894 17.6806 12.2793 17.291V17.2812L16.5605 13.0039H5C4.44 13.0039 4 12.5545 4 12.0049C4.0001 11.4454 4.44006 11.0058 5 11.0058H16.5801L12.29 6.71872C11.8903 6.31904 11.8902 5.68943 12.2891 5.29978Z'/%3E%3C/svg%3E") center / contain no-repeat; /* Arrows/Arrow Right (24:702) */
-}
-
 /* media — desktop right column; tablet/mobile inside the open item.
    Mobile gap 16, h 253.125 kit raw (3094:372687) */
 .accordion.feature .accordion-media {

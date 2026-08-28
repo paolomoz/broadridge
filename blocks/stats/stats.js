@@ -111,11 +111,11 @@ function setupCountUp(block) {
    746:16951). */
 function setupCarousel(block, row) {
   const way = document.createElement('div');
-  way.className = 'stats-wayfinding';
-  way.innerHTML = `<div class="stats-tabs"></div>
-    <div class="stats-arrows">
-      <button type="button" class="stats-arrow" aria-label="Previous stats">${ARROW_LEFT}</button>
-      <button type="button" class="stats-arrow" aria-label="Next stats">${ARROW_RIGHT}</button>
+  way.className = 'stats-wayfinding wayfinding';
+  way.innerHTML = `<div class="stats-tabs wayfinding-tabs"></div>
+    <div class="stats-arrows wayfinding-arrows">
+      <button type="button" class="stats-arrow wayfinding-arrow" aria-label="Previous stats">${ARROW_LEFT}</button>
+      <button type="button" class="stats-arrow wayfinding-arrow" aria-label="Next stats">${ARROW_RIGHT}</button>
     </div>`;
   row.after(way);
   const tabs = way.querySelector('.stats-tabs');
@@ -129,7 +129,7 @@ function setupCarousel(block, row) {
       tabs.replaceChildren(...Array.from({ length: pages }, (_, i) => {
         const tab = document.createElement('button');
         tab.type = 'button';
-        tab.className = 'stats-tab';
+        tab.className = 'stats-tab wayfinding-tab';
         tab.setAttribute('aria-label', `Go to stats page ${i + 1}`);
         tab.addEventListener('click', () => row.scrollTo({ left: i * step() }));
         return tab;

@@ -26,11 +26,11 @@ const ARROW_RIGHT = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
    rail overflows (same runtime as the gated C4/M3 wayfinders) */
 function setupWayfinding(block, row) {
   const way = document.createElement('div');
-  way.className = 'carousel-wayfinding';
-  way.innerHTML = `<div class="carousel-tabs"></div>
-    <div class="carousel-arrows">
-      <button type="button" class="carousel-arrow" aria-label="Previous slides">${ARROW_LEFT}</button>
-      <button type="button" class="carousel-arrow" aria-label="Next slides">${ARROW_RIGHT}</button>
+  way.className = 'carousel-wayfinding wayfinding';
+  way.innerHTML = `<div class="carousel-tabs wayfinding-tabs"></div>
+    <div class="carousel-arrows wayfinding-arrows">
+      <button type="button" class="carousel-arrow wayfinding-arrow" aria-label="Previous slides">${ARROW_LEFT}</button>
+      <button type="button" class="carousel-arrow wayfinding-arrow" aria-label="Next slides">${ARROW_RIGHT}</button>
     </div>`;
   row.after(way);
   const tabs = way.querySelector('.carousel-tabs');
@@ -44,7 +44,7 @@ function setupWayfinding(block, row) {
       tabs.replaceChildren(...Array.from({ length: pages }, (_, i) => {
         const tab = document.createElement('button');
         tab.type = 'button';
-        tab.className = 'carousel-tab';
+        tab.className = 'carousel-tab wayfinding-tab';
         tab.setAttribute('aria-label', `Go to slide page ${i + 1}`);
         tab.addEventListener('click', () => row.scrollTo({ left: i * step() }));
         return tab;

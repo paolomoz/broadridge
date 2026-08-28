@@ -121,73 +121,9 @@
 }
 
 /* wayfinding row (737:73286): tabs left, arrow pair right */
-.stats .stats-wayfinding {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 48px; /* kit row height 737:73286 */
-}
-
-.stats .stats-wayfinding[hidden] {
-  display: none;
-}
 
 /* A22 Wayfinder / Tabs (737:73287): 20x5 bars, gap 12 */
-.stats .stats-tabs {
-  display: flex;
-  gap: var(--space-component-12);
-}
-
-.stats .stats-tab {
-  width: 20px; /* tab bar 143:6011 (no token; kit raw) */
-  height: 5px;
-  padding: 0;
-  border: 0;
-  border-radius: var(--border-radius-radius-xs);
-  background-color: var(--color-edge-badge-surface);
-  cursor: pointer;
-}
-
-.stats .stats-tab.active {
-  background-color: var(--color-action-base);
-}
-
 /* A22 Wayfinder arrows (142:5881): 48px round secondary icon buttons */
-.stats .stats-arrows {
-  display: flex;
-  gap: var(--space-component-16);
-}
-
-.stats .stats-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 48px; /* icon-round small A6 (I142:5847;6539:20183) */
-  height: 48px;
-  padding: 0;
-  border: var(--border-width-63) solid var(--color-action-secondary-border-base);
-  border-radius: var(--border-radius-radius-full);
-  background: none;
-  color: var(--color-action-secondary-content-base);
-  cursor: pointer;
-}
-
-.stats .stats-arrow:hover {
-  border-color: var(--color-action-secondary-border-hover);
-  color: var(--color-action-secondary-content-hover);
-}
-
-.stats .stats-arrow:focus-visible {
-  outline: 3px solid var(--color-action-secondary-border-focus-ring);
-  outline-offset: -1px;
-}
-
-.stats .stats-arrow svg {
-  width: var(--size-icon-sm);
-  height: var(--size-icon-sm);
-}
-
 /* CTA row — A5 Button Group, right-aligned in C4 (1914:174947) */
 .stats .stats-cta {
   display: flex;
