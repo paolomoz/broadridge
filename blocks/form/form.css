@@ -20,8 +20,11 @@
   padding: 0 var(--grid-page-margin-mobile);
 }
 
-/* mobile base (57:3034, 430 design: pad 32/16, stack gap 24) */
-.form {
+/* mobile base (57:3034, 430 design: pad 32/16, stack gap 24).
+   D7: qualified .form.block — pages using the "form" template carry a
+   `form` class on <body>, so a bare .form selector washes the whole
+   canvas surface/mid (contact-us regression) */
+.form.block {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   row-gap: var(--space-component-24);
@@ -359,7 +362,7 @@
     padding: 0 var(--grid-page-margin-tablet);
   }
 
-  .form {
+  .form.block {
     row-gap: var(--space-component-32);
     padding: var(--space-component-48);
   }
@@ -379,7 +382,7 @@
     display: block;
   }
 
-  .form {
+  .form.block {
     grid-template-columns: minmax(0, 1fr) 677px; /* 66:4279 core width */
     grid-template-rows: auto 1fr;
     column-gap: 64px; /* 57:2632 wrapper gap (no space token carries 64) */
