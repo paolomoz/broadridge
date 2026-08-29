@@ -1572,22 +1572,33 @@ main .section.narrow .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
 }
 
 /* narrow lists ride the Body-1 A4 variant (395:738: row 33, marker 10x33,
-   7px dot at (5,16.5), text x = 16 + 10 + 12 = 38) */
-main .section.narrow .default-content-wrapper li {
+   7px dot at (5,16.5), text x = 16 + 10 + 12 = 38).
+   The article/press-release templates are the same narrow/C7 context
+   (lazy-styles.css: ~778px column, Body-1 24/1.3 copy), so their
+   default-content lists take the same A4 Size=Body-1 scale — the kit
+   never draws Body-3 bullets under Body-1 copy (C3 li = A4 at the
+   inherited body scale). */
+main .section.narrow .default-content-wrapper li,
+body.article main .section .default-content-wrapper li,
+body.press-release main .section .default-content-wrapper li {
   min-height: 33px;
   padding-left: 38px;
   font-size: var(--type-body-1-book-font-size);
   line-height: var(--type-body-1-book-line-height);
 }
 
-main .section.narrow .default-content-wrapper ul li::before {
+main .section.narrow .default-content-wrapper ul li::before,
+body.article main .section .default-content-wrapper ul li::before,
+body.press-release main .section .default-content-wrapper ul li::before {
   top: 13px; /* cy 16.5 - r 3.5 (asset 6eac0742) */
   left: 17.5px; /* pl 16 + (cx 5 - r 3.5) */
   width: 7px;
   height: 7px;
 }
 
-main .section.narrow .default-content-wrapper ol > li::before {
+main .section.narrow .default-content-wrapper ol > li::before,
+body.article main .section .default-content-wrapper ol > li::before,
+body.press-release main .section .default-content-wrapper ol > li::before {
   width: 26px; /* 16 + Body-1 marker box 10 */
 }
 

@@ -34,13 +34,20 @@ const CARD_ARROW_24 = `<svg width="24" height="24" viewBox="0 0 24 24" fill="non
 
 /* A7/M4 card anatomy: image cell (featured only), body with copy +
    icon-only Link CTA (354:1603) — the authored link text stays for
-   assistive tech, the visible affordance is the 24px arrow */
+   assistive tech, the visible affordance is the 24px arrow.
+   Defensive (real content): authors also write the card title AS the
+   link (h3 > a, with an optional eyebrow paragraph). The title must
+   stay visible (Title-1/Title-2), so only links authored OUTSIDE a
+   heading become the icon-only foot CTA; a title-only link keeps its
+   text and gets a synthesized foot arrow (same href, aria-hidden —
+   the visible title link already carries the accessible name). */
 function decorateCard(li) {
   [...li.children].forEach((div) => {
     if (div.children.length === 1 && div.querySelector('picture, img')) div.className = 'cards-card-image';
     else div.className = 'cards-card-body';
   });
-  const link = li.querySelector('.cards-card-body a');
+  const links = [...li.querySelectorAll('.cards-card-body a')];
+  const link = links.find((a) => !a.closest('h1, h2, h3, h4, h5, h6'));
   if (link) {
     const wrapper = link.closest('p') || link.parentElement;
     wrapper.classList.remove('button-wrapper');
@@ -48,6 +55,17 @@ function decorateCard(li) {
     link.classList.remove('button', 'primary', 'secondary');
     const label = link.textContent.trim() || 'Read more';
     link.innerHTML = `<span class="cards-link-label">${label}</span>${CARD_ARROW_24}`;
+  } else if (links.length) {
+    const titleLink = links[links.length - 1];
+    const arrow = document.createElement('a');
+    arrow.href = titleLink.href;
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.tabIndex = -1;
+    arrow.innerHTML = CARD_ARROW_24;
+    const cta = document.createElement('p');
+    cta.className = 'cards-card-cta';
+    cta.append(arrow);
+    titleLink.closest('.cards-card-body').append(cta);
   }
 }
 
@@ -95,8 +113,11 @@ export default function decorate(block) {
       row.classList.add('cards-header');
       return;
     }
+    // block-foot CTA row = a lone link authored OUTSIDE a heading; a
+    // heading-link row is a card whose title is the link (real content)
     const link = row.querySelector('a');
-    if (link && row.textContent.trim() === link.textContent.trim()) {
+    if (link && !link.closest('h1, h2, h3, h4, h5, h6')
+      && row.textContent.trim() === link.textContent.trim()) {
       cta = row;
       row.classList.add('cards-cta');
       return;

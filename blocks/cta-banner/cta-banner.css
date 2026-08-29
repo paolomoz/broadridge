@@ -112,6 +112,18 @@ main .section.cta-banner-container:is(.light, .highlight, .tint, .dark, .navy, .
   }
 }
 
+/* statement banner (real content): a headline-only banner (no button)
+   authored with no section surface option. The kit never maps a band to
+   "no surface" (B1 always keeps the banner box, and the kit deprecates
+   the same-color-as-the-page combo, 1914:157594), so on the white page
+   ground the CTA-less statement shape defaults to surface/mid instead
+   of the invisible white surface/light. Authored section surface
+   options below still win (the section :not() keeps this rule out of
+   every styled section). */
+main .section.cta-banner-container:not(.light, .highlight, .tint, .dark, .navy, .surface-light, .surface-base, .surface-mid, .surface-dim) .cta-banner:not(:has(a.button)) {
+  background-color: var(--color-surface-mid);
+}
+
 /* surface options — light usage board 1914:157587 (base flagged
    "same color as the page" by the kit, kept for authors who theme the
    page differently) */

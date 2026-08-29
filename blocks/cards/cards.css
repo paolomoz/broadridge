@@ -101,6 +101,15 @@
   background-color: var(--color-surface-light);
 }
 
+/* real content authors card grids in unstyled sections (white page
+   ground) where the kit's surface-light tile disappears — the kit
+   deprecates same-color-as-ground surfaces (cf. B1 1914:157594), so
+   tiles remap to surface/mid there; authored section styles (light/
+   dark/surface-*) still pick their own gated tile surfaces */
+main .section.cards-container:not(.light, .highlight, .tint, .dark, .navy, .surface-light, .surface-base, .surface-mid, .surface-dim) .cards:not(.featured) > ul > li:not(.cards-header-tile) {
+  background-color: var(--color-surface-mid);
+}
+
 /* C1B inline header rides the grid as a bare tile (6520:29989) */
 .cards > ul > li.cards-header-tile {
   grid-column: 1 / -1;
@@ -136,6 +145,32 @@
   font-size: var(--type-body-3-book-font-size);
   line-height: var(--type-body-3-book-line-height);
   letter-spacing: var(--type-body-3-book-letter-spacing);
+}
+
+/* real content authors the card title as a link (h3 > a): the title
+   keeps the card ink, not the action-link treatment */
+.cards .cards-card-body :is(h3, h4, h5, h6) a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* eyebrow-like paragraph authored ABOVE the title (awards shape:
+   "WINNER 2024" em + h3 link): leads the copy, 8 gap to the title */
+.cards .cards-card-body p:has(+ :is(h3, h4, h5, h6)) {
+  margin: 0 0 var(--space-component-8);
+}
+
+/* non-featured cards with an authored image cell (awards shape): the
+   media sits framed inside the padded tile, A13 radius */
+.cards:not(.featured) .cards-card-image {
+  margin-bottom: var(--space-component-16);
+}
+
+.cards:not(.featured) .cards-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-radius-sm);
 }
 
 /* icon-only Link CTA (354:1603): 24px arrow, action/tertiary colors */

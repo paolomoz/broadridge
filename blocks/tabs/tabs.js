@@ -35,13 +35,16 @@ let blockIndex = 0;
    I504:57252;714:400063;2712:438048), never as buttons */
 function decorateLinks(panel) {
   panel.querySelectorAll('a').forEach((a) => {
+    // links inside headings are panel titles, not A12 links — leave them
+    if (a.closest('h1, h2, h3, h4, h5, h6')) return;
     a.classList.remove('button', 'primary', 'secondary');
     a.classList.add('tabs-link');
     const strong = a.closest('strong, em');
     if (strong && strong.parentElement) strong.replaceWith(a);
     // unwrap the aem.js button paragraph so the link is a flex child of
-    // the copy column (the kit A9 gap/margins apply to the link itself)
-    const wrapper = a.closest('p, div');
+    // the copy column (the kit A9 gap/margins apply to the link itself);
+    // only <p> wrappers — never the .tabs-copy column itself
+    const wrapper = a.closest('p');
     if (wrapper && wrapper !== panel && wrapper.textContent.trim() === a.textContent.trim()
       && !wrapper.querySelector('picture')) {
       wrapper.replaceWith(a);
@@ -74,6 +77,21 @@ function decoratePanel(cell) {
   copy.className = 'tabs-copy';
   [...panel.children].filter((el) => el !== picture).forEach((el) => copy.append(el));
   panel.append(copy);
+  // defensive (real content): panels authored as a lone title-link
+  // (h3 > a, no other link) still get the kit A7 panel anatomy — the
+  // heading keeps its text as the card title, the link moves to the
+  // card foot as the A12 link inside the padding
+  if (copy.querySelectorAll('a').length === 1) {
+    const heading = copy.querySelector('h1, h2, h3, h4, h5, h6');
+    const a = heading && heading.querySelector('a');
+    if (a && heading.textContent.trim() === a.textContent.trim()) {
+      const label = a.textContent.trim();
+      const foot = document.createElement('p');
+      foot.append(a);
+      heading.textContent = label;
+      copy.append(foot);
+    }
+  }
   decorateLinks(panel);
   return panel;
 }
