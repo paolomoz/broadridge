@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="nav" content="/test/figma/n1-nav-fragment">
+  <meta name="footer" content="/test/figma/n2-footer-fragment">
+  <title>gate: n4 mobile menu (Capabilities > Wealth Advisor drill-in)</title>
+  <script nonce="aem" src="/scripts/aem.js" type="module"></script>
+  <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/typekit.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    .consent-banner { display: none; }
+    footer { display: none; }
+    body { height: 1090px; background: #f9f9f9; }
+    main { display: none; }
+    header nav * { transition: none !important; }
+  </style>
+  <script>
+    const poll = setInterval(() => {
+      const burger = document.querySelector('header .nav-hamburger button');
+      if (!burger) return;
+      clearInterval(poll);
+      burger.click();
+      const accs = document.querySelectorAll('header .drawer-acc-toggle');
+      if (accs[1]) accs[1].click(); /* Capabilities */
+      const cap = document.querySelector('header .n4-acc-toggle');
+      if (cap) cap.click(); /* N4 State=C Wealth Adv. (1754:373192) */
+    }, 50);
+  </script>
+</head>
+<body>
+  <header></header>
+  <main><div><p>gate page</p></div></main>
+  <footer></footer>
+</body>
+</html>
